@@ -10,7 +10,7 @@ The Project **Angular Bootcamp** collects and documents the information for the 
 
 ## Teilprojekt React Bootcamp
 
-### Key-Up with GitHub
+### Key Configuration with GitHub
 
 To push code to GitHub securely, you typically create an **SSH key** and add it to your GitHub account. This avoids typing your username/password every time.
 
@@ -69,6 +69,8 @@ Copy the full output (it starts with `ssh-ed25519`).
 1. Go to GitHub
 
 2. Click your profile → **Settings**
+   
+   1. Important follow the white rabbit: https://github.com/settings/keys
 
 3. Go to **SSH and GPG keys**
 
