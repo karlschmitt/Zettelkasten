@@ -43,6 +43,10 @@ Zettekasten is a method and system for learning and collecting information: [Zet
 
 ### HTTP
 
+1. Star Wars API
+2. Curl
+3. Node.js
+
 ### HTML
 
 ### CSS
@@ -66,8 +70,11 @@ Zettekasten is a method and system for learning and collecting information: [Zet
 
 ### React Router
 
-### Material-UI
+### Material-UI 
 
+1. The comunity [material.co](https://materialui.co)
+2. Browse icons: [brows icons](https://fonts.google.com/icons)
+3. Download: [Downlod a zip archive](https://github.com/google/material-design-icons/releases)
 
 
 ## Teilprojekt Angular Bootcamp
