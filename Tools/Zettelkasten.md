@@ -1,3 +1,7 @@
+# 20260405145008 Zettelkasten
+
+## Zettelkasten Method
+
 The **Zettelkasten method** (German for “slip box”) is a powerful note-taking and thinking system designed to help you **organize knowledge, make connections, and generate new ideas**. It was made famous by the German sociologist Niklas Luhmann, who used it to write 70+ books and hundreds of papers.
 
 ***
