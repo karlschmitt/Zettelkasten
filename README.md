@@ -35,9 +35,9 @@ Zettekasten is a method and system for learning and collecting information: [Zet
 3. [GitBash](https://git-scm.com/install/windows)
 4. [PowerShell](https://github.com/powershell/powershell), [Releases](https://github.com/powershell/powershell/releases). PowerShell is maintained on [GitHub](https://github.com/).
 5. [Neovim](https://neovim.io/)
-6. LvChad
+6. [LvChad](https://nvchad.com/)
 7. [Visual Studio Code](https://code.visualstudio.com/)
-8. Eclipse
+8. [Eclipse](https://eclipseide.org/)
    
 
 ### Useful Links
@@ -45,19 +45,25 @@ Zettekasten is a method and system for learning and collecting information: [Zet
 1. In case you need a rabbit: [Open Clip Art](https://openclipart.org/#google_vignette)
 2. Fetch some data in csv format:  [World Religon Data](https://correlatesofwar.org/data-sets/world-religion-data/)
 
-### Let's take a 
+### Let's take a coffee break
 
-Breaks are extreamly important when it comes to learning.
+Coffee breaks are extreamly important when it comes to learning.
 
 Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perfectly understands the coding terminology and jargon.
 [JS Crash Course](https://youtu.be/FtaQSdrl7YA)
 
 
-### HTTP
+### HTTP and Node.js
 
-1. Star Wars API
-2. Curl
-3. Node.js
+1. [Star Wars API](https://swapi.dev/)
+2. [Curl](https://youtu.be/IEV1yXgbJbY) on [YouTube](https://www.youtube.com/)
+3. [Curl for Windows](https://curl.se/windows/) Follow the white rabbit it's a zip archive 🐇
+4. [Curl Tutorial](https://curl.se/docs/tutorial.html)
+5. [Everiting Curl](https://everything.curl.dev/)
+6. [swapi](https://swapi.info/)
+7. [Downloading Node.js](https://nodejs.org/en/download) Follow the white rabbit it's a zip archive 🐇
+8. [Node.js](https://nodejs.org/en)
+9. [Learning Node.js](https://nodejs.org/learn/)
 
 ### HTML
 
@@ -69,6 +75,10 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 2. 
 
 ### JavaScript
+
+1. [The Modern JavaScript Tutorial](https://javascript.info/)
+
+
 
 ### TypeScript
 
