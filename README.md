@@ -1,6 +1,10 @@
 # 20260405151408 Metaprojekt Zettelkasten
 
-The Information you find here comprise: "The story of my life".
+The Information you find here comprise: ["The story of my life".](https://youtu.be/W-TE_Ys4iwM?list=RDW-TE_Ys4iwM)
+
+This landing page is flooded with tons of links, so feel free to follow the white rabbit into this fascinating wonderland of coding.
+![open-clipart-white-rabbit.png](Images\open-clipart-white-rabbit.png)[
+Times have changed, however the [Raspberry PI](https://www.raspberrypi.com/), [Arduino](https://www.arduino.cc/), [ESP32](https://www.espressif.com/en/products/socs/esp32), and [STM32](https://www.st.com) connect to this good old time.
 
 The Metaproject [**Zettelkasten**](C:\Learning\WebDev\Bootcamp\Zettelkasten\Tools\Zettelkasten.md) collects all the information dicovered for learning [**React**](https://react.dev/) and [**Angular**](https://angular.dev/). 
 
@@ -40,6 +44,14 @@ Zettekasten is a method and system for learning and collecting information: [Zet
 
 1. In case you need a rabbit: [Open Clip Art](https://openclipart.org/#google_vignette)
 2. Fetch some data in csv format:  [World Religon Data](https://correlatesofwar.org/data-sets/world-religion-data/)
+
+### Let's take a 
+
+Breaks are extreamly important when it comes to learning.
+
+Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perfectly understands the coding terminology and jargon.
+[JS Crash Course](https://youtu.be/FtaQSdrl7YA)
+
 
 ### HTTP
 
