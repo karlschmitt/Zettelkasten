@@ -2,15 +2,21 @@
 
 The Information you find here comprise: ["The story of my life".](https://youtu.be/W-TE_Ys4iwM?list=RDW-TE_Ys4iwM)
 
-This landing page is flooded with tons of links, so feel free to follow the white rabbit into this fascinating wonderland of coding.
+This landing page is flooded with tons of links, so feel free to follow the white rabbit into this fascinating wonderland of coding. 🐇
+
 ![open-clipart-white-rabbit.png](Images\open-clipart-white-rabbit.png)[
 In my life the computer experience started with Comodore 64 and Atari 1024:
 
 1. Comodore 64 
 ![Commodore64.png](Images\Commodore64.png)
-2. Atari 1024 
-![412-4126078_atari-st-hd-png-download.png](Images\412-4126078_atari-st-hd-png-download.png)
-However, Times have changed, however the [Raspberry PI](https://www.raspberrypi.com/), [Arduino](https://www.arduino.cc/), [ESP32](https://www.espressif.com/en/products/socs/esp32), and [STM32](https://www.st.com) connect to this good old time.
+2. Atari 1024 ![Atari-1024-ST.png](Images\Atari-1024-ST.png)
+
+However, Times have changed, nowadays the [Raspberry PI](https://www.raspberrypi.com/), [Arduino](https://www.arduino.cc/), [ESP32](https://www.espressif.com/en/products/socs/esp32), and [STM32](https://www.st.com) connect to this good old time.
+
+1. Raspbery ![Raspberry-Pi-5.png](Images\Raspberry-Pi-5.png)
+2. Arduino ![Arduino-Q.png](Images\Arduino-Q.png) 
+3. ESP32 ![ESP32-mit-Schraubklemmen.png](Images\ESP32-mit-Schraubklemmen.png)
+4. STM32 ![STM512-Nucleo-64.png](Images\STM512-Nucleo-64.png)
 
 The Metaproject [**Zettelkasten**](C:\Learning\WebDev\Bootcamp\Zettelkasten\Tools\Zettelkasten.md) collects all the information dicovered for learning [**React**](https://react.dev/) and [**Angular**](https://angular.dev/). 
 
