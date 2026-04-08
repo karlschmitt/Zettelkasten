@@ -1,4 +1,4 @@
-# 20260407212745 How can I sustiude curl with PowerShell
+# 20260407212745 How can I substiude curl with PowerShell
 
  You don’t really “substitute” `curl` in PowerShell—you use native PowerShell cmdlets that are more powerful and object-based.
 
