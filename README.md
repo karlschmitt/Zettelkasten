@@ -4,7 +4,13 @@ The Information you find here comprise: ["The story of my life".](https://youtu.
 
 This landing page is flooded with tons of links, so feel free to follow the white rabbit into this fascinating wonderland of coding.
 ![open-clipart-white-rabbit.png](Images\open-clipart-white-rabbit.png)[
-Times have changed, however the [Raspberry PI](https://www.raspberrypi.com/), [Arduino](https://www.arduino.cc/), [ESP32](https://www.espressif.com/en/products/socs/esp32), and [STM32](https://www.st.com) connect to this good old time.
+In my life the computer experience started with Comodore 64 and Atari 1024:
+
+1. Comodore 64 
+![Commodore64.png](Images\Commodore64.png)
+2. Atari 1024 
+![412-4126078_atari-st-hd-png-download.png](Images\412-4126078_atari-st-hd-png-download.png)
+However, Times have changed, however the [Raspberry PI](https://www.raspberrypi.com/), [Arduino](https://www.arduino.cc/), [ESP32](https://www.espressif.com/en/products/socs/esp32), and [STM32](https://www.st.com) connect to this good old time.
 
 The Metaproject [**Zettelkasten**](C:\Learning\WebDev\Bootcamp\Zettelkasten\Tools\Zettelkasten.md) collects all the information dicovered for learning [**React**](https://react.dev/) and [**Angular**](https://angular.dev/). 
 
@@ -52,6 +58,9 @@ Coffee breaks are extreamly important when it comes to learning.
 Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perfectly understands the coding terminology and jargon.
 [JS Crash Course](https://youtu.be/FtaQSdrl7YA)
 
+### PowerShell 
+
+
 
 ### HTTP and Node.js
 
@@ -74,13 +83,15 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 1. If you feel playful and for some prototyping you can use [Play Tailwind](https://play.tailwindcss.com/nI1CW63Nu2)
 2. 
 
-### JavaScript
+### JavaScript 🤠
+
 
 1. [The Modern JavaScript Tutorial](https://javascript.info/)
 
 
 
-### TypeScript
+### TypeScript 👷
+
 
 1. The Typescript landing page: [TypeScript](https://www.typescriptlang.org/)
 2. If you feel playful again, just [play TypeScript ](https://www.typescriptlang.org/play)
