@@ -16,7 +16,7 @@ However, Times have changed, nowadays the [Raspberry PI](https://www.raspberrypi
 1. Raspbery ![Raspberry-Pi-5.png](./Images/Raspberry-Pi-5.png)
 2. Arduino ![Arduino-Q.png](./Images/Arduino-Q.png) 
 3. ESP32 ![ESP32-mit-Schraubklemmen.png](./Images/ESP32-mit-Schraubklemmen.png)
-4. STM32 ![STM512-Nucleo-64.png](Images\STM512-Nucleo-64.png)
+4. STM32 ![STM512-Nucleo-64.png](./Images/STM512-Nucleo-64.png)
 
 
 ### 🪖 Project Overview
