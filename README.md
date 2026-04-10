@@ -4,12 +4,12 @@ The Information you find here comprise: ["The story of my life".](https://youtu.
 
 This landing page is flooded with tons of links, so feel free to follow the white rabbit into this fascinating wonderland of coding. 🐇
 
-![open-clipart-white-rabbit.png](Images/open-clipart-white-rabbit.png)[
+![open-clipart-white-rabbit.png](./Images/open-clipart-white-rabbit.png)[
 In my life the computer experience started with Comodore 64 and Atari 1024:
 
 1. Comodore 64 
-![Commodore64.png](Images\Commodore64.png)
-2. Atari 1024 ![Atari-1024-ST.png](Images\Atari-1024-ST.png)
+![Commodore64.png](./Images/Commodore64.png)
+2. Atari 1024 ![Atari-1024-ST.png](./Images/Atari-1024-ST.png)
 
 However, Times have changed, nowadays the [Raspberry PI](https://www.raspberrypi.com/), [Arduino](https://www.arduino.cc/), [ESP32](https://www.espressif.com/en/products/socs/esp32), and [STM32](https://www.st.com) connect to this good old time.
 
