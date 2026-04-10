@@ -4,7 +4,7 @@ The Information you find here comprise: ["The story of my life".](https://youtu.
 
 This landing page is flooded with tons of links, so feel free to follow the white rabbit into this fascinating wonderland of coding. 🐇
 
-![open-clipart-white-rabbit.png](Images\open-clipart-white-rabbit.png)[
+![open-clipart-white-rabbit.png](Images/open-clipart-white-rabbit.png)[
 In my life the computer experience started with Comodore 64 and Atari 1024:
 
 1. Comodore 64 
@@ -18,19 +18,22 @@ However, Times have changed, nowadays the [Raspberry PI](https://www.raspberrypi
 3. ESP32 ![ESP32-mit-Schraubklemmen.png](Images\ESP32-mit-Schraubklemmen.png)
 4. STM32 ![STM512-Nucleo-64.png](Images\STM512-Nucleo-64.png)
 
+
+### 🪖 Project Overview
+
 The Metaproject [**Zettelkasten**](C:\Learning\WebDev\Bootcamp\Zettelkasten\Tools\Zettelkasten.md) collects all the information dicovered for learning [**React**](https://react.dev/) and [**Angular**](https://angular.dev/). 
 
 The Project [**React Bootcamp**](./React/What.is-the-react-boot-camp.md) collects and documents the information for the [React](https://react.dev/) ecosystem.
 
 The Project [**Angular Bootcamp**](./Angular/AngularBootCamp.md) collects and documents the information for the [Angular](https://angular.dev/) framework. 
 
-## Teilprojekt React Bootcamp
+## 🏕️ Teilprojekt React Bootcamp
 
 To follow along with the boot camp it is enough to download the zip archive of the Zettelkasten and the React boot camp archive.
 However, to dive deeper, feel free to create your own Zettelkasten and React boot camp repository on GitHub.
 To interact with [GitHub](https://github.com/) or GitLab you need to exchange your SSH key.
 
-### SSH-Key Configuration using GitBash for GitHub
+### 🔑 SSH-Key Configuration using GitBash for GitHub
 
 To push code to [GitHub](https://github.com/) securely, you typically create an **SSH key** and add it to your [GitHub](https://github.com/) account. This avoids typing your username/password every time.
 
@@ -82,7 +85,7 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 
 ### PowerShell  ⚡
 
-1. How to learn PwerShell?
+1. How to learn PowerShell?
 
 
 ### HTTP 🌐 and Node.js 📡
@@ -97,16 +100,23 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 8. [Node.js](https://nodejs.org/en)
 9. [Learning Node.js](https://nodejs.org/learn/)
 
-### HTML
+### 🟧 HTML
 
-### CSS
+![HTML](./Icons/Open-Clip-Art-HTML.png)
 
-### Tailwind
+1. [MDN HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+2. [HTML Template](https://www.freecodecamp.org/news/html-starter-template-a-basic-html5-boilerplate-for-index-html/)
+3. [Ultimate Colors - Free Icons](https://www.streamlinehq.com/icons/ultimate-colos-free)
+4. [Material Icons](https://mui.com/material-ui/material-icons/)
+
+### 🟦 CSS
+
+### 🟦 Tailwind
 
 1. If you feel playful and for some prototyping you can use [Play Tailwind](https://play.tailwindcss.com/nI1CW63Nu2)
 2. 
 
-### JavaScript 🤠
+### 🟨 JavaScript 🤠
 
 
 1. [The Modern JavaScript Tutorial](https://javascript.info/)
