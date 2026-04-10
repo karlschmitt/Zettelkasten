@@ -4,7 +4,7 @@ The Information you find here comprise: ["The story of my life".](https://youtu.
 
 This landing page is flooded with tons of links, so feel free to follow the white rabbit into this fascinating wonderland of coding. 🐇
 
-![open-clipart-white-rabbit.png](./Images/open-clipart-white-rabbit.png)[
+![open-clipart-white-rabbit.png](./Images/open-clipart-white-rabbit.png)
 In my life the computer experience started with Comodore 64 and Atari 1024:
 
 1. Comodore 64 
