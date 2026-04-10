@@ -13,9 +13,9 @@ In my life the computer experience started with Comodore 64 and Atari 1024:
 
 However, Times have changed, nowadays the [Raspberry PI](https://www.raspberrypi.com/), [Arduino](https://www.arduino.cc/), [ESP32](https://www.espressif.com/en/products/socs/esp32), and [STM32](https://www.st.com) connect to this good old time.
 
-1. Raspbery ![Raspberry-Pi-5.png](Images\Raspberry-Pi-5.png)
-2. Arduino ![Arduino-Q.png](Images\Arduino-Q.png) 
-3. ESP32 ![ESP32-mit-Schraubklemmen.png](Images\ESP32-mit-Schraubklemmen.png)
+1. Raspbery ![Raspberry-Pi-5.png](./Images/Raspberry-Pi-5.png)
+2. Arduino ![Arduino-Q.png](./Images/Arduino-Q.png) 
+3. ESP32 ![ESP32-mit-Schraubklemmen.png](./Images/ESP32-mit-Schraubklemmen.png)
 4. STM32 ![STM512-Nucleo-64.png](Images\STM512-Nucleo-64.png)
 
 
