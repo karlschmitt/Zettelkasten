@@ -1,4 +1,4 @@
-# 20260405151408 Metaprojekt Zettelkasten
+# 20260405151408 Metaprojekt Zettelkasten 🗂️
 
 The Information you find here comprise: ["The story of my life".](https://youtu.be/W-TE_Ys4iwM?list=RDW-TE_Ys4iwM)
 
@@ -36,39 +36,56 @@ To push code to [GitHub](https://github.com/) securely, you typically create an 
 
 Here’s the clean, modern way to do it: [SSH-Key generation and configuration](./Tools/SSH-Key-configuration)
 
-### Zettelkasten
+### Zettelkasten 📝
 
 Zettekasten is a method and system for learning and collecting information: [Zettelkasten](./Tools/Zettelkasten.md)
 
-### Tools
+### Tools 🛠️
 
 1. [Zettlr](https://www.zettlr.com/)
-2. [Git](https://git-scm.com/)
-3. [GitBash](https://git-scm.com/install/windows)
-4. [PowerShell](https://github.com/powershell/powershell), [Releases](https://github.com/powershell/powershell/releases). PowerShell is maintained on [GitHub](https://github.com/).
-5. [Neovim](https://neovim.io/)
-6. [LvChad](https://nvchad.com/)
-7. [Visual Studio Code](https://code.visualstudio.com/)
-8. [Eclipse](https://eclipseide.org/)
+2. [Gimp](https://www.gimp.org/)
+3. [ImageMagick](https://imagemagick.org/#gsc.tab=0)
+4. [Git](https://git-scm.com/)
+5. [GitBash](https://git-scm.com/install/windows)
+6. [PowerShell](https://github.com/powershell/powershell), [Releases](https://github.com/powershell/powershell/releases). PowerShell is maintained on [GitHub](https://github.com/).
+7. [Neovim](https://neovim.io/)
+8. [LvChad](https://nvchad.com/)
+9. [Visual Studio Code](https://code.visualstudio.com/)
+10. [Eclipse](https://eclipseide.org/)
    
-
-### Useful Links
+### Useful Links 🔗
 
 1. In case you need a rabbit: [Open Clip Art](https://openclipart.org/#google_vignette)
 2. Fetch some data in csv format:  [World Religon Data](https://correlatesofwar.org/data-sets/world-religion-data/)
 
-### Let's take a coffee break
+### Let's take a coffee break ☕
 
 Coffee breaks are extreamly important when it comes to learning.
 
 Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perfectly understands the coding terminology and jargon.
 [JS Crash Course](https://youtu.be/FtaQSdrl7YA)
 
-### PowerShell 
+### Welcome to the Workshop Workout ⛹
+
+1. Aufstehen und Hände ausschütteln.
+2. Schulter kreisen lassen.
+3. Arme kreisen lassen.
+4. Arme pendeln lassen.
+5. Arme pendeln lassen und Oberkörper dreht sich nach den Seiten
+6. Walk in Place
+7. High knees
+8. Calf Raises, ein Bein hinter das ander geschlungen und mit dem anderen auf die Zehnspitzen.
+9. Dioganal leg raises
+10. Kniebeugen.
+11. Back Lunges von der Tischkante aus.
+12. Arme strecken, eine Hand streckt sich, die ander greift ums Handgelenk
+
+### PowerShell  ⚡
+
+1. How to learn PwerShell?
 
 
-
-### HTTP and Node.js
+### HTTP 🌐 and Node.js 📡
 
 1. [Star Wars API](https://swapi.dev/)
 2. [Curl](https://youtu.be/IEV1yXgbJbY) on [YouTube](https://www.youtube.com/)
