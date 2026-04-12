@@ -71,7 +71,7 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 
 ### Welcome to the Workshop Workout ⛹
 
-1. Aufstehen und Hände ausschütteln.
+1. Aufstehen und [Hände](https://youtu.be/2G6pHQJEbWQ) ausschütteln.
 2. Schulter kreisen lassen.
 3. Arme kreisen lassen.
 4. Arme pendeln lassen.
@@ -79,14 +79,16 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 6. Walk in Place
 7. High knees
 8. Calf Raises, ein Bein hinter das ander geschlungen und mit dem anderen auf die Zehnspitzen.
-9. Dioganal leg raises
-10. Kniebeugen.
-11. Back Lunges von der Tischkante aus.
-12. Arme strecken, eine Hand streckt sich, die ander greift ums Handgelenk
+9. Standing diagonal leg raises
+10. [Squat](https://www.youtube.com/shorts/MoyeW6_eYok?feature=share) Kniebeugen.
+11. [Reverse Lunges](https://www.youtube.com/watch?v=xrPteyQLGAo) von der Tischkante aus.
+12. [Streaching](https://www.youtube.com/shorts/rlMwCYa02d4?feature=share) Arme strecken, eine Hand streckt sich, die ander greift ums Handgelenk
 
 ### PowerShell  ⚡
 
-1. How to learn PowerShell?
+1. [How to learn PowerShell? Part 1](./PowerShell/HowToLearnPowerShell.md)
+2. [How to learn PowerShell? Part 2](./PowerShell/How_to_learn_power_shell.md)
+3. How to query the Star Wars API using the PowerShell?
 
 
 ### HTTP 🌐 and Node.js 📡
@@ -100,6 +102,7 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 7. [Downloading Node.js](https://nodejs.org/en/download) Follow the white rabbit it's a zip archive 🐇
 8. [Node.js](https://nodejs.org/en)
 9. [Learning Node.js](https://nodejs.org/learn/)
+10. [Let's get our hand dirty](https://www.freecodecamp.org/news/get-started-with-nodejs/)
 
 ### 🟧 HTML
 
@@ -120,7 +123,12 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 ### 🟨 JavaScript 🤠
 
 
-1. [The Modern JavaScript Tutorial](https://javascript.info/)
+1. [Deno](https://deno.com/)
+2. [Deno Docs](https://docs.deno.com/runtime/)
+3. [Oak](https://oakserver.org/)
+4. [The Modern JavaScript Tutorial](https://javascript.info/)
+5. Regular Expressions
+
 
 
 
