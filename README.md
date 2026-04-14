@@ -1,4 +1,18 @@
-# 20260405151408 Metaprojekt Zettelkasten 🗂️
+---
+id: 20260405151408
+title: Metaproject Zettelkasten
+subtitle: The story of my life
+abstract: This is the landing page of the meta project
+summary: [ React bootcamp,
+           Angular bootcamp,
+           Sprig Boot bootcamp,
+           Persitency bootcamp, ]
+date: 2026-04-14
+keywords: [bootcamp, React, Zettelkasten,]
+author: [Karl Schmitt]
+---
+
+#  Metaprojekt Zettelkasten 🗂️ 
 
 The Information you find here comprise: ["The story of my life".](https://youtu.be/W-TE_Ys4iwM?list=RDW-TE_Ys4iwM)
 
@@ -36,7 +50,7 @@ To interact with [GitHub](https://github.com/) or GitLab you need to exchange yo
 
 ### 🔑 SSH-Key Configuration using GitBash for GitHub
 
-To push code to [GitHub](https://github.com/) securely, you typically create an **SSH key** and add it to your [GitHub](https://github.com/) account. This avoids typing your username/password every time.
+To push code to [GitHub](https://github.com/) **securely**, you typically create an **SSH key** and add it to your [GitHub](https://github.com/) account. This avoids typing your username/password every time.
 
 Here’s the clean, modern way to do it: [SSH-Key generation and configuration](./Tools/SSH-Key-configuration)
 
@@ -132,8 +146,6 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 6. Regular Expressions
 
 
-
-
 ### TypeScript 👷
 
 
@@ -156,9 +168,9 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 
 ## Teilprojekt Angular Bootcamp
 
-## Teilproject Spring Boot Backend
+## Teilproject Spring Boot Bootcamp
 
-## Teilproject Persistency
+## Teilproject Persistency Bootcamp
 
 ### PostgreSQL
 
