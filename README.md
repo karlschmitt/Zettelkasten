@@ -6,7 +6,7 @@ abstract: This is the landing page of the meta project
 summary: [ React bootcamp,
            Angular bootcamp,
            Sprig Boot bootcamp,
-           Persitency bootcamp, ]
+           Persistency bootcamp, ]
 date: 2026-04-14
 keywords: [bootcamp, React, Zettelkasten,]
 author: [Karl Schmitt]
