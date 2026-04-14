@@ -1,0 +1,52 @@
+[
+	{
+		"id": "http://zotero.org/users/local/wQtmxvFA/items/7MBIVNN3",
+		"type": "document",
+		"title": "Svekis et al. - 2021 - JavaScript from beginner to professional learn JavaScript quickly by building fun, interactive, and",
+		"URL": "https://www.gurukultti.org/admin/notice/javascript.pdf",
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					4,
+					13
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/wQtmxvFA/items/TVHCZUJ3",
+		"type": "book",
+		"abstract": "This JavaScript programming book presents concepts in a straightforward and actionable way, with a short theoretical background, an example in the form of a practical project that mimics a real-world application, and relevant tips and best practices. It enables you to see meaningful results on the screen as you interact with code",
+		"collection-title": "Expert Insight",
+		"ISBN": "978-1-80056-252-3",
+		"language": "en",
+		"number-of-pages": "1",
+		"publisher": "Packt Publishing",
+		"publisher-place": "Place of publication not identified",
+		"source": "K10plus ISBN",
+		"title": "JavaScript from beginner to professional: learn JavaScript quickly by building fun, interactive, and dynamic web apps, games, and pages",
+		"title-short": "JavaScript from beginner to professional",
+		"author": [
+			{
+				"family": "Svekis",
+				"given": "Laurence Lars"
+			},
+			{
+				"family": "Van Putten",
+				"given": "Maaike"
+			},
+			{
+				"family": "Percival",
+				"given": "Rob"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2021"
+				]
+			]
+		}
+	}
+]

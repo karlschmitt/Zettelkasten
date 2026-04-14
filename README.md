@@ -86,9 +86,10 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 
 ### PowerShell  ⚡
 
-1. [How to learn PowerShell? Part 1](./PowerShell/HowToLearnPowerShell.md)
-2. [How to learn PowerShell? Part 2](./PowerShell/How_to_learn_power_shell.md)
-3. How to query the Star Wars API using the PowerShell?
+1. [Let's jump right into it](./PowerShell/Learning_the_PowerShell.md)
+2. [How to learn PowerShell? Part 1](./PowerShell/HowToLearnPowerShell.md)
+3. [How to learn PowerShell? Part 2](./PowerShell/How_to_learn_power_shell.md)
+4. [How to query the Star Wars API using the PowerShell?](./PowerShell/PowerShell_query_the_star_wars_api.md)
 
 
 ### HTTP 🌐 and Node.js 📡
@@ -97,12 +98,12 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 2. [Curl](https://youtu.be/IEV1yXgbJbY) on [YouTube](https://www.youtube.com/)
 3. [Curl for Windows](https://curl.se/windows/) Follow the white rabbit it's a zip archive 🐇
 4. [Curl Tutorial](https://curl.se/docs/tutorial.html)
-5. [Everiting Curl](https://everything.curl.dev/)
+5. [Everyting Curl](https://everything.curl.dev/)
 6. [swapi](https://swapi.info/)
 7. [Downloading Node.js](https://nodejs.org/en/download) Follow the white rabbit it's a zip archive 🐇
 8. [Node.js](https://nodejs.org/en)
 9. [Learning Node.js](https://nodejs.org/learn/)
-10. [Let's get our hand dirty](https://www.freecodecamp.org/news/get-started-with-nodejs/)
+10. [Let's get our hands dirty](https://www.freecodecamp.org/news/get-started-with-nodejs/)
 
 ### 🟧 HTML
 
@@ -123,11 +124,12 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 ### 🟨 JavaScript 🤠
 
 
-1. [Deno](https://deno.com/)
-2. [Deno Docs](https://docs.deno.com/runtime/)
-3. [Oak](https://oakserver.org/)
-4. [The Modern JavaScript Tutorial](https://javascript.info/)
-5. Regular Expressions
+1. [Let's jump in.](./JavaScript/Java_Script_Esentials.md)
+2. [Deno](https://deno.com/)
+3. [Deno Docs](https://docs.deno.com/runtime/)
+4. [Oak](https://oakserver.org/)
+5. [The Modern JavaScript Tutorial](https://javascript.info/)
+6. Regular Expressions
 
 
 
