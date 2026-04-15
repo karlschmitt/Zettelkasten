@@ -2,7 +2,7 @@
 
 1. The learnings here are inpired by this [book](https://www.gurukultti.org/admin/notice/javascript.pdf)
 2. [JavaScript](https://en.wikipedia.org/wiki/JavaScript) needed for [React](https://react.dev/) [YouTube video](https://youtu.be/bCkfU_wHPcY) 
-3. [How to learn JavaScript using Deno?](./JavaScript/How_to_learn_JavaScript_using_Deno.md)
+3. [How to learn JavaScript using Deno?](./How_to_learn_JavaScript_using_Deno.md)
 4. [Deno](./JavaScript/What_is_deno.md)
 5. [Exploring JavaScript variables using Deno](./Explorin_JavaScript_Variables.md)
 6. [JavaScript Variales](./Java_Script_Variables.md)
