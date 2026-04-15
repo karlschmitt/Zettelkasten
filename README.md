@@ -18,7 +18,7 @@ The Information you find here comprise: ["The story of my life".](https://youtu.
 
 This landing page is flooded with tons of links, so feel free to follow the white rabbit into this fascinating wonderland of coding. 🐇
 
-![Zettelkasten.png](./images/Zettelkasten.png)
+![Zettelkasten.png](./Images/Zettelkasten.png)
 
 In my life the computer experience started with Comodore 64 and Atari 1024:
 
