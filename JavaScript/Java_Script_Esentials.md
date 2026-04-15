@@ -15,7 +15,7 @@
 13. [What is an object?](https://youtu.be/Pq1ScRoKyPE)
 14. [Arrays or Objects thats here the question](https://youtu.be/yHLGUxt0EKc)
 15. [Array of Ojects](./JavaScript_Array_of_Objects.md)
-16. [Exploring primitive JavaScript data types using Deno](./JavaScript/primitive_data_types.md)
+16. [Exploring primitive JavaScript data types using Deno](./primitive_data_types.md)
 17. [Playing around with JavaScript primitive data types](./playing_with_prrimitive_data_types.md)
 18. Analyzing JavaScript Data Types
 19. Modifying JavaScript Data Types
