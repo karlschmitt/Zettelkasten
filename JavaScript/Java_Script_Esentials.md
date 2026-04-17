@@ -1,4 +1,18 @@
-# 20260412212207 JavaScript essentials
+---
+id: 20260412212207
+title: JavaScript Essentials
+subtitle: Overview of the JavaScript learning path
+abstract: This is the start page for learning JavaScript using Deno
+date: 2026-04-15
+summary: [ Learning JavaScript using Deno,
+           Learning JavaScript variables,
+           Learning JavaScript arrays,
+           Learning JavaScript objects, ]
+keywords: [ JavaScript, Deno, Variables, Arrays, Objects ]
+author: Karl Schmitt
+---
+
+#  JavaScript Essentials
 
 1. The learnings here are inpired by this [book](https://www.gurukultti.org/admin/notice/javascript.pdf)
 2. [JavaScript](https://en.wikipedia.org/wiki/JavaScript) needed for [React](https://react.dev/) [YouTube video](https://youtu.be/bCkfU_wHPcY) 
@@ -14,15 +28,17 @@
 12. [Short Introduction into JavaScript objects](./JavaScript_short_array_intoduction.md)
 13. [What is an object?](https://youtu.be/Pq1ScRoKyPE)
 14. [Arrays or Objects thats here the question](https://youtu.be/yHLGUxt0EKc)
-15. [Array of Ojects](./JavaScript_Array_of_Objects.md)
-16. [Exploring primitive JavaScript data types using Deno](./primitive_data_types.md)
-17. [Playing around with JavaScript primitive data types](./playing_with_prrimitive_data_types.md)
-18. Analyzing JavaScript Data Types
-19. Modifying JavaScript Data Types
-20. Operators
-21. [A 7-day JavaScript bootcam with Deno](./7-day_JavaScript_Bootcamp_with_Deno.md)
-22. [JavaScript Bootcamp Week 2](./JavaScript_Bootcamp_Week2.md)
-23. [JavaScript Bootcamp Week 3](./JavaSript_Bootcamp_week3.md)
+15. [Array of Objects](./JavaScript_Array_of_Objects.md)
+16. [JavaScript functions](./JavaScript_Functions.md)
+17. [JavaScript functions explained](./JavaScript_functions_explained.md)
+18. [Exploring primitive JavaScript data types using Deno](./primitive_data_types.md)
+19. [Playing around with JavaScript primitive data types](./playing_with_prrimitive_data_types.md)
+20. [Analyzing JavaScript Data Types](./Analyzing_JavaScript_Data_Types.md)
+21. [Modifying JavaScript Data Types](./Modifing_JavaScript_Data_Types.md)
+22. Operators
+23. [A 7-day JavaScript bootcam with Deno](./7-day_JavaScript_Bootcamp_with_Deno.md)
+24. [JavaScript Bootcamp Week 2](./JavaScript_Bootcamp_Week2.md)
+25. [JavaScript Bootcamp Week 3](./JavaSript_Bootcamp_week3.md)
     
 
 [@http://zotero.org/users/local/wQtmxvFA/items/7MBIVNN3]

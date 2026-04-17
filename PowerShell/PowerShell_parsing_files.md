@@ -1,4 +1,10 @@
-# 20260414132020 Parsing files
+---
+id: 20260414132020
+title: Parsing files
+date: 2016-04-16
+---
+
+#  Parsing files
 
 
 In PowerShell, the equivalent to the Linux `grep` command is **`Select-String`** (often aliased as **`sls`**).

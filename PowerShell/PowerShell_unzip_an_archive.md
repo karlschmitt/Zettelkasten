@@ -1,4 +1,10 @@
-# 20260414160032 Unzip an archive
+---
+id: 20260414160032
+title: Unzip an archive
+date: 2016-04-16
+---
+
+#  Unzip an archive
 
 The standard way to unzip files in PowerShell is using the **`Expand-Archive`** cmdlet.
 

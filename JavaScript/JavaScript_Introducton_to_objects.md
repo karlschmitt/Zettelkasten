@@ -1,4 +1,10 @@
-# 20260414162741 Introduction to objects
+---
+id: 20260414162741
+title: Introduction to objects
+date: 2026-04-16
+keywords: [ JavaScript, Object]
+---
+#  Introduction to objects
 
 Absolutely — let’s do a **short, 
 practical introduction to JavaScript objects using Deno** 🚀

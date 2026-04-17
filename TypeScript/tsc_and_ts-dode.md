@@ -1,9 +1,17 @@
-# 20260406191146 How to install tsc and ts-node globaly
+---
+id: 20260406191146
+title: How to install tsc and ts-node globaly
+date: 2026-04-06
+keywords: [ TypeScript, tsc, ts-node]
+author: Karl Schmitt
+---
+
+#  How to install tsc and ts-node globaly
 
 To install `tsc` (the TypeScript compiler) and `ts-node` globally, you use the Node Package Manager (npm), which comes bundled with Node.js. \[1, 2]
 
 
-## 20260406191656 Global Installation Commands tsc and ts-node
+## Global Installation Commands tsc and ts-node
 
 Open your terminal or command prompt and run the following command:
 

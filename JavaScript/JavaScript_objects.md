@@ -1,4 +1,10 @@
-# 20260414161339 JavaScript objects
+---
+id: 20260414161339
+title: JavaScript objects
+date: 2026-04-16
+keywords: [ JavaScript, Object]
+---
+#  JavaScript objects
 
 In JavaScript, an **object** is a standalone entity that holds data in the form of **properties** and **methods**. 
 

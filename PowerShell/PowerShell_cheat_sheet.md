@@ -1,4 +1,10 @@
-# 20260414124401 PowerShell vs. Linux cheat sheet
+---
+id: 20260414124401
+title: PowerShell vs. Linux cheat sheet
+date: 2026-04-16
+---
+
+#  PowerShell vs. Linux cheat sheet
 
 Awesome — this will be **super useful for you** since you’re clearly thinking in both worlds already 💪
 Here’s a **PowerShell ⇄ Linux (bash) cheat sheet** you can actually use daily.

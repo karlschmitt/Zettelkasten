@@ -1,4 +1,11 @@
-# 20260408183941 Convert jpg to png using image magic
+---
+id: 20260408183941
+title: Convert jpg to png using image magic
+date: 2026-04-16
+keywords: [ PowerShell, ImageMagick ]
+---
+
+#  Convert jpg to png using image magick
 
 
 Yes 👍 — **ImageMagick** actually has a built-in command called **`display`**.

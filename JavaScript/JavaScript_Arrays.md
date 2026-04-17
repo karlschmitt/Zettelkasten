@@ -1,4 +1,10 @@
-# 20260414000507 JavaScript Arrays
+---
+id: 20260414000507
+title: JavaScript Arrays
+date: 2026-04-16
+keywords: [ JavaScript, Array]
+---
+#  JavaScript Arrays
 
 In JavaScript, an **Array** is a global object used to store a collection of multiple items under a single variable name. 
 

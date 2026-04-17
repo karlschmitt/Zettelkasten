@@ -1,4 +1,11 @@
-# 20260413230534 A 7-day JavaScript Bootcamp using Deno
+---
+id: 20260413230534 
+title: A 7-day JavaScript Bootcamp using Deno
+date: 2026-04-16
+keywords [ JavaScript, Bootcamp, Deno ]
+---
+
+# A 7-day JavaScript Bootcamp using Deno
 
 Perfect—this fits _exactly_ with how you’ve been learning (Deno + Zettelkasten + small experiments).\
 Here’s a **focused 7-day JavaScript bootcamp using Deno**—designed to be practical, short, and repeatable.

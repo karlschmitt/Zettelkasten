@@ -1,4 +1,10 @@
-# 20260414084737 How to query the Star Wars API
+---
+id: 20260414084737
+title: How to query the Star Wars API
+date: 2026-04-26
+---
+
+# How to query the Star Wars API
 
 You can query the **Star Wars API (SWAPI)** very easily in PowerShell using built-in commands like `Invoke-RestMethod`. Here’s a clear, step-by-step guide 👇
 

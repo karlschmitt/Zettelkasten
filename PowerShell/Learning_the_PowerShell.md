@@ -1,4 +1,11 @@
-# 20260414084321 Learning the PowerShell
+---
+id: 20260414084321
+title: Learning the PowerShell
+subtitle: Hub site for learning the power shell
+date: 2026-04-16
+---
+
+#  Learning the PowerShell
 
 1. [PowerShell Wikipedia](https://en.wikipedia.org/wiki/PowerShell)
 2. [Getting started with PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started?view=powershell-7.6)

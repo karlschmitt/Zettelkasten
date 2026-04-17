@@ -1,4 +1,10 @@
-# 20260414164533 Array of Objects
+---
+id: 20260414164533
+title: Array of Objects
+date: 2026-04-16
+keywords: [ JavaScript, Array, Objects]
+---
+#  Array of Objects
 
 Perfect — this is the **next big step** in JavaScript 🚀
 Arrays of objects are _everywhere_ (APIs, databases, real apps).

@@ -1,4 +1,11 @@
-# 20260408190443 How to learn PowerShell?
+---
+id: 20260408190443
+title: How to learn PowerShell? 
+date: 2026-04-16
+keywords: [ PowerShell ]
+---
+
+#  How to learn PowerShell?
 
 **Defining PowerShell's Scope**
 

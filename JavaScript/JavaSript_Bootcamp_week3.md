@@ -1,4 +1,11 @@
-# 20260413231824 JavaScript Bootcamp Week 3
+---
+id: 20260413231824
+title: JavaScript Bootcamp Week 3
+date: 2026-04-16
+keywords: [ JavaScript, Bootcamp, Deno ]
+---
+
+#  JavaScript Bootcamp Week 3
 
 Nice—Week 3 is where things start to feel _real_. You’ll fetch live data, handle async code, and build a small CLI tool using Deno.
 

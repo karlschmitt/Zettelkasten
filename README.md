@@ -20,6 +20,9 @@ This landing page is flooded with tons of links, so feel free to follow the whit
 
 ![Zettelkasten.png](./Images/Zettelkasten.png)
 
+In the picture above you can see the orinal Zettelkasten invented by Niklas Luhmann.
+
+
 In my life the computer experience started with Comodore 64 and Atari 1024:
 
 1. Comodore 64 

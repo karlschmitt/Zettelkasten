@@ -1,7 +1,11 @@
+---
+id: 20260408191823
+title: How can I substiude curl with PowerShell?
+date: 2026-04-16
+keywords: [ PowerShell, curl, iwr, irm]
+---
 
-
-
-# 20260408191823 How can I substiude curl with PowerShell?
+#  How can I substiude curl with PowerShell?
 
 In PowerShell, there are two primary commands (cmdlets) used to replace `curl`:
 

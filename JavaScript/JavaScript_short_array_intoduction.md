@@ -1,4 +1,11 @@
-# 20260413234445 A short array introduction for JavaScript
+---
+id: 20260413234445
+title: A short array introduction for JavaScript
+date: 2016-04-16
+keywords: [ JavaScript, Array ]
+---
+
+#  A short array introduction for JavaScript
 
 Absolutely—here’s a **short, practical introduction to JavaScript arrays** (perfect for your Deno learning flow 👇).
 

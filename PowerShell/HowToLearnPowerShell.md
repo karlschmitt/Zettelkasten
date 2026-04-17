@@ -1,4 +1,11 @@
-# 20260407212317 How to learn PowerShell?
+---
+id: 20260407212317 
+title: How to learn PowerShell?
+date: 2016-04-16
+keywords: [ PowerShell ]
+---
+
+# How to learn PowerShell?
 
 Learning PowerShell is a great move—especially with your background as a Java/Spring developer. Think of it as combining scripting + system automation + a bit of object-oriented thinking.
 

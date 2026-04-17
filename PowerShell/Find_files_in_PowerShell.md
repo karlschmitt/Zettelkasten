@@ -1,4 +1,11 @@
-# 20260414123754 Finding files
+---
+id: 20260414123754
+title: Finding files
+date: 2026-04-16
+---
+
+
+#  Finding files
 
 Great question — and a perfect step forward 👍
 PowerShell can absolutely replace the Linux `find` command, but the mindset is a bit different: **you work with objects instead of plain text**.

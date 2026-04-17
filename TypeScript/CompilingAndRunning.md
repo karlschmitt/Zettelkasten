@@ -1,4 +1,12 @@
-# 20260406190414 Compiling and running TypeScript
+---
+id: 20260406190414
+title: Compiling and running TypeScript
+date: 2026-04-06
+keywords: [ TypeScript, Compiling]
+author: Karl Schmitt
+---
+
+# Compiling and running TypeScript
 
 To compile and run TypeScript in a single command, you have several options 
 depending on whether you want to use a dedicated runner or native Node.js support. [1, 2, 3] 

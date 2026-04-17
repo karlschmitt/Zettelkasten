@@ -1,4 +1,11 @@
-# 20260413231257 JavaScript Bootcamp Week 2
+---
+id: 20260413231257 
+title: JavaScript Bootcamp Week 2
+date: 2026-04-16
+keywords [ JavaScript, Bootcamp ]
+---
+
+# JavaScript Bootcamp Week 2
 
 Great—Week 2 is where JavaScript starts to feel _powerful_. You’ll move from simple values to **working with collections and real data** using Deno.
 

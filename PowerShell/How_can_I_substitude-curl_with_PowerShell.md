@@ -1,4 +1,11 @@
-# 20260407212745 How can I substiude curl with PowerShell
+---
+id: 20260407212745
+title: How can I substiude curl with PowerShell?
+date: 2026-04-16
+keywords: [ PowerShell, curl ]
+---
+
+#  How can I substiude curl with PowerShell
 
  You don’t really “substitute” `curl` in PowerShell—you use native PowerShell cmdlets that are more powerful and object-based.
 

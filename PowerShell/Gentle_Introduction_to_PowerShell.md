@@ -1,4 +1,10 @@
-# 20260414123400 Gentle Introduction to PowerShell
+---
+id: 20260414123400
+title: Gentle Introduction to PowerShell
+date: 2026-04-16
+---
+
+#  Gentle Introduction to PowerShell
 
 Absolutely — let’s build you a **gentle, beginner-friendly introduction to PowerShell** 🌱
 I’ll keep it practical and aligned with how you like to learn (step-by-step, hands-on).
