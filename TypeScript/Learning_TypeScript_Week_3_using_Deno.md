@@ -1,6 +1,6 @@
 ---
 id: 20260416220757
-title: Learning TypeScript Week Thrre using Deno
+title: Learning TypeScript Week Three using Deno
 date: 2016-04-16
 keywords: [ TypeScript, Deno ]
 author: Karl Schmitt
