@@ -3,7 +3,9 @@ id: 20260405151408
 title: Metaproject Zettelkasten
 subtitle: The story of my life
 abstract: This is the landing page of the meta project
-summary: [ React bootcamp,
+summary: [ JavaScript bootcamp,
+           Node.js bootcamp,
+           React bootcamp,
            Angular bootcamp,
            Sprig Boot bootcamp,
            Persistency bootcamp, ]
@@ -119,8 +121,9 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 6. [swapi](https://swapi.info/)
 7. [Downloading Node.js](https://nodejs.org/en/download) Follow the white rabbit it's a zip archive 🐇
 8. [Node.js](https://nodejs.org/en)
-9. [Learning Node.js](https://nodejs.org/learn/)
-10. [Let's get our hands dirty](https://www.freecodecamp.org/news/get-started-with-nodejs/)
+9. [Let's jump right into it](./Node.js/Learning_Node.js.md)
+10. [Learning Node.js](https://nodejs.org/learn/)
+11. [Let's get our hands dirty](https://www.freecodecamp.org/news/get-started-with-nodejs/)
 
 ### 🟧 HTML
 
@@ -148,9 +151,11 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 5. [The Modern JavaScript Tutorial](https://javascript.info/)
 6. Regular Expressions
 
+### Vanilla JavaScript
+
+1. [Let's jump right into it](./Vanilla-JavaScript/Learning-Vanilla-JavaScript.md)
 
 ### TypeScript 👷
-
 
 1. The Typescript landing page: [TypeScript](https://www.typescriptlang.org/)
 2. If you feel playful again, just [play TypeScript ](https://www.typescriptlang.org/play)
@@ -167,6 +172,12 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 1. The comunity [material.co](https://materialui.co)
 2. Browse icons: [brows icons](https://fonts.google.com/icons)
 3. Download: [Downlod a zip archive](https://github.com/google/material-design-icons/releases)
+
+### Next.js
+
+1. [Next.js React Framework Course](https://youtu.be/KjY94sAKLlw)
+2. 
+
 
 
 ## Teilprojekt Angular Bootcamp

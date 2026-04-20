@@ -2,7 +2,8 @@
 id: 20260419135020
 title: How to learn Node.js?
 author: Karl Schmitt
-keywords: [ Node.js, node, npm, JavaScript, TypeScript]
+date: 2026-04-19
+keywords: [ Node.js, node, npm, roadmap, JavaScript, TypeScript]
 ---
 
 # How to learn Node.js?
