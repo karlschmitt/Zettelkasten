@@ -20,21 +20,25 @@ The Information you find here comprise: ["The story of my life".](https://youtu.
 
 This landing page is flooded with tons of links, so feel free to follow the white rabbit into this fascinating wonderland of coding. 🐇
 
+### The Zettelkasten Method.
+
 ![Zettelkasten.png](./Images/Zettelkasten.png)
 
 In the picture above you can see the original [Zettelkasten](https://zettelkasten.de/overview/) invented by [Niklas Luhmann](https://de.wikipedia.org/wiki/Niklas_Luhmann).
 
-The Zettelkasten-Method is a notaking system of five types of notes:
+The Zettelkasten-Method is a notetaking system of five types of notes:
 
-1. Fleeting notes
-2. Literature notes
-3. Permanent notes
-4. Index notes
-5. Keyword notes
+1. Fleeting notes: "Collect Information"
+2. Literature notes: "Where does the information come from?"
+3. Permanent notes: "Keep Valuable Information"
+4. Index notes: "Create a Zettel in your Zettelkasten with a Number."
+5. Keyword notes: "How to find the information again?"
 
 The Note-taking Process:
 
 ![Zettelkaten-Process](./Images/Zettelkasten-Process.png)
+
+### My personal history
 
 In my life the computer experience started with Comodore 64 and Atari 1024:
 
