@@ -8,8 +8,7 @@ keywords: [ Vanilla, JavaScript]
 
 # Learning Vanilla JavaScript
 
-
-1. [Startig Vanilla JavaScript](./Starting-Vanilla-JavaScript.md)
+1. [Starting Vanilla JavaScript](./Starting-Vanilla-JavaScript.md)
 2. [Week One Vanilla JavaScript Bootcamp](./Week_One_Vanilla_JavaScript_Bootcamp.md)
 3. [Week Two Vanilla JavaScript Bootcamp](./Week_Two_Vanilla_JavaScript_Bootcamp.md)
 4. [Week Three Vanilla JavaScript Bootcamp](./Week_Three_Vanilla_JavaScript_Bootcamp.md)

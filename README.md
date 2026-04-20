@@ -22,8 +22,19 @@ This landing page is flooded with tons of links, so feel free to follow the whit
 
 ![Zettelkasten.png](./Images/Zettelkasten.png)
 
-In the picture above you can see the orinal Zettelkasten invented by Niklas Luhmann.
+In the picture above you can see the original [Zettelkasten](https://zettelkasten.de/overview/) invented by [Niklas Luhmann](https://de.wikipedia.org/wiki/Niklas_Luhmann).
 
+The Zettelkasten-Method is a notaking system of five types of notes:
+
+1. Fleeting notes
+2. Literature notes
+3. Permanent notes
+4. Index notes
+5. Keyword notes
+
+The Note-taking Process:
+
+![Zettelkaten-Process](./Images/Zettelkasten-Process.png)
 
 In my life the computer experience started with Comodore 64 and Atari 1024:
 
