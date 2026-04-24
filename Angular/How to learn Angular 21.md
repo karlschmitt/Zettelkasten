@@ -1,0 +1,273 @@
+---
+id: 20260423115040
+title: How to learn Angular 21?
+author: Karl Schmitt
+date: 2026-04-23
+---
+
+# How to learn Angular 21?
+
+Learning Angular effectively (including the upcoming Angular versions like Angular 21) is less about memorizing APIs and more about building structured, real-world apps step by step. Since you already worked through JavaScript, Node, and TypeScript bootcamps, you’re in a strong position—Angular is basically where all of that comes together.
+
+Here’s a **clear, practical roadmap** tailored to how you’ve been learning 👇
+
+***
+
+# 🧭 Phase 1: Angular Fundamentals (Week 1–2)
+
+## What Angular really is
+
+Angular is:
+
+* A **framework** (not just a library like React)
+
+* Built with **TypeScript-first design**
+
+* Based on:
+
+  * Components
+
+  * Dependency Injection
+
+  * RxJS (reactive programming)
+
+## Core concepts to learn
+
+* Angular CLI (`ng new`, `ng serve`)
+
+* Project structure
+
+* Components (`@Component`)
+
+* Templates (HTML + bindings)
+
+* Data binding:
+
+  * `{{ }}`
+
+  * `[property]`
+
+  * `(event)`
+
+  * `[(ngModel)]`
+
+## Hands-on project
+
+👉 Build a **Counter App**
+
+* Increment / decrement buttons
+
+* Display value
+
+* Reset button
+
+***
+
+# 🧱 Phase 2: Components & Architecture (Week 3–4)
+
+## Learn how Angular apps are structured
+
+* Component tree
+
+* `@Input()` / `@Output()`
+
+* Smart vs dumb components
+
+## Routing (very important)
+
+* Angular Router
+
+* Route parameters
+
+* Navigation
+
+## Hands-on project
+
+👉 Build a **Multi-page App**
+
+* Home page
+
+* About page
+
+* Contact page
+
+* Navigation bar
+
+***
+
+# 🔄 Phase 3: Services & Dependency Injection (Week 5–6)
+
+This is where Angular becomes _real Angular_.
+
+## Learn:
+
+* Services (`ng generate service`)
+
+* Dependency Injection
+
+* Singleton services
+
+## HTTP & APIs
+
+* `HttpClient`
+
+* Fetch data from APIs
+
+* Observables (basic RxJS)
+
+## Hands-on project
+
+👉 Build a **User List App**
+
+* Fetch users from API (e.g. JSONPlaceholder)
+
+* Display list
+
+* Show user details
+
+***
+
+# ⚡ Phase 4: Reactive Programming (Week 7)
+
+Angular heavily uses RxJS.
+
+## Learn:
+
+* Observables
+
+* `subscribe()`
+
+* `map`, `filter`
+
+* Async pipe
+
+👉 You don’t need to master everything—focus on:
+
+* HTTP streams
+
+* Async pipe usage
+
+***
+
+# 🧩 Phase 5: Forms (Week 8)
+
+## Two approaches:
+
+* Template-driven forms
+
+* Reactive forms (recommended)
+
+## Learn:
+
+* Form validation
+
+* Form controls
+
+* Form groups
+
+👉 Project:
+
+* **Login / Registration Form**
+
+  * Validation
+
+  * Error messages
+
+***
+
+# 🏗️ Phase 6: Real App Build (Week 9–10)
+
+Now combine everything.
+
+👉 Build a **Task Manager App**
+
+* Add / edit / delete tasks
+
+* Routing
+
+* Services
+
+* Forms
+
+* API (fake backend)
+
+***
+
+# 🚀 Phase 7: Modern Angular Features (Angular 16 → 21)
+
+Angular has evolved a lot recently. Focus on:
+
+## Signals (important 🔥)
+
+* New reactivity system
+
+* Alternative to RxJS in some cases
+
+## Standalone Components
+
+* No need for NgModules anymore
+
+## New control flow syntax
+
+* `@if`, `@for` instead of `*ngIf`, `*ngFor`
+
+***
+
+# 🧠 How to Study (Important)
+
+Given your bootcamp style, use this loop:
+
+1. Learn concept (30–60 min)
+
+2. Build small example
+
+3. Break it on purpose
+
+4. Fix it
+
+5. Extend it
+
+👉 Avoid:
+
+* Watching too many tutorials without coding
+
+* Copy-pasting
+
+***
+
+# 🛠️ Tools You’ll Use
+
+* Angular CLI
+
+* Browser DevTools (Chrome)
+
+* VS Code
+
+* Optional backend: Node.js
+
+***
+
+# 📚 Recommended Learning Sources
+
+* Official Angular docs (best source)
+
+* YouTube (for visuals)
+
+* Small GitHub projects
+
+***
+
+# 🧩 If You Want…
+
+I can build you a **full 10-week Angular 21 bootcamp**, just like your:
+
+* JavaScript bootcamp
+
+* Node.js bootcamp
+
+* TypeScript bootcamp
+
+👉 Just say:\
+**“Week 1 Angular Bootcamp please”**
+
+and I’ll structure it day-by-day with exercises 👍
