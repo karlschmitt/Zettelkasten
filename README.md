@@ -202,7 +202,7 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 
 ## Teilprojekt Angular Bootcamp
 
-1. [Angular Hub](./Angular/Learning_Angular_Hub.md)
+1. [Angular Bootcamp](./Angular/Learning_Angular_Hub.md)
 2. [Angular Home](https://angular.dev/)
 
 ## Teilproject Spring Boot Bootcamp![
@@ -210,7 +210,7 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 ## Teilproject Persistency Bootcamp
 
 ### PostgreSQL
-]()
+
 ### PostgresML
 
 ### MongoDB
