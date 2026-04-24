@@ -3,7 +3,7 @@ id: 20260424150008
 title: Learning Angular Hub
 author: Karl Schmitt
 date: 2026-04-24
-keywords: []
+keywords: [ Angular, Bootcamp, RsJX, NgRx, HTTP ]
 ---
 
 # Learning Angular Hub
@@ -15,9 +15,11 @@ keywords: []
 5. [Angular Bootcamp Week Two](./Week_Two_Angular_Bootcamp.md)
 6. [Angular Bootcamp Week Three](./Week_Three_Angular_Bootcamp.md)
 7. [Angular Bootcamp Week Four](./Week_Four_Angular_Bootcamp.md)
-8. [What is RxJS?](./What_is_RxJS-.md)
-9. [How to learn RxJS?](./How_to_learn_RxJS.md)
-10. [What is NgRx?](./What_is_NgRx.md)
-11. [How to learn NgRx?](./How_to_learn_NgRx.md)
-12. [What is HTTP?](./What_is_HTTP-.md)
-13. [How to learn HTTP?](./How_to_learn_HTTP-.md)
+8. [Angular Dependency Injection](./Angular_Dependency_Injection.md)
+9. How to learn the Angular dependency injection?  
+10. [What is RxJS?](./What_is_RxJS-.md)
+11. [How to learn RxJS?](./How_to_learn_RxJS.md)
+12. [What is NgRx?](./What_is_NgRx.md)
+13. [How to learn NgRx?](./How_to_learn_NgRx.md)
+14. [What is HTTP?](./What_is_HTTP-.md)
+15. [How to learn HTTP?](./How_to_learn_HTTP-.md)
