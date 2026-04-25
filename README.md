@@ -10,8 +10,8 @@ summary: [ JavaScript bootcamp,
            Sprig Boot bootcamp,
            Persistency bootcamp, ]
 date: 2026-04-14
-keywords: [bootcamp, React, Zettelkasten,]
-author: [Karl Schmitt]
+keywords: [bootcamp, React, Angular, JavaScript, TypeScript, Zettelkasten,]
+author: Karl Schmitt
 ---
 
 #  Metaprojekt Zettelkasten 🗂️ 
@@ -26,17 +26,7 @@ This landing page is flooded with tons of links, so feel free to follow the whit
 
 In the picture above you can see the original [Zettelkasten](https://zettelkasten.de/overview/) invented by [Niklas Luhmann](https://de.wikipedia.org/wiki/Niklas_Luhmann).
 
-The Zettelkasten-Method is a notetaking system of five types of notes:
-
-1. Fleeting notes: "Collect Information"
-2. Literature notes: "Where does the information come from?"
-3. Permanent notes: "Keep Valuable Information"
-4. Index notes: "Create a Zettel in your Zettelkasten with a Number."
-5. Keyword notes: "How to find the information again?"
-
-The Note-taking Process:
-
-![Zettelkaten-Process](./Images/Zettelkasten-Process.png)
+[!NOTE] [Zettelkasten-Method](./Zettelkasten-Method/Zettelkasten.md)
 
 ### My personal history
 
@@ -79,27 +69,25 @@ To push code to [GitHub](https://github.com/) **securely**, you typically create
 
 Here’s the clean, modern way to do it: [SSH-Key generation and configuration](./Tools/SSH-Key-configuration)
 
-### Zettelkasten 📝
-
-Zettekasten is a method and system for learning and collecting information: [Zettelkasten](./Tools/Zettelkasten.md)
-
 ### Tools 🛠️
 
 1. [Zettlr](https://www.zettlr.com/)
-2. [Gimp](https://www.gimp.org/)
-3. [ImageMagick](https://imagemagick.org/#gsc.tab=0)
-4. [Git](https://git-scm.com/)
-5. [GitBash](https://git-scm.com/install/windows)
-6. [PowerShell](https://github.com/powershell/powershell), [Releases](https://github.com/powershell/powershell/releases). PowerShell is maintained on [GitHub](https://github.com/).
-7. [Neovim](https://neovim.io/)
-8. [LvChad](https://nvchad.com/)
-9. [Visual Studio Code](https://code.visualstudio.com/)
-10. [Eclipse](https://eclipseide.org/)
+2. [Anki](https://apps.ankiweb.net/)
+3. [Gimp](https://www.gimp.org/)
+4. [ImageMagick](https://imagemagick.org/#gsc.tab=0)
+5. [Git](https://git-scm.com/)
+6. [GitBash](https://git-scm.com/install/windows)
+7. [PowerShell](https://github.com/powershell/powershell), [Releases](https://github.com/powershell/powershell/releases). PowerShell is maintained on [GitHub](https://github.com/).
+8. [Neovim](https://neovim.io/)
+9. [LvChad](https://nvchad.com/)
+10. [Visual Studio Code](https://code.visualstudio.com/)
+11. [Eclipse](https://eclipseide.org/)
    
 ### Useful Links 🔗
 
 1. In case you need a rabbit: [Open Clip Art](https://openclipart.org/#google_vignette)
-2. Fetch some data in csv format:  [World Religon Data](https://correlatesofwar.org/data-sets/world-religion-data/)
+2. Some useful sketches: [undraw](https://undraw.co/)
+3. Fetch some data in csv format:  [World Religon Data](https://correlatesofwar.org/data-sets/world-religion-data/)
 
 ### Let's take a coffee break ☕
 
