@@ -37,7 +37,7 @@ Angular is:
 
 ## Core concepts to learn
 
-* [Angular CLI](-/Atoms/Angular_CLI.md) (`ng new`, `ng serve`)
+* [Angular CLI](./Atoms/Angular_CLI.md) (`ng new`, `ng serve`)
 
     * [Angular CLI Tutorial](./Atoms/Angular-CLI_Tutorial.md)
     * [Hands on Angular CLI Tuturial](./Atoms/Hands_on_Angular_CLI_tutorial.md)
