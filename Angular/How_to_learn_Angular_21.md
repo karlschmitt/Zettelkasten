@@ -3,11 +3,12 @@ id: 20260423115040
 title: How to learn Angular 21?
 author: Karl Schmitt
 date: 2026-04-23
+keywords: [ Angular ]
 ---
 
 # How to learn Angular 21?
 
-Learning Angular effectively (including the upcoming Angular versions like Angular 21) is less about memorizing APIs and more about building structured, real-world apps step by step. Since you already worked through JavaScript, Node, and TypeScript bootcamps, you’re in a strong position—Angular is basically where all of that comes together.
+Learning Angular effectively (including the upcoming Angular versions like [Angular 21](https://angular.dev/events/v21)) is less about memorizing APIs and more about building structured, real-world apps step by step. Since you already worked through JavaScript, Node, and TypeScript bootcamps, you’re in a strong position—Angular is basically where all of that comes together.
 
 Here’s a **clear, practical roadmap** tailored to how you’ve been learning 👇
 
@@ -25,15 +26,22 @@ Angular is:
 
 * Based on:
 
-  * Components
+  * [Components](./Atoms/Angular_Component.md)
 
-  * Dependency Injection
+  * [Dependency Injection](./Atoms/Angular_Dependency_Injection.md)
 
-  * RxJS (reactive programming)
+  * [RxJS](./Atoms/Angular_RxJS.md) (reactive programming)
+ 
+      * [Angular RxJS Tutorial](./Atoms/Angular_RxJS-Tutorial.md)
+      * [Angular RxJS Bootcamp](./Atoms/Angular_RxJS_Bootcamp.md)
 
 ## Core concepts to learn
 
-* Angular CLI (`ng new`, `ng serve`)
+* [Angular CLI](-/Atoms/Angular_CLI.md) (`ng new`, `ng serve`)
+
+    * [Angular CLI Tutorial](./Atoms/Angular-CLI_Tutorial.md)
+    * [Hands on Angular CLI Tuturial](./Atoms/Hands_on_Angular_CLI_tutorial.md)
+    * [Angular CLI Bootcamp](./Atoms/Angular_CLI_Bootcamp.md)
 
 * Project structure
 

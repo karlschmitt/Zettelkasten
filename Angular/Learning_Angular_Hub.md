@@ -16,7 +16,7 @@ keywords: [ Angular, Bootcamp, RsJX, NgRx, HTTP ]
 6. [Angular Bootcamp Week Three](./Week_Three_Angular_Bootcamp.md)
 7. [Angular Bootcamp Week Four](./Week_Four_Angular_Bootcamp.md)
 8. [Angular Dependency Injection](./Angular_Dependency_Injection.md)
-9. How to learn the Angular dependency injection?  
+9. How to learn the [Angular dependency injection](./How_to_learn_Angular_dependency_injections.md)?  
 10. [What is RxJS?](./What_is_RxJS-.md)
 11. [How to learn RxJS?](./How_to_learn_RxJS.md)
 12. [What is NgRx?](./What_is_NgRx.md)
