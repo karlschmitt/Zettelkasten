@@ -26,7 +26,8 @@ This landing page is flooded with tons of links, so feel free to follow the whit
 
 In the picture above you can see the original [Zettelkasten](https://zettelkasten.de/overview/) invented by [Niklas Luhmann](https://de.wikipedia.org/wiki/Niklas_Luhmann).
 
->[!NOTE] [Zettelkasten-Method](./Zettelkasten-Method/Zettelkasten.md)
+>[!NOTE]
+>[Zettelkasten-Method](./Zettelkasten-Method/Zettelkasten.md)
 
 ### My personal history
 
