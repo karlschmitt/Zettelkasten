@@ -65,15 +65,15 @@ Angular is:
 
 * Data binding:
 
-    * Anguar Data Bindings => Continue here.
+    * [Anguar Data Bindings](./Atoms/Angular_Data_Bindings.md) => Continue here.
 
-  * `{{ }}`
+  * `{{ }}` 👉 Interpolation
 
-  * `[property]`
+  * `[property]` 👉 Property Binding
 
-  * `(event)`
+  * `(event)` 👉 Event Binding
 
-  * `[(ngModel)]`
+  * `[(ngModel)]` 👉 Tow Way Binding
 
 ## Hands-on project
 
