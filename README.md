@@ -44,6 +44,10 @@ However, Times have changed, nowadays the [Raspberry PI](https://www.raspberrypi
 3. ESP32 ![ESP32-mit-Schraubklemmen.png](./Images/ESP32-mit-Schraubklemmen.png)
 4. STM32 ![STM512-Nucleo-64.png](./Images/STM512-Nucleo-64.png)
 
+### Learning in General
+
+1. [S.M.A.R.T Learning Framework](https://youtu.be/oHPOZj69SDg)
+2. 
 
 ### Using Markdown
 

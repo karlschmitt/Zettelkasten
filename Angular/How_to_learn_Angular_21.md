@@ -3,7 +3,7 @@ id: 20260423115040
 title: How to learn Angular 21?
 author: Karl Schmitt
 date: 2026-04-23
-keywords: [ Angular ]
+keywords: [ Angular, Component, DI, RxJS, CLI, template ]
 ---
 
 # How to learn Angular 21?
@@ -34,6 +34,7 @@ Angular is:
  
       * [Angular RxJS Tutorial](./Atoms/Angular_RxJS-Tutorial.md)
       * [Angular RxJS Bootcamp](./Atoms/Angular_RxJS_Bootcamp.md)
+      * [RxJS Deep Dive](./RxJS/RxJS_deep_dive.md)
 
 ## Core concepts to learn
 
@@ -45,11 +46,26 @@ Angular is:
 
 * Project structure
 
+    * [Angular Project Structure](./Atoms/Angular_Project_Structure.md)
+    * [Installing the Angular CLI](./Atoms/Angular_CLI_Instalation.md)
+    * [Angular Project Structure Example](./Atoms/Angular_Project_Structure_Example.md)
+
 * Components (`@Component`)
+
+    * [Angular Component Creation](./Atoms/Angular_Component_Creation.md)
+    * [Angular Components](./Atoms/Angular_Component.md)
+    * [Angular Component Tutorial](./Atoms/Angular_Component_Tutorial.md)
+    * [Angular Component Bootcamp](./Atoms/Angular_Component_Bootcamp.md)
 
 * Templates (HTML + bindings)
 
+    * [Angular Templates](./Atoms/Angular_Templates.md)
+    * [Angular Template Tutorial](./Atoms/Angular_Template_Tutorial.md)
+    * [Angular Template Bootcamp](./Atoms/Angular_Template_Bootcamp.md)
+
 * Data binding:
+
+    * Anguar Data Bindings => Continue here.
 
   * `{{ }}`
 

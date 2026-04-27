@@ -10,6 +10,11 @@ keywords: [ Angular, CLI ]
 
 Das **Angular CLI** fungiert als ein unverzichtbares **Kommandozeilenwerkzeug**, das den gesamten Lebenszyklus der Softwareentwicklung für Angular-Projekte automatisiert und vereinfacht. Durch gezielte Befehle ermöglicht es Entwicklern, neue **Arbeitsbereiche zu initialisieren** und notwendigen **Quellcode**, wie Komponenten oder Services, effizient zu generieren. Neben der Bereitstellung eines **lokalen Entwicklungsservers** mit Echtzeit-Aktualisierung übernimmt das Tool auch die **Optimierung für den Produktivbetrieb** sowie die Durchführung automatisierter Tests. Ein wesentlicher Vorteil besteht darin, dass komplexe Konfigurationen im Hintergrund verwaltet werden, wodurch ein einheitlicher Standard gemäß **bewährter Praktiken** gewährleistet wird. Somit erleichtert das Interface nicht nur die **Wartung und Aktualisierung** von Abhängigkeiten, sondern erlaubt es Programmierern auch, sich vollkommen auf die Logik ihrer Anwendung zu konzentrieren.
 
+![Mastering the Angular CLI Workspace](../Images/Mastering_the_Angular_CLI_Workspace.png)
+
+[Angular CLI Reference](./Angular_CLI_Reference.md)
+[Angular CLI Tutorial](./Angular-CLI_Tutorial.md)
+[Angular CLI Bootcam](./Angular_CLI_Bootcamp.md)
 
 # Angular CLI
 
