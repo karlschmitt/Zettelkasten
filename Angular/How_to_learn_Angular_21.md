@@ -67,10 +67,14 @@ Angular is:
 
     * [Anguar Data Bindings](./Atoms/Angular_Data_Bindings.md) => Continue here.
 
-  * `{{ }}` 👉 Interpolation
+  * `{{ }}` 👉 [Interpolation](./Atoms/Angular_Interpolation.md)
+ 
+      * [Angular Interpolation Tutorial](./Atoms/Angular_Interpolation_Tutorial.md)
 
-  * `[property]` 👉 Property Binding
-
+  * `[property]` 👉 [Property Binding](./Atoms/Angular_Property_Bindings.md)
+ 
+      * [Angular Property Binding Tutorial](./Atoms/Angular_Property_Binding_Tutorial.md)
+    
   * `(event)` 👉 Event Binding
 
   * `[(ngModel)]` 👉 Tow Way Binding

@@ -6,7 +6,7 @@ date: 2026-04-25
 keywords: [ Angular, RxJS]
 ---
 
-# Vorschau
+# Introductin in German
 
 Das bereitgestellte Material erläutert die **Funktionsweise von RxJS** als essenzielle Bibliothek für die **reaktive Programmierung** innerhalb des Angular-Frameworks. Es definiert zentrale Konzepte wie **Observables**, die als Datenströme fungieren, sowie **Operatoren**, mit denen Informationen effizient gefiltert oder transformiert werden können. Ein wesentlicher Teil des Textes vergleicht die Vorteile von **Observables gegenüber Promises**, wobei insbesondere die Fähigkeit zur **Stornierung** und die verzögerte Ausführung hervorgehoben werden. Zudem wird aufgezeigt, wie Angular diese Technologie für **HTTP-Anfragen, Formulare und das Routing** nutzt, um asynchrone Ereignisse zu steuern. Die Quellen verdeutlichen somit, warum dieses Werkzeug für die Verwaltung komplexer **Datenströme und Benutzerinteraktionen** in modernen Webanwendungen unverzichtbar ist. Durch praktische Beispiele wird schließlich illustriert, wie Entwickler den **Datenfluss abonnieren** und gezielt manipulieren können.
 
