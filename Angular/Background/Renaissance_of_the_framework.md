@@ -7,9 +7,9 @@ date: 2026-04-28
 
 # Renaissance of the framework
 
-![Modernizing a Web Powerhouse](../Images/Modernizing_ a_Web_ Powerhouse.png)
+![Modernizing a Web Powerhouse](../Images/Modernizing_a_Web_Powerhouse.png)
 
-[Enjoy a German translation](../Summaries/Modernizing_ a_Web_ Powerhouse.md)
+[Enjoy a German translation](../Summaries/Modernizing_a_Web_Powerhouse.md)
 
 The **"Angular Renaissance"** refers to a period of rapid innovation, modernization, and a complete "rebranding" of the framework that began around late 2022 (with Angular v14/15) and reached full momentum with **Angular v17 and v18**.
 
