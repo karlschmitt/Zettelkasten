@@ -19,7 +19,7 @@ I've been calculating the likely Angular version based on the release cycle and 
 
 **Forecasting Angular's Future**
 
-I'm now detailing the planned releases, including the anticipated date for Angular 22. I'm focusing on the modern features like Signals, Standalone Components, and the new Control Flow, which will define the learning roadmap. Considering Angular 21, I'm emphasizing that this is a ["Renaissance"](./Background/Renaissance_of_the_framework.md) for the framework.
+I'm now detailing the planned releases, including the anticipated date for Angular 22. I'm focusing on the modern features like [Signals](./How_do_Angular_signals_work-.md), [Standalone Components](./Background/Standalone_Components.md), and the [new Control Flow](./Background/New_Control_Flow.md), which will define the learning roadmap. Considering Angular 21, I'm emphasizing that this is a ["Renaissance"](./Background/Renaissance_of_the_framework.md) for the framework.
 
 As of beginning-2026, Angular 22 does not exist yet. Angular follows a predictable
 six-month release cycle. Here is the estimated timeline:
@@ -83,7 +83,7 @@ features:
   - An interactive, in-browser tutorial.
   - Modern guides focused on Standalone Components and [Signals](./How_do_Angular_signals_work-.md).
 
-Step 3: Server-Side Rendering (SSR) and Hydration
+Step 3: Server-Side Rendering ([SSR](./Background/Server-Side_Rendering.md)) and Hydration
 
 Angular is moving heavily toward better [SEO](./Angular/Background\Angular_SEO.md) and performance. Learn:
 
