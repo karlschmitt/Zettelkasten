@@ -10,7 +10,7 @@ keywords: [ Angular, SSR, SEO ]
 
 ![Moder Angular Matery](./Images/Modern_Angular_Mastery.png)
 
-[Enjoy a summary in German]()
+[Enjoy a summary in German](./Summaries/The_Angular_21_ Mastery_ Roadmap.md)
 
 ## **Analyzing Angular Versions**
 
