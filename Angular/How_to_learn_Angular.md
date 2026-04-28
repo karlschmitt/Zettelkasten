@@ -37,16 +37,16 @@ version 22 arrives.
 
 Here is your roadmap to learning modern Angular (leading up to v21):
 
-1. Master the New Essentials (The "Renaissance" Features)
+1. Master the New Essentials (The ["Renaissance"](./Background/Renaissance_of_the_framework.md) Features)
 
 The "old way" of writing Angular (Modules, Zone.js) is being phased out. To be
 ready for version 22, focus on these:
 
-  - Standalone Components: Learn how to build apps without NgModule. This is now
+  - [Standalone Components](./Background/Standalone_Components.md): Learn how to build apps without NgModule. This is now
     the default.
   - [Signals](./How_do_Angular_signals_work-.md): This is the most important change. Signals are a new way to manage
     state and change detection, making apps faster and easier to reason about.
-  - New Control Flow: Move away from *ngIf and *ngFor. Learn the new syntax:
+  - [New Control Flow:](./Background/New_Control_Flow.md) Move away from *ngIf and *ngFor. Learn the new syntax:
     @if, @for, and @switch.
   - Deferrable Views (@defer): Learn how to easily lazy-load parts of your
     template to improve performance.
