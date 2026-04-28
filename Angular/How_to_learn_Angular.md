@@ -67,12 +67,12 @@ Step 1: TypeScript
 Angular is built on [TypeScript](./Background/Angular_TypeScript.md). You need to understand:
 
   - Types
-  - Interfaces .
-  - Generics.
-  - Decorators.
+  - Interfaces
+  - Generics
+  - Decorators
 
 >[!NOTE]
-> [7-Day TypeScript for Angular Bootcamp](./Background/7-Day_TypeScript_for_Angular_Bootcamp.md)
+> [7-Day TypeScript for Angular Bootcamp](./Background/7-Day_TypeScript_for_Angular_Bootcamp.md) and 
 > [30-Day TypeScript Mastery Plan for Angular Developers](./Background/30-Day_TypeScript_Mastery_Plan _for_Angular_Developers.md)
 
 Step 2: The Official New Documentation
