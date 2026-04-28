@@ -8,6 +8,8 @@ keywords: [ Angular, Component, DI, RxJS, CLI, template ]
 
 # How to learn Angular 21?
 
+![The Angular 21 Mastery Roadmap](./Images/Angular_21_ Mastery_ Roadmap.png)
+
 Learning Angular effectively (including the upcoming Angular versions like [Angular 21](https://angular.dev/events/v21)) is less about memorizing APIs and more about building structured, real-world apps step by step. Since you already worked through JavaScript, Node, and TypeScript bootcamps, you’re in a strong position—Angular is basically where all of that comes together.
 
 Here’s a **clear, practical roadmap** tailored to how you’ve been learning 👇

@@ -8,14 +8,18 @@ keywords: [ Angular, SSR, SEO ]
 
 # How to learn Angular?
 
+![Moder Angular Matery](./Images/Modern_Angular_Mastery.png)
+
+[Enjoy a summary in German]()
+
 ## **Analyzing Angular Versions**
 
-I've been calculating the likely Angular version based on the release cycle and the current date. I'm assuming a six-month cadence for major releases. Considering Angular 17 was released last November, I'm expecting Angular 18 to be imminent, likely in May. I'm taking the release frequency into account.
+I've been calculating the likely Angular version based on the release cycle and the current date. I'm assuming a six-month cadence for major releases. Considering Angular 21 was released last November, I'm expecting Angular 22 to be imminent, likely in May. I'm taking the release frequency into account.
 
 
 **Forecasting Angular's Future**
 
-I'm now detailing the planned releases, including the anticipated dates for Angular 19, 20, and 21. I'm focusing on the modern features like Signals, Standalone Components, and the new Control Flow, which will define the learning roadmap. Considering Angular 17/18, I'm emphasizing that this is a "Renaissance" for the framework.
+I'm now detailing the planned releases, including the anticipated date for Angular 22. I'm focusing on the modern features like Signals, Standalone Components, and the new Control Flow, which will define the learning roadmap. Considering Angular 21, I'm emphasizing that this is a "Renaissance" for the framework.
 
 As of beginning-2026, Angular 22 does not exist yet. Angular follows a predictable
 six-month release cycle. Here is the estimated timeline:
@@ -111,7 +115,7 @@ To be ready for the future, try building a "Signal-based" application:
 
 >[!note]
 >[Feel free to install Angular](./Atoms/Angular_CLI_Instalation.md) and
->[feel free to create an Angular project](./Atoms/Angular_Project_Creation.md)
+>[feel free to create an Angular project](./Atoms/Angular_Project_Creation.md).
 
 1.  Initialize a project: **ng new my-app --standalone**
 2.  Use [Signals](./How_do_Angular_signals_work-.md) for all local state management.
