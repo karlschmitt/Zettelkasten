@@ -125,10 +125,10 @@ To be ready for the future, try building a "Signal-based" application:
 
 ## Summary
 
-By the time Angular 22 is released in early 2026, Signals will likely be the
+By the time Angular 22 is released in early 2026, [Signals](./How_do_Angular_signals_work-.md) will likely be the
 primary way to handle reactivity, and Zone.js (the old change detection system)
 might be optional or deprecated. If you [learn Angular 21](./How_to_learn_Angular_21.md) today using
-Standalone Components and [Signals](./How_do_Angular_signals_work-.md), you will already know 95% of what Angular 22
+[Standalone Component](./Background/Standalone_Components.md)s and [Signals](./How_do_Angular_signals_work-.md), you will already know 95% of what Angular 22
 will be.
 
 >[!Note]
