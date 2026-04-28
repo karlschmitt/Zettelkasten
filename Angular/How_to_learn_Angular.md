@@ -12,6 +12,7 @@ keywords: [ Angular, SSR, SEO ]
 
 [Enjoy a summary in German](./Summaries/The_Angular_21_ Mastery_ Roadmap.md)
 
+
 ## **Analyzing Angular Versions**
 
 I've been calculating the likely Angular version based on the release cycle and the current date. I'm assuming a six-month cadence for major releases. Considering Angular 21 was released last November, I'm expecting Angular 22 to be imminent, likely in May. I'm taking the release frequency into account.
