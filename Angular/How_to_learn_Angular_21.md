@@ -8,7 +8,7 @@ keywords: [ Angular, Component, DI, RxJS, CLI, template ]
 
 # How to learn Angular 21?
 
-![The Angular 21 Mastery Roadmap](./Images/Angular_21_ Mastery_ Roadmap.png)
+![The Angular 21 Mastery Roadmap](./Images/Angular_21_Mastery_Roadmap.png)
 
 Learning Angular effectively (including the upcoming Angular versions like [Angular 21](https://angular.dev/events/v21)) is less about memorizing APIs and more about building structured, real-world apps step by step. Since you already worked through JavaScript, Node, and TypeScript bootcamps, you’re in a strong position—Angular is basically where all of that comes together.
 
@@ -78,8 +78,12 @@ Angular is:
       * [Angular Property Binding Tutorial](./Atoms/Angular_Property_Binding_Tutorial.md)
     
   * `(event)` 👉 Event Binding
+ 
+      * [Angular Event Binding Tutorial](./Atoms/Angular_Event_Binding_Tutorial.md)
 
-  * `[(ngModel)]` 👉 Tow Way Binding
+  * `[(ngModel)]` 👉 Two Way Binding
+ 
+      * [Angular Two Way Binding Tutorial](./Atoms/Angular_Two_Way_Binding_Tutorial.md)
 
 ## Hands-on project
 
@@ -91,6 +95,7 @@ Angular is:
 
 * Reset button
 
+[Example Couner App](/Examples/Angular_Counter_App.md)
 ***
 
 # 🧱 Phase 2: Components & Architecture (Week 3–4)

@@ -42,7 +42,7 @@ Here is your roadmap to learning modern Angular (leading up to v21):
 The "old way" of writing Angular (Modules, Zone.js) is being phased out. To be
 ready for version 22, focus on these:
 
-  - [Standalone Components](./Background/Standalone_Components.md): Learn how to build apps without NgModule. This is now
+  - [Standalone Components](./Background/Standalone_Components.md): Learn how to build apps without [NgModule](./Background/Angular_NgModule.md). This is now
     the default.
   - [Signals](./How_do_Angular_signals_work-.md): This is the most important change. Signals are a new way to manage
     state and change detection, making apps faster and easier to reason about.
@@ -128,7 +128,7 @@ To be ready for the future, try building a "Signal-based" application:
 By the time Angular 22 is released in early 2026, [Signals](./How_do_Angular_signals_work-.md) will likely be the
 primary way to handle reactivity, and Zone.js (the old change detection system)
 might be optional or deprecated. If you [learn Angular 21](./How_to_learn_Angular_21.md) today using
-[Standalone Component](./Background/Standalone_Components.md)s and [Signals](./How_do_Angular_signals_work-.md), you will already know 95% of what Angular 22
+[Standalone Component](./Background/Standalone_Components.md)s and [Signals](./How_do_Angular_signals_work-.md), you will already know 95% of what Angular 22        
 will be.
 
 >[!Note]
