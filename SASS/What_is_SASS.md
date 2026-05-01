@@ -16,11 +16,14 @@ Think of it as "CSS with superpowers." It allows you to use features that don't 
 
 Angular defaults to SASS (specifically the `.scss` syntax) because it makes managing styles in large, complex applications much easier.
 
+[Feel free to try the tutorial](./SASS_tutorial.md). Just follow the white rabbit. 🐇 👩‍🎓
+
 ---
 
 ### Key Features of SASS
 
-#### 1. Variables
+#### 1. [Variables](./Atoms/SASS_Variables.md)
+
 In standard CSS, variables exist, but SASS variables are simpler to write and can be used for calculations.
 *   **SASS:** `$primary-color: #3498db;`
 *   **Usage:** `button { background: $primary-color; }`
