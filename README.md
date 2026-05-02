@@ -104,17 +104,23 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 ### Welcome to the Workshop Workout ⛹
 
 1. Aufstehen und [Hände](https://youtu.be/2G6pHQJEbWQ) ausschütteln.
-2. Schulter kreisen lassen.
-3. Arme kreisen lassen.
-4. Arme pendeln lassen.
-5. Arme pendeln lassen und Oberkörper dreht sich nach den Seiten
-6. Walk in Place
-7. High knees
-8. Calf Raises, ein Bein hinter das ander geschlungen und mit dem anderen auf die Zehnspitzen.
-9. Standing diagonal leg raises
+2. [Schulter](https://youtu.be/lnXSq-zW_Q0) kreisen lassen.
+3. [Arme](https://youtu.be/NJQjeNK7gtQ) kreisen lassen.
+4. [Arme](https://youtu.be/lnXSq-zW_Q0) pendeln lassen.
+5. [Arme](https://youtu.be/mlZIDpp7DeM) pendeln lassen und Oberkörper dreht sich nach den Seiten
+6. [Walk in Place](https://youtu.be/WykJoIt9GLM)
+7.[ High knees](https://youtu.be/tx5rgpDAJRI)
+8. [Calf Raises](https://youtu.be/-tJSMx4n6-g), ein Bein hinter das ander geschlungen und mit dem anderen auf die Zehnspitzen.
+9. [Standing diagonal leg raises](https://youtu.be/6b1hu6iSqok)
 10. [Squat](https://www.youtube.com/shorts/MoyeW6_eYok?feature=share) Kniebeugen.
 11. [Reverse Lunges](https://www.youtube.com/watch?v=xrPteyQLGAo) von der Tischkante aus.
 12. [Streaching](https://www.youtube.com/shorts/rlMwCYa02d4?feature=share) Arme strecken, eine Hand streckt sich, die ander greift ums Handgelenk
+
+### IRC is stll alive
+
+1. IRC Client: [HexChat](https://hexchat.github.io/screenshots.html)
+2. Some Hints: [Libero.Chat](https://libera.chat/guides/basics)
+3. 
 
 ### PowerShell  ⚡
 
@@ -138,6 +144,8 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 10. [Learning Node.js](https://nodejs.org/learn/)
 11. [Let's get our hands dirty](https://www.freecodecamp.org/news/get-started-with-nodejs/)
 
+
+
 ### 🟧 HTML
 
 ![HTML](./Icons/Open-Clip-Art-HTML.png)
@@ -146,6 +154,7 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 2. [HTML Template](https://www.freecodecamp.org/news/html-starter-template-a-basic-html5-boilerplate-for-index-html/)
 3. [Ultimate Colors - Free Icons](https://www.streamlinehq.com/icons/ultimate-colos-free)
 4. [Material Icons](https://mui.com/material-ui/material-icons/)
+5. [Create your own idie website for free](https://neocities.org/)
 
 ### 🟦 CSS
 

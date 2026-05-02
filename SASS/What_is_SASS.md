@@ -28,15 +28,18 @@ In standard CSS, variables exist, but SASS variables are simpler to write and ca
 *   **SASS:** `$primary-color: #3498db;`
 *   **Usage:** `button { background: $primary-color; }`
 
-#### 2. Nesting
-SASS lets you nest your CSS selectors in a way that follows the hierarchy of your HTML. This makes your code much cleaner and easier to read.
+#### 2. [Nesting](./Atoms/SASS_Nesting.md)
+
+SASS lets you nest your CSS selectors in a way that follows the hierarchy of your HTML. 
+This makes your code much cleaner and easier to read.
+
 *   **Standard CSS:**
     ```css
     nav { background: white; }
     nav ul { list-style: none; }
     nav li { display: inline-block; }
     ```
-*   **SASS (SCSS):**
+*   **SASS ([SCSS](./Atoms/SCSS.md))**
     ```scss
     nav {
       background: white;
