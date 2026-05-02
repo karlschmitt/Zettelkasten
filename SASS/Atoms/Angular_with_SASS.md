@@ -6,7 +6,7 @@ date: 2025-05-01
 ---
 
 
-[Install Angular globally ...](./nstall_Angular_globallY.md) 🐇👩‍🏭🌐
+[Install Angular globally ...](./Install_Angular_globally.md) 🐇👩‍🏭🌐
 
 # Angular with SASS
 
