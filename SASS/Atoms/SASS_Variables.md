@@ -30,7 +30,7 @@ $standard-padding: 16px;
   font-family: $font-stack;
 }
 ```
-[Try it out ...](./Atoms/Angular_with_SASS.md)
+[Try it out ...](./Angular_with_SASS.md)
 
 ### 2. Why use them in Angular?
 
