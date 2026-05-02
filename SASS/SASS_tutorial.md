@@ -3,21 +3,26 @@ id: 20260501123427
 title: SASS Tutorial
 author: Karl Schmitt
 date: 2026-05-01
+keywords: [ Angular, SASS, SCSS]
 ---
 
 Absolutely. Angular commonly supports **SCSS (Sassy CSS)** out of the box, which is the most popular syntax of **Sass**. It helps you write cleaner, reusable, and more maintainable styles for Angular apps.
 
-# 🎨 Angular + Sass (SCSS) Tutorial
+# 🎨 Angular + SASS (SCSS) Tutorial
 
-## 📌 What is Sass?
+## 📌 What is SASS?
 
-**Sass** = CSS with superpowers.
+>[!NOTE]
+> SASS = Syntactically Awesome Style Sheets
+
+>[!IMPORTANT]
+> **SASS** = CSS with superpowers.
 
 It adds:
 
 * [Variables](./Atoms/SASS_Variables.md) Follow the white rabbit 🐇 
 
-* Nesting
+* [Nesting](./Atoms/SASS_Nesting.md)
 
 * Mixins
 
@@ -65,11 +70,13 @@ Benefits:
 
 # 📌 Create Angular Project with SCSS
 
+You can use the following comand:
 ```bash
-ng new my-app --style=scss
+ng new my-app --style=scss --standalone
 ```
 
-Or convert later.
+>[!NOTE]
+> You can follow the white rabbit: [Create an Angular Project with SASS](./Atoms/Angular_with_SASS.md)
 
 ***
 
