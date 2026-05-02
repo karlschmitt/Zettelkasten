@@ -11,13 +11,14 @@ date: 2025-05-01
 # Angular with SASS
 
 >[!Note]
-> How can I create a Angular project using SASS with a standalone Component?
+> How can I create an Angular project with SASS and with a [standalone Componen](./Angular_Standalone_Component.md)t?
 
-Since **Angular 17 and 18**, Standalone components are the default. To create a modern project that uses SCSS (the most common version of SASS) and Standalone components, follow these steps:
+Since **Angular 17 and 18**, [Standalone components](./Angular_Standalone_Component.md) are the default. 
+To create a modern project that uses SCSS (the most common version of SASS) and [Standalone components](./Angular_Standalone_Component.md), follow these steps:
 
 ### 1. Create the Project
-Open your terminal and run the following command:
 
+Open your terminal and run the following command:
 ```bash
 ng new my-sass-project --style=scss --standalone
 ```
@@ -27,8 +28,9 @@ ng new my-sass-project --style=scss --standalone
 *   `--standalone`: Ensures the project starts without an `app.module.ts` file. (Note: In Angular 18+, this is the default, so you can often omit it).
 
 ### 2. Verify the Standalone Component
-Once the project is created, open `src/app/app.component.ts`. You will see the `standalone: true` property in the decorator:
 
+Once the project is created, open `src/app/app.component.ts`. 
+You will see the `standalone: true` property in the decorator:
 ```typescript
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
@@ -73,7 +75,9 @@ h1 {
 ```
 
 ### 4. Generating New Standalone Components
-When you want to add a new component, use the CLI. Because you set up the project with SCSS, any new component will automatically generate a `.scss` file.
+
+When you want to add a new component, use the CLI. 
+Because you set up the project with SCSS, any new component will automatically generate a `.scss` file.
 
 ```bash
 ng generate component components/my-new-component
@@ -90,6 +94,7 @@ ng serve
 ```
 
 ### Pro Tip: Global SASS Variables
+
 If you create a file for variables (e.g., `src/_variables.scss`), you can import it into any component's SCSS file to use them:
 
 ```scss
@@ -102,6 +107,7 @@ If you create a file for variables (e.g., `src/_variables.scss`), you can import
 ```
 
 ### Troubleshooting
+
 If you already have a project and want to **change** the default style format to SCSS later, run:
 ```bash
 ng config schematics.@schematics/angular:component.style scss
