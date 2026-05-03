@@ -12,9 +12,18 @@ keywerds: [ Angular, SASS, CSS ]
 
 In the context of Angular, **SASS** (Syntactically Awesome Style Sheets) is a **CSS preprocessor**. 
 
-Think of it as "CSS with superpowers." It allows you to use features that don't exist in standard CSS yet (or are easier to write in SASS), which then get compiled into regular CSS that the browser can understand.
+>[!NOTE]
+> [SASS](./Atoms/SASS.md) = Syntactically Awesome Style Sheets
 
-Angular defaults to SASS (specifically the `.scss` syntax) because it makes managing styles in large, complex applications much easier.
+Think of it as "CSS with superpowers." It allows you to use features that don't exist in standard [CSS ](./Atoms/CSS.md)yet (or are easier to write in SASS), which then get compiled into regular [CSS](./Atoms/CSS.md) that the browser can understand.
+
+>[!NOTTE]
+> [SASS](./Atoms/SASS.md) is CSS with superpowers.
+
+Angular defaults to [SASS](./Atoms/SASS.md) (specifically the `.scss` syntax) because it makes managing styles in large, complex applications much easier.
+
+>[!NOTE]
+> [SCSS](./Atoms/SCSS.md) = Sassy Cascading Style Sheets
 
 [Feel free to try the tutorial](./SASS_tutorial.md). Just follow the white rabbit. 🐇 👩‍🎓
 
@@ -24,13 +33,13 @@ Angular defaults to SASS (specifically the `.scss` syntax) because it makes mana
 
 #### 1. [Variables](./Atoms/SASS_Variables.md)
 
-In standard CSS, variables exist, but SASS variables are simpler to write and can be used for calculations.
+In standard [CSS](./Atoms/CSS.md), variables exist, but SASS variables are simpler to write and can be used for calculations.
 *   **SASS:** `$primary-color: #3498db;`
 *   **Usage:** `button { background: $primary-color; }`
 
 #### 2. [Nesting](./Atoms/SASS_Nesting.md)
 
-SASS lets you nest your CSS selectors in a way that follows the hierarchy of your HTML. 
+SASS lets you nest your [CSS](./Atoms/CSS.md) selectors in a way that follows the hierarchy of your HTML. 
 This makes your code much cleaner and easier to read.
 
 *   **Standard CSS:**
@@ -53,7 +62,8 @@ This makes your code much cleaner and easier to read.
     ```
 
 #### 3. Mixins (Reusable Blocks)
-Mixins are like functions for CSS. You can define a group of styles and reuse them throughout your app.
+
+Mixins are like functions for [CSS](./Atoms/CSS.md). You can define a group of styles and reuse them throughout your app.
 ```scss
 @mixin flex-center {
   display: flex;
@@ -66,7 +76,8 @@ Mixins are like functions for CSS. You can define a group of styles and reuse th
 ```
 
 #### 4. Partials and Imports
-You can break your CSS into smaller, manageable files (e.g., `_variables.scss`, `_buttons.scss`) and import them into one main stylesheet. This keeps your Angular project organized.
+
+You can break your [CSS](./Atoms/CSS.md) into smaller, manageable files (e.g., `_variables.scss`, `_buttons.scss`) and import them into one main stylesheet. This keeps your Angular project organized.
 
 ---
 

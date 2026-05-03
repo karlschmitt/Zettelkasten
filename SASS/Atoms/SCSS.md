@@ -1,14 +1,15 @@
 ---
 id: 20260502191341
-tile: SCSS
+tile: What is SCSS?
 author: Karl Schmitt
 date: 2026-05-02
 keywords: [ Angular, SASS, SCSS ]
 ---
 
-# SCSS
+# What is SCSS?
 
-In the context of Angular, **SCSS (Sassy Cascading Style Sheets)** is the most popular syntax of **Sass**. When you create a new Angular project using the CLI (`ng new`), SCSS is usually the recommended choice for styling.
+In the context of Angular, **SCSS (Sassy Cascading Style Sheets)** is the most popular syntax of **Sass**. 
+When you create a new Angular project using the CLI (`ng new`), SCSS is usually the recommended choice for styling.
 
 Here is a breakdown of what it is and why it is so useful.
 
