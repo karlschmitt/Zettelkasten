@@ -16,20 +16,26 @@ Follow these steps:
 Open your terminal (Command Prompt, PowerShell, or macOS Terminal) and type:
 ```bash
 node -v
+npm -v
 ```
 If you see a version number (like `v18.x.x` or `v20.x.x`), you are ready. 
+
+![node and npm version command](./Images/node_and_npm_version_comand.png)
 
 **If you don't have it:**
 Download the **LTS version** from [nodejs.org](https://nodejs.org/).
 
 ---
 
-### 2. Install Angular CLI
+### 2. Installing the Angular CLI
+
 Run the following command in your terminal. The `-g` flag is important because it installs the CLI **globally**, allowing you to use the `ng` command anywhere on your system.
 
 ```bash
 npm install -g @angular/cli
 ```
+
+![Installing the Angular CLI](./Images/Installing_the_Angular_CLI.png)
 
 *   **macOS/Linux Users:** If you get a "Permission Denied" error, use `sudo`:
     ```bash
@@ -45,7 +51,9 @@ Once the installation finishes, check that it's working by asking for the versio
 ng version
 ```
 
-This should display the Angular CLI version, your Node.js version, and your Operating System details.
+This should display the Angular CLI version, your Node.js version, your npm package manager and your Operating System details.
+
+![Angular Version Command](./Images/ng_version_command.png)
 
 ---
 

@@ -169,6 +169,8 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 
 ### 🟦 CSS
 
+1. [What is CSS?](./CSS/What_is_CSS-.md)
+
 ### 🟦 Tailwind
 
 1. If you feel playful and for some prototyping you can use [Play Tailwind](https://play.tailwindcss.com/nI1CW63Nu2)

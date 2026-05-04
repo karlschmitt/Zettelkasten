@@ -72,7 +72,9 @@ Angular is built on [TypeScript](./Background/Angular_TypeScript.md). You need t
   - Decorators
 
 >[!NOTE]
-> [7-Day TypeScript for Angular Bootcamp](./Background/7-Day_TypeScript_for_Angular_Bootcamp.md) and 
+> [7-Day TypeScript for Angular Bootcamp](./Background/7-Day_TypeScript_for_Angular_Bootcamp.md)
+
+> [!NOTE] 
 > [30-Day TypeScript Mastery Plan for Angular Developers](./Background/30-Day_TypeScript_Mastery_Plan _for_Angular_Developers.md)
 
 Step 2: The Official New Documentation

@@ -3,7 +3,7 @@ id: 20260504075327
 title: What is CSS?
 author: Karl Schmitt
 date: 2026-05-04
-keywords: [ CSS ]
+keywords: [ HTML, CSS ]
 ---
 
 # What is CSS?
@@ -11,6 +11,10 @@ keywords: [ CSS ]
 **CSS** stands for **Cascading Style Sheets**. 
 
 If HTML is the "skeleton" or the structure of a webpage, **CSS is the "skin," "clothes," and "makeup."** It is the language used to describe how HTML elements should look on a screen, paper, or in other media.
+
+[Why was it named Cascading Style Sheet?](./Cascading Style Sheets.md)
+
+[What is meant by vanilla CSS?](./Vanilla_CSS.md)
 
 Here is a breakdown of what CSS is and how it works:
 
