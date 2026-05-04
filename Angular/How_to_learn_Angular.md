@@ -28,7 +28,7 @@ six-month release cycle. Here is the estimated timeline:
   - Angular 19: Released November 2024
   - Angular 20: Released May 2025
   - [Angular 21](https://angular.dev/events/v21): Released November 2025
-  - Angular 22: Expected May 2026
+  - Angular 22: Expected June 2026
 
 However, if you want to be ready for Angular 22, you should learn the "Angular
 Renaissance" features introduced between versions 18 and 21. These features

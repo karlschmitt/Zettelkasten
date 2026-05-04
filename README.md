@@ -47,7 +47,18 @@ However, Times have changed, nowadays the [Raspberry PI](https://www.raspberrypi
 ### Learning in General
 
 1. [S.M.A.R.T Learning Framework](https://youtu.be/oHPOZj69SDg)
-2. 
+2. [Bullet Journal (BuJo)](https://youtu.be/jkZEEQG6IVE)
+3. [Bullet Journal Method](https://youtu.be/kTK-OxT1QFI)
+4. [Bullet Journal 101](https://youtu.be/AcO6xdM0wc8)
+5. [Atomic Notes](https://youtu.be/5O46Rqh5zHE)
+6. [Highlighting 2.0](https://youtu.be/CreKt_NeGME)
+7. [Visual Notes](https://youtu.be/c9vPNSSQvHk)
+8. [Zettelkasten Method](https://youtu.be/GpV47rUYk8I)
+9. [Zettelkasten for Beginners](https://youtu.be/w15joVA4pIc)
+10. [Zettelkasten from Scratch](https://youtu.be/TRrKO6TNN6w)
+11. [Zettelkasten Numbering the Easy Way](https://youtu.be/2a5TOzxuqxE)
+12. 
+
 
 ### Using Markdown
 
