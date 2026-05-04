@@ -176,7 +176,6 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 
 ### 🟨 JavaScript 🤠
 
-
 1. [Let's jump in.](./JavaScript/Java_Script_Esentials.md)
 2. [Deno](https://deno.com/)
 3. [Deno Docs](https://docs.deno.com/runtime/)
@@ -214,6 +213,7 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 ## SASS
 
 1. [What is SASS?](./SASS/What_is_SASS.md)
+2. [SASS for beginners](https://youtu.be/jfMHA8SqUL4)
 
 ## Teilprojekt Angular Bootcamp
 
