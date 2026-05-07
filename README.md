@@ -10,7 +10,7 @@ summary: [ JavaScript bootcamp,
            Sprig Boot bootcamp,
            Persistency bootcamp, ]
 date: 2026-04-14
-keywords: [bootcamp, React, Angular, JavaScript, TypeScript, Zettelkasten,]
+keywords: [ HTML, CSS, SASS, bootcamp, React, Angular, JavaScript, TypeScript, Zettelkasten,]
 author: Karl Schmitt
 ---
 
@@ -63,7 +63,7 @@ However, Times have changed, nowadays the [Raspberry PI](https://www.raspberrypi
 ### Using Markdown
 
 1. Mardown Guide
-2. Github Alerts
+2. [Github Alerts](./Markdown/Github_Alerts.md)
 
 ### 🪖 Project Overview
 
@@ -170,6 +170,7 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 ### 🟦 CSS
 
 1. [What is CSS?](./CSS/What_is_CSS-.md)
+2. [MDN CSS](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics)
 
 ### 🟦 Tailwind
 
