@@ -14,7 +14,9 @@ Here is a 5-step roadmap to mastering React in 2024/2025.
 
 ---
 
-### Step 1: Master the JavaScript Prerequisites
+### Step 1: Master the JavaScript Prerequisites \&#128187;
+
+![JavaScript](./Images/JavaScript.png)
 
 Before writing a single line of React, you **must** understand these Modern JavaScript (ES6+) concepts. If you skip this, React syntax will look like magic and confuse you.
 
@@ -25,16 +27,18 @@ Before writing a single line of React, you **must** understand these Modern Java
 *   **Spread/Rest Operator:** `...args` or `[...array]`
 *   **Async/Await and Fetch:** How to get data from an API.
 
-1. [Master JavaScript](./Atoms/Mastering_the_JavaScript_Prerequisites_for React.md)
-2. [Master JavaScript using Deno](./Atoms/How_to_Master_the_JavaScript_Prerequisites_using_Deno.md)
-3. [7-Day Bootcamp](./Atoms/A_7_Day_JavaScript_for_React-Bootcamp.md)
-4. [30-Day Mastery Plan](./Atoms/A_30-Day_JavaScript_for_React_Mastery_Plan.md)
-5. Arrow Functions
-6. Destructuring
-7. Template Literals
-8. Array Methods
-9. Spread or Rest Operator
-10. Async, Awayt and Fetch
+1. 🔴 [A quick video to get into the mood](https://youtu.be/xKOyDDuQSVY) 🎥
+2. 🔴 [A slitely longer video](https://youtu.be/voLJ3CmaM1s) 🎥
+3. [Master JavaScript](./Atoms/Mastering_the_JavaScript_Prerequisites_for React.md) ![female factory worker](./Images/very-small-female-factory-worker.png)
+4. [Master JavaScript using Deno](./Atoms/How_to_Master_the_JavaScript_Prerequisites_using_Deno.md) ![Deno](./Images/dino-very-small.png)
+5. [7-Day Bootcamp](./Atoms/A_7_Day_JavaScript_for_React-Bootcamp.md)
+6. [30-Day Mastery Plan](./Atoms/A_30-Day_JavaScript_for_React_Mastery_Plan.md)
+7. Arrow Functions
+8. Destructuring
+9. Template Literals
+10. Array Methods
+11. Spread or Rest Operator
+12. Async, Awayt and Fetch
 
 
 ---

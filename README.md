@@ -206,7 +206,7 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 1. [React Home](https://react.dev/)
 2. [How to create a React project?](./React/How_to_create_a_react_project.md)
 3. [A beginner's guide](https://www.freecodecamp.org/news/get-started-with-react-for-beginners/)
-4. 
+4. [Learn React](./React/React.md)
 
 ### React Hooks
 

@@ -6,25 +6,42 @@ date: 2026-05-08
 kekwords: []
 ---
 
+![JavaScript](../Images/JavaScript.png)
+
 # How to Master the JavaScript Prerequisites using Deno?
 
-Deno is an excellent tool for mastering JavaScript prerequisites because it supports modern features (ES6+) and TypeScript out of the box with zero configuration. It also has a built-in "Top-level Await," which makes practicing API calls much easier than in Node.js.
+![Deno](../Images/dino.png)
 
-Here is how to master the JS prerequisites using **Deno**.
+[Deno](https://deno.com/) is an excellent tool for mastering JavaScript prerequisites because it supports modern features (ES6+) and TypeScript out of the box with zero configuration. It also has a built-in "Top-level Await," which makes practicing API calls much easier than in Node.js.
+
+Here is how to master the JS prerequisites using [**Deno**](https://deno.com/).
+
+![female worker](../Images/small-female-factory-worker.png)
 
 ---
 
 ### 1. Set Up the Deno Environment
 First, ensure Deno is installed. Open your terminal and type:
-```bash
+```pwsh
 deno --version
 ```
-If not installed, run: `curl -fsSL https://deno.land/install.sh | sh` (macOS/Linux) or `irm https://deno.land/install.ps1 | iex` (Windows).
+![Deno version](../Images/deno-version.png)
+
+If not installed, run: `curl -fsSL https://deno.land/install.sh | sh` (macOS/Linux) 
+or `irm https://deno.land/install.ps1 | iex` (Windows).
+
+```pwsh
+irm https://deno.land/install.ps1 | iex
+```
+![Windows Deno installation](../Images/windows-deno-installation.png)
 
 ---
 
 ### 2. Method A: The Deno REPL (Interactive Practice)
+
 The REPL is perfect for testing small snippets like Arrow Functions or Destructuring. Just type `deno` in your terminal.
+
+[What is a REPL](./What_is_a_REPL-.md)
 
 ```javascript
 // Type 'deno' in your terminal to start
@@ -33,7 +50,16 @@ The REPL is perfect for testing small snippets like Arrow Functions or Destructu
 > console.log(name); 
 // Deno
 ```
-*To exit, press `Ctrl + D`.*
+![](../Images/deno-repl-001.png)
+
+*To exit, press `Ctrl + D` or `Ctrl + C`  twice.*
+
+
+If you want to get your feet wet:
+
+1. [JavaScript Prerequisite](./Mastering_the_JavaScript_Prerequisites_for React.md)
+2. [7-Day Bootcamp](./A_7_Day_JavaScript_for_React-Bootcamp.md)
+3. [30-Day Mastery Plan](./A_30-Day_JavaScript_for_React_Mastery_Plan.md)
 
 ---
 
