@@ -65,6 +65,11 @@ However, Times have changed, nowadays the [Raspberry PI](https://www.raspberrypi
 1. Mardown Guide
 2. [Github Alerts](./Markdown/Github_Alerts.md)
 
+### Vibe Coding
+
+1. [Prompt Cowboy](https://www.promptcowboy.ai/)
+2. 
+
 ### 🪖 Project Overview
 
 The Metaproject [**Zettelkasten**](C:\Learning\WebDev\Bootcamp\Zettelkasten\Tools\Zettelkasten.md) collects all the information dicovered for learning [**React**](https://react.dev/) and [**Angular**](https://angular.dev/). 
@@ -198,6 +203,11 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 
 ### React
 
+1. [React Home](https://react.dev/)
+2. [How to create a React project?](./React/How_to_create_a_react_project.md)
+3. [A beginner's guide](https://www.freecodecamp.org/news/get-started-with-react-for-beginners/)
+4. 
+
 ### React Hooks
 
 ### React Router
@@ -223,7 +233,7 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 1. [Angular Bootcamp](./Angular/Learning_Angular_Hub.md)
 2. [Angular Home](https://angular.dev/)
 
-## Teilproject Spring Boot Bootcamp![
+## Teilproject Spring Boot Bootcamp!
 
 ## Teilproject Persistency Bootcamp
 
