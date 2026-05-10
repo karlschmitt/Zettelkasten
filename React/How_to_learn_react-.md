@@ -3,22 +3,31 @@ id: 20260508190011
 title: How to learn React?
 author: Karl Schmitt
 date: 2026-05-08
-keywords: [ React, ]
+keywords: [ React, JavaScript, Deno ]
 ---
 
-# How to learn React?
+# How to learn React ![React](./Images/very-small-react-logo-dark.png)?
 
 Learning React can feel overwhelming because of the massive ecosystem surrounding it. The best way to learn is to follow a **structured path** rather than jumping randomly between tutorials.
 
 Here is a 5-step roadmap to mastering React in 2024/2025.
 
+1. Master the JavaScript Prerequisites
+2. The Core React Thinking
+3. Essential Hooks
+4. Building your first Projects
+5. Expand into the Ecosystem
+
 ---
 
-### Step 1: Master the JavaScript Prerequisites \&#128187;
+### Step 1: Master the JavaScript Prerequisites 💻
+
 
 ![JavaScript](./Images/JavaScript.png)
 
-Before writing a single line of React, you **must** understand these Modern JavaScript (ES6+) concepts. If you skip this, React syntax will look like magic and confuse you.
+Before writing a single line of [React](https://react.dev/), 
+you **must** understand these Modern JavaScript (ES6+) concepts. If you skip this, 
+[React](https://react.dev/) syntax will look like magic and confuse you.
 
 *   **Arrow Functions:** `const myFunc = () => { ... }`
 *   **Destructuring:** `const { name, age } = user;`
@@ -44,7 +53,8 @@ Before writing a single line of React, you **must** understand these Modern Java
 
 ---
 
-### Step 2: The Core "React Thinking"
+### Step 2: The Core "React Thinking" ![React](./Images/very-small-react-logo-dark.png)
+
 React is "declarative." Instead of telling the browser *how* to change (e.g., "find this button and change the color"), you describe *what* the UI should look like based on the current data.
 
 **Learn these fundamentals in order:**
@@ -57,6 +67,7 @@ React is "declarative." Instead of telling the browser *how* to change (e.g., "f
 ---
 
 ### Step 3: Essential Hooks
+
 Hooks are functions that let you "hook into" React features. You will use these two 90% of the time:
 
 1.  **`useState`:** For managing local data.
@@ -65,15 +76,20 @@ Hooks are functions that let you "hook into" React features. You will use these 
 ---
 
 ### Step 4: Building Your First Projects
-**Do not stay in "Tutorial Hell"** (watching videos without coding). Build these three projects in order:
 
-1.  **The Counter/Todo List:** Teaches you state management, handling inputs, and deleting items from an array.
-2.  **Weather App (using an API):** Teaches you `useEffect`, fetching data, and displaying dynamic information.
-3.  **Simple Product Catalog:** Teaches you how to map through data and use "lifting state up."
+**Do not stay in "Tutorial Hell"** (watching videos without coding). 
+Build these projects in order:
+
+1.  **The Counter:** Teaches you state management, handling inputs, and deleting items from an array.
+2.  Break Timer:
+3.  ToDo List:
+4.  **Weather App (using an API):** Teaches you `useEffect`, fetching data, and displaying dynamic information.
+5.  **Simple Product Catalog:** Teaches you how to map through data and use "lifting state up."
 
 ---
 
 ### Step 5: Expand into the Ecosystem
+
 Once you are comfortable with components and props, learn these tools to build professional apps:
 
 *   **Routing:** Learn `React Router` to create multiple pages (e.g., `/home` and `/about`).
@@ -89,4 +105,5 @@ Once you are comfortable with components and props, learn these tools to build p
 3.  **[Scrimba (Free React Course)](https://scrimba.com/learn/learnreact):** An interactive coding platform where you can edit the code inside the video player.
 
 ### A Final Tip:
+
 **Build small, ugly things.** Don't try to build the next Facebook immediately. Build a button that changes color. Build a list that adds a new item. Every small success builds the "mental model" you need for complex apps.
