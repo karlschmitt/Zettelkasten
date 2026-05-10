@@ -29,7 +29,7 @@ Before writing a single line of React, you **must** understand these Modern Java
 
 1. 🔴 [A quick video to get into the mood](https://youtu.be/xKOyDDuQSVY) 🎥
 2. 🔴 [A slitely longer video](https://youtu.be/voLJ3CmaM1s) 🎥
-3. [Master JavaScript](./Atoms/Mastering_the_JavaScript_Prerequisites_for React.md) ![female factory worker](./Images/very-small-female-factory-worker.png)
+3. [Master JavaScript](./Atoms/Mastering_the_JavaScript_Prerequisites_for_React.md)  ![female factory worker](./Images/very-small-female-factory-worker.png)
 4. [Master JavaScript using Deno](./Atoms/How_to_Master_the_JavaScript_Prerequisites_using_Deno.md) ![Deno](./Images/dino-very-small.png)
 5. [7-Day Bootcamp](./Atoms/A_7_Day_JavaScript_for_React-Bootcamp.md)
 6. [30-Day Mastery Plan](./Atoms/A_30-Day_JavaScript_for_React_Mastery_Plan.md)
@@ -39,6 +39,7 @@ Before writing a single line of React, you **must** understand these Modern Java
 10. Array Methods
 11. Spread or Rest Operator
 12. Async, Awayt and Fetch
+
 
 
 ---
