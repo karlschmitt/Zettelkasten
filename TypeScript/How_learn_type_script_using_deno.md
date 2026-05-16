@@ -8,9 +8,12 @@ author: Karl Schmitt
 
 # How to learn TypeScript using Deno?
 
+![Deno](./Images/Deno.png)
+
 1. This Learning is inspired by the [book](https://gandrille.github.io/tech-notes/Web_Design/TypeScript/2019%20typescript%20deep%20dive.pdf)
-2. [Starting TypeScript using Denp](./Starting_TypeScript_using_Deno.md)
+2. [Starting TypeScript using Deno](./Starting_TypeScript_using_Deno.md)
 3. [Learning TypeScript using Deno](./Learning_TypeScript_using_Deno.md)
 4. [Learning TypeScript Week One using Deno](./Learning_TypeScript_Week_1_using_Deno.md)
 5. [Learning TypeScript Week Two using Deno](./Learning_TypeScript_Week_2_using_Deno.md)
 6. [Learning TypeScript Week Three using Deno](./Learning_TypeScript_Week_3_using_Deno.md)
+7. [Learning TypeScript Week Four using Deno](./Learning_TypeScript_Week-4_using_Deno.md)

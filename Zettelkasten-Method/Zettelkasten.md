@@ -4,7 +4,7 @@ title: Zettelkasten Method
 author: Karl Schmitt
 date: 2024-04-25
 keywords: [ Zettelkasten, Niklas Luhmann ]
-summary: The Zettelkasten method comes in two favors a digital version and an anolog version. The analog version has the handwritten and haptic advantage while the digital version is easy to share.
+summary: The Zettelkasten method comes in two flavors a digital version and an anolog version. The analog version has the handwritten and haptic advantage while the digital version is easy to share.
 ---
 
 # Zettelkasten-Method

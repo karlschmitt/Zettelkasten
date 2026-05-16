@@ -27,7 +27,8 @@ First, install Deno and set up your editor.
 ---
 
 ### 2. Your First TypeScript File
-In Deno, you just create a `.ts` file and run it. No compilation step is required.
+
+In [Deno](https://deno.com/), you just create a `.ts` file and run it. No compilation step is required.
 
 Create `hello.ts`:
 ```typescript
@@ -88,6 +89,7 @@ console.log(data.title.toUpperCase());
 ---
 
 ### 4. Leverage Deno’s Built-in Tooling
+
 One of the best ways to learn "Good" TypeScript is by using tools that enforce best practices. Deno includes these out of the box:
 
 *   **Linter:** Run `deno lint`. It will tell you if you are using "bad" patterns (like using `any` too much).
@@ -117,7 +119,10 @@ Deno.test("add function works", () => {
 ---
 
 ### 6. Managing Dependencies (The Deno Way)
+
 In Deno, there is no `node_modules`. You import modules directly via URLs or via `deno.json`. 
+
+[What is Hono?](./Atomics/Hono web framework.md)
 
 If you want to use a library (like the `Hono` web framework) to learn how types work in large libraries:
 ```typescript
@@ -130,15 +135,23 @@ app.get("/", (c) => c.text("Hello TypeScript!"));
 Deno.serve(app.fetch);
 ```
 
+1. [Hono Tutorial](./Hono_tutorial_using_deno.md)
+2. [Hono Bootcamp](./A_7-Day Hono_and_Deno_Bootcamp.md)
+
 ---
 
 ### Recommended Learning Path
 
 1.  **The Basics:** Learn `string`, `number`, `boolean`, and `arrays`.
+    1.  [string](./Atomics/Srings_in_TypeScript.md)
+    2.  number
+    3.  boolean
+    4.  arrays
 2.  **Functions:** Learn how to type parameters and return values.
 3.  **Interfaces vs. Types:** Learn how to describe the shape of objects.
 4.  **Generics:** This is the "Level 2" of TypeScript. Try writing a function that works with any type of array.
 5.  **Deno Standard Library:** Browse the [Deno Standard Library](https://deno.land/std). Read the source code; it is written in very clean, high-quality TypeScript.
 
 ### Summary: Why this works
-By using Deno, you remove the **configuration fatigue** that usually comes with TypeScript. You don't have to worry about `package.json`, `tsconfig.json`, `eslint.json`, or `prettierrc`. You just write code, and Deno tells you if your types are wrong.
+
+By using [Deno](https://deno.com/), you remove the **configuration fatigue** that usually comes with TypeScript. You don't have to worry about `package.json`, `tsconfig.json`, `eslint.json`, or `prettierrc`. You just write code, and Deno tells you if your types are wrong.
