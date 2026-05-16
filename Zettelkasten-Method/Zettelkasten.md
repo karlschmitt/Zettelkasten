@@ -9,6 +9,8 @@ summary: The Zettelkasten method comes in two favors a digital version and an an
 
 # Zettelkasten-Method
 
+![Niklas Luhmann](./Images/Niklas_Luhmann.jpg "Niklas Luhman")
+
 The Zettelkasten-Method is a notetaking system of five types of notes:
 
 1. Fleeting notes: "Collect Information"
@@ -27,6 +29,7 @@ The Note-taking Process:
 
 Zettekasten is a method and system for learning and collecting information: [Zettelkasten](./Tools/Zettelkasten.md)
 
+![Niklas Luhmann](./Images/Niklas-Luhmann.jpg)
 
 #### Useful YouTube Links for the Zettelkasten Method
 
