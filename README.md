@@ -119,7 +119,7 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 
 ### Welcome to the Workshop Workout ⛹
 
-![Coding-Dojo-Triangle](./Images/Tiny-Habits.png)
+![Coding-Dojo-Triangle](./Images/Coding-Dojo-Triangle.png)
 
 1. Aufstehen und [Hände](https://youtu.be/2G6pHQJEbWQ) ausschütteln.
 2. [Schulter](https://youtu.be/lnXSq-zW_Q0) kreisen lassen.
