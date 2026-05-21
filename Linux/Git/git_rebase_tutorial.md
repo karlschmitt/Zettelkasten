@@ -167,6 +167,7 @@ A---B---C---F---G
      \         /
       D---E---M
 ```
+![Imagine git merge](./Images/Imagine_git_merge_001.png)
 
 Advantages:
 
