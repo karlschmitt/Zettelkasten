@@ -36,7 +36,7 @@ Instead of combining two branches with a "merge commit," rebasing rewrites the p
 * Clean History: It creates a linear, straight-line path of commits that is much easier to read than a "spaghetti" history of merges.
 * Avoid Merge Commits: It prevents the "Merge branch 'main' into 'feature'" commits that often clutter logs.
 * Polished Commits: You can use "interactive rebase" (git rebase -i) to squash small fixes into one clean commit or reword old messages.
-* Simpler Conflict Resolution: Conflicts are resolved one commit at a time during the replay, rather than all at once in a massive merge. [3, 4, 5, 6, 7, 8, 9, 10] 
+* Simpler Conflict Resolution: Conflicts are resolved one commit at a time during the replay, rather than all at once in a massive merge.
 
 ------------------------------
 ### How It Works
@@ -44,13 +44,16 @@ Instead of combining two branches with a "merge commit," rebasing rewrites the p
    1. Detach: Git temporarily "parks" your unique commits in a safe place.
    2. Reset: Your branch is reset to match the latest state of the target branch (e.g., main).
    3. Replay: Git takes your parked commits and applies them one-by-one onto the new tip of the branch.
-   4. Rewrite: Because the base has changed, Git creates brand new commits with different IDs (hashes). [1, 2, 3, 4, 11, 12, 13] 
+   4. Rewrite: Because the base has changed, Git creates brand new commits with different IDs (hashes).
 
 ------------------------------
 ### ⚠️ The Golden Rule of Rebasing
 
-Never rebase commits that you have already pushed to a public/shared branch. [14, 15] 
-Since rebase rewrites history by creating new commit IDs, anyone else working on that branch will see their history as diverged and broken. Only rebase local branches that only you are working on. [11, 16, 17, 18] 
+Never rebase commits that you have already pushed to a public/shared branch.
+
+Since rebase rewrites history by creating new commit IDs, anyone else working on that branch will see their history as diverged and broken. 
+
+Only rebase local branches that only you are working on.
 
 | Feature [2, 3, 4, 11, 14, 19, 20, 21] | Git Merge | Git Rebase |
 |---|---|---|
@@ -102,8 +105,9 @@ feature
       D---E
 ```
 
-Meanwhile, `main` receives new commits:
+![Imagine this history](./Images/Imagine_this_history_001.png)
 
+Meanwhile, `main` receives new commits:
 ```text
 main
 A---B---C---F---G
@@ -112,6 +116,7 @@ feature
      \
       D---E
 ```
+![Imagine main receives new commits](./Images/Imagine_main_receives_new_commits_001.png)
 
 You want your feature branch to look like it started from `G`.
 
@@ -134,6 +139,8 @@ feature
                  \
                   D'---E'
 ```
+
+![Imagine with git rebase 001](./Images/Imagine_with_git_rebase_001.png)
 
 Notice:
 
