@@ -29,7 +29,7 @@ Git rebase is a command that moves or "replays" a sequence of commits from one b
 
 Instead of combining two branches with a "merge commit," rebasing rewrites the project history so that your changes appear to have been built sequentially on top of the latest work from another branch (like main).
 
-![Git rebase from main](./images/Git_rebase_from_main.png)
+![Git rebase from main](./Images/Git_rebase_from_main.png)
 
 #### Why Use Rebase?
 
