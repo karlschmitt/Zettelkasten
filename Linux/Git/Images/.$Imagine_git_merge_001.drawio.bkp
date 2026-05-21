@@ -49,10 +49,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="afUsStFP6pN4-gkts8XP-13" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#9999FF;" value="&lt;font color=&quot;#ffff00&quot;&gt;F&lt;/font&gt;" vertex="1">
-          <mxGeometry height="29" width="29" x="349" y="186" as="geometry" />
+          <mxGeometry height="29" width="29" x="349" y="187" as="geometry" />
         </mxCell>
         <mxCell id="afUsStFP6pN4-gkts8XP-14" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#9999FF;" value="&lt;font color=&quot;#ffff00&quot;&gt;G&lt;/font&gt;" vertex="1">
-          <mxGeometry height="29" width="29" x="464" y="187" as="geometry" />
+          <mxGeometry height="29" width="29" x="464" y="188" as="geometry" />
         </mxCell>
         <mxCell id="K9PTJxRipkYIl3_pnhCW-3" edge="1" parent="1" source="K9PTJxRipkYIl3_pnhCW-1" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#FF0000;" target="afUsStFP6pN4-gkts8XP-14">
           <mxGeometry relative="1" as="geometry" />

@@ -587,6 +587,8 @@ feature:
       D---E
 ```
 
+![](./Images/Imagine_before_001.png)
+
 ***
 
 ## After `git merge main`
@@ -596,7 +598,7 @@ A---B---C---F
      \      \
       D---E--M
 ```
-
+![Imagine git merge main 001](./Images/Imagine_git_merge_main_001.png)
 ***
 
 ## After `git rebase main`
@@ -604,7 +606,7 @@ A---B---C---F
 ```text
 A---B---C---F---D'---E'
 ```
-
+![Imagine after git rebase main 001](./Images/Imagine_after_git_rebase_main_001.png)
 ***
 
 # 13. Recommended Beginner Workflow
