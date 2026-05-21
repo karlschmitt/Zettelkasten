@@ -193,9 +193,6 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 5. [The Modern JavaScript Tutorial](https://javascript.info/)
 6. Regular Expressions
 
-### Vanilla JavaScript
-
-1. [Let's jump right into it](./Vanilla-JavaScript/Learning-Vanilla-JavaScript.md)
 
 ### TypeScript 👷
 

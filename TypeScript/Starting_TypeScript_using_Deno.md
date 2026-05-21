@@ -24,13 +24,21 @@ First, install Deno and set up your editor.
 *   **Extension:** Install the **[Official Deno Extension](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno)**. 
     *   *Crucial:* After installing, open your project folder, press `Ctrl+Shift+P`, and run **"Deno: Initialize Workspace Configuration"**. This tells VS Code to use Deno's engine instead of the default Node engine.
 
+![First Steps 001](./Images/First_Steps_001.png)
+
 ---
 
 ### 2. Your First TypeScript File
 
 In [Deno](https://deno.com/), you just create a `.ts` file and run it. No compilation step is required.
 
-Create `hello.ts`:
+Create `hello.ts` and place the following TypeScript code inside:
+```powershell
+touch hello.ts
+nvim hello.ts
+```
+```
+
 ```typescript
 const greeting: string = "Hello, Deno!";
 
@@ -40,8 +48,15 @@ function sayHello(name: string): void {
 
 sayHello("TypeScript Learner");
 ```
+![First Steps 002](./Images/First_Steps_002.png)
 
-**Run it in your terminal:**
+> [!NOTE]
+>  In case you are curious and have the TypeScript compiler globally installed, you can compile the TypeScript file.
+```powershell
+tsc hello.ts
+```
+
+**Anyway run it in your terminal with deno:**
 ```bash
 deno run hello.ts
 ```
@@ -49,7 +64,12 @@ deno run hello.ts
 ---
 
 ### 3. Learn the Core TypeScript Concepts
-Since Deno handles the "plumbing," you can focus entirely on the language syntax. Practice these three core pillars:
+Since Deno handles the "plumbing," you can focus entirely on the language syntax. 
+Practice these three core pillars:
+
+1. Type Annotations
+2.  Interfaces
+3.  Fetch
 
 #### A. Type Annotations and Interfaces
 Create a file `types.ts`:
@@ -85,7 +105,9 @@ const data: Post = await response.json();
 console.log(data.title.toUpperCase());
 ```
 *Note: Run this with permissions: `deno run --allow-net types.ts`*
-
+```powershell
+deno run --allow-net typ
+```
 ---
 
 ### 4. Leverage Deno’s Built-in Tooling

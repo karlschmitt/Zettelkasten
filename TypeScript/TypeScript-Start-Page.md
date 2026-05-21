@@ -6,7 +6,15 @@ date: 2026-05-16
 keywords: [ TypeScript, tsc, ts-node, Deno ]
 ---
 
-# TypeScript
+# TypeScript and Vanilla JavaScript
+
+## Vanilla JavaScript
+
+![From JavaScriptToTypeScript](./Images/FromJavaScriptToTypeScript.png)
+
+1. [Let's jump right into JavaScript](./Vanilla-JavaScript/Learning-Vanilla-JavaScript.md)
+
+## TypeScript
 
 ![TypeScript Logo](./Images/ts-logo-128.png)
 
