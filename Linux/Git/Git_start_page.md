@@ -9,8 +9,8 @@ keywords: [ git, rebase, PowerShell, visual studio code ]
 # Git start page
 
 1. What is a git rebase?
-2. How to git rebase using PowerShell?
-3. How to git rebase using Visual Studio Code?
+2. How to do a git rebase using PowerShell?
+3. How to do a git rebase using Visual Studio Code?
 4. Why there are merge conflicts during a rebase?
 5. Git rebase tutorial
 6. Git rebase bootcamp
