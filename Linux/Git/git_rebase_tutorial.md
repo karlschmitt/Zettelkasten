@@ -20,6 +20,16 @@ It helps you:
 
 * edit/squash/reorder commits before sharing them
 
+
+General information about Git rebase can be found:  [Git rebase ...](https://git-scm.com/docs/git-rebase)
+
+Here you can learn about Git rebase:
+
+1. [Learn git rebase ...](https://www.gitkraken.com/learn/git/git-rebase)
+2. [Again learn git rebase ...](https://intellipaat.com/blog/git-rebase/)
+3. [Gitlab learn git rebase ...](https://docs.gitlab.com/topics/git/git_rebase/)
+4. [Cherry pick and rebase ...](https://dojofive.com/blog/the-git-cherry-pick-and-git-rebase-interactive-combo/)
+
 ***
 
 # 1. What Is Rebase?
@@ -69,30 +79,7 @@ If you'd like, I can show you:
 * How to fix conflicts if the rebase stops halfway. [22] 
 
 
-[1] [https://git-scm.com](https://git-scm.com/docs/git-rebase)
-[2] [https://www.youtube.com](https://www.youtube.com/watch?v=yTFC_MvwJvQ&t=47)
-[3] [https://www.gitkraken.com](https://www.gitkraken.com/learn/git/git-rebase)
-[4] [https://www.geeksforgeeks.org](https://www.geeksforgeeks.org/git/rebasing-of-branches-in-git/)
-[5] [https://stackoverflow.com](https://stackoverflow.com/questions/13193787/why-would-i-want-to-do-git-rebase)
-[6] [https://www.reddit.com](https://www.reddit.com/r/programming/comments/1mn85pw/git_rebase_explained_like_youre_new_to_git/)
-[7] [https://www.reddit.com](https://www.reddit.com/r/git/comments/t5dctv/am_i_not_understanding_how_git_rebase_work/)
-[8] [https://docs.github.com](https://docs.github.com/en/get-started/using-git/about-git-rebase)
-[9] [https://www.youtube.com](https://www.youtube.com/watch?v=_UZEXUrj-Ds)
-[10] [https://shiftmag.dev](https://shiftmag.dev/rebase-over-merge-4014/)
-[11] [https://www.youtube.com](https://www.youtube.com/watch?v=KrJxJklLTjk)
-[12] [https://www.youtube.com](https://www.youtube.com/watch?v=qZDF7EPiS0g&t=30)
-[13] [https://git-scm.com](https://git-scm.com/docs/git-rebase/2.52.0)
-[14] [https://www.reddit.com](https://www.reddit.com/r/git/comments/1kwf4nr/what_git_rebase_is_for/)
-[15] [https://www.reddit.com](https://www.reddit.com/r/git/comments/1jirf1q/i_dont_quite_understand_the_risks_of_rebase/)
-[16] [https://zapier.com](https://zapier.com/blog/git-rebase-vs-merge/)
-[17] [https://intellipaat.com](https://intellipaat.com/blog/git-rebase/)
-[18] [https://medium.com](https://medium.com/@shekharsomani98/git-rebase-the-complete-guide-to-maintaining-clean-linear-history-28b88b3ef0d6)
-[19] [https://git-scm.com](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
-[20] [https://www.youtube.com](https://www.youtube.com/watch?v=zOnwgxiC0OA&t=7)
-[21] [https://docs.gitlab.com](https://docs.gitlab.com/topics/git/git_rebase/)
-[22] [https://dojofive.com](https://dojofive.com/blog/the-git-cherry-pick-and-git-rebase-interactive-combo/)
-
-
+---
 
 Imagine this history:
 
@@ -154,6 +141,10 @@ Notice:
 
 # 2. Merge vs Rebase
 
+Here you can learn about merge versus rebase:
+1. [Learn about Merge versus Rebase ...](https://shiftmag.dev/rebase-over-merge-4014/)
+2. [Again learn about Merge versus Rebase ...](https://zapier.com/blog/git-rebase-vs-merge/)
+
 ## Merge
 
 ```bash
@@ -192,6 +183,7 @@ Creates:
 ```text
 A---B---C---F---G---D'---E'
 ```
+![Imagine after git rebase main 001](./Images/Imagine_after_git_rebase_main_002.png)
 
 Advantages:
 
@@ -211,11 +203,46 @@ Disadvantages:
 
 ## Step 1 — Switch to your branch
 
+1. [Learn git branching in a nutchell: ](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
+2. [What is git checkout?](https://www.gitkraken.com/learn/git/tutorials/what-is-git-checkout)
+3. [git checkout versus switch](https://graphite.com/guides/git-checkout-vs-switch)
+4. [Just git checkout](https://www.codecademy.com/resources/docs/git/checkout) 
+
+Switch or checkout thats here the question:
 ```bash
 git checkout feature
 ```
 
+The `git checkout` command is primarily used to switch between different versions of a project, such as branches or specific commits. When you run it, Git updates the files in your working directory to match the state of the target version and moves the `HEAD` pointer to that location.
+
 ***
+
+## Key Capabilities
+
+* Switching Branches: Navigates to an existing branch (e.g., `git checkout feature-login`).
+* Creating Branches: Uses the `-b` flag to create and switch to a new branch in one step (`git checkout -b new-feature`).
+* Restoring Files: Reverts a specific file to a previous state without changing the rest of the project.
+* Navigating History: Moves the environment to a specific past commit or tag to inspect old code.
+
+## Modern Alternatives
+
+In Git version 2.23 and later, `git checkout` has been split into two more specific commands to reduce confusion:
+
+* `git switch`: Dedicated exclusively to switching and creating branches.
+* [`git restore`](https://git-scm.com/docs/git-checkout): Dedicated exclusively to reverting changes in files. \[11, 14]
+
+💡 Pro Tip: Use `git checkout -` to instantly toggle back to the previous branch you were on.
+
+***
+
+If you'd like, I can help you with:
+
+* Resolving conflicts that prevent a checkout
+* Understanding detached HEAD state
+* Comparing changes between two different branches
+
+
+
 
 ## Step 2 — Update main
 
@@ -223,6 +250,30 @@ git checkout feature
 git checkout main
 git pull
 ```
+
+Running those two commands in sequence ensures your local version of the `main` branch is identical to the latest version on the remote server (like GitHub).
+
+## 1. `git checkout main`
+
+* Switches your active workspace to the `main` branch.
+* Updates your files to match whatever is currently stored in your local `main` history.
+* Moves the HEAD pointer to the `main` branch.
+
+## 2. `git pull`
+
+* Fetches new changes from the remote repository (usually `origin`).
+* Merges those changes into your local `main` branch automatically.
+* Updates your code with the most recent work pushed by teammates.
+
+***
+
+## ⚠️ Important Note
+
+If you have unsaved changes in your files that haven't been committed, `git checkout main` might fail with an error. To fix this, you can:
+
+* Commit your work first.
+* Stash your work using `git stash`.
+* Discard your changes using `git restore .`.
 
 ***
 
@@ -232,49 +283,326 @@ git pull
 git checkout feature
 git rebase main
 ```
+>[!NOTE]
+> Git now replays your commits on top of `main`.
 
-Git now replays your commits on top of `main`.
+These two commands are used to _move your work from a feature branch so that it starts on top of the newest code in_ `main`. This creates a clean, linear project history.
+
+## 1. `git checkout feature`
+
+* Switches you onto your specific work branch (named `feature`).
+* Sets the context so that the following command knows which branch needs to be updated.
+
+## 2. `git rebase main`
+
+* Lifts your commits from the `feature` branch and sets them aside.
+* Applies the new updates from `main` to your branch first.
+* Replays your commits one by one on top of those new updates.
+
+***
+
+## 💡 Why do this instead of merging?
+
+* Clean History: It avoids the "clutter" of extra merge commits in your log.
+* No "Train Tracks": The project history looks like a straight line rather than a web of crossing lines.
+* Easier Reviews: It makes it look like you started your feature today, even if you actually started it a week ago.
+
+***
+
+## ⚠️ Common Risks
+
+* Conflicts: You may have to resolve code conflicts for each commit as it is "replayed."
+* Rewriting History: Never rebase a branch that other people are also working on, as it changes commit IDs and can break their local setup.
 
 ***
 
 # 4. Handling Rebase Conflicts
 
-Sometimes Git cannot automatically replay a commit.
+>[!NOTE]
+>Sometimes Git cannot automatically replay a commit.
 
-You may see:
+You may see a ==CONFLICT==:
 
 ```text
 CONFLICT (content): Merge conflict in app.js
 ```
-Merge conflicts occur during a rebase for the same reason they do during a merge: _two different commits changed the same line of code in the same file, and Git doesn't know which version to keep_. \[1, 2]
+Merge conflicts occur during a rebase for the same reason they do during a merge: _two different commits changed the same line of code in the same file, and Git doesn't know which version to keep_. 
 
-However, rebase handles conflicts differently than a standard merge. \[3]
+>[!IMPORTANT]
+>However, rebase handles conflicts differently than a standard merge.
 
-### 1. Sequential Application \[4]
+### 1. Sequential Application 
 
-While a merge combines the final state of two branches at once, a rebase takes your commits and reapplies them one by one on top of the new base. \[3, 5]
+While a **merge** *combines* the final state of two branches at once, a **rebase** takes your commits and *reapplies* them one by one on top of the new base.
 
-* Conflict Trigger: If your first commit changes a line that was also changed in the "new base" (the target branch), Git pauses.
-* Repeating Conflicts: You might have to resolve the same conflict multiple times if several of your commits touch that same line. \[1, 6, 7, 8]
+![Git rebase from main 002](./Images/Git_rebase_from_main_002.png)
 
-### 2. Rewriting History
+* **Conflict Trigger**: If your first commit changes a line that was also changed in the "new base" (the target branch), Git pauses.
+* **Repeating Conflicts**: You might have to resolve the same conflict multiple times if several of your commits touch that same line.
 
-Rebase technically "rewrites" history by creating brand-new commits with different IDs (hashes). \[5, 9]
+>[!NOTE]
+>In a Git rebase, **Sequential Application** refers to the _==step-by-step==_ process where Git takes your individual commits and **"re-plays"** them one at a time onto the new base.
 
-* Because Git is effectively "replay-ing" your work on a new foundation, it checks for compatibility at every single step.
-* If you previously resolved a conflict in a merge, rebase may force you to do it again because it ignores that past merge resolution. \[10, 11]
-
-### 3. Diverged Path
-
-Conflicts often happen when your branch has "diverged" significantly from the main branch. \[12]
-
-* If someone else changed a function name in `main` and you called that same function in your feature branch, [Git](https://github.com/) will flag this as a conflict during rebase. \[6]
+Instead of combining everything at once (like a merge), Git treats your work like a **movie reel**, _==frame by frame==_.
 
 ***
 
-### 💡 Common Rebase Commands
+### How it Works
 
-If you hit a conflict, Git will pause and wait for you to: \[13]
+* Step 1: **==Lifting==**: Git identifies the commits unique to your branch and temporarily moves them to a "holding area."
+* Step 2: **==Resetting==**: Your branch "teleports" to the latest commit of the target branch (e.g., `main`).
+* Step 3: **==Replaying==**: Git takes the first commit you made, applies it to the new `main`, and creates a new commit ID. Then it takes the second, and so on.
+
+### ⚓ The Importance of Sequence
+
+* **==Conflict Resolution==**: If a conflict occurs, Git pauses at the specific commit that caused the problem. You fix it, then tell Git to `continue`.
+* **==Atomic History==**: Because commits are applied one by one, the logical flow of your work is preserved, even though the "starting point" of your branch has changed.
+* **==New Identities==**: Even if the code is the same, each re-applied commit gets a new SHA (ID) because its "parent" commit is now different.
+
+***
+
+### ⚠️ Potential Hurdles
+
+* **==Multiple Conflicts==**: You might have to fix the same conflict multiple times if it exists across several of your sequential commits.
+* **==Squashing==**: You can choose to "squash" these sequential commits into one single commit during the process to keep history even cleaner.
+
+***
+
+If you're currently stuck in a rebase, let me know:
+
+* Are you being asked to resolve conflicts repeatedly?
+* Do you want to know how to skip a specific commit during the sequence?
+* Are you trying to use interactive rebase (`-i`) to rewrite that sequence?
+
+
+
+\[1] [https://medium.com](https://medium.com/@haroldfinch01/whats-the-difference-between-git-merge-and-git-rebase-5aa33a485dfc)
+
+\[2] [https://dzone.com](https://dzone.com/articles/understanding-git)
+
+\[3] [https://medium.com](https://medium.com/@1809157_26884/git-merge-vs-rebase-ea941fd5eef7)
+
+\[4] [https://medium.com](https://medium.com/yavar/understanding-git-merge-and-rebase-0c6d65f4ec6b)
+
+\[5] [https://praneethreddybilakanti.medium.com](https://praneethreddybilakanti.medium.com/3-git-branching-55ff1ca8af0d)
+
+\[6] [https://codingitwrong.com](https://codingitwrong.com/2021/09/08/small-commits-and-the-power-of-git-bisect.html)
+
+\[7] [https://www.geeksforgeeks.org](https://www.geeksforgeeks.org/git/how-to-use-git-rebase/)
+
+\[8] [https://codesignal.com](https://codesignal.com/learn/courses/advanced-git-features/lessons/understanding-rebasing-in-git)
+
+\[9] [https://dev.to](https://dev.to/vaib/git-branching-strategies-a-deep-dive-into-rebasing-vs-merging-when-to-use-what-14ja)
+
+\[10] [https://man7.org](https://man7.org/linux/man-pages/man1/git-rebase.1.html)
+
+\[11] [https://codingnomads.com](https://codingnomads.com/git-rebase)
+
+\[12] [https://www.kodeco.com](https://www.kodeco.com/books/advanced-git/v2.0/chapters/4-demystifying-rebasing)
+
+\[13] [https://dev.to](https://dev.to/joemsak/git-rebase-explained-and-eventually-illustrated-5hlb)
+
+\[14] [https://tutorial.gitlabpages.inria.fr](https://tutorial.gitlabpages.inria.fr/git/03-linear-git-project/)
+
+\[15] [https://docs.microfocus.com](https://docs.microfocus.com/doc/397/2020.11.ng/workinggit)
+
+\[16] [https://www.codecademy.com](https://www.codecademy.com/article/how-to-use-git-rebase)
+
+\[17] [https://www.ibm.com](https://www.ibm.com/docs/en/z-devops-guide?topic=use-git-branching-model-mainframe-development)
+
+
+### 2. Rewriting History
+
+Rebase technically "rewrites" history by creating brand-new commits with different IDs (hashes).
+
+* Because Git is effectively "replay-ing" your work on a new foundation, it checks for compatibility at every single step.
+* If you previously resolved a conflict in a merge, rebase may force you to do it again because it ignores that past merge resolution.
+
+In Git, Rewriting History means _changing the record of how, when, or in what order commits were made_. When you rebase, you aren't just moving code; you are technically deleting old commits and creating brand-new ones. \[1, 2, 3, 4, 5]
+
+***
+
+#### Why it is considered "Rewriting"
+
+* New Parentage: A commit’s identity (SHA-1 hash) is partially based on the commit that came before it. By changing the "base" (the parent), the commit's identity changes.
+* New IDs: Even if the code changes are identical, the Commit Hash (e.g., `a1b2c3d`) will be completely different after a rebase.
+* Linearizing: It makes the history look like a straight line, hiding the fact that you were working on a separate branch for days. \[6, 7, 8, 9, 10]
+
+#### 🛠️ What you can change
+
+During a rebase (especially an interactive one), you can:
+
+* Edit: Change the code within a specific past commit.
+* Reword: Change a typo in an old commit message.
+* Squash: Combine five small commits into one clean "feature" commit.
+* Drop: Completely delete a commit you no longer want. \[12, 13, 14, 15, 16]
+
+***
+
+#### 🛑 The Golden Rule
+
+Never rewrite history on a public branch.
+
+If you rebase a branch that others have already pulled to their computers:
+
+* Their version of history will conflict with your "new" version.
+* It causes massive "merge headaches" for the team.
+* You will be forced to use `git push --force`, which can overwrite teammates' work. \[18, 19, 20, 21, 22]
+
+***
+
+If you need to move forward, I can explain:
+
+* How to force push safely using `--force-with-lease`
+* How to use interactive rebase (`git rebase -i`)
+* What to do if you accidentally rewrote history on the wrong branch
+
+
+
+\[1] [https://namastedev.com](https://namastedev.com/blog/advanced-git-strategies-rebasing-merging-and-history-rewriting/)
+
+\[2] [https://www.linkedin.com](https://www.linkedin.com/pulse/understanding-git-rebase-kiran-u-kamath-1hp2c)
+
+\[3] [https://medium.com](https://medium.com/devlink-tips/git-rebase-isnt-scary-you-just-never-had-it-explained-right-18cb866ce0a2)
+
+\[4] [https://code.tutsplus.com](https://code.tutsplus.com/rewriting-history-with-git-rebase--cms-23191t)
+
+\[5] [https://www.augmentedmind.de](https://www.augmentedmind.de/2024/04/07/ultimate-git-guide-for-developers/)
+
+\[6] [https://dev.to](https://dev.to/abbeyperini/gitpanic-interactive-rebase-48fe)
+
+\[7] [https://githowto.com](https://githowto.com/git_basics)
+
+\[8] [https://www.biteinteractive.com](https://www.biteinteractive.com/understanding-git-merge/)
+
+\[9] [https://gist.github.com](https://gist.github.com/jherax/6a756503065e991197e70e8feb319128)
+
+\[10] [https://support.atlassian.com](https://support.atlassian.com/bitbucket-cloud/docs/maintain-a-git-repository/)
+
+\[11] [https://www.graphapp.ai](https://www.graphapp.ai/engineering-glossary/git/commit-ish-also-committish)
+
+\[12] [https://dev.to](https://dev.to/d4vsanchez/rebasing-in-git-to-maintain-history-s-health-310c)
+
+\[13] [https://www.aleksandrhovhannisyan.com](https://www.aleksandrhovhannisyan.com/blog/undoing-changes-in-git/)
+
+\[14] [https://thoughtbot.com](https://thoughtbot.com/blog/git-interactive-rebase-squash-amend-rewriting-history)
+
+\[15] [https://www.heise.de](https://www.heise.de/en/news/Git-2-54-experiments-with-changing-commit-history-11265809.html)
+
+\[16] [https://labex.io](https://labex.io/tutorials/git-how-to-rewrite-git-commit-history-with-rebase-411498)
+
+\[17] [https://dev.to](https://dev.to/vaib/git-branching-strategies-a-deep-dive-into-rebasing-vs-merging-when-to-use-what-14ja)
+
+\[18] [https://www.linkedin.com](https://www.linkedin.com/pulse/understanding-git-rebase-kiran-u-kamath-1hp2c)
+
+\[19] [https://medium.com](https://medium.com/yavar/understanding-git-merge-and-rebase-0c6d65f4ec6b)
+
+\[20] [https://dev.to](https://dev.to/vaib/git-branching-strategies-a-deep-dive-into-rebasing-vs-merging-when-to-use-what-14ja)
+
+\[21] [https://dev.to](https://dev.to/d4vsanchez/rebasing-in-git-to-maintain-history-s-health-310c)
+
+\[22] [https://thoughtbot.com](https://thoughtbot.com/blog/git-interactive-rebase-squash-amend-rewriting-history)
+
+
+### 3. Diverged Path
+
+Conflicts often happen when your branch has **"diverged"** significantly from the main branch.
+
+>[!NOTE]
+>If someone else changed a function name in `main` and you called that same function in your feature branch, [Git](https://github.com/) will flag this as a conflict during rebase.
+
+A **==Diverged Path==** occurs when two versions of the same branch have different commit histories that are no longer compatible.
+
+In the context of a rebase, this happens because you have rewritten history locally, while the original history still exists on the remote server (like GitHub).
+
+#### Why it Happens
+
+* Local Change: You rebase your `feature` branch. This creates new commits with new IDs.
+* Remote Record: The remote server still has your old commits with the original IDs.
+* The Conflict: Git looks at both and sees they started at the same point but traveled in different "directions." It can't figure out which one is the "truth" without help. \[6, 7, 8, 9, 10]
+
+#### 🚩 How You’ll Know
+
+If you try to run a standard `git push` after a rebase, Git will reject it with an error like: \[11, 12, 13]
+
+* `[rejected] feature -> feature (non-fast-forward)`
+* `Updates were rejected because the tip of your current branch is behind its remote counterpart.` \[14, 15]
+
+#### 🛠️ How to Fix the Path
+
+Since you intentionally changed the history, you have to tell the server to replace its old path with your new one:
+
+* The "Hammer": `git push --force` (Overwrites the remote branch entirely).
+* The "Safety Valve": `git push --force-with-lease` (Only overwrites if no one else has added new work to the remote branch). \[16, 17, 18, 19, 20]
+
+***
+
+#### ⚠️ The Risk
+
+If a teammate pulled your `feature` branch before you rebased, their local path is now "diverged" from the server. When they try to pull, they will get a mess of duplicate commits and merge conflicts. \[21, 22, 23]
+
+***
+
+To help you clear this up, let me know:
+
+* Are you seeing a "non-fast-forward" error right now?
+* Are other people working on this same branch?
+* Do you want the command to undo the rebase and go back to the old path?
+
+
+
+\[1] [https://dev.to](https://dev.to/lotanna_obianefo/mastering-git-for-production-branching-merging-squash-strategies-every-engineer-should-know-5flp)
+
+\[2] [https://www.geeksforgeeks.org](https://www.geeksforgeeks.org/git/what-to-do-when-git-branch-has-diverged/)
+
+\[3] [https://refine.dev](https://refine.dev/blog/git-merge-vs-rebase/)
+
+\[4] [https://github.com](https://github.com/android-password-store/Android-Password-Store/issues/1231)
+
+\[5] [https://rse.shef.ac.uk](https://rse.shef.ac.uk/blog/2020-06-23-git-rebase-vs-merge/)
+
+\[6] [https://medium.datadriveninvestor.com](https://medium.datadriveninvestor.com/git-rebase-vs-git-merge-ec3300f49dbd)
+
+\[7] [https://unstop.com](https://unstop.com/blog/git-rebase-vs-merge)
+
+\[8] [https://medium.com](https://medium.com/@basecs101/do-you-know-the-difference-between-git-merge-and-git-rebase-800983738b60)
+
+\[9] [https://seantrane.com](https://seantrane.com/posts/merging-strategies-in-github-19015/)
+
+\[10] [https://set.kuleuven.be](https://set.kuleuven.be/voorkennis/ximerademo/ximera-downloads/handout_pdf/git/gitConcepts.pdf)
+
+\[11] [https://www.augmentedmind.de](https://www.augmentedmind.de/2024/04/07/ultimate-git-guide-for-developers/)
+
+\[12] [https://learn.microsoft.com](https://learn.microsoft.com/en-us/azure/devops/repos/git/rebase?view=azure-devops)
+
+\[13] [https://www.codemag.com](https://www.codemag.com/article/1105101/Git-for-Subversion-Users)
+
+\[14] [https://hades.github.io](https://hades.github.io/2010/01/git-your-friend-not-foe-vol-2-branches)
+
+\[15] [https://www.kodeco.com](https://www.kodeco.com/books/advanced-git/v2.0/chapters/8-centralized-workflow)
+
+\[16] [https://dev.to](https://dev.to/milu_franz/git-explained-an-in-depth-comparison-18mk)
+
+\[17] [https://tms-outsource.com](https://tms-outsource.com/blog/posts/what-is-git-rebase/)
+
+\[18] [https://dev.to](https://dev.to/vaib/git-branching-strategies-a-deep-dive-into-rebasing-vs-merging-when-to-use-what-14ja)
+
+\[19] [https://dev.to](https://dev.to/maxwell_dev/the-git-rebase-introduction-i-wish-id-had)
+
+\[20] [https://medium.com](https://medium.com/@artem.redia/mastering-git-for-teams-0ded8b0c0792)
+
+\[21] [https://medium.com](https://medium.com/@tomascdmota/git-rebase-vs-merge-as-a-junior-dev-d09ca2a2ea0b)
+
+\[22] [https://dev.to](https://dev.to/jessekphillips/rebase-and-merge-don-t-mix-4aj)
+
+\[23] [https://codingnomads.com](https://codingnomads.com/git-rebase)
+
+
+***
+
+#### 💡 Common Rebase Commands
+
+If you hit a conflict, Git will pause and wait for you to:
 
 * Fix the files: Open the file, keep the code you want, and remove conflict markers.
 * `git add <file>`: Stage the fixed file.
@@ -321,7 +649,7 @@ Would you like to know how to avoid these conflicts in the first place, or shoul
 
 ## Step 1 — Open conflicted files
 
-Git marks conflicts like this:
+Git marks ==conflicts== like this:
 
 ```text
 <<<<<<< HEAD
@@ -331,7 +659,103 @@ your feature code
 >>>>>>> feature
 ```
 
-Edit the file manually.
+>[!NOTE]
+> Edit the file manually.
+
+
+==Conflicted files== are _files where Git cannot automatically decide which code to keep during the rebase process_.
+
+Because a rebase applies your changes one commit at a time, a conflict happens when your changes and the changes from the `main` branch overlap on the exact same lines of code.
+
+***
+
+#### Why Conflicts Happen During Rebase
+
+* Overlapping Edits: You changed line 10 in `style.css` on your branch, but someone else also changed line 10 on the `main` branch.
+* File Deletions: You edited a file that was completely deleted in the `main` branch.
+* Structural Changes: A file was moved or renamed in one branch but edited in the other.
+
+#### 🔍 How they look in the code
+
+Git marks the problem area with "Conflict Markers":
+
+```text
+<<<<<<< HEAD
+(The code currently in the main branch)
+=======
+(The code you wrote in your commit)
+>>>>>>> your-commit-message
+```
+
+#### 🛠️ The Rebase Resolution Flow
+
+Unlike a merge (where you fix everything at once), a rebase might stop multiple times. \[11, 12]
+
+1. Git Pauses: The rebase stops at the specific commit where the conflict exists.
+2. You Fix: You open the file, remove the markers, and choose the correct code.
+3. You Stage: Run `git add <file-name>` to mark it as resolved.
+4. You Continue: Run `git rebase --continue`.
+5. Repeat: If your next commit also has a conflict, Git will pause again. \[13, 14, 15, 16, 17]
+
+***
+
+#### 💡 Pro Tip
+
+If the conflicts are too **==overwhelming==**, you can run `git rebase --abort` to instantly **==teleport back==* to exactly how things were before you started the rebase.
+
+***
+
+If you're looking at a conflict right now, I can help with:
+
+* The command to see which files are conflicted
+* How to use a merge tool (like VS Code) to fix them
+* Deciding between "ours" (main) or "theirs" (feature) changes \[19, 20, 21, 22]
+
+
+
+\[1] [https://codingnomads.com](https://codingnomads.com/git-merge-conflict-how-to-resolve-merge-conflict-in-git)
+
+\[2] [https://docs.rocketpy.org](https://docs.rocketpy.org/en/latest/development/conflicts.html)
+
+\[3] [https://www.kodeco.com](https://www.kodeco.com/books/advanced-git/v2.0/chapters/4-demystifying-rebasing)
+
+\[4] [https://code.tutsplus.com](https://code.tutsplus.com/rewriting-history-with-git-rebase--cms-23191t)
+
+\[5] [https://www.freecodecamp.org](https://www.freecodecamp.org/news/git-under-the-hood/)
+
+\[6] [https://unstop.com](https://unstop.com/blog/merge-in-git)
+
+\[7] [https://medium.com](https://medium.com/@emishokunbi/why-merge-conflicts-happen-why-theyre-so-annoying-and-how-to-fix-them-908109d71903)
+
+\[8] [https://dev.to](https://dev.to/lovestaco/git-rebase-a-practical-guide-175p)
+
+\[9] [https://habtesoft.medium.com](https://habtesoft.medium.com/when-paths-diverge-mastering-merge-conflicts-in-git-part-13-ffbde7a45ace)
+
+\[10] [https://oneuptime.com](https://oneuptime.com/blog/post/2026-01-24-git-merge-conflict-errors/view)
+
+\[11] [https://www.reddit.com](https://www.reddit.com/r/git/comments/1r7acqy/sharing_my_method_for_resolving_multiple_git/)
+
+\[12] [https://oneuptime.com](https://oneuptime.com/blog/post/2026-01-24-git-rebase-vs-merge-strategies/view)
+
+\[13] [https://algomaster.io](https://algomaster.io/learn/git/rebase-conflicts)
+
+\[14] [https://dev.to](https://dev.to/vaib/git-branching-strategies-a-deep-dive-into-rebasing-vs-merging-when-to-use-what-14ja)
+
+\[15] [https://blog.devgenius.io](https://blog.devgenius.io/git-confused-me-for-years-until-i-found-this-simple-guide-a45223bebb40)
+
+\[16] [https://blog.mergify.com](https://blog.mergify.com/resolve-git-merge-conflicts/)
+
+\[17] [https://www.kodeco.com](https://www.kodeco.com/books/advanced-git/v2.0/chapters/4-demystifying-rebasing)
+
+\[18] [https://capmation.com](https://capmation.com/blog/insight-blog-fixing-mistakes-and-resolving-conflicts-with-git)
+
+\[19] [https://unstop.com](https://unstop.com/blog/merge-in-git)
+
+\[20] [https://haydar-ai.medium.com](https://haydar-ai.medium.com/learning-how-to-git-merging-branches-and-resolving-conflict-61652834d4b0)
+
+\[21] [https://frontendmasters.com](https://frontendmasters.com/courses/everything-git/)
+
+\[22] [https://www.thinktecture.com](https://www.thinktecture.com/en/tools/demystifying-git-rebase/)
 
 ***
 
@@ -340,12 +764,56 @@ Edit the file manually.
 ```bash
 git add app.js
 ```
+Marking as resolved is _the specific action where you tell Git, "I have manually fixed the code conflicts in this file, and it is now ready to be committed_."
+
+In a rebase, Git cannot move forward to the next commit until every conflicted file is marked as resolved.
+
+***
+
+#### How to Mark a File Resolved
+
+There isn't a button labeled "Mark Resolved" in the command line; instead, you use the standard staging command:
+
+1. Edit the file: Remove the `<<<<<<<`, `=======`, and `>>>>>>>` markers.
+
+2. Save: Keep the code you want.
+
+3. Run the command: `git add <filename>`
+
+   * This "stages" the file.
+   * Git interprets this action as the signal that the conflict is gone.
+
+#### The Rebase Handshake
+
+Once you have used `git add` for all conflicted files in that specific step, you must complete the "handshake" by running:
+
+```powershell
+git rebase --continue
+```
+
+Git will then take those ==resolved changes==, create the ==new commit==, and move on to the next commit in your sequence.
+
+***
+
+#### 💡 Common Confusion
+
+* Do NOT use `git commit`: During a rebase, you should generally avoid running `git commit` manually. Using `git rebase --continue` handles the commit creation for you.
+* Check your progress: If you aren't sure if you marked everything, run `git status`. Resolved files will be under "Changes to be committed," while unresolved ones stay under "Unmerged paths."
+
+***
+
+If you're stuck in a loop, let me know:
+
+* Are you getting an error saying "you still have unmerged files"?
+* Do you want to know how to skip a commit instead of resolving it?
+* Are you using a code editor like VS Code to click the "Accept Incoming" buttons?
+
 
 ***
 
 ## Step 3 — Continue rebase
 
-```bash
+```powershell
 git rebase --continue
 ```
 
@@ -830,11 +1298,11 @@ That is why rebasing shared history is dangerous.
 
 ---
 
-You can perform a Git rebase in Visual Studio Code using either the built-in Source Control menu or specialized extensions like [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) for a more visual experience. \[1, 2, 3]
+You can perform a Git rebase in Visual Studio Code using either the built-in Source Control menu or specialized extensions like [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) for a more visual experience.
 
 ### Standard Method (Built-in)
 
-VS Code has native support for basic rebasing through the command palette or the Source Control view. \[4, 5]
+VS Code has native support for basic rebasing through the command palette or the Source Control view.
 
 1. Checkout the branch you want to rebase (e.g., your feature branch).
 2. Open the Source Control view (`Ctrl+Shift+G`).
