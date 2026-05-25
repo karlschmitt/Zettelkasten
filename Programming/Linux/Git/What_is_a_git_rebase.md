@@ -3,19 +3,7 @@ id: 20260520170505
 title: What is a Git rebase?
 author: Karl Schmitt
 date: 2026-05-20
-keywords: [ git, rebase ]
-summary: > "Der Text erläutert das Konzept des Git-Rebase als eine Methode zur Neustrukturierung von Code:
-Änderungen innerhalb der Softwareentwicklung. 
-Im Gegensatz zum klassischen Merging, 
-das die Historie chronologisch verknüpft, 
-verschiebt ein Rebase eigene Arbeitsschritte direkt an die aktuelle Spitze eines anderen Zweigs. 
-Dieser Prozess sorgt für einen linearen Projektverlauf ohne unübersichtliche Merge-Commits, 
-was die Fehlersuche und Lesbarkeit erheblich erleichtert. 
-Dennoch warnt der Autor vor der Anwendung auf öffentlichen Servern, 
-da dabei die Commit-Historie technisch neu geschrieben wird. 
-Letztlich dient Rebase dazu, 
-lokale Beiträge sauber aufzubereiten, 
-bevor sie endgültig in das Hauptprojekt integriert werden."
+keywords: [ git, rebase, merge ]
 ---
 ![Git Rebase versus Merge](./Images/Git_Rebase_vs._Merge_Vergleich.png)
 
