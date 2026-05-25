@@ -11,7 +11,7 @@ keywords: [ git, conflict ]
 >[!NOTE]
 >Sometimes Git cannot automatically replay a commit.
 
-You may see a ==CONFLICT==:
+You may see a CONFLICT:
 
 ```text
 CONFLICT (content): Merge conflict in app.js
@@ -31,30 +31,30 @@ While a **merge** *combines* the final state of two branches at once, a **rebase
 * **Repeating Conflicts**: You might have to resolve the same conflict multiple times if several of your commits touch that same line.
 
 >[!NOTE]
->In a Git rebase, **Sequential Application** refers to the _==step-by-step==_ process where Git takes your individual commits and **"re-plays"** them one at a time onto the new base.
+>In a Git rebase, **Sequential Application** refers to the _step-by-step_ process where Git takes your individual commits and **"re-plays"** them one at a time onto the new base.
 
-Instead of combining everything at once (like a merge), Git treats your work like a **movie reel**, _==frame by frame==_.
+Instead of combining everything at once (like a merge), Git treats your work like a **movie reel**, _frame by frame_.
 
 ***
 
 ### How it Works
 
-* Step 1: **==Lifting==**: Git identifies the commits unique to your branch and temporarily moves them to a "holding area."
-* Step 2: **==Resetting==**: Your branch "teleports" to the latest commit of the target branch (e.g., `main`).
-* Step 3: **==Replaying==**: Git takes the first commit you made, applies it to the new `main`, and creates a new commit ID. Then it takes the second, and so on.
+* Step 1: **Lifting**: Git identifies the commits unique to your branch and temporarily moves them to a "holding area."
+* Step 2: **Resetting**: Your branch "teleports" to the latest commit of the target branch (e.g., `main`).
+* Step 3: **Replaying**: Git takes the first commit you made, applies it to the new `main`, and creates a new commit ID. Then it takes the second, and so on.
 
 ### ⚓ The Importance of Sequence
 
-* **==Conflict Resolution==**: If a conflict occurs, Git pauses at the specific commit that caused the problem. You fix it, then tell Git to `continue`.
-* **==Atomic History==**: Because commits are applied one by one, the logical flow of your work is preserved, even though the "starting point" of your branch has changed.
-* **==New Identities==**: Even if the code is the same, each re-applied commit gets a new SHA (ID) because its "parent" commit is now different.
+* **Conflict Resolution**: If a conflict occurs, Git pauses at the specific commit that caused the problem. You fix it, then tell Git to `continue`.
+* **Atomic History**: Because commits are applied one by one, the logical flow of your work is preserved, even though the "starting point" of your branch has changed.
+* **New Identities**: Even if the code is the same, each re-applied commit gets a new SHA (ID) because its "parent" commit is now different.
 
 ***
 
 ### ⚠️ Potential Hurdles
 
-* **==Multiple Conflicts==**: You might have to fix the same conflict multiple times if it exists across several of your sequential commits.
-* **==Squashing==**: You can choose to "squash" these sequential commits into one single commit during the process to keep history even cleaner.
+* **Multiple Conflicts**: You might have to fix the same conflict multiple times if it exists across several of your sequential commits.
+* **Squashing**: You can choose to "squash" these sequential commits into one single commit during the process to keep history even cleaner.
 
 ***
 
@@ -117,7 +117,7 @@ Conflicts often happen when your branch has **"diverged"** significantly from th
 >[!NOTE]
 >If someone else changed a function name in `main` and you called that same function in your feature branch, [Git](https://github.com/) will flag this as a conflict during rebase.
 
-A **==Diverged Path==** occurs when two versions of the same branch have different commit histories that are no longer compatible.
+A **Diverged Path** occurs when two versions of the same branch have different commit histories that are no longer compatible.
 
 In the context of a rebase, this happens because you have rewritten history locally, while the original history still exists on the remote server (like GitHub).
 
@@ -147,7 +147,7 @@ you have to tell the server to replace its old path with your new one:
 
 #### ⚠️ The Risk
 
-If a teammate pulled your `feature` branch before you rebased, their local path is now "==diverged==" from the server. When they try to pull, they will get a mess of duplicate commits and merge conflicts. 
+If a teammate pulled your `feature` branch before you rebased, their local path is now "diverged" from the server. When they try to pull, they will get a mess of duplicate commits and merge conflicts. 
 
 🔗 [Diverged Path](./Atoms/Git_rebase_diverged_path.md)
 
@@ -168,7 +168,7 @@ If you hit a conflict, Git will pause and wait for you to:
 * Fix the files: Open the file, keep the code you want, and remove conflict markers.
 * `git add <file>`: Stage the fixed file.
 * `git rebase --continue`: Move on to the next commit in your branch.
-* `git rebase --abort`: Completely cancel the rebase and go back to how things were. \[1, 5, 14, 15, 16]
+* `git rebase --abort`: Completely cancel the rebase and go back to how things were.
 
 Would you like to know how to avoid these conflicts in the first place, or should we look at how to squash commits to make rebasing easier?
 
