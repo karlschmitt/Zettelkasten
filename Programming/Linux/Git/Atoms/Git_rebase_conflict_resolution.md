@@ -45,14 +45,5 @@ Unlike a standard merge (which happens once), a rebase applies your commits one 
 * Commit by Commit: You resolve conflicts for each individual commit in your sequence, not just the final state.
 * The "Head" Flip: During a rebase, `HEAD` refers to the upstream branch (the base), while your local changes are considered the "incoming" part.
 
-***
-
-If you are stuck in a messy rebase right now, let me know:
-
-* Are you seeing "Entry not up to date" errors?
-* Do you want to abort and go back to how things were?
-* Are you confused about which version (ours vs. theirs) is which?
-
-I can give you the specific commands to get your branch back in order.
 
 
