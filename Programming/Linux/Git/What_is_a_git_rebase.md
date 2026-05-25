@@ -68,14 +68,16 @@ When you run `git rebase main`:
 
 ---
 
-### 4. The "Golden Rule" of Rebasing
+### 4. The "Golden Rule" of Rebasing 🪙
 
-There is one major risk with rebasing: **It rewrites history.** Because Git creates *new* commits (with new ID hashes) during a rebase, you should follow this rule:
+There is one major risk with rebasing: 
+**It rewrites history.** Because Git creates *new* commits (with new ID hashes) during a rebase, you should follow this rule:
 
 >[!IMPORTANT]
 > **Never rebase branches that have been pushed to a public/shared repository.**
 
-If you rebase a branch that other people are working on, you will break their local versions of the project because the commit IDs they have no longer match yours. 
+If you rebase a branch that other people are working on, 
+you will break their local versions of the project because the commit IDs they have no longer match yours. 
 
 **Use Rebase for:** Your local feature branches before you merge them into the main project.
 **Use Merge for:** Public branches or when you want a permanent record of how/when branches were combined.

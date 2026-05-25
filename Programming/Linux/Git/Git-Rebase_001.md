@@ -12,7 +12,7 @@ Using Git in PowerShell is virtually identical to using it in any other terminal
 
 ### 1. Basic Rebase (Onto another branch)
 
-This is used to move your current branch's work on top of the latest version of another branch (usually `main` or `master`).
+This is used to move your current branch's work on top of the latest version of another branch (usually `main` or `master` or `dev`).
 
 ```powershell
 # 1. Switch to your feature branch
@@ -20,11 +20,14 @@ git checkout feature-branch
 
 # 2. Rebase onto main
 git rebase main
+# 2. Rebase onto dev
+git rebase dev
 ```
+Follow the white rabbit 🐇: [Standard Rebase](./Atoms/Git_standard_rebase.md)
 
 ### 2. Interactive Rebase (Clean up commits)
 
-This is the most popular way to "squash" multiple commits into one or rename commit messages before merging.
+This is the most popular way to "squash" 🎾 multiple commits into one or rename commit messages before merging.
 
 ```powershell
 # Rebase the last 3 commits
@@ -32,12 +35,15 @@ git rebase -i HEAD~3
 ```
 When you run this, Git will open your default text editor (e.g., Notepad, VS Code, or Vim). You change the word `pick` to `squash` (or `s`) for the commits you want to combine.
 
+Follow the white rabbit 🐇:
+
 ### 3. Pulling with Rebase
 
 Instead of creating a "merge commit" every time you pull from the server, you can rebase your local changes on top of the incoming changes:
 
 ```powershell
 git pull --rebase origin main
+git pull --rebase origin dev
 ```
 ---
 
@@ -55,6 +61,8 @@ If a conflict occurs during a rebase, PowerShell will show a message stating whi
     git rebase --continue
     ```
     *(If you get stuck and want to give up, use `git rebase --abort`)*.
+
+Follow the white rabbit 🐇: [Conflict Resolution](./Atoms/Git-rebase_conflict resolution.md)
 
 ---
 
@@ -91,6 +99,7 @@ git config --global core.editor "code --wait"
 You can add these to your PowerShell Profile (`$PROFILE`) to work faster:
 ```powershell
 function g-rbm { git rebase main }
+function g-rbd { git rebase dev }
 function g-ri { git rebase -i "HEAD~$args" }
 ```
 Then you could just type `g-ri 5` to start an interactive rebase of the last 5 commits.
