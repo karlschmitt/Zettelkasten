@@ -47,10 +47,12 @@ For complex tasks like squashing, dropping, or reordering commits, the GitLens e
 
 If Git encounters conflicts during the rebase, VS Code will pause and alert you.
 
-* Resolve files: Open the conflicted files and use the Merge Editor to pick changes.
-* Continue: Once resolved, stage the files (`+` icon) and click Continue in the rebase banner or run `git rebase --continue` in the terminal.
-* Abort: If things go wrong, select Abort Rebase from the command palette or run `git rebase --abort`.
+* ==List== conflicting files: [Conflicting Files](./Atoms/List_conflicting_files.md)
+* ==Resolve== files: Open the conflicted files and use the Merge Editor to pick changes.
+* ==Continue==: Once resolved, stage the files (`+` icon) and click Continue in the rebase banner or run `git rebase --continue` in the terminal.
+* ==Abort==: If things go wrong, select Abort Rebase from the command palette or run `git rebase --abort`.
 
+Follow the white rabit 🐇: [Handle Conflict](./Atoms/Git_handle_rebase_conflicts.md)
 ***
 
 💡 Pro Tip: After a successful rebase, you will likely need to perform a Force Push (`git push --force-with-lease`) to update your remote branch, as the commit history has been rewritten. 
