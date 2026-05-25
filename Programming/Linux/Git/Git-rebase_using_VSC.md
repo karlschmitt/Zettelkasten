@@ -4,7 +4,10 @@ title: How to do a git rebase using Visual Studio Code?
 author: Karl Schmitt
 date: 2026-05-23
 kewords: [ git, visual studio code ]
+summary:
+Dieser Text erläutert detailliert, wie Nutzer einen **Git-Rebase** direkt in **Visual Studio Code** durchführen können. Der Prozess lässt sich entweder über die **integrierte Quellverwaltung** des Editors oder durch die Verwendung der leistungsstarken Erweiterung **GitLens** realisieren. Während die Standardmethode einfache Zusammenführungen erlaubt, ermöglicht GitLens einen **interaktiven Editor** zum Umsortieren oder Zusammenfassen von Commits. Ein wesentlicher Teil der Anleitung befasst sich zudem mit der **Lösung von Konflikten** über den internen Merge-Editor des Programms. Abschließend wird darauf hingewiesen, dass nach der Umstrukturierung der Historie ein **Force Push** notwendig ist, um die Änderungen auf den Server zu übertragen. Damit bietet die Quelle eine kompakte Hilfestellung für die effiziente **Versionsverwaltung** innerhalb der Entwicklungsumgebung.
 ---
+![Der ultimative Rebase Workflow](./Images/Der_ultimative_Rebase_Workflow.png )
 
 # How to do a git rebase using Visual Studio Code?
 
@@ -60,3 +63,7 @@ Follow the white rabit 🐇: [Handle Conflict](./Atoms/Git_handle_rebase_conflic
 ```powershell
 git push --force-with-ease
 ```
+##
+## Tutorial
+
+🔗 [Git Rebase Tutorial with Visual Studio Code](./Atoms/Git_Rebase_Tutorial_with_Visual_Studio_Code.md)

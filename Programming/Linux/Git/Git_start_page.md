@@ -6,6 +6,8 @@ date: 2026-05-22
 keywords: [ git, rebase, PowerShell, visual studio code ]
 ---
 
+![Under Construction](./Images/Under_construction_animated.gif)
+
 # Git start page
 
 1. [What is a git rebase?](./What_is_a_git_rebase.md)

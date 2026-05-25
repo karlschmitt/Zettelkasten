@@ -4,7 +4,10 @@ title: How to Git rebase using PowerShell?
 auhor: Karl Schmitt
 date: 2026-05-20
 keywords: [ git, rebase, PowerShell ]
+summary:
+Diese Quelle bietet eine detaillierte Anleitung zur Durchführung von **Git-Rebases** innerhalb der **PowerShell-Umgebung**. Der Text erläutert grundlegende Befehle wie das **interaktive Zusammenführen** von Commits sowie Methoden zur **Konfliktlösung** bei Code-Überschneidungen. Ein besonderer Fokus liegt auf der effizienten Konfiguration, beispielsweise durch die Installation des Moduls **posh-git** für eine verbesserte Statusanzeige. Zudem werden Sicherheitsaspekte beim **Force-Pushing** sowie die Einrichtung von **Shortcuts** in den Profil-Einstellungen thematisiert. Die Anleitung verdeutlicht, dass die Nutzung von Git unter Windows nahezu identisch mit anderen Betriebssystemen ist, sofern die richtigen **Texteditoren** und Aliase konfiguriert wurden. Insgesamt dient das Dokument als technischer Leitfaden für Entwickler, die ihren **Workflow** auf der Kommandozeile optimieren möchten.
 ---
+![Rebase via PowerShell](./Images/Rebase-Anleitung_für_die_Kommandozeile.png)
 
 # How to Git rebase using PowerShell?
 
