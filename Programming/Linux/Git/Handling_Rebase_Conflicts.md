@@ -73,7 +73,7 @@ In Git, Rewriting History means _changing the record of how, when, or in what or
 
 * New Parentage: A commit’s identity (SHA-1 hash) is partially based on the commit that came before it. By changing the "base" (the parent), the commit's identity changes.
 * New IDs: Even if the code changes are identical, the Commit Hash (e.g., `a1b2c3d`) will be completely different after a rebase.
-* Linearizing: It makes the history look like a straight line, hiding the fact that you were working on a separate branch for days. \[6, 7, 8, 9, 10]
+* Linearizing: It makes the history look like a straight line, hiding the fact that you were working on a separate branch for days.
 
 #### 🛠️ What you can change
 
@@ -82,7 +82,7 @@ During a rebase (especially an interactive one), you can:
 * Edit: Change the code within a specific past commit.
 * Reword: Change a typo in an old commit message.
 * Squash: Combine five small commits into one clean "feature" commit.
-* Drop: Completely delete a commit you no longer want. \[12, 13, 14, 15, 16]
+* Drop: Completely delete a commit you no longer want.
 
 ***
 
@@ -99,7 +99,6 @@ If you rebase a branch that others have already pulled to their computers:
 
 ***
 
-![Google (Noto Color Emoji 17.0)](https://images.emojiterra.com/google/noto-emoji/unicode-17.0/color/svg/1f6df.svg)
 ![Safety Ring](./Images/Safety-Ring.png)
 
 If you need to move forward, see also:
