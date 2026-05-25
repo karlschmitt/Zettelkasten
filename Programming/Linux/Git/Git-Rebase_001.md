@@ -62,7 +62,7 @@ If a conflict occurs during a rebase, PowerShell will show a message stating whi
     ```
     *(If you get stuck and want to give up, use `git rebase --abort`)*.
 
-Follow the white rabbit 🐇: [Conflict Resolution](./Atoms/Git-rebase_conflict resolution.md)
+Follow the white rabbit 🐇: [Conflict Resolution](./Atoms/Git_rebase_conflict_resolution.md)
 
 ---
 
