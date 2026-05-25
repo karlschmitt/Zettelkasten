@@ -8,7 +8,7 @@ keywords: [ git, rebase, PowerShell, visual studio code ]
 
 # Git start page
 
-1. [What is a git rebase?](-/What_is_a_git_rebase.md)
+1. [What is a git rebase?](./What_is_a_git_rebase.md)
 2. [How to do a git rebase using PowerShell?](./Git-Rebase_001.md)
 3. [How to do a git rebase using Visual Studio Code?](./Git-rebase_using_VSC.md)
 4. [Git rebase mini practce exercise](./Git_rebase_mini_practce_exercise.md)
