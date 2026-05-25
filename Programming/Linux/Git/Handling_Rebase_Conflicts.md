@@ -99,7 +99,7 @@ If you rebase a branch that others have already pulled to their computers:
 
 ***
 
-![Safety Ring](./Images/Safety-Ring.png)
+![Safety Ring](./Images/Safety-Ring2.png)
 
 If you need to move forward, see also:
 
