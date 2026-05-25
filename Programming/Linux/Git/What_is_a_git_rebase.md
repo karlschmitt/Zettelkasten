@@ -29,6 +29,8 @@ When you merge `main` into `feature`, Git creates a new **"Merge Commit."**
           D---E---F (feature)
     ```
 
+![Imagine merge twice](./Images/Imagine_merge_twice_001.png)
+
 #### The Rebase Approach
 
 When you rebase `feature` onto `main`, Git finds the point where the branches diverged, takes your commits (D and E), and **re-plays** them on top of the latest commit of `main` (C).
@@ -39,6 +41,7 @@ When you rebase `feature` onto `main`, Git finds the point where the branches di
              \
               D'---E' (feature)
     ```
+![Imagine simple rebase](./Images/Imagine_simple_rebase_001.png)
 
 ---
 
@@ -64,6 +67,7 @@ When you run `git rebase main`:
 
 There is one major risk with rebasing: **It rewrites history.** Because Git creates *new* commits (with new ID hashes) during a rebase, you should follow this rule:
 
+>[!IMPORTANT]
 > **Never rebase branches that have been pushed to a public/shared repository.**
 
 If you rebase a branch that other people are working on, you will break their local versions of the project because the commit IDs they have no longer match yours. 

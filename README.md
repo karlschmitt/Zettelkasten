@@ -142,10 +142,10 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 
 ### PowerShell  ⚡
 
-1. [Let's jump right into it](./PowerShell/Learning_the_PowerShell.md)
-2. [How to learn PowerShell? Part 1](./PowerShell/HowToLearnPowerShell.md)
-3. [How to learn PowerShell? Part 2](./PowerShell/How_to_learn_power_shell.md)
-4. [How to query the Star Wars API using the PowerShell?](./PowerShell/PowerShell_query_the_star_wars_api.md)
+1. [Let's jump right into it](./Programming/Windows/PowerShell/Learning_the_PowerShell.md)
+2. [How to learn PowerShell? Part 1](./Programming/Windows/PowerShell/HowToLearnPowerShell.md)
+3. [How to learn PowerShell? Part 2](./Programming/Windows/PowerShell/How_to_learn_power_shell.md)
+4. [How to query the Star Wars API using the PowerShell?](./Programming/Windows/PowerShell/PowerShell_query_the_star_wars_api.md)
 
 
 ### HTTP 🌐 and Node.js 📡
