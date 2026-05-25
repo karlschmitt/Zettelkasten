@@ -4,7 +4,7 @@ title: What is a Git rebase?
 author: Karl Schmitt
 date: 2026-05-20
 keywords: [ git, rebase ]
-summary: | "Der Text erläutert das Konzept des Git-Rebase als eine Methode zur Neustrukturierung von Code:
+summary: > "Der Text erläutert das Konzept des Git-Rebase als eine Methode zur Neustrukturierung von Code:
 Änderungen innerhalb der Softwareentwicklung. 
 Im Gegensatz zum klassischen Merging, 
 das die Historie chronologisch verknüpft, 
