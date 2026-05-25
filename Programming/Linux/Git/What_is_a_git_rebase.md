@@ -56,7 +56,7 @@ When you rebase `feature` onto `main`, Git finds the point where the branches di
 ### 3. How it works internally
 
 When you run `git rebase main`:
-1.  Git goes to the common ancestor of both branches.
+1.  Git goes to the ==common ancestor== of both branches.
 2.  It temporarily "hides" your commits from the current branch.
 3.  It resets your current branch to look exactly like the `main` branch.
 4.  It applies your "hidden" commits one by one on top of the new base.
