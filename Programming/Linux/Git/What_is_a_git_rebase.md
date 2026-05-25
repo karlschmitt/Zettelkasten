@@ -12,15 +12,20 @@ At its simplest, **Rebase** is the process of moving or combining a sequence of 
 
 In terms of workflow: **Rebase is the alternative to Merging.**
 
+![Git rebase from main](./Images/Git_rebase_from_main_002.png)
+
 ---
 
-### 1. The Visual Difference: Merge vs. Rebase
+### 1. The Visual Difference 🔬: Merge vs. Rebase
 
-Imagine you created a `feature` branch from `main`. While you were working, someone else added new commits to `main`. Now your branch is "out of date."
+Imagine you created a `feature` branch from `main`. 
+While you were working, someone else added new commits to `main`. 
+Now your branch is "out of date."
 
-#### The Merge Approach
+#### The Merge Approach ⛙
 
-When you merge `main` into `feature`, Git creates a new **"Merge Commit."** 
+When you merge `main` into `feature`, 
+Git creates a new **"Merge Commit."** 
 *   **Result:** Your history looks like a series of loops. It preserves the exact chronological history of when things happened.
 *   **Visual:**
     ```text
@@ -31,9 +36,9 @@ When you merge `main` into `feature`, Git creates a new **"Merge Commit."**
 
 ![Imagine merge twice](./Images/Imagine_merge_twice_001.png)
 
-#### The Rebase Approach
+#### The Rebase Approach ▶️
 
-When you rebase `feature` onto `main`, Git finds the point where the branches diverged, takes your commits (D and E), and **re-plays** them on top of the latest commit of `main` (C).
+When you rebase `feature` onto `main`, Git finds the point where the branches diverged, takes your commits (D and E), and **==re-plays==** them on top of the latest commit of `main` (C).
 *   **Result:** A perfectly straight line. It looks like you started your work today, even if you started it last week.
 *   **Visual:**
     ```text
