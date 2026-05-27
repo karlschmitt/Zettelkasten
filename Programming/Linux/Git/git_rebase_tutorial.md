@@ -6,7 +6,7 @@ date: 2026-05-20
 keywords: [ git, rebase ]
 ---
 
-# Git Rebase Tutorial
+# Git Rebase Tutorial 📚
 
 `git rebase` is one of the most useful — and most misunderstood — Git commands.
 
@@ -270,7 +270,7 @@ These two commands are used to _move your work from a feature branch so that it 
 
 ## Step 1 — Open conflicted files
 
-Git marks ==conflicts== like this:
+Git marks onflicts like this:
 
 ```text
 <<<<<<< HEAD
@@ -284,7 +284,7 @@ your feature code
 > Edit the file manually.
 
 
-==Conflicted files== are _files where Git cannot automatically decide which code to keep during the rebase process_.
+Conflicted files are _files where Git cannot automatically decide which code to keep during the rebase process_.
 
 Because a rebase applies your changes one commit at a time, a conflict happens when your changes and the changes from the `main` branch overlap on the exact same lines of code.
 
@@ -322,7 +322,7 @@ Unlike a merge (where you fix everything at once), a rebase might stop multiple 
 
 #### 💡 Pro Tip
 
-If the conflicts are too **==overwhelming==**, you can run `git rebase --abort` to instantly **==teleport back==* to exactly how things were before you started the rebase.
+If the conflicts are too **overwhelming**, you can run `git rebase --abort` to instantly **teleport back* to exactly how things were before you started the rebase.
 
 ***
 
@@ -330,53 +330,7 @@ If you're looking at a conflict right now, I can help with:
 
 * The command to see which files are conflicted
 * How to use a merge tool (like VS Code) to fix them
-* Deciding between "ours" (main) or "theirs" (feature) changes \[19, 20, 21, 22]
-
-
-
-\[1] [https://codingnomads.com](https://codingnomads.com/git-merge-conflict-how-to-resolve-merge-conflict-in-git)
-
-\[2] [https://docs.rocketpy.org](https://docs.rocketpy.org/en/latest/development/conflicts.html)
-
-\[3] [https://www.kodeco.com](https://www.kodeco.com/books/advanced-git/v2.0/chapters/4-demystifying-rebasing)
-
-\[4] [https://code.tutsplus.com](https://code.tutsplus.com/rewriting-history-with-git-rebase--cms-23191t)
-
-\[5] [https://www.freecodecamp.org](https://www.freecodecamp.org/news/git-under-the-hood/)
-
-\[6] [https://unstop.com](https://unstop.com/blog/merge-in-git)
-
-\[7] [https://medium.com](https://medium.com/@emishokunbi/why-merge-conflicts-happen-why-theyre-so-annoying-and-how-to-fix-them-908109d71903)
-
-\[8] [https://dev.to](https://dev.to/lovestaco/git-rebase-a-practical-guide-175p)
-
-\[9] [https://habtesoft.medium.com](https://habtesoft.medium.com/when-paths-diverge-mastering-merge-conflicts-in-git-part-13-ffbde7a45ace)
-
-\[10] [https://oneuptime.com](https://oneuptime.com/blog/post/2026-01-24-git-merge-conflict-errors/view)
-
-\[11] [https://www.reddit.com](https://www.reddit.com/r/git/comments/1r7acqy/sharing_my_method_for_resolving_multiple_git/)
-
-\[12] [https://oneuptime.com](https://oneuptime.com/blog/post/2026-01-24-git-rebase-vs-merge-strategies/view)
-
-\[13] [https://algomaster.io](https://algomaster.io/learn/git/rebase-conflicts)
-
-\[14] [https://dev.to](https://dev.to/vaib/git-branching-strategies-a-deep-dive-into-rebasing-vs-merging-when-to-use-what-14ja)
-
-\[15] [https://blog.devgenius.io](https://blog.devgenius.io/git-confused-me-for-years-until-i-found-this-simple-guide-a45223bebb40)
-
-\[16] [https://blog.mergify.com](https://blog.mergify.com/resolve-git-merge-conflicts/)
-
-\[17] [https://www.kodeco.com](https://www.kodeco.com/books/advanced-git/v2.0/chapters/4-demystifying-rebasing)
-
-\[18] [https://capmation.com](https://capmation.com/blog/insight-blog-fixing-mistakes-and-resolving-conflicts-with-git)
-
-\[19] [https://unstop.com](https://unstop.com/blog/merge-in-git)
-
-\[20] [https://haydar-ai.medium.com](https://haydar-ai.medium.com/learning-how-to-git-merging-branches-and-resolving-conflict-61652834d4b0)
-
-\[21] [https://frontendmasters.com](https://frontendmasters.com/courses/everything-git/)
-
-\[22] [https://www.thinktecture.com](https://www.thinktecture.com/en/tools/demystifying-git-rebase/)
+* Deciding between "ours" (main) or "theirs" (feature) changes
 
 ***
 
@@ -412,7 +366,7 @@ Once you have used `git add` for all conflicted files in that specific step, you
 git rebase --continue
 ```
 
-Git will then take those ==resolved changes==, create the ==new commit==, and move on to the next commit in your sequence.
+Git will then take those resolved changes, create the new commit, and move on to the next commit in your sequence.
 
 ***
 
@@ -870,15 +824,15 @@ That is why rebasing shared history is dangerous.
 [Git rebase using VSC](./Git-rebase_using_VSC.md)
 ***
 
-If you'd like, I can also provide:
+Fell free to follow the white rabit::
 
-* a **Git Rebase Bootcamp (7 days)**
+* a **Git Rebase Bootcamp:**  🔗 [Bootcamp](./Git_Rebase_Bootcamp.md) ⛺
 
 * an **Interactive Rebase Deep Dive**
 
 * a **visual conflict-resolution tutorial**
 
-* a **Merge vs Rebase guide**
+* a **Merge vs Rebase guide**  🔗 [merge versus rebase](./Atoms/Git_merge_versus_rebase.md) ⚖️
 
 * a **Git branching workflow tutorial**
 

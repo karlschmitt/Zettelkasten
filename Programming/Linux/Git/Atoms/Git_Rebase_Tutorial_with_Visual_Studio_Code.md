@@ -31,6 +31,8 @@ You will learn:
 
 Instead of creating a merge commit, rebase rewrites history so the branch appears to have started from the latest `main`.
 
+![Git rebase from main](../Images/Git_rebase_from_main_002.png)
+
 ---
 
 ## Before Rebase
@@ -43,6 +45,8 @@ feature:        D---E
 
 `main` received new commit `C`.
 
+![](../Images/Imagine_after_git_merge_main_002.png)
+
 ---
 
 ## After Rebase
@@ -54,6 +58,8 @@ feature:            D'---E'
 ```
 
 Your feature commits are replayed on top of `C`.
+
+![git rebase main](../Images/Imagine_after_git_rebase_main_005.png)
 
 ---
 
@@ -80,18 +86,100 @@ main
 and
 
 ```bash
-feature/login
+feature/test
 ```
 
 You want to update `feature/login` with the newest changes from `main`.
+
+### Open a sandbox project on GitHub
+
+I will use my sandbox on [GitHub](https://github.com/):
+
+![afraid to commit](../Images/afraid-to-commit.png)
+
+Let's add a test html file using the 🔗 [template](https://www.freecodecamp.org/news/html-starter-template-a-basic-html5-boilerplate-for-index-html/) from free code camp:
+
+![add file button](../Images/add-file-button.png)
+
+Choose the option create new file:
+
+![choose create new file](../Images/choose-cerate-new-file.png)
+
+Create the test HTML:
+
+![create test html](../Images/create-test-html.png)
+
+Let's commit revision "A":
+
+![first commit "A"](../Images/first-commit-A.png)
+
+Commit the changes by pressing the green "Commit changes" button:
+
+![After the revision "A" commit](../Images/after-revision-A-commit.png)
+
+Now you can see the HTML test file in the toplevel directory of the GitHub reository. 
+
+In case you get stuck feel free to ask GitHub Copilot for help: ![GitHub Copilot](../Images/git-hub-copilot-001.png)
+
+![Imersive Chat](../Images/in-imersive-chat.png)
+
+![GitHub Copilot](../Images/git-hub-copilot-002.png)
+
+![GitHub Copilot](../Images/git-hub-copilot-003.png)
+
+1. Klick on the test.html file it will open the Web editor
+2. Klick on the pencile icon on the right and select "in place"
+3. Now you can edit the file
+4. Change the <title> tag
+5. Change the <h1> tag to the string "First changes in main branch"
+6. Add an ordered list <ol> with three list items <li>
+7. And commit the changes as revision "B"
+
+![second changes in main branch](../Images/second-changes-in-main-branch.png)
+
+Let's commit those changes on the main branch as revision "B":
+
+![GitHub revision "B"](../Images/git-hub-revision-b.png)
+
+Now we have two revisions on the GitHub main branch:
+![Two revisions on GitHub main branch](../Images/Imagine_after_git_rebase_master_006.png)
+
+We can create the _"feature/test"_ branch now on GitHub, and we are done with the initial setting:
+
+![create the feature test branch](../Images/create-the-feature-test-branch.png)
+
+
+Eventually you can create a directory locally and clone your repository into it :
+```powershell
+mkdir D:\playground\git-rebase-with-powershell-and-vsc
+cd D:\playground\git-rebase-with-powershell-and-vsc
+git clone git@github.com:karlschmitt/afraid-to-commit.git
+```
+
+![first git clone 001](../Images/first-git-clone-001.png)
+
+After typing ```git status``` Git reminds me of some housekeeping:
+
+![some windows housekeeping](../Images/some-windows-housekeeping.png)
 
 ---
 
 # 4. Open the Project in VS Code
 
+
 Open your repository in:
 
 [Visual Studio Code](https://code.visualstudio.com?utm_source=chatgpt.com)
+
+In the repository directory you can type ```code .```:
+
+![starting vsc using code dot](../Images/starting-vsc-using-code-dot.png)
+
+Visual Studio Code asks for trust and we say "yes":
+
+![vsc asks for trust](../Images/vsc-asks-for-trust.png)
+
+![visual studio code](../Images/visual-studio-code-001.png)
 
 ---
 
@@ -109,18 +197,20 @@ Run:
 git branch
 ```
 
-Example:
+![vsc terminal 001](../Images/vsc-terminal-001.png)
+
+In this case only master is visible, on GitHub there is also _featue/test_:
 
 ```text
-* feature/login
-  main
+   feature/test
+*  master
 ```
 
 The `*` shows your current branch.
 
 ---
 
-# 6. Fetch Latest Changes
+# 6. Fetch Latest Changes and change both branches
 
 Always fetch first:
 
@@ -128,7 +218,31 @@ Always fetch first:
 git fetch origin
 ```
 
+![git fetch origin](../Images/git-fetch-origin-001.png)
+
 This updates remote references.
+Let's create the _feature/test_ branch locally:
+
+### Now let's change locally in the branch _feature/test_
+```powershell
+git switch -c feature/test
+```
+
+![create new branch feature test](../Images/create-new-branch-feature-test-002.png)
+
+Now let's change the HTML test file and commit the changes:
+
+1. Change the <title> of the test.html file, and commit as "C"
+2. Change <h1> of the the test.html file, and commit as "D"
+3. Change the <ol> of the test.html file,  and commit as "E"
+4. And "Sync" with GitHub
+
+![sync with GitHub](../Images/sync-with-github.png)
+
+![feature test C D E](../Images/feature-test-C-D-E.png)
+
+### Now let's change remotly in the branch _master_
+
 
 ---
 
@@ -453,6 +567,8 @@ git rebase main
 
 Resolve conflicts if needed.
 
+[Handling Rebase Conflicts](../Handling_Rebase_Conflicts.md)
+
 Then:
 
 ```bash
@@ -493,6 +609,8 @@ Then practice:
 * aborting
 
 This is the fastest way to learn.
+
+[Git rebase mini practce exercise](./Git_rebase_mini_practce_exercise.md)
 
 ---
 
