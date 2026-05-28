@@ -20,28 +20,13 @@ VS Code has native support for basic rebasing through the command palette or the
 2. Open the Source Control view (`Ctrl+Shift+G`).
 3. Click the three dots (...) at the top of the Source Control panel.
 4. Select Branch > Rebase Branch....
-5. Choose the target branch (e.g., `main` or `master`) you want to rebase onto. 
+5. Choose the target branch (e.g., `main` or `master` or `master` ) you want to rebase onto. 
 
 ***
 
-## Interactive Rebase with GitLens
+## Git Merge with Meld
 
-For complex tasks like squashing, dropping, or reordering commits, the GitLens extension provides a dedicated visual editor. \[9]
-
-1. Install GitLens from the VS Code Marketplace. \[10, 11]
-
-2. Enable the Interactive Rebase Editor via the Command Palette (`Ctrl+Shift+P` > `GitLens: Enable Interactive Rebase Editor`). \[12]
-
-3. Start the rebase by typing `git rebase -i <branch-name>` in the integrated terminal. 
-
-4. A visual UI will open where you can:
-
-   * Drag and drop to reorder commits.
-   * Change actions (Pick, Squash, Drop, Reword) using dropdown menus.
-
-5. Click Start Rebase to execute the changes. 
-
-[VS Code tips — Interactive rebase editor from the GitLens ...](https://www.youtube.com/watch?v=P5p71fguFNI),
+[Using Meld as Your Git Merge Tool](./Atoms/Using_meld_for_git_rebase.md)
 
 ***
 
@@ -49,10 +34,10 @@ For complex tasks like squashing, dropping, or reordering commits, the GitLens e
 
 If Git encounters conflicts during the rebase, VS Code will pause and alert you.
 
-* ==List== conflicting files: [Conflicting Files](./Atoms/List_conflicting_files.md)
-* ==Resolve== files: Open the conflicted files and use the Merge Editor to pick changes.
-* ==Continue==: Once resolved, stage the files (`+` icon) and click Continue in the rebase banner or run `git rebase --continue` in the terminal.
-* ==Abort==: If things go wrong, select Abort Rebase from the command palette or run `git rebase --abort`.
+* _List_ conflicting files: [Conflicting Files](./Atoms/List_conflicting_files.md)
+* _Resolve_ files: Open the conflicted files and use the Merge Editor to pick changes.
+* _Continue_: Once resolved, stage the files (`+` icon) and click Continue in the rebase banner or run `git rebase --continue` in the terminal.
+* _Abort_: If things go wrong, select Abort Rebase from the command palette or run `git rebase --abort`.
 
 Follow the white rabit 🐇: [Handle Conflict](./Atoms/Git_handle_rebase_conflicts.md)
 ***
