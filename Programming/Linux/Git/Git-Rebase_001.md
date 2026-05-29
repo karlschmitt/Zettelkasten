@@ -3,7 +3,7 @@ id: 20260520165415
 title: How to Git rebase using PowerShell?
 auhor: Karl Schmitt
 date: 2026-05-20
-keywords: [ git, rebase, PowerShell ]
+keywords: [ git, rebase, PowerShellm Meld ]
 ---
 ![Rebase via PowerShell](./Images/Rebase-Anleitung_für_die_Kommandozeile.png)
 
@@ -41,7 +41,6 @@ Follow the white rabbit 🐇:
 ### 3. Pulling with Rebase
 
 Instead of creating a "merge commit" every time you pull from the server, you can rebase your local changes on top of the incoming changes:
-
 ```powershell
 git pull --rebase origin main
 git pull --rebase origin dev
@@ -68,6 +67,7 @@ Follow the white rabbit 🐇: [Conflict Resolution](./Atoms/Git_rebase_conflict_
 ---
 
 ### 5. Pushing after a Rebase
+
 Because `rebase` rewrites history, a standard `git push` will be rejected by the server. You must "force" it.
 
 **Warning:** Only do this on your own feature branch. Never do this on a shared branch like `main`.
@@ -76,7 +76,6 @@ Because `rebase` rewrites history, a standard `git push` will be rejected by the
 # The "safer" way to force push
 git push --force-with-lease
 ```
-
 ---
 
 ### PowerShell Tips for Git
@@ -91,12 +90,14 @@ Add-PoshGitToProfile
 ```
 
 #### 2. Set your Default Editor
+
 If `git rebase -i` opens an editor you don't like (like Vim), you can change it to VS Code:
 ```powershell
 git config --global core.editor "code --wait"
 ```
 
 #### 3. Common Shortcuts (Aliases)
+
 You can add these to your PowerShell Profile (`$PROFILE`) to work faster:
 ```powershell
 function g-rbm { git rebase main }
@@ -104,3 +105,7 @@ function g-rbd { git rebase dev }
 function g-ri { git rebase -i "HEAD~$args" }
 ```
 Then you could just type `g-ri 5` to start an interactive rebase of the last 5 commits.
+
+### Using Meld as Your Git Merge Tool
+
+[Using Meld as Your Git Merge Tool](./Atomds/Using_meld_for_git_rebase.md)

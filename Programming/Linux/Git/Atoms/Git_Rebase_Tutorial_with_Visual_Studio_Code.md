@@ -97,7 +97,7 @@ I will use my sandbox on [GitHub](https://github.com/):
 
 ![afraid to commit](../Images/afraid-to-commit.png)
 
-Let's add a test html file using the 🔗 [template](https://www.freecodecamp.org/news/html-starter-template-a-basic-html5-boilerplate-for-index-html/) from free code camp:
+Let's add a test HTML file using the 🔗 [template](https://www.freecodecamp.org/news/html-starter-template-a-basic-html5-boilerplate-for-index-html/) from free code camp:
 
 ![add file button](../Images/add-file-button.png)
 
@@ -130,8 +130,8 @@ In case you get stuck feel free to ask GitHub Copilot for help: ![GitHub Copilot
 1. Klick on the test.html file it will open the Web editor
 2. Klick on the pencile icon on the right and select "in place"
 3. Now you can edit the file
-4. Change the <title> tag
-5. Change the <h1> tag to the string "First changes in main branch"
+4. Change the HTML <title> tag
+5. Change the HTML <h1> tag to the string "First changes in main branch"
 6. Add an ordered list <ol> with three list items <li>
 7. And commit the changes as revision "B"
 
