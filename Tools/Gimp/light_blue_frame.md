@@ -11,52 +11,33 @@ keywords: [ gimp, frame ]
 To add a light blue frame around a PNG image in GIMP, 
 you need to _expand the canvas, add a new layer, and fill it with color_.
 
-## 1. Open and Prepare Your Image 📷
 
-* Open your PNG file in GIMP.
-* Go to Layer ➡️ Layer to Image Size.
-    * Ebene ➡️ Ebenen auf Bildgröße
+## Canvas Expansion Method
 
-## 2. Expand the Canvas 🎨
+You do not need to duplicate layers for this. GIMP can do it automatically.
 
-* Go to Image ➡️ Canvas Size.
-    * Ebene ➡️ Ebenengröße ...
-* Increase the Width and Height by your desired border thickness (e.g., add 10 pixels to each).
-* Click the Center button «Zentrieren» to automatically position your image in the middle.
-* Click Resize
-    * Schaltfläche: Größe ändern
+1. Open your screenshot in GIMP.
 
-    ![Ebene Ebenengröße](./Images/Ebene-Ebenengröße.png)
+2. 🎨 Add a background color: Click your Foreground Color box (the top colored square on your toolbar), choose your blue color, and click OK.
 
-## 3. Create the Frame Layer
+![Forground color box](./Images/Forground_color_box.png)
 
-* Go to Layer  ➡️ New Layer.
-* Name it "Frame" and select Transparency for the fill type.
-* Click OK.
-* Drag this new layer _below_ your original image layer in the Layers panel. 
+1. Open Canvas Size: Go to the top menu and select Image ➡️  Canvas Size...
+        Bild ➡️ Leinwandgröße
+2. Add 10 pixels: In the width and height boxes, add 20 to the current numbers (5 pixels for the left/right, 5 pixels for the top/bottom).
 
-![Eine neue Ebene erstellen](./Images/Eine_neue_Ebene_erstellen.png)
+   * _Example: If it says 1000, change it to 1020_.
 
-![Ebenen Fenster](./Images/Ebenen-Fenster.png)
+       ![Bild Leinwandgröße ändern](./Images/Bild_Leinwandgröße_ändern.png)
 
-## 4. Color the Frame Light Blue 🖌️
+3. ⚠️ Center the image: Click the Center button right below the dimensions.
 
-* Click on your Foreground Color square (the top color box in the toolbox).
-* Choose a light blue color and click OK.
-* Click on the Bucket Fill Tool (or press `Shift + B`).
-* Ensure "Fill whole selection" is checked in the tool options.
-* Click anywhere on the transparent canvas background outside your image.
+4. Set the background: Look at the bottom of that window for Resize layers. Change it to All layers.
 
-## 5. Export Your Final Image 🚚
+5. 🖌️Fill with blue: Change the Fill with dropdown menu to Foreground color (your blue).
 
-* Go to File ➡️ Export As.
-* Name your file and keep the `.png` extension to preserve any remaining transparency.
-* Click Export.
+6. Apply: Click the Resize button.
 
-If you want to customize this further, tell me:
+The screenshot will now have a perfect 5-pixel blue frame around it.
 
-* Do you want the frame to have rounded corners?
-* Do you need a multi-colored or gradient border?
-* Should the frame overlap the image edges or sit entirely outside it?
 
-I can provide the exact adjustments for any style you prefer.
