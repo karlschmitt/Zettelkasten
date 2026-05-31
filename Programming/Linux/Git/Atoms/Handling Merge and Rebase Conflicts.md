@@ -129,7 +129,7 @@ meld
 
 ![GitHub master revision A  and B](../Images/Imagine_after_git_rebase_master_006.png)
 
-![Cloning the repostory](../images/Cloning-it.png)
+![Cloning the repostory](../Images/Cloning-it.png)
 
 ![GitHub-PowerShell-Clone-It](../Images/GitHub-PowerShell-Clone-It.png)
 
