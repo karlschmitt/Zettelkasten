@@ -40,18 +40,18 @@ feature         C ---- D
 
 ![Imagine_git_master_and_commit_feature_004](../Images/Imagine_git_master_and_commit_feature_004.png)
 
-Both branches modify the same line:
+Both branches modify the same line, here an example:
 
-**master branch**
+**master branch ** 🌳
 
 ```typescript
-const apiUrl = "https://prod.company.com";
+const url = "https://www.ecosia.org/";
 ```
 
-**feature branch**
+**feature branch** 🦆
 
 ```typescript
-const apiUrl = "https://dev.company.com";
+const url = "https://duckduckgo.com";
 ```
 
 Git cannot decide automatically which version should survive.
