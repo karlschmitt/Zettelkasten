@@ -190,43 +190,62 @@ git checkout master
 
 ![GitHub git checkout master](../Images/GitHub_git_checkout_master.png)
 
-Modify same line:
+List the content of the master branch:
+
+![Edit TypeScript file in master branch](../Images/Edit_TypeScript_Master.png)
+
+Modify same lines:
 
 ```typescript
-console.log("Main Version");
+console.log("Hola Carlos!"); // correct first char
+console.log("Master Version E");
+console.log("Viva el rey"); 
 ```
+
+![Modify TypeScript master version E](../Images/Modify_TypeScript_master_version_E.png)
 
 Commit:
 
 ```bash
 git add .
-git commit -m "Main change"
+git commit -m "E"
+git push
 ```
+![Commit_and_status_TypeScript_file_version_E](../Images/Commit_and_status_TypeScript_file_version_E.png)
 
-Merge:
+Now we have the following situation:
+
+![git_before_merge_master](../Images/Imagine_after_git_merge_main_003.png)
+
+Let“s merge feature onto master::
 
 ```bash
 git merge feature
 ```
 
-Git:
+🚨 Git tries an auto merge, and informs us about a conflict 💥:
 
+![Merge_conflict_in_hello-world.ts](../Images/Merge_conflict_in_hello-world.ts.png)
 ```text
-Auto-merging app.ts
-CONFLICT (content)
+Auto-merging hello-world.ts
+CONFLICT (content): Merge conflict in hello-world.ts
 ```
 
 ***
 
 # 4. Inspect Conflict
 
-Open file:
+Open the TypeScript file:
 
 ```typescript
 <<<<<<< HEAD
-console.log("Main Version");
+console.log("Hola Carlos!"); // correct first char
+console.log("Master Version E");
+console.log("Viva el rey"); 
 =======
+console.log("Hi Charls!");
 console.log("Feature Version");
+console.log("Long live the king!")
 >>>>>>> feature
 ```
 
