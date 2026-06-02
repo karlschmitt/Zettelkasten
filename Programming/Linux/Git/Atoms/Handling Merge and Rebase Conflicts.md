@@ -230,13 +230,17 @@ git merge feature
 Auto-merging hello-world.ts
 CONFLICT (content): Merge conflict in hello-world.ts
 ```
-
 ***
 
-# 4. Inspect Conflict
+# 4. Inspect Conflict 🚨
+
+Let's look what ```git status``` says:
+
+![Git status conflict](../Images/Git_status_conflict.png)
+
+💥 Yes we have a conflict!
 
 Open the TypeScript file:
-
 ```typescript
 <<<<<<< HEAD
 console.log("Hola Carlos!"); // correct first char
@@ -248,9 +252,11 @@ console.log("Feature Version");
 console.log("Long live the king!")
 >>>>>>> feature
 ```
+🔬 Let's prick into the file:
 
-Meaning:
+![Open_conflicting_file](../Images/Open_conflicting_file_001.png)
 
+✨Meaning:
 ```text
 <<<<<<< HEAD
 Current branch
@@ -261,24 +267,27 @@ Separator
 >>>>>>> feature
 Incoming branch
 ```
-
 ***
 
-# 5. Start Meld
+# 5. Start Meld to resolve the merge conflict 
 
-Run:
+Our situation now:
+![Git merge conflict master](../Images/Git_merge_conflict_master_004.png)
 
+To start meld, please run:
 ```bash
 git mergetool
 ```
 
-Meld opens.
+Meld opens:
+
+![Meld first conflict screen shot](../Images/Meld_first_conflict_screen_shot_001.png)
 
 Typical layout:
 
 ```text
-LEFT      BASE      RIGHT
-Main      Common    Feature
+LEFT        BASE      RIGHT
+Master      Common    Feature
 ```
 
 or
@@ -287,7 +296,7 @@ or
 LOCAL     MERGED    REMOTE
 ```
 
-depending on Git version.
+depending on Git versions.
 
 ***
 
