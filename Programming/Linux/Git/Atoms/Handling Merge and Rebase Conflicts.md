@@ -309,22 +309,38 @@ Buttons typically allow:
 → Use Right
 ```
 
-Example:
+Accept right:
 
-Choose Feature version:
+![Meld_merge_accept_right](../Images/Meld_merge_accept_right.png)
 
+Accept left:
+
+![Merge_conflict_accept_left](../Images/Merge_conflict_accept_left.png)
+
+Examples:
+
+Choose feature version (right) and adjust:
 ```typescript
-console.log("Feature Version");
+console.log("Hi Charls!");
+nsole.log("Master Version F");
+console.log("Long live the king!")
+```
+![Meld_select_feature_version_and adjust](../Images/Meld_select_feature_version_and adjust.png)
+
+Or combine both sides and adjust:
+```typescript
+console.log("Hi Charls!");
+nsole.log("Master Version F");
+console.log("Long live the king!")
 ```
 
-Or combine:
+![Meld_merge_use_both_change_sets_and_adjust](../Images/Meld_merge_use_both_change_sets_and_adjust.png)
 
-```typescript
-console.log("Main Version");
-console.log("Feature Version");
-```
+Save the target file.
 
-Save file.
+Line 1 and 3 are from the right. While line 2 is from the left.
+
+![Meld_resolved_merge_conflict](../Images/Meld_resolved_merge_conflict.png)
 
 Close Meld.
 
@@ -332,42 +348,40 @@ Close Meld.
 
 # 7. Complete Merge
 
-Check status:
-
+Check status after conflict resolution:
 ```bash
 git status
 ```
 
-Output:
+![Meld_right_after_resolving_the_merge_conflict](../Images/Meld_right_after_resolving_the_merge_conflict.png)
+
+Add this point, you can still abort the merge::
 
 ```text
-both modified: app.ts
+git merge --abort
 ```
 
 Stage resolved file:
-
 ```bash
-git add app.ts
+git add hello-world.ts
 ```
 
 Finish merge:
-
 ```bash
-git commit
+git commit -m "F"
 ```
 
-Git creates merge commit.
+Git creates a merge commit (Version F).
 
 Graph:
-
 ```text
-A---B---C
-     \   \
-      D---M
+A---B---E---M
+     \       \
+      C-------D
 ```
-
 M = Merge commit
 
+![Git merge conflict master](../Images/Git_merge_conflict_master_004.png)
 ***
 
 # 8. Rebase Conflict Tutorial
