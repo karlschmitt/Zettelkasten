@@ -1,12 +1,12 @@
 ---
 id: 20260530090038
-title: Handling Merge and Rebase Conflicts
+title: Handling Merge and Rebase Conflicts with Meld
 author: Karl Schmitt
 date: 2026-05-30
 keywords: [ git, rebase, merge, meld]
 ---
 
-# Git and Meld Tutorial: Handling Merge and Rebase Conflicts
+# Git and Meld Tutorial: Handling Merge and Rebase Conflicts with Meld
 
 **Meld** is an excellent visual merge tool for Git because it lets you compare files side-by-side and choose which changes to keep.
 
@@ -373,23 +373,24 @@ git commit -m "F"
 
 Git creates a merge commit (Version F).
 
+![Git_commit_F_and_finish_merge](../Images/Git_commit_F_and_finish_merge.png)
+
 Graph:
 ```text
-A---B---E---M
+A---B---E---F
      \       \
       C-------D
 ```
-M = Merge commit
+F = Merge commit
 
 ![Git merge conflict master](../Images/Git_merge_conflict_master_004.png)
 ***
 
 # 8. Rebase Conflict Tutorial
 
-Imagine:
-
+Imagine the following situation:
 ```text
-main
+master
  |
  A---B---C
 
@@ -397,6 +398,41 @@ feature
  |
  A---B---D---E
 ```
+
+![Imagine_git_rebase_master_001](../Images/Imagine_git_rebase_master_001.png)
+
+First let“s create the two revisions on the master branch:
+
+```powershell
+ni variables.ts
+nvim variables.ts
+```
+
+![Git_rebase_revision_A_and_B](../Images/Git_rebase_revision_A_and_B.png)
+
+![Git_rebase_log_info_revision_A_and_B](../Images/Git_rebase_log_info_revision_A_and_B.png)
+
+Now let“s create the the two revisions on the feature branch:
+
+```powershell
+git checkout feature
+```
+
+![Git_rebase_checkout_feature_and_variabels_are_not_there](../Images/Git_rebase_checkout_feature_and_variabels_are_not_there.png)
+
+We see that the file ```variabels.ts``` is not availabe in the feature branch.
+That is the feature banch was created long before, 
+and at that time the file ```variabels.ts``` didn't exist in the feature branch.
+Let's rebase to see ```variables.ts```.
+
+```powershell
+git rebase master
+```
+![Git_rebase_master_to_see_variables](../Images/Git_rebase_master_to_see_variables.png)
+
+Let's create the two revisons D and E:
+    
+
 
 Update feature:
 
