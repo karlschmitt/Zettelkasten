@@ -39,4 +39,4 @@ Zettekasten is a method and system for learning and collecting information: [Zet
 4. Want is a Simplified Zettelkasten? [For Beginners](https://youtu.be/w15joVA4pIc)
 5. How I created and use my analog Zettelkasten? [Step-by-step guide](https://youtu.be/xF6Rfhztz6o)
 6. A revolutionary way to take notes: [Visual Notes and the Zettelkasten System](https://youtu.be/c9vPNSSQvHk)
-7. 
+7. [Zettelkasten Tutorial](./Atoms/Zettelkasten-Tutorial.md)
