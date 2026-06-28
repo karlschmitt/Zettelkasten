@@ -154,7 +154,7 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 2. [Curl](https://youtu.be/IEV1yXgbJbY) on [YouTube](https://www.youtube.com/)
 3. [Curl for Windows](https://curl.se/windows/) Follow the white rabbit it's a zip archive 🐇
 4. [Curl Tutorial](https://curl.se/docs/tutorial.html)
-5. [Everyting Curl](https://everything.curl.dev/)
+5. [Everything Curl](https://everything.curl.dev/)
 6. [swapi](https://swapi.info/)
 7. [Downloading Node.js](https://nodejs.org/en/download) Follow the white rabbit it's a zip archive 🐇
 8. [Node.js](https://nodejs.org/en)
@@ -196,7 +196,7 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 
 ### TypeScript 👷
 
-![Round Typescipt Icon](./TypeScript/Images/ts-logo-round-128.png)
+![Round Typescipt Icon](./Programming/Frontend/TypeScript/Images/ts-logo-round-128.png)
 
 1. The Typescript landing page: [TypeScript](https://www.typescriptlang.org/)
 2. If you feel playful again, just [play TypeScript ](https://www.typescriptlang.org/play)
@@ -217,7 +217,7 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 
 ### Material-UI 
 
-1. The comunity [material.co](https://materialui.co)
+1. The community [material.co](https://materialui.co)
 2. Browse icons: [brows icons](https://fonts.google.com/icons)
 3. Download: [Downlod a zip archive](https://github.com/google/material-design-icons/releases)
 
