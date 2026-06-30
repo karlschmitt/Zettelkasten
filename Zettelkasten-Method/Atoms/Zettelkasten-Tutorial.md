@@ -22,7 +22,7 @@ Ein Zettelkasten besteht aus vielen kleinen, miteinander verknüpften Notizen ("
 
 ![Atom](../Images/Atom.png)
 
-Attomic Notes ➡️ Jeder Zettel enthält:
+[Attomic Notes](./atomic-notes.md) ➡️ Jeder Zettel enthält:
 
 * **genau eine Idee oder einen Gedanken** 💡
 
