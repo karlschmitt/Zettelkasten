@@ -196,7 +196,7 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 
 ### TypeScript 👷
 
-![Round Typescipt Icon](./Programming/Frontend/TypeScript/Images/ts-logo-round-128.png)
+![Round Typescipt Icon](./Coding/Frontend/TypeScript/Images/ts-logo-round-128.png)
 
 1. The Typescript landing page: [TypeScript](https://www.typescriptlang.org/)
 2. If you feel playful again, just [play TypeScript ](https://www.typescriptlang.org/play)
