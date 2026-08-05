@@ -16,13 +16,20 @@ The **Redux pattern** is one of the most important architectural patterns for ma
 
 ![NgRx Redux Patern](./Images/NgRx-Redux-Patern.png)
 
+
+Before coding, understand the four pillars:
+1.  [**Store:**](./Atoms/Angular-NgRx-Store.md) The single source of truth (a global object).
+2.  [**Actions:**](./Atoms/Angular-NgRx-Actions.md) Plain objects that describe *what* happened (e.g., "[Counter] Increment").
+3.  [**Reducers:**](./Atoms/Angular-NgRx-Reducer.md) [Pure functions](./Atoms/Angular-NgRx-Pure-Funktion.md) that take the **current state** + **action** and return a **new state**.
+4.  [**Selectors:**](./Atoms/Angular-NgRx-Selector.md) Functions used to grab specific pieces of state from the store.
+
 # Redux Pattern Tutorial for Angular Developers
 
 ## Learning Objectives
 
 By the end of this tutorial you'll understand:
 
-* Why state management is needed
+* Why [state management](./Atoms/state-management-cycle.md) is needed
 
 * What Redux solves
 
@@ -85,15 +92,23 @@ Several subscriptions
 Manual synchronization
 ```
 
+![Without Redux](./Images/Without-Redux.png)
+
+1. [Standalone Component](./Atoms/Angular-standalone-component.md)
+2. [Angular Service](./Atoms/Angular-Service.md)
+3. [BehaviorSubject](./Atoms/BehaviorSubject.md)
+4. [Subscriptions](./Atoms/Subscription.md)
+5. [Manual Synchronisations](./Atoms/Manual-Synchronization.md)
+
 As the application grows:
 
-* state gets duplicated
+* [state](./Atoms/NgRx-State.md) gets duplicated
 
-* synchronization becomes difficult
+* [synchronization](./Atoms/NgRx-Synchronization.md) becomes difficult
 
 * bugs increase
 
-* debugging becomes harder
+* [debugging](./Atoms/NgRx-Debugging.md) becomes harder
 
 Redux solves this.
 
@@ -156,7 +171,7 @@ Everything comes from there.
 
 ## Principle 2
 
-State is Read-Only
+[State](./Atoms/NgRx-State.md) is Read-Only
 
 Wrong:
 
@@ -177,7 +192,15 @@ Reducer
 New State
 ```
 
-State can only change through **Actions**.
+[State](./Atoms/NgRx-State.md) can only change through **Actions**.
+
+![Dispatch Action](./Images/Dispatch-Action.png)
+
+> [NOTE!]
+> See also:
+>  [Dispatch Action](./Atoms/Dispatch-Action.md).
+> [Reducer](./Atoms/NgRx-Reducer.md)
+> [New State](./Atoms/New-State.md)
 
 ***
 

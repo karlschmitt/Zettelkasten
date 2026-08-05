@@ -1,0 +1,25 @@
+<mxfile host="Electron">
+  <diagram name="Seite-1" id="wXchTP5Tqtsz0kt5mOQ2">
+    <mxGraphModel dx="896" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xi2CLXw0LI9U8-MQEgX8-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="New State" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="321" as="geometry" />
+        </mxCell>
+        <mxCell id="xi2CLXw0LI9U8-MQEgX8-6" edge="1" parent="1" source="xi2CLXw0LI9U8-MQEgX8-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="xi2CLXw0LI9U8-MQEgX8-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xi2CLXw0LI9U8-MQEgX8-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Reducer" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="xi2CLXw0LI9U8-MQEgX8-5" edge="1" parent="1" source="xi2CLXw0LI9U8-MQEgX8-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="xi2CLXw0LI9U8-MQEgX8-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xi2CLXw0LI9U8-MQEgX8-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Dispatch Action" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="116" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

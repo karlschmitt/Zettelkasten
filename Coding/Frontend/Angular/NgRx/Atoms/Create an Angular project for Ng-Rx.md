@@ -1,6 +1,6 @@
 ---
 id: 20260803134927
-title: Create an Angular project for NgRX
+title: Create an Angular project for NgRx
 author: Karl Schmitt
 date: 2026-08-03
 keywords: [ Angular, NgRx ]

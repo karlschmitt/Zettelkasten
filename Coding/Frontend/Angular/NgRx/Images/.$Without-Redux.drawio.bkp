@@ -1,0 +1,37 @@
+<mxfile host="Electron">
+  <diagram name="Seite-1" id="03WswTCXKnrdtqCbFp9t">
+    <mxGraphModel dx="896" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="M18hSeuPRRHf4iE1vPDd-6" edge="1" parent="1" source="M18hSeuPRRHf4iE1vPDd-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="M18hSeuPRRHf4iE1vPDd-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M18hSeuPRRHf4iE1vPDd-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Component" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="M18hSeuPRRHf4iE1vPDd-8" edge="1" parent="1" source="M18hSeuPRRHf4iE1vPDd-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="M18hSeuPRRHf4iE1vPDd-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M18hSeuPRRHf4iE1vPDd-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Service" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="172" as="geometry" />
+        </mxCell>
+        <mxCell id="M18hSeuPRRHf4iE1vPDd-9" edge="1" parent="1" source="M18hSeuPRRHf4iE1vPDd-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="M18hSeuPRRHf4iE1vPDd-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M18hSeuPRRHf4iE1vPDd-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Behavior Subject" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="269" as="geometry" />
+        </mxCell>
+        <mxCell id="M18hSeuPRRHf4iE1vPDd-10" edge="1" parent="1" source="M18hSeuPRRHf4iE1vPDd-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="M18hSeuPRRHf4iE1vPDd-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M18hSeuPRRHf4iE1vPDd-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Several Subscriptions" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="366" as="geometry" />
+        </mxCell>
+        <mxCell id="M18hSeuPRRHf4iE1vPDd-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Manual Synchronisations" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="466" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
