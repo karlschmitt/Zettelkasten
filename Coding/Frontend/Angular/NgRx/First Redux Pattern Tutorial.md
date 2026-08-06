@@ -23,7 +23,7 @@ Before coding, understand the four pillars:
 3.  [**Reducers:**](./Atoms/Angular-NgRx-Reducer.md) [Pure functions](./Atoms/Angular-NgRx-Pure-Funktion.md) that take the **current state** + **action** and return a **new state**.
 4.  [**Selectors:**](./Atoms/Angular-NgRx-Selector.md) Functions used to grab specific pieces of state from the store.
 
-# Redux Pattern Tutorial for Angular Developers
+# Redux PatterRedux Pattern Tutorialn ./Tutorial for Angular Developers
 
 ## Learning Objectives
 
@@ -31,23 +31,29 @@ By the end of this tutorial you'll understand:
 
 * Why [state management](./Atoms/state-management-cycle.md) is needed
 
-* What Redux solves
+* What [Redux](./Atoms/What_Problem_does_Redux_solve.md) solves ➡️ «Data Flow»
 
-* The three Redux principles
+    * [Redux Pattern Tutorial](./Second Redux Pattern Tutorial.md)
 
-* Store
+* [The three Redux principles](./Atoms/The_three_Redux__principles.md)
 
-* Actions
+    * Single Source of Truth ➡️ _»Central Bank»_
+    * **State** is Read-Only and **State** can only change through **Actions**
+    * Changes are made by **Pure Functions**
 
-* Reducers
+* [Store](./Atoms/Angular-NgRx-Store.md) ➡️ 
 
-* Selectors
+* [Actions](./Atoms/Angular-NgRx-Actions.md) ➡️ 
 
-* Effects (NgRx extension)
+* [Reducers](./Atoms/Angular-NgRx-Reducer.md) ➡️ 
 
-* Complete data flow
+* [Selectors](./Atoms/Angular-NgRx-Selector.md) ➡️ 
 
-* How Redux maps to Angular
+* [Effects](./Atoms/Angular_NgRx_Effects.md) (NgRx extension)
+
+* [Complete data flow](./Atoms/Complete_Data_Flow.md)
+
+* [How Redux maps to Angular](./Atoms/How_Redux_maps_to_Angular.md)
 
 ***
 

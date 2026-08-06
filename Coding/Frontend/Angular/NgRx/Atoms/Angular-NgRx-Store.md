@@ -6,6 +6,12 @@ date: 2026-08-05
 keywords: [Angular, NgRx, Store]
 ---
 
+![Bank Analogie](../Images/Zustandsmanagement_als_Bank-Analogie.png)
+
+> [NOTE!]
+> Der Text erläutert das **NgRx Store-Konzept** für Angular-Anwendungen anhand einer Banken-Analogie und technischer Details. Der Store fungiert als **zentrale Datenbank**, die den gesamten Zustand der Applikation in einem einzigen, unveränderlichen Objekt verwaltet. Durch einen **unidirektionalen Datenfluss** wird sichergestellt, dass Änderungen nur über definierte Aktionen und reine Funktionen, sogenannte **Reducer**, vorgenommen werden können. Komponenten greifen mittels **Selektoren** lesend auf diese Daten zu, was eine effiziente und reaktive Aktualisierung der Benutzeroberfläche ermöglicht. Diese Methode fördert die **Vorhersehbarkeit und Testbarkeit** des Codes, indem sie die Geschäftslogik von der Darstellung trennt. Insgesamt bietet das System eine **strukturierte Lösung**, um komplexe Datenströme in großen Softwareprojekten wartbar zu halten.
+
+
 # Store
 
 Let's break down what the NgRx "Store" is, from a simple analogy to a more technical explanation with code.
