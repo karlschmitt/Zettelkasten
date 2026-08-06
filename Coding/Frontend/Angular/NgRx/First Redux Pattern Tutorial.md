@@ -212,9 +212,9 @@ New State
 
 ## Principle 3
 
-Changes are made by Pure Functions
+Changes are made by [Pure Functions](./Atoms/Angular-NgRx-Pure-Funktion.md)
 
-Reducers are pure.
+[Reducers](./Atoms/Angular-NgRx-Reducer.md) are pure.
 
 Input
 
@@ -229,6 +229,11 @@ Output
 ```
 New State
 ```
+> [NOTE!]
+> See also:
+> [State](.Atoms/NgRx-State.md)
+> [New State](./Atoms/New-State.md)
+
 
 Nothing else.
 
@@ -244,7 +249,7 @@ No randomness.
 
 # 4. What is State?
 
-State is simply data.
+[State](./Atoms/NgRx-State.md) is simply data.
 
 Example:
 
@@ -262,13 +267,13 @@ interface AppState {
 }
 ```
 
-Think of state as the application's memory.
+Think of [state](./Atoms/NgRx-State.md) as the application's memory.
 
 ***
 
 # 5. Store
 
-The Store contains the entire application state.
+The [Store](./Atoms/Angular-NgRx-Store.md) contains the entire application state.
 
 ```
 Store
@@ -284,7 +289,7 @@ Store
 }
 ```
 
-Components subscribe to the Store.
+Components subscribe to the [Store](./Atoms/Angular-NgRx-Store.md).
 
 ```ts
 cart$ = this.store.select(selectCart);
@@ -294,7 +299,7 @@ Notice:
 
 No mutable variables.
 
-No BehaviorSubjects.
+No [BehaviorSubjects](./Atoms/BehaviorSubject.md).
 
 No event emitters.
 
@@ -348,7 +353,7 @@ They don't contain business logic.
 
 # 7. Dispatching Actions
 
-Components dispatch actions.
+Components [dispatch actions](./Atoms/Dispatch-Action.md).
 
 ```ts
 this.store.dispatch(
@@ -368,7 +373,7 @@ Instead:
 
 # 8. Reducers
 
-Reducers calculate the next state.
+[Reducers](./Atoms/Angular-NgRx-Reducer.md) calculate the next [state](./Atoms/NgRx-State.md).
 
 Example:
 
@@ -475,9 +480,9 @@ const newState = {
 
 # 10. Selectors
 
-Components shouldn't know the store structure.
+Components shouldn't know the [store](./Atoms/Angular-NgRx-Store.md) structure.
 
-Instead they use selectors.
+Instead they use [selectors](./Atoms/Angular-NgRx-Selector.md).
 
 Example:
 
@@ -521,11 +526,11 @@ Benefits:
 
 # 11. Effects (NgRx)
 
-Reducers must stay pure.
+[Reducers](./Atoms/Angular-NgRx-Reducer.md) must stay pure.
 
 So where do HTTP requests go?
 
-Into Effects.
+Into [Effects](./Atoms/Angular_NgRx_Effects.md).
 
 ```
 Dispatch Load Products
@@ -572,7 +577,7 @@ loadProducts$ = createEffect(() =>
 );
 ```
 
-Reducers stay free of side effects.
+[Reducers](./Atoms/Angular-NgRx-Reducer.md) stay free of side effects.
 
 ***
 
@@ -608,6 +613,7 @@ Selectors
 ↓
 
 Component Updates
+
 ```
 
 If HTTP is involved:
@@ -810,12 +816,14 @@ For smaller applications with mostly local component state, Angular services and
 
 Since you're learning Angular, a good progression is:
 
-1. **Master the Redux concepts** (store, actions, reducers, selectors, immutable state).
+1. **Master the Redux concepts** ( [store](./Atoms/Angular-NgRx-Store.md), [actions](./Atoms/Angular-NgRx-Actions.md), [reducers](./Atoms/Angular-NgRx-Reducer.md), [selectors](./Atoms/Angular-NgRx-Selector.md), [immutable state](./Atoms/Redux_Pattern_Immutable_State.md) ).
 
-2. **Learn RxJS fundamentals**, as NgRx builds heavily on observables.
-
+2. **Learn RxJS fundamentals**, as NgRx builds heavily on [observables](./Atoms/Angular_RxJS_Observables.md).
+ 
 3. **Study NgRx**, Angular's most popular Redux-inspired state management library.
 
 4. Build a small project (such as a Todo app or Shopping Cart) using NgRx to reinforce the concepts.
+
+5. Continue with the [second Redux pattern tutorial](./Second Redux Pattern Tutorial.md).
 
 Once you're comfortable with this pattern, you'll find that NgRx is primarily a set of Angular-friendly tools that implement these same Redux ideas rather than an entirely new concept.

@@ -6,6 +6,8 @@ date: 2026-08-05
 keywords: [Angular, NgRx, Reducer, pure function]
 ---
 
+# Reducer
+
 In NgRx, a **Reducer** is a [pure function](./Atoms/Angular-NgRx-Pure-Funktion.md) that determines how the application's state changes in response to an **Action**.
 
 It is the only part of the NgRx lifecycle responsible for transforming the state.
