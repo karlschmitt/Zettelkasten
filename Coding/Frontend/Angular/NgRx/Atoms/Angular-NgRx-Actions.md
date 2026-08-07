@@ -6,6 +6,7 @@ date: 2026-08-05
 keywords: [Angular, NgRx, Actions]
 ---
 
+![Herzschlag der Zustandsverwaltung](../Images/Herzschlag_der_Zustandsverwaltung.png)
 
 > [NOTE!]
 > Dieser Text erläutert die zentrale Rolle von **Actions** innerhalb des **NgRx-State-Managements** für Angular-Anwendungen. Diese fungieren als **eindeutige Ereignisse**, die detailliert beschreiben, welche Interaktionen oder Systemprozesse innerhalb einer App stattgefunden haben. Jede Action besteht aus einem **beschreibenden Typ** und optionalen Daten, die als **Payload** bezeichnet werden. Der Text verdeutlicht zudem den **Lebenszyklus**, in dem Actions durch Reducer den Status aktualisieren oder durch Effects asynchrone Aufgaben auslösen. Ein wesentlicher Teil des Inhalts widmet sich der **Action Hygiene**, die eine präzise Benennung nach der Herkunft des Ereignisses empfiehlt. Letztlich dienen diese Objekte als essenzielle **Informationsträger**, um eine strukturierte Kommunikation zwischen verschiedenen Software-Schichten zu gewährleisten.

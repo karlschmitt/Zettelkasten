@@ -48,7 +48,7 @@ The Store itself is conceptually simple. Its power comes from how it interacts w
 
 The Store enforces a strict one-way data flow, which is the key to its predictability.
 
-
+![NgRx Redux Patern](../Images/NgRx-Redux-Patern.png)
 
 1.  **Component/Service:** An event happens (e.g., a user clicks a button).
 2.  **Action:** The component `dispatches` an **Action**. An action is a simple object that describes the event (e.g., `{ type: '[Products Page] Load Products' }`). It's a command, not the implementation.

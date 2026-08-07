@@ -6,6 +6,12 @@ date: 2026-08-05
 keywords: [Angular, NgRy, Selector]
 ---
 
+![Selectoren im Status-Management](../Images/Selectoren_im_Status-Management.png)
+
+> [NOTE!]
+> In der Welt von Angular dienen **NgRx-Selectoren** als spezialisierte Abfragefunktionen, die gezielt bestimmte Informationen aus dem globalen Datenspeicher extrahieren. Man kann sie mit **SQL-Abfragen** vergleichen, da sie aus einer komplexen Datenstruktur nur die benötigten Fragmente herausfiltern und für die Benutzeroberfläche aufbereiten. Ein entscheidender technischer Vorteil ist die **Memoization**, welche die Anwendungsleistung steigert, indem Ergebnisse zwischengespeichert und nur bei tatsächlichen Änderungen neu berechnet werden. Zudem fördern Selectoren eine saubere Softwarearchitektur, da sie die **Logik zur Datentransformation** zentralisieren und die Komponenten von der internen Struktur des State-Trees entkoppeln. Durch die Möglichkeit, einfache Selectoren zu komplexen Abfragen zu kombinieren, bleibt der Code sowohl **effizient** als auch leicht wartbar.
+
+
 # Selector
 
 In NgRx, **Selectors** are [pure functions](./Angular-NgRx-Pure-Funktion.md) used to slice, transform, 

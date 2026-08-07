@@ -6,6 +6,13 @@ date: 2026-08-05
 keywords: [Angular, NgRx, Reducer, pure function]
 ---
 
+![Der NgRx Reducer Guide](../Images/Der_NgRx_Reducer_Guide.png)
+
+> [NOTE!]
+> In der NgRx-Architektur fungiert ein **Reducer** als eine **reine Funktion**, die für sämtliche **Zustandsänderungen** innerhalb einer Angular-Anwendung verantwortlich ist. Er verarbeitet zwei Eingabewerte, den **aktuellen Status** sowie eine spezifische **Aktion**, um daraus einen **neuen Zustand** zu generieren. Dabei folgt er dem Prinzip der **Immutabilität**, was bedeutet, dass der bestehende Zustand niemals direkt verändert, sondern stets durch eine modifizierte Kopie ersetzt wird. Die Bezeichnung leitet sich aus der **funktionalen Programmierung** ab, da der Reducer einen kontinuierlichen Strom von Aktionen zu einem einzigen, aktuellen Datenobjekt zusammenführt. Da er **nebeneffektfrei** arbeitet, garantiert er bei identischen Parametern immer das gleiche Ergebnis, was die Vorhersagbarkeit des Systems erhöht. Somit bildet der Reducer das zentrale Bindeglied, um den Anwendungsstatus basierend auf Nutzerinteraktionen präzise zu transformieren.
+
+
+
 # Reducer
 
 In NgRx, a **Reducer** is a [pure function](./Atoms/Angular-NgRx-Pure-Funktion.md) that determines how the application's state changes in response to an **Action**.

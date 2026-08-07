@@ -3,12 +3,13 @@ id: 20260803120531
 title: First Redux Pattern Tutorial
 author: Karl Schmitt
 date: 2026-08-03
-keywords: [ Angular, Redux Pattern, NgRx]
+keywords: [ Angular, Redux Pattern, NgRx, RxJS, state, new state, store, action, reducer, effect, select]
 ---
 
 # First Redux Patern Tutorial
 
-The **Redux pattern** is one of the most important architectural patterns for managing state in Angular applications. Even if you later use **NgRx**, understanding the underlying Redux concepts makes the library much easier to learn.
+The **Redux pattern** is one of the most important architectural patterns for managing state in Angular applications. 
+Even if you later use **NgRx**, understanding the underlying Redux concepts makes the library much easier to learn.
 
 ***
 
@@ -41,15 +42,15 @@ By the end of this tutorial you'll understand:
     * **State** is Read-Only and **State** can only change through **Actions**
     * Changes are made by **Pure Functions**
 
-* [Store](./Atoms/Angular-NgRx-Store.md) ➡️ 
+* [Store](./Atoms/Angular-NgRx-Store.md) ➡️ **Centralization**
 
-* [Actions](./Atoms/Angular-NgRx-Actions.md) ➡️ 
+* [Actions](./Atoms/Angular-NgRx-Actions.md) ➡️ **Actions are Events, not Commands**
 
-* [Reducers](./Atoms/Angular-NgRx-Reducer.md) ➡️ 
+* [Reducers](./Atoms/Angular-NgRx-Reducer.md) ➡️ **A pure function that takes `(state, action)` and returns `newState`**
 
-* [Selectors](./Atoms/Angular-NgRx-Selector.md) ➡️ 
+* [Selectors](./Atoms/Angular-NgRx-Selector.md) ➡️ **A query function for your state**
 
-* [Effects](./Atoms/Angular_NgRx_Effects.md) (NgRx extension)
+* [Effects](./Atoms/Angular_NgRx_Effects.md) (NgRx extension) ➡️ **Asynchronous side-effect management**
 
 * [Complete data flow](./Atoms/Complete_Data_Flow.md)
 
@@ -74,13 +75,13 @@ Now suppose the user adds a product to the cart.
 
 Several components need to know:
 
-* Cart icon
+* Cart icon 🛒
 
-* Checkout page
+* Checkout page 🛒
 
-* Product list
+* Product list 📃
 
-* Total price
+* Total price 🏷️
 
 * Header badge
 
@@ -112,7 +113,7 @@ As the application grows:
 
 * [synchronization](./Atoms/NgRx-Synchronization.md) becomes difficult
 
-* bugs increase
+* bugs increase 🐞
 
 * [debugging](./Atoms/NgRx-Debugging.md) becomes harder
 
@@ -120,7 +121,7 @@ Redux solves this.
 
 ***
 
-# 2. The Core Idea
+# 2. The Core Idea 💡
 
 Instead of every component owning data:
 
