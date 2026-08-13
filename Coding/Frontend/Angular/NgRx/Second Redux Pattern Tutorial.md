@@ -6,6 +6,12 @@ date: 2026-08-03
 keywords: [ Angular, Redux Pattern, NgRx]
 ---
 
+![Architektur für reaktives Zustandsmanagement](./Images/Architektur_für_reaktives_Zustandsmanagement.png)
+
+> [NOTE!]
+> Dieses Tutorial von Karl Schmitt bietet eine fundierte Einführung in die Implementierung des **Redux-Patterns** innerhalb moderner **Angular-Anwendungen** unter Verwendung der **NgRx-Bibliothek**. Der Text erläutert die vier zentralen Säulen der Zustandsverwaltung: den globalen **Store**, beschreibende **Actions**, logikbasierte **Reducer** und effiziente **Selectors**. Anhand einer praktischen Beispielanwendung wird der gesamte Entwicklungsprozess von der Installation bis hin zur Integration in **Standalone-Komponenten** detailliert beschrieben. Darüber hinaus hebt die Quelle die Vorteile von **Immutabilität** und der Vorhersagbarkeit von Daten hervor, um die Performance und Wartbarkeit komplexer Softwareprojekte zu steigern. Abschließend wird die Nutzung der **Redux DevTools** empfohlen, um Zustandsänderungen im Browser präzise nachzuverfolgen und zu analysieren.
+
+
 # Second Redux Pattern Tutorial
 
 In the Angular ecosystem, the most popular and "official" implementation of the Redux pattern is **NgRx**.
@@ -19,22 +25,34 @@ This tutorial will guide you through building a simple **Counter Application** u
 ---
 
 ### 1. The Redux Pattern Core Concepts
+
 Before coding, understand the four pillars:
 1.  **Store:** The single source of truth (a global object).
 2.  **Actions:** Plain objects that describe *what* happened (e.g., "[Counter] Increment").
 3.  **Reducers:** Pure functions that take the **current state** + **action** and return a **new state**.
 4.  **Selectors:** Functions used to grab specific pieces of state from the store.
 
+Das Redux-Pattern, welches in Angular häufig durch die Library **NgRx** implementiert wird, basiert auf vier zentralen Grundpfeilern, die für ein vorhersehbares Zustandsmanagement sorgen:
+
+* **Store:** Der Store ist die **einzige Quelle der Wahrheit** (Single Source of Truth). Man kann ihn sich als ein großes, globales Objekt vorstellen, in dem der gesamte Zustand (State) der Anwendung gespeichert ist. Da es nur diesen einen zentralen Ort für die Daten gibt, behält man stets den Überblick über die aktuelle Datenlage der App.
+* **Actions:** Actions sind einfache Objekte, die beschreiben, **was passiert ist** (z. B. „\[Counter] Increment“). Sie dienen als Befehle oder Ereignismeldungen, die dem Store mitteilen, dass eine Änderung des Zustands gewünscht ist. Eine Action selbst enthält dabei nur die Information über das Ereignis, führt aber noch keine Änderung durch.
+* **Reducers:** Reducer sind **reine Funktionen** (Pure Functions), welche die eigentliche Logik der Zustandsänderung enthalten. Sie nehmen den **aktuellen Zustand** und die **Action** entgegen und geben daraufhin einen **neuen Zustand** zurück. Ein wichtiges Prinzip dabei ist die **Immutabilität** (Unveränderlichkeit): Der alte Zustand wird nicht modifiziert, sondern durch ein komplett neues Objekt ersetzt.
+* **Selectors:** Selectors sind Funktionen, die dazu verwendet werden, **bestimmte Teile des Zustands** effizient aus dem Store abzurufen. Anstatt dass eine Komponente den gesamten globalen Store durchsuchen muss, helfen Selectors dabei, nur die benötigten Datenfragmente "herauszupicken".
+
+**Warum nutzt man dieses System?** Obwohl dieses Muster für kleine Aufgaben komplex wirken kann, bietet es enorme Vorteile bei wachsenden Anwendungen: Es sorgt für **Vorhersehbarkeit**, da jede Änderung protokolliert wird, und ermöglicht durch die Unveränderlichkeit der Daten eine sehr schnelle Performance (z. B. durch Angulars _OnPush_-Change-Detection). Zudem erlauben Tools wie die **Redux DevTools** eine Art „Zeitreise“ durch die verschiedenen Zustände der App.
+
+
 ---
 
 ### 2. Installation
-Create a new Angular project and add NgRx:
 
+Create a new Angular project and add NgRx:
 ```bash
 ng new redux-tutorial
 cd redux-tutorial
 ng add @ngrx/store@latest
 ```
+![Successful Angular Project Creation with NgRx](./Images/Screenshots/Successful_Angular_Project_Creation_with_NgRx.png)
 
 ---
 

@@ -6,6 +6,12 @@ date: 2026-06-04
 keywords: [Angular, Service]
 ---
 
+![Modulare Architektur durch Web-Services](../Images/Modulare_Architektur_durch_Web-Services.png)
+
+> [NOTE!]
+> In Angular dienen **Services** als spezialisierte Klassen, die die Geschäftslogik und den Datenaustausch von der grafischen Benutzeroberfläche trennen. Während Komponenten für die Darstellung zuständig sind, übernehmen Services zentrale Aufgaben wie **API-Anfragen, Datenverwaltung und Authentifizierung**. Durch den Einsatz des **@Injectable-Decorators** ermöglicht Angular die effiziente Bereitstellung dieser Funktionen mittels **Dependency Injection**. Da Services standardmäßig als **Singletons** fungieren, bleibt eine konsistente Datenbasis über die gesamte Anwendung hinweg erhalten. Dieser modulare Ansatz fördert die **Wiederverwendbarkeit** von Code und sorgt für eine übersichtliche Struktur innerhalb des Frameworks. Insgesamt ermöglichen Services eine saubere **Trennung von Zuständigkeiten**, wodurch die Wartbarkeit komplexer Webanwendungen erheblich verbessert wird.
+
+
 # Angular Service
 
 In Angular, a **Service** is a class that contains logic, data, or functions that are not directly related to a specific view (UI). 

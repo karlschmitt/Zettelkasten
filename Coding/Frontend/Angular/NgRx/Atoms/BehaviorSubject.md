@@ -6,6 +6,12 @@ date: 2026-08-04
 keywords: [ Angular, RxJS, BehaviorSubject]
 ---
 
+![Leitfaden zum modernen Zustandsmanagement](../Images/Leitfaden_zum_modernen_Zustandsmanagement.png)
+
+> [NOTE!]
+> In diesem Text wird das Konzept des **BehaviorSubject** innerhalb von **Angular** und **RxJS** als Werkzeug zur **Zustandsverwaltung** erläutert. Im Gegensatz zu einfachen Variablen ermöglicht dieser Ansatz eine **automatische Aktualisierung** aller abhängigen Komponenten, sobald sich Daten ändern. Ein wesentliches Merkmal ist, dass ein **BehaviorSubject** stets den **aktuellsten Wert speichert** und diesen sofort an neue Abonnenten übermittelt. Während sich diese Methode hervorragend für **kleine bis mittlere Anwendungen** eignet, vergleicht der Autor sie auch mit komplexeren Lösungen wie **Redux oder NgRx**. Letztere bieten durch **explizite Aktionen** mehr Struktur, während das **BehaviorSubject** eine leichtgewichtige und flexible Alternative für den **einfachen Datenaustausch** darstellt. Insgesamt dient die Quelle als Leitfaden, um die passende Strategie für die Synchronisierung von **Applikationszuständen** zu wählen.
+
+
 # BehaviorSubject
 
 A **`BehaviorSubject`** is an RxJS class that represents both:

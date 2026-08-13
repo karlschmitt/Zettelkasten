@@ -6,6 +6,12 @@ date: 2026-08-03
 keywords: [ Angular, Redux Pattern, NgRx, RxJS, state, new state, store, action, reducer, effect, select]
 ---
 
+![Konzept für zentrale Zustandsverwaltung](./Images/Konzept_für_zentrale_Zustandsverwaltung.png)
+
+> [NOTE!]
+> Dieses Tutorial erläutert das **Redux-Pattern** als Architekturkonzept für die Zustandsverwaltung in **Angular-Anwendungen**. Die zentrale Idee basiert auf einem **Store**, der als einzige verlässliche Datenquelle dient und nur über klar definierte **Actions** sowie reine Funktionen, sogenannte **Reducer**, verändert werden kann. Durch diese Struktur wird der Datenfluss vorhersehbarer, was besonders bei komplexen Projekten die **Synchronisation** zwischen verschiedenen Komponenten vereinfacht und die Fehleranfälligkeit senkt. Neben den Grundprinzipien wie der **Unveränderlichkeit von Daten** werden auch fortgeschrittene Werkzeuge wie **Selectors** zur Datenabfrage und **Effects** für asynchrone Prozesse wie HTTP-Anfragen thematisiert. Insgesamt bietet der Text einen Leitfaden, um durch die Trennung von Logik und Darstellung die **Skalierbarkeit** und Testbarkeit von Software zu optimieren.
+
+
 # First Redux Patern Tutorial
 
 The **Redux pattern** is one of the most important architectural patterns for managing state in Angular applications. 
@@ -24,7 +30,7 @@ Before coding, understand the four pillars:
 3.  [**Reducers:**](./Atoms/Angular-NgRx-Reducer.md) [Pure functions](./Atoms/Angular-NgRx-Pure-Funktion.md) that take the **current state** + **action** and return a **new state**.
 4.  [**Selectors:**](./Atoms/Angular-NgRx-Selector.md) Functions used to grab specific pieces of state from the store.
 
-# Redux PatterRedux Pattern Tutorialn ./Tutorial for Angular Developers
+# Redux Pattern Tutorialn for Angular Developers
 
 ## Learning Objectives
 

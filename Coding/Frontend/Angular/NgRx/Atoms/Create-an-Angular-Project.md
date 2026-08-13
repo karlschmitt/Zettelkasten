@@ -1,10 +1,16 @@
 ---
 id: 20260803133358
-tile: Create an Agular Project
+tile: Create an modern Agular Project
 author: Karl Schmitt
 date: 2026-08-03
 keywords: [Angular, Project]
 ---
+
+![Setup-Guide moderne Web-Entwicklung 2025](../Images/Setup-Guide_moderne_Web-Entwicklung_2025.png)
+
+> [NOTE!]
+> Dieser Text bietet eine umfassende Anleitung zur Erstellung von **Angular-Projekten nach modernsten Standards** der Versionen 18 und 19. Der Autor erläutert den grundlegenden Wandel hin zu einer **modullosen Architektur**, bei der Standalone-Komponenten und eine zentrale Konfigurationsdatei das veraltete Modulsystem ersetzen. Wichtige technologische Neuerungen wie der **Vite-basierte Application Builder** und die Integration von **Server-Side Rendering** stehen dabei im Fokus für eine optimierte Performance. Zudem werden innovative Funktionen wie **Signals für das Zustandsmanagement** sowie die neue Kontrollfluss-Syntax detailliert beschrieben. Abschließend empfiehlt die Quelle ergänzende Werkzeuge wie **Tailwind CSS und Angular Query**, um professionelle Webanwendungen auf dem aktuellen Stand der Technik zu entwickeln.
+
 
 # Create an Angular Project
 
@@ -15,6 +21,7 @@ Here is the step-by-step guide to creating a modern Angular project.
 ---
 
 ### 1. Prerequisites
+
 Ensure you have the latest **Node.js (LTS)** version installed. Then, install the latest Angular CLI globally:
 
 ```bash
@@ -22,6 +29,7 @@ npm install -g @angular/cli
 ```
 
 ### 2. Create the Project
+
 Run the following command to start the interactive setup:
 
 ```bash
@@ -31,6 +39,9 @@ ng new my-modern-app
 **Choose these modern defaults when prompted:**
 *   **Styles:** SCSS (or CSS if you prefer simplicity).
 *   **Server-Side Rendering (SSR):** **Yes.** (Modern Angular defaults to SSR for better SEO and performance using the new "Hydration" engine).
+
+> [NOTE!]
+> Also feel free to create an Angular project using this Link: [Create an Angular project using Vite](./Create an Angular project using Vite.md)
 
 ---
 
@@ -130,3 +141,26 @@ To make your project truly professional in 2025, consider adding these:
 - [ ] **SSR & Hydration** enabled
 - [ ] **Application Builder** (Vite/esbuild)
 - [ ] **provideHttpClient(withFetch())** instead of the old XHR backend.
+
+# Signals
+
+In modernen Angular-Versionen (18/19) stellen **Signals** und der neue **Control Flow** wesentliche technologische Sprünge dar, um Anwendungen schneller und wartungsfreundlicher zu machen.
+
+### Signals (State Management)
+
+Signals sind die neue Art, **Reaktivität** in Angular-Anwendungen zu handhaben.
+
+* **Zweck:** Sie dienen primär dem Management des lokalen Zustands (State Management).
+* **Vorteil:** Entwickler sollten sich nicht mehr ausschließlich auf `BehaviorSubject` verlassen, um reaktive Datenflüsse zu steuern. Signals bieten eine effizientere und modernere Alternative.
+* **Einordnung:** Sie sind ein fester Bestandteil der Checkliste für moderne Angular-Apps, da sie das Framework funktionaler machen.
+
+### Der neue Control Flow
+
+Der integrierte Control Flow ersetzt die bisherigen strukturellen Direktiven durch eine neue, eingebaute Syntax.
+
+* **Syntax:** Anstelle von `*ngIf` und `*ngFor` wird nun eine Syntax mit **`@if`** und **`@for`** verwendet.
+* **Performance:** Diese neue Syntax ist direkt in das Framework integriert, was zu einer **besseren Performance** führt.
+* **Typsicherheit:** Ein entscheidender Vorteil gegenüber der alten Methode ist die erhöhte **Typsicherheit** innerhalb der Templates.
+* **Zusatzfunktion:** Ergänzend dazu gibt es die **@defer**-Blöcke, die es erlauben, Teile eines Templates verzögert zu laden (Lazy Loading), zum Beispiel wenn sie im Viewport erscheinen.
+
+Diese Neuerungen arbeiten Hand in Hand mit dem neuen **Application Builder** (basierend auf Vite und esbuild), um die Entwicklung und Ausführung von Angular-Anwendungen signifikant zu beschleunigen.

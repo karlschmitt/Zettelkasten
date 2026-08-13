@@ -5,6 +5,8 @@ author: Karl Schmitt
 date: [Angular NgRx Lebenszyklus]
 ---
 
+![State Management Action Lebenszyklus](../Images/State_Management_Action_Lebenszyklus_Diagramm.png)
+
 > [NOTE!]
 > Dieser Text erläutert den strukturierten **Lebenszyklus von Actions** innerhalb des NgRx-Frameworks für Angular-Anwendungen. Der Prozess beginnt mit dem **Dispatching**, bei dem eine Nachricht als Auslöser für eine Zustandsänderung in das System gesendet wird. Anschließend übernehmen **Reducer** die Aufgabe, basierend auf diesen Informationen einen neuen Anwendungszustand zu berechnen, während **Effects** notwendige externe Operationen wie API-Abrufe steuern. Ein praxisnahes Beispiel verdeutlicht den kreislaufförmigen Ablauf von der Nutzerinteraktion bis zur finalen Datenanzeige. Abschließend betont der Autor die Bedeutung der **Action-Hygiene**, um durch klare Benennungen und ereignisorientierte Beschreibungen eine wartbare Architektur zu gewährleisten. Diese Übersicht dient somit als Leitfaden für die **vorhersehbare Zustandsverwaltung** in komplexen Webprojekten.
 

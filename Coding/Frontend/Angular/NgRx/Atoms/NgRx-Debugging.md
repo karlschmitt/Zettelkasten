@@ -5,6 +5,13 @@ author: Karl Schmitt
 date: 2026-08-04
 ---
 
+![Debugging in der Zustandsverwaltung](../Images/Debugging_in_der_Zustandsverwaltung.png)
+
+>[NOTE!]
+>Dieser Text erläutert die Funktionsweise und die Vorteile des **Debuggings in NgRx**, wobei der Fokus primär auf dem **Redux DevTools**-Ökosystem liegt. Das System nutzt einen sogenannten **Meta-Reducer**, um den Datenfluss abzufangen und jede Zustandsänderung innerhalb der Anwendung präzise zu protokollieren. Zu den zentralen Funktionen gehören das **Time Travel Debugging**, das ein Springen zwischen verschiedenen Programmzuständen ermöglicht, sowie die detaillierte Analyse von **Aktions-Logs** und **State-Differenzen**. Damit diese Werkzeuge korrekt funktionieren, müssen Entwickler strikte Prinzipien wie die **Unveränderlichkeit (Immutability)** und die **Serialisierbarkeit** von Daten einhalten. Insgesamt bietet NgRx durch seine unidirektionale Architektur eine **hohe Rückverfolgbarkeit**, die weit über traditionelle Methoden der Fehlerbehebung hinausgeht.
+
+
+
 # Debugging
 
 Debugging in NgRx is primarily centered around the **Redux DevTools** ecosystem. Because NgRx follows a strict unidirectional data flow and uses immutable state, it provides a level of traceability that is impossible in traditional service-based state management.

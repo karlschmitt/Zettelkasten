@@ -6,6 +6,13 @@ date: 2026-08-06
 keywords: [Angular, NgRx, Redux, actions, reducers, selectors, effects]
 ---
 
+![Datenfluss der unidirektionalen Zustandsverwaltung](../Images/Datenfluss_der_unidirektionalen_Zustandsverwaltung.png)
+
+> [NOTE!]
+> Der bereitgestellte Text erläutert den **unidirektionalen Datenfluss** innerhalb des **NgRx-Frameworks** für Angular-Anwendungen. Der Prozess beginnt mit einer **Aktion**, die ein Ereignis beschreibt und entweder direkt an einen **Reducer** oder über einen asynchronen **Effect** weitergeleitet wird. Der Reducer erzeugt daraufhin einen vollständig **neuen Zustand**, ohne die bestehenden Daten direkt zu verändern. Mithilfe von **Selectoren** rufen Komponenten gezielt Informationen aus diesem zentralen Speicher ab und abonnieren die Änderungen. Durch diese **festgelegte Struktur** wird die Entwicklung vorhersehbarer, da jede Zustandsänderung klar nachvollziehbar und leicht zu testen ist. Schließlich sorgt Angular für die automatische **Aktualisierung der Benutzeroberfläche**, sobald neue Daten über den Store verfügbar sind.
+
+
+
 # Complete Data Flow
 
 The **NgRx data flow** is the heart of how NgRx works. 
@@ -449,3 +456,77 @@ Because there is only **one path** for changing state, you can always answer que
 * _Where did the data come from?_ → Look at the effect (if one was involved).
 
 This predictable, one-way flow is one of the biggest advantages of NgRx. It makes complex applications easier to reason about, debug, and test because every state transition follows the same well-defined lifecycle.
+
+# Unidirektionale Datenfluss
+
+Der **unidirektionale Datenfluss** ist das Herzstück von NgRx und bedeutet, dass Daten sich immer nur in **eine einzige Richtung** durch die Anwendung bewegen und niemals rückwärts fließen. Dieser Kreislauf sorgt dafür, dass Zustandsänderungen vorhersehbar und leicht nachvollziehbar sind.
+
+Hier ist der Ablauf Schritt für Schritt für Anfänger erklärt:
+
+### 1. Die Aktion (Action)
+
+Alles beginnt mit einem Ereignis, zum Beispiel wenn ein Benutzer auf einen Button klickt. Die Komponente ändert den Zustand jedoch nicht direkt, sondern versendet eine **Action**. Eine Action ist wie eine Nachricht, die beschreibt, **was passiert ist** (z. B. „Add Todo“), aber sie enthält noch keine Logik zur Änderung der Daten.
+
+### 2. Effekte (Effects) – optional
+
+Falls Daten von einem Server geladen werden müssen (asynchrone Arbeit), tritt ein **Effect** auf den Plan. Er fängt die ursprüngliche Action ab, führt zum Beispiel einen HTTP-Request aus und versendet danach eine **neue Action** (z. B. „Todo erfolgreich gespeichert“), sobald die Daten bereitstehen.
+
+### 3. Der Reducer
+
+Der **Reducer** ist der Ort, an dem die eigentliche Logik stattfindet. Er erhält zwei Informationen:
+
+* Den **aktuellen Zustand** (State).
+* Die **Action**.
+
+Wichtig ist: Der Reducer verändert den alten Zustand nicht einfach. Stattdessen berechnet er einen **komplett neuen Zustand** und gibt diesen zurück. Der alte Zustand bleibt unverändert.
+
+### 4. Der Store
+
+Der **Store** nimmt diesen neuen Zustand vom Reducer entgegen und ersetzt damit den alten. Er dient als die einzige „Quelle der Wahrheit“ (Single Source of Truth) für die gesamte Anwendung.
+
+### 5. Selektoren (Selectors)
+
+Komponenten lesen die Daten nicht direkt aus dem Store, sondern nutzen **Selectors**. Man kann sie sich wie einen Filter oder eine Abfrage vorstellen (z. B. „Gib mir nur die Liste der Todos“). Selektoren können auch Daten transformieren oder Werte berechnen, bevor sie an die Komponente geliefert werden.
+
+### 6. Die Komponente und das UI
+
+Da Selektoren sogenannte **Observables** zurückgeben, wird die Komponente automatisch informiert, sobald sich die Daten im Store ändern. Angular aktualisiert daraufhin die Benutzeroberfläche, und der Benutzer sieht die neuen Informationen.
+
+### Warum ist dieser Fluss so vorteilhaft?
+
+Da es nur **einen festen Pfad** für Datenänderungen gibt, lässt sich jede Änderung leicht debuggen:
+
+* **Warum** hat sich der Zustand geändert? Schau dir die Action an.
+* **Wie** wurde der neue Zustand berechnet? Schau dir den Reducer an.
+* **Woher** kamen die Daten? Schau dir den Effekt an.
+
+# Actions or State thats here the Question
+
+In NgRx erfüllen **Actions** und der **State** grundlegend unterschiedliche Aufgaben innerhalb des Datenflusses. Während eine Action ein Ereignis beschreibt, repräsentiert der State die tatsächlichen Daten der Anwendung zu einem bestimmten Zeitpunkt.
+
+### Actions: Die Beschreibung eines Ereignisses
+
+Eine **Action** fungiert als eine Art Nachricht oder Ankündigung, die beschreibt, **was in der Anwendung passiert ist**.
+
+* **Zweck:** Sie dient als Auslöser für eine Zustandsänderung, enthält aber selbst **keine Logik** zur Aktualisierung der Daten.
+* **Inhalt:** Sie beschreibt lediglich ein Ereignis, wie zum Beispiel „Benutzer hat auf den 'Add Todo'-Button geklickt“.
+* **Versand:** Actions werden von Komponenten versendet (dispatched), wenn eine Interaktion stattfindet, oder von Effekten nach Abschluss asynchroner Aufgaben.
+
+### State: Der aktuelle Zustand der Daten
+
+Der **State** stellt die **eigentlichen Informationen** dar, die die Anwendung zu einem gegebenen Zeitpunkt hält.
+
+* **Zweck:** Er ist die „Quelle der Wahrheit“ für die Benutzeroberfläche. Ein Beispiel für einen State wäre eine Liste von Todo-Einträgen: `todos: [{ id: 1, text: 'Lernen' }]`.
+* **Unveränderlichkeit:** Der State wird niemals direkt bearbeitet. Stattdessen nimmt ein Reducer den alten State und eine Action entgegen, um daraus einen **komplett neuen State** zu berechnen.
+* **Aufbewahrung:** Der aktuelle State wird im **Store** gespeichert und ersetzt dort bei jeder Änderung das vorherige State-Objekt.
+
+### Die wichtigsten Unterschiede im Überblick
+
+| Merkmal    | Action                                               | State                                                  |
+| :--------- | :--------------------------------------------------- | :----------------------------------------------------- |
+| **Rolle**  | Der Auslöser / Die Nachricht                         | Das Ergebnis / Die Datenbasis                          |
+| **Inhalt** | Beschreibung eines Ereignisses („Was ist passiert?“) | Aktuelle Werte der Anwendung („Wie sieht es aus?“)     |
+| **Logik**  | Enthält keine Logik                                  | Wird durch Logik im Reducer erzeugt                    |
+| **Fluss**  | Startet den Kreislauf                                | Wird am Ende des Kreislaufs aktualisiert und angezeigt |
+
+Zusammenfassend lässt sich sagen: Wenn ein Benutzer etwas tut, wird eine **Action** versendet, um das System zu informieren. Diese Action führt (über einen Reducer) dazu, dass ein neuer **State** erstellt wird, der dann die aktualisierte Ansicht für den Benutzer bestimmt.
