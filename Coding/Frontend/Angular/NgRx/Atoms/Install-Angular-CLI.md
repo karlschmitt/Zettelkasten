@@ -6,7 +6,7 @@ date: 2026-08-03
 keywords: [Angular, CLI]
 ---
 
-# Install Angular CLI
+# Install Angular CLI and NgRx
 
 You’ll need:
 
@@ -233,3 +233,139 @@ Open your project's `package.json` file and look inside the `dependencies` objec
 ```
 
 Are you working with a standalone components architecture (Angular 15+) or a traditional NgModule-based architecture? I can show you how to register your first actions, reducers, and selectors for your specific structure.
+
+
+
+# Minimal Verification Project
+
+Here is a complete, minimal verification project using Angular (Standalone Components) and NgRx. This project implements a Counter to verify that your NgRx Actions, Reducers, and Selectors are wiring up and managing state correctly.
+
+## 1. Set Up the Project Files
+
+Create or update these three files in your Angular project's `src/app/` directory.
+
+## `app.config.ts` (Application Configuration)
+
+This file initializes the NgRx Store using the modern `provideStore` API.
+
+```typescript
+import { ApplicationConfig } from '@angular/core';
+import { provideStore } from '@ngrx/store';
+import { counterReducer } from './counter.reducer';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideStore({ counter: counterReducer })
+  ]
+};
+```
+
+## `counter.reducer.ts` (Actions & Reducer)
+
+This file defines the actions (`increment`, `decrement`, `reset`) and the logic to transition the state.
+
+```typescript
+import { createAction, createReducer, on } from '@ngrx/store';
+
+// 1. Actions
+export const increment = createAction('[Counter] Increment');
+export const decrement = createAction('[Counter] Decrement');
+export const reset = createAction('[Counter] Reset');
+
+// 2. Initial State
+export const initialState = 0;
+
+// 3. Reducer
+export const counterReducer = createReducer(
+  initialState,
+  on(increment, (state) => state + 1),
+  on(decrement, (state) => state - 1),
+  on(reset, () => initialState)
+);
+```
+
+## `app.component.ts` (The View Component)
+
+This component reads the state using a selector and dispatches actions when buttons are clicked.
+
+```typescript
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { increment, decrement, reset } from './counter.reducer';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    <div style="text-align: center; margin-top: 50px; font-family: sans-serif;">
+      <h1>NgRx Verification Counter</h1>
+      
+      <!-- Async pipe automatically subscribes/unsubscribes -->
+      <h2 style="font-size: 3rem; color: #3f51b5;">{{ count$ | async }}</h2>
+
+      <div style="display: flex; gap: 10px; justify-content: center;">
+        <button (click)="onIncrement()" style="padding: 10px 20px;">Increment</button>
+        <button (click)="onDecrement()" style="padding: 10px 20px;">Decrement</button>
+        <button (click)="onReset()" style="padding: 10px 20px; background-color: #f44336; color: white; border: none; border-radius: 4px;">Reset</button>
+      </div>
+    </div>
+  `
+})
+export class AppComponent {
+  // Select the 'counter' slice from global state
+  count$: Observable<number>;
+
+  constructor(private store: Store<{ counter: number }>) {
+    this.count$ = store.select('counter');
+  }
+
+  onIncrement() {
+    this.store.dispatch(increment());
+  }
+
+  onDecrement() {
+    this.store.dispatch(decrement());
+  }
+
+  onReset() {
+    this.store.dispatch(reset());
+  }
+}
+```
+
+***
+
+## 2. Verify Your `main.ts`
+
+Ensure your standard entrypoint bootstrap file matches the config injection:
+
+```typescript
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
+import { appConfig } from './app/app.config';
+
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));
+```
+
+***
+
+## 3. Run and Verify
+
+1. Launch your application:
+   ```bash
+   ng serve
+   ```
+2. Open `http://localhost:4200` in your web browser.
+3. Click Increment and Decrement. If the number changes on your screen, your NgRx architecture is fully functional.
+
+Would you like to extend this verification project to test NgRx Effects using a mock HTTP service call, or install Redux DevTools to visually track these state changes?
+
+
+
+
+
+
