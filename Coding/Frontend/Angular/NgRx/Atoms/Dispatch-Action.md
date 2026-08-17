@@ -5,6 +5,13 @@ author: Karl Schmitt
 date: 2026-08-04
 ---
 
+![Der Weg zum State-Update](..\Images\Der_Weg_zum_State-Update.png)
+
+> [NOTE!]
+> In diesem Text erläutert Karl Schmitt das Konzept des **Dispatching** innerhalb der Redux-Architektur und nutzt dafür anschauliche Alltagsvergleiche. Anstatt den Zustand einer Anwendung direkt zu manipulieren, senden Komponenten lediglich **formalisierte Nachrichten** über eingetretene Ereignisse an einen zentralen Speicher. Dieser Prozess wird mit einem **Postdienst oder einem Kellner** verglichen, wobei die Komponente nur den Auftrag erteilt, während die interne Logik die eigentliche Verarbeitung übernimmt. Durch diese **strikte Trennung** von Ereignismeldung und Zustandsänderung bleibt der Code übersichtlich und leichter nachvollziehbar. Das System stellt sicher, dass alle Datenänderungen einem **vorhersehbaren Pfad** folgen, was die Fehlersuche und die Skalierbarkeit erheblich verbessert. Letztlich beschreibt der Autor den **mentalen Wechsel**, Handlungen als bloße Benachrichtigungen über Vergangenes zu verstehen, statt als direkte Befehle zur Datenänderung.
+
+
+
 # Dispatch Action
 
 > What does the term "dispatch action" mean, and why was the wording "dispatch" used?

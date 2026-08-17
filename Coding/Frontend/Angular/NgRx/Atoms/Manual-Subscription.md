@@ -5,6 +5,12 @@ author: Karl Schmitt
 keywords: [Angular, manual subscription]
 ---
 
+![Framework-Subscriptions Manuell vs. Automatisch](../Images/Framework-Subscriptions__Manuell_vs._Automatisch.png)
+
+>[NOTE!]
+>Dieser Text erläutert die wesentlichen Unterschiede zwischen **manuellen und automatischen Abonnements** in Angular-Anwendungen. Während Entwickler bei einem **manuellen Abonnement** selbst für den Aufruf von **subscribe** und die spätere Bereinigung zuständig sind, übernimmt die **Async-Pipe** diese Aufgaben im Template vollautomatisch. Die Nutzung der Async-Pipe wird ausdrücklich empfohlen, um **Speicherlecks und unnötigen Code-Ausführungen** vorzubeugen, die durch vergessene Kündigungen entstehen könnten. Dennoch bleiben manuelle Abonnements für **imperative Aktionen**, wie etwa die Navigation oder das Auslösen von Benachrichtigungen, ein notwendiges Werkzeug. Zusammenfassend liefert die Quelle eine klare Richtlinie, wann welche Methode für eine **effiziente Datenverarbeitung** und Fehlervermeidung einzusetzen ist.
+
+
 # Manual Subscription
 
 A **manual subscription** is when **you explicitly call `subscribe()` in your component code and are responsible for managing the subscription yourself**.
