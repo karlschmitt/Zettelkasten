@@ -1,10 +1,16 @@
 ---
 id: 20260803132846
-title: Install Angular CLI
+title: Install Angular CLI and NgRx
 author: Karl Schmitt
 date: 2026-08-03
-keywords: [Angular, CLI]
+keywords: [node.js, node, npm, Angular, CLI, NgRx]
 ---
+
+![Setup-Leitfaden für Frontend-Entwicklung](../Images/Setup-Leitfaden_für_Frontend-Entwicklung.png)
+
+> [NOTE!]
+> Dieser Text bietet eine umfassende Anleitung zur Einrichtung einer modernen Web-Entwicklungsumgebung mit **Node.js**, dem **Angular CLI** und **NgRx**. Zunächst wird erläutert, wie man die Installation von **Node.js** und **npm** über das Terminal überprüft oder diese bei Bedarf plattformübergreifend neu installiert. Anschließend beschreibt die Quelle den globalen Installationsprozess des **Angular Frameworks** sowie die Erstellung und den Start eines neuen Projekts. Ein weiterer Schwerpunkt liegt auf der Integration von **NgRx** für das **State-Management**, wobei sowohl die automatisierte Installation über Schematics als auch die manuelle Konfiguration behandelt werden. Abschließend wird ein **minimales Beispielprojekt** bereitgestellt, das die korrekte Funktionsweise von Actions, Reducern und Selectoren praktisch demonstriert. Damit dient das Dokument als strukturierter Leitfaden für Entwickler, um eine funktionale **Architektur** für skalierbare Frontend-Anwendungen aufzubauen.
+
 
 # Install Angular CLI and NgRx
 
@@ -14,11 +20,11 @@ You’ll need:
 
 ## How to check that node.js is already installed?
 
-To check if Node.js and npm are already installed, _open your terminal or command prompt and run the version check commands_. \[1, 2]
+To check if Node.js and npm are already installed, _open your terminal or command prompt and run the version check commands_.
 
 ### 1. Quick Verification Commands
 
-Open your terminal (macOS/Linux) or Command Prompt/PowerShell (Windows) and type the following: \[2]
+Open your terminal (macOS/Linux) or Command Prompt/PowerShell (Windows) and type the following:
 
 * Check Node.js:
   ```bash
@@ -29,7 +35,9 @@ Open your terminal (macOS/Linux) or Command Prompt/PowerShell (Windows) and type
   ```bash
   npm -v
   ```
-  _(Alternative: `npm --version`)_ 
+  _(Alternative: `npm --version`)_
+
+  ![Nodejs-node-and-npm-version](../Images/Screenshots/Nodejs-node-and-npm-version.png)
 
 ### 2. How to Interpret the Results
 
@@ -45,13 +53,15 @@ If you want to know exactly where they are installed on your hard drive, run:
   where node
   where npm
   ```
+![](../Images/Screenshots/Node.js-where-to-find-node-and-npm.png)
+  
 * macOS / Linux:
   ```bash
   which node
   which npm
   ```
 
-If you find that they are missing or outdated, you can download the correct packages directly from the official Node.js Downloads page, or use a version manager like [nvm (Node Version Manager)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) to install them. \[5, 11]
+If you find that they are missing or outdated, you can download the correct packages directly from the official Node.js Downloads page, or use a version manager like [nvm (Node Version Manager)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) to install them. 
 
 Would you like help updating them to the latest version, or are you trying to troubleshoot a "command not found" error?
 
@@ -59,20 +69,20 @@ Would you like help updating them to the latest version, or are you trying to tr
 ## How to install node.js and verify the installation?
 
 
-To install Node.js and verify that it works correctly, _download the installer from the official website or use a package manager, then run the version check commands in your terminal_. \[1, 2, 3, 4]
+To install Node.js and verify that it works correctly, _download the installer from the official website or use a package manager, then run the version check commands in your terminal_.
 
 ### 1. Step-by-Step Installation
 
-#### Option A: Official Installer (Recommended for Beginners) \[5, 6, 7]
+#### Option A: Official Installer (Recommended for Beginners) 
 
 1. Visit the official Node.js Downloads page.
 2. Download the LTS (Long Term Support) version for your operating system (Windows or macOS).
 3. Run the downloaded installer file.
-4. Follow the setup wizard prompts, leaving the default settings selected. \[8, 9, 10, 11, 12]
+4. Follow the setup wizard prompts, leaving the default settings selected. 
 
 #### Option B: macOS (Using Homebrew)
 
-If you use the Homebrew package manager, open your Terminal and run: \[13, 14]
+If you use the Homebrew package manager, open your Terminal and run: 
 
 ```bash
 brew install node
@@ -80,7 +90,7 @@ brew install node
 
 #### Option C: Linux (Ubuntu/Debian) \[15]
 
-Open your terminal and run the following commands to install Node.js from the official NodeSource repository: \[16, 17, 18, 19]
+Open your terminal and run the following commands to install Node.js from the official NodeSource repository:
 
 ```bash
 sudo apt update
@@ -143,6 +153,8 @@ npm install -g @angular/cli
 
 * Note: macOS and Linux users may need to prefix this command with `sudo` (`sudo npm install -g @angular/cli`) if they run into permission errors.
 
+![Node.js-install-Angular](../Images/Screenshots/Node.js-install-Angular.png)
+
 ### 3. Verify the Installation
 
 Once the installation finishes, restart your terminal and run the version command to verify it was successful:
@@ -153,6 +165,8 @@ ng version
 
 This command will display an ASCII art Angular logo along with the specific versions of the Angular CLI, Node.js, and your operating system.
 
+![Node.js-Angular-Version](../Images/Screenshots/Node.js-Angular-Version.png)
+
 ### 4. Create Your First Angular Project
 
 Now that the CLI is installed, you can generate a new workspace and start your development server with these commands: 
@@ -162,16 +176,33 @@ Now that the CLI is installed, you can generate a new workspace and start your d
    ng new my-first-angular-app
    ```
    _(The CLI will ask you to choose a stylesheet format like CSS or Sass and enable Server-Side Rendering. You can press Enter to accept the defaults)._
-2. Navigate into the directory:
+
+![Create_my-first-angular-app_project](../Images/Screenshots/Create_my-first-angular-app_project.png)
+   
+1. Navigate into the directory:
    ```bash
    cd my-first-angular-app
    ```
-   For editing your project files, popular development environments like [Microsoft Visual Studio Code](https://code.visualstudio.com/) are highly recommended by the community. \[28, 29]
+   For editing your project files, popular development environments like [Microsoft Visual Studio Code](https://code.visualstudio.com/) are highly recommended by the community.
+
+   ![cd_my-first-angular-app](../images/Screenshots/cd_my-first-angular-app.png)
+
+   To start the Visual Studio Code editor just type:
+
+   ````powershell
+   code .
+    ````
+    ![luanch vsc 001](../Images/Screenshots/luanch_vsc_001.png)
+
+   
 3. Launch the development server:
+
    ```bash
    ng serve --open
    ```
    The `--open` flag automatically launches your default web browser to `http://localhost:4200`, where you will see the default Angular welcome page.
+
+![ng serve 001](../Images/Screenshots/ng_serve_001.png)
 
 Would you like to learn how to generate components using the CLI, or do you need help configuring routing for your new application?
 
@@ -191,6 +222,7 @@ Open your terminal and run the following command to install the primary global s
 ```bash
 ng add @ngrx/store@latest
 ```
+![Install_NgRX_packages](../Images/Screenshots/Install_NgRX_packages.png)
 
 * What this does: It installs the packages, registers the `StoreModule` or configures the functional `provideStore()` providers in your application, and updates your configurations automatically. 
 
@@ -232,13 +264,16 @@ Open your project's `package.json` file and look inside the `dependencies` objec
 }
 ```
 
-Are you working with a standalone components architecture (Angular 15+) or a traditional NgModule-based architecture? I can show you how to register your first actions, reducers, and selectors for your specific structure.
+Are you working with a [standalone components](./Angular-standalone-component.md) architecture (Angular 15+) or a traditional NgModule-based architecture? 
+I can show you how to register your first [actions](./Angular-NgRx-Actions.md), [reducers](./Angular-NgRx-Reducer.md), and [selectors](./Angular-NgRx-Selector.md) for your specific structure.
 
-
+>[NOTE!]
+> In case you want to review the Redux data flow the white rabbit: [Link](./state-management-cycle.md)
 
 # Minimal Verification Project
 
-Here is a complete, minimal verification project using Angular (Standalone Components) and NgRx. This project implements a Counter to verify that your NgRx Actions, Reducers, and Selectors are wiring up and managing state correctly.
+Here is a complete, minimal verification project using Angular ([Standalone Components](./Angular-standalone-component.md)) and NgRx. 
+This project implements a Counter to verify that your NgRx [Actions](./Angular-NgRx-Actions.md), [Reducers](./Angular-NgRx-Reducer.md), and [Selectors](./Angular-NgRx-Selector.md) are wiring up and managing [state](./NgRx-State.md) correctly.
 
 ## 1. Set Up the Project Files
 
@@ -246,7 +281,7 @@ Create or update these three files in your Angular project's `src/app/` director
 
 ## `app.config.ts` (Application Configuration)
 
-This file initializes the NgRx Store using the modern `provideStore` API.
+This file initializes the NgRx [Store](./Angular-NgRx-Store.md) using the modern `provideStore` API.
 
 ```typescript
 import { ApplicationConfig } from '@angular/core';
@@ -262,7 +297,7 @@ export const appConfig: ApplicationConfig = {
 
 ## `counter.reducer.ts` (Actions & Reducer)
 
-This file defines the actions (`increment`, `decrement`, `reset`) and the logic to transition the state.
+This file defines the [actions](./Angular-NgRx-Actions.md) (`increment`, `decrement`, `reset`) and the logic to transition the [state](./NgRx-State.md).
 
 ```typescript
 import { createAction, createReducer, on } from '@ngrx/store';
@@ -286,7 +321,7 @@ export const counterReducer = createReducer(
 
 ## `app.component.ts` (The View Component)
 
-This component reads the state using a selector and dispatches actions when buttons are clicked.
+This component reads the state using a [selector](./Angular-NgRx-Selector.md) and [dispatches actions](./Dispatch-Action.md) when buttons are clicked.
 
 ```typescript
 import { Component } from '@angular/core';
