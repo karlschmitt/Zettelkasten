@@ -242,7 +242,7 @@ Most enterprise Angular applications require additional NgRx libraries to handle
   ```bash
   ng add @ngrx/router-store@latest
   ```
-
+![Install-NgRx-Extensions](../Images/ScreenShots/Install-NgRx-Extensions.png)
 
 ### 4. Alternative: Using npm directly
 
@@ -263,12 +263,13 @@ Open your project's `package.json` file and look inside the `dependencies` objec
   "@ngrx/store-devtools": "^19.0.0"
 }
 ```
+![Verify_the_NgRx_Installation](../Images/Screenshots/Verify_the_NgRx_Installation.png)
 
 Are you working with a [standalone components](./Angular-standalone-component.md) architecture (Angular 15+) or a traditional NgModule-based architecture? 
 I can show you how to register your first [actions](./Angular-NgRx-Actions.md), [reducers](./Angular-NgRx-Reducer.md), and [selectors](./Angular-NgRx-Selector.md) for your specific structure.
 
 >[NOTE!]
-> In case you want to review the Redux data flow the white rabbit: [Link](./state-management-cycle.md)
+> In case you want to review the Redux data flow the white rabbit: 🐇 [Link](./state-management-cycle.md)
 
 # Minimal Verification Project
 
