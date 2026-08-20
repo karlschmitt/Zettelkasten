@@ -12,7 +12,7 @@ Here is a beginner-friendly **Spring Boot + Apache Camel tutorial**.
 
 We'll build a small application step by step and learn the most important Camel concepts along the way.
 
-## ## Mastering Spring Boot and Apache Camel Integration
+## Mastering Spring Boot and Apache Camel Integration
 
 ![Datenfluss der Software-Integration](./Images/Datenfluss_der_Software-Integration.png)
 
