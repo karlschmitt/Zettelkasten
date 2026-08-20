@@ -236,6 +236,8 @@ Add:
 Spring Web
 Apache Camel
 ```
+![Spring-initializr](./Images/Screenshots/Spring-initializr.png)
+
 
 For a Maven project, a typical Camel dependency looks like this:
 
@@ -254,6 +256,8 @@ For a file-based example, add the file component as well:
     <artifactId>camel-file-starter</artifactId>
 </dependency>
 ```
+
+![spring-boot-maven-dependencies](./Images/Screenshots/spring-boot-maven-dependencies.png)
 
 Camel version compatibility depends on the Spring Boot version, so it is best to use the dependency versions recommended by the current Camel Spring Boot documentation.
 
@@ -290,6 +294,30 @@ public class FileRoute extends RouteBuilder {
     }
 }
 ```
+For better debuging it might be useful to explicitly set the encoding to **utf8**:
+
+```java
+package alice.alice.camel.routes;
+
+import org.apache.camel.builder.RouteBuilder;
+import org.springframework.stereotype.Component;
+
+@Component
+public class FileRoute extends RouteBuilder {
+
+    @Override
+    public void configure() {
+
+        from("file:input?charset=UTF-8")
+            .routeId("my-file-route")
+            .log(">>> FILE DETECTED <<<")
+            .log("File name: ${header.CamelFileName}")
+            .log("File content: ${body}");
+    }
+}
+```
+
+
 
 This is a complete Camel route.
 
@@ -333,6 +361,21 @@ With this content:
 ```text
 Hello Apache Camel!
 ```
+
+So your structure should be:
+
+project-root/
+│
+├── pom.xml
+├── input/              ← HERE
+│   └── hello.txt
+│
+├── src/
+│   └── main/
+│       ├── java/
+│       └── resources/
+│
+└── target/
 
 Camel should detect the file and process it.
 
