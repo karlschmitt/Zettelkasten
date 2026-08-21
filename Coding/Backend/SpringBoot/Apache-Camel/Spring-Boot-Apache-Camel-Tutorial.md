@@ -265,18 +265,30 @@ Camel version compatibility depends on the Spring Boot version, so it is best to
 
 # 5. Your First Camel Route
 
-Create a package:
+You can start Visual Studio Code from the project root folder:
 
+![Start-Visual-Studio-Code-from-project-root](./Images/Screenshots/Start-Visual-Studio-Code-from-project-root.png)
+Feel free to install the extension pack for Java:
+
+![Extension-Pack-for-Java](./Images/Screenshots/Extension-Pack-for-Java.png)
+
+Create a package using the extension:
 ```text
-com.example.camel.routes
+alice.alice.camel.routes
 ```
+![Create-Java-Package](./Images/Screenshots/Create-Java-Package.png)
 
-Then create:
+![Package-Camel-Routes](./Images/Screenshots/Package-Camel-Routes.png)
 
+Then create the Java class file:
 ```text
 FileRoute.java
 ```
+![Java-Class-File](./Images/Screenshots/Java-Class-File.png)
 
+With the name **FileRoute**:
+
+![Java-Class-FileRoute](./Images/Screenshots/Java-Class-FileRoute.png)
 ```java
 package com.example.camel.routes;
 
@@ -295,7 +307,6 @@ public class FileRoute extends RouteBuilder {
 }
 ```
 For better debuging it might be useful to explicitly set the encoding to **utf8**:
-
 ```java
 package alice.alice.camel.routes;
 
@@ -316,11 +327,10 @@ public class FileRoute extends RouteBuilder {
     }
 }
 ```
+After saving, you can double check by compiling the Maven project:
 
-
-
-This is a complete Camel route.
-
+![Maven-compile](./Images/Screenshots/Maven-compile.png)
+Look at the code, This is a complete Camel route.
 The structure is:
 
 ```text
@@ -336,25 +346,25 @@ You can read it like a sentence:
 
 # 6. Run the Application
 
-Create a directory:
-
-```text
-input
+Create the directory **input** in the project root folder:
+```powershell
+mkdir input
 ```
+![New-Folder-via-mkdir](./images/Screenshots/New-Folder-via-mkdir.png)
 
-Then start Spring Boot.
+Then start Spring Boot from the project root folder.
 
 For example:
-
 ```powershell
 mvn spring-boot:run
 ```
+![Maven-mvn-sring-boot-run](./Images/Screenshots/Maven-mvn-sring-boot-run.png)
 
 Now create a file:
-
-```text
-input/hello.txt
+```powershell
+ni nput/hello.txt
 ```
+
 
 With this content:
 
