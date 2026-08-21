@@ -352,7 +352,7 @@ Create the directory **input** in the project root folder:
 mkdir input
 ```
 
-![New-Folder-via-mkdir](./images/Screenshots/New-Folder-via-mkdir.png)
+![New-Folder-via-mkdir](./Images/Screenshots/New-Folder-via-mkdir.png)
 
 Then start Spring Boot from the project root folder.
 
