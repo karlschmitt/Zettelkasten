@@ -347,9 +347,11 @@ You can read it like a sentence:
 # 6. Run the Application
 
 Create the directory **input** in the project root folder:
+
 ```powershell
 mkdir input
 ```
+
 ![New-Folder-via-mkdir](./images/Screenshots/New-Folder-via-mkdir.png)
 
 Then start Spring Boot from the project root folder.
