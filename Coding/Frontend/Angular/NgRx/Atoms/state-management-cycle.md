@@ -6,6 +6,13 @@ date: 2026-08-05
 keywords: [Angular, NgRx, State]
 ---
 
+![Der Weg zum State-Update](../Images/Der_Weg_zum_State-Update.png)
+
+> [NOTE!]
+> Der bereitgestellte Text erläutert den **State Management Cycle** in Angular-Anwendungen unter Verwendung von **NgRx**. Dieser Prozess beschreibt einen **kreisförmigen Datenfluss**, bei dem Komponenten niemals den Zustand direkt ändern, sondern stattdessen **Actions** aussenden, um Ereignisse zu melden. Ein **Reducer** verarbeitet diese Signale, um einen vollständig **neuen Status** zu berechnen, ohne den alten zu manipulieren. Über **Selectors** fließen die aktualisierten Informationen zurück an die Benutzeroberfläche, wodurch eine **automatische Synchronisation** der Anzeige erfolgt. Für asynchrone Aufgaben wie API-Aufrufe werden **Effects** eingesetzt, die den reinen Logikfluss des Reducers nicht unterbrechen. Dieses System garantiert eine **hohe Vorhersehbarkeit** und erleichtert die Fehlersuche durch klar definierte Zustandsübergänge.
+
+
+
 # State Management Cycle
 
 In **NgRx**, the **state management cycle** (also called the **state lifecycle** or **Redux data flow**) describes **the complete journey of data from a user action to an updated UI**.

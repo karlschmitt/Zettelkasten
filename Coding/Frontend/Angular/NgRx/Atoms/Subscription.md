@@ -6,6 +6,12 @@ date: 2026-08-04
 keywords: [ Angular, RxJS, Subscription]
 ---
 
+![Abonnements in Web-Frameworks verstehen](../Images/Abonnements_in_Web-Frameworks_verstehen.png)
+
+> [NOTE!]
+> In dieser Quelle wird das grundlegende Konzept von **Subscriptions in Angular und RxJS** erläutert, welches die Reaktion auf **asynchrone Datenströme** ermöglicht. Eine Subscription fungiert als Verbindung zwischen einem **Observable**, das Informationen aussendet, und einem **Subscriber**, der diese empfängt. Durch die Verwendung von **BehaviorSubjects** können Zustandsänderungen automatisch an mehrere Empfänger gleichzeitig kommuniziert werden. Es wird jedoch betont, dass ein manuelles **Unsubscribe** essenziell ist, um **Memory Leaks** zu vermeiden, wenn Komponenten zerstört werden. Alternativ bietet Angular die **Async-Pipe** an, welche das Abonnieren und Kündigen von Datenströmen im Template **automatisch verwaltet**. Letztlich bilden diese Mechanismen das Rückgrat für die effiziente **Zustandsverwaltung** in modernen Webanwendungen.
+
+
 **Subscriptions** are a fundamental concept in RxJS and Angular. 
 If you understand them, you'll understand much of how Angular handles asynchronous data.
 
