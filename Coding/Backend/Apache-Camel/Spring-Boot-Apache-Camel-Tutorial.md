@@ -330,7 +330,7 @@ public class FileRoute extends RouteBuilder {
 After saving, you can double check by compiling the Maven project:
 
 ![Maven-compile](./Images/Screenshots/Maven-compile.png)
-Look at the code, This is a complete Camel route.
+Look at the code, This is a complete [Camel route](./Atoms/Camel_Route.md).
 The structure is:
 
 ```text
@@ -354,9 +354,7 @@ mkdir input
 
 ![New-Folder-via-mkdir](./Images/Screenshots/New-Folder-via-mkdir.png)
 
-Then start Spring Boot from the project root folder.
-
-For example:
+Then start Spring Boot from the project root folder. With this command:
 ```powershell
 mvn spring-boot:run
 ```
@@ -366,12 +364,16 @@ Now create a file:
 ```powershell
 ni nput/hello.txt
 ```
-
-
 With this content:
-
 ```text
 Hello Apache Camel!
+```
+> [NOTE]
+> You can also use the Neovim editor to edit the file, type nvim if you have it.
+
+For a quick test you can also use the PowerShell:
+```PowerShell
+"Hello Apache Camel!" | Out-File -Encoding utf8 .\input\hello.txt
 ```
 
 So your structure should be:
