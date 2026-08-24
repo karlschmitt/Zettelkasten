@@ -3,10 +3,10 @@ id: 20260823165251
 title: Docker Absolute Beginner Bootcamp
 author: Karl Schmitt
 date: 2026-08-23
-keywords: [ Docker, Bootcamp]
+keywords: [ Docker, Bootcamp, Spring Boot]
 ---
 
-![](./Images/)
+![Training zur Container-Software Entwicklung](./Images/Training_zur_Container-Software_Entwicklung.png)
 
 > {NOTE!}
 > Dieser Text präsentiert einen strukturierten **Vier-Wochen-Lehrplan**, der speziell darauf ausgelegt ist, Anfänger methodisch in die Welt von **Docker** einzuführen. Der Kurs beginnt mit den **fundamentalen Konzepten** von Images und Containern und steigert sich schrittweise bis hin zur **Containerisierung von Java-Anwendungen** mit Spring Boot. Ein besonderer Schwerpunkt liegt auf der **praktischen Anwendung**, wobei die Lernenden durch tägliche Übungen wichtige Befehle und das Management von **Netzwerken sowie Datenvolumen** verinnerlichen. Fortgeschrittene Themen wie **Docker Compose** und die Orchestrierung von Multi-Container-Anwendungen bilden den Abschluss des Programms. Ziel ist es, ein tiefes **mentales Modell** der Technologie aufzubauen, um komplexe Entwicklungsumgebungen eigenständig zu verwalten. Das Training endet mit einem **finalen Projekt**, welches die theoretischen Kenntnisse in einer realistischen Software-Architektur zusammenführt.
