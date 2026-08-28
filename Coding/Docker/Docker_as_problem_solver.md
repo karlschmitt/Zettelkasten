@@ -5,6 +5,12 @@ author: Karl Schmitt
 date: 2026-08-26
 ---
 
+![Vorteile moderner Software-Container-Technologie](./Images/Vorteile_moderner_Software-Container-Technologie.png)
+
+> [NOTE!]
+> Diese Quelle beschreibt **Docker** als eine transformative Technologie, die grundlegende Hürden in der **Softwareentwicklung und Bereitstellung** überwindet. Durch die Kapselung von Anwendungen in **standardisierte Container** wird das Problem unterschiedlicher Systemumgebungen gelöst, sodass Programme überall identisch funktionieren. Im Vergleich zu herkömmlichen virtuellen Maschinen bietet dieser Ansatz eine **hohe Ressourceneffizienz**, da Container den Betriebssystemkern des Hosts teilen und deutlich schneller starten. Zudem vereinfacht die Technologie die **Verwaltung komplexer Abhängigkeiten** und beschleunigt die Einarbeitung neuer Teammitglieder durch automatisierte Setups. Schließlich ermöglicht Docker eine **nahtlose Skalierbarkeit von Microservices** und bietet eine universelle Portabilität zwischen lokalen Rechnern und Cloud-Anbietern. Das Prinzip wird dabei treffend mit einem **Frachtcontainer** verglichen, der den Transport von Gütern unabhängig von ihrem Inhalt standardisiert.
+
+
 # Docker as a Problem Solver
 
 Docker was created to solve the "it works on my machine" problem, but its impact goes much deeper than just consistency.
