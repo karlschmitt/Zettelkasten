@@ -26,17 +26,8 @@ We'll build a small application step by step and learn the most important Camel 
 
 For example:
 
-```text
-File
-  ↓
-Apache Camel
-  ↓
-Process / Transform
-  ↓
-REST API
-  ↓
-Database / Message Queue / Another System
-```
+![Apache Camel Integration](./Images/Apache-Camel-Integration.png)
+
 
 Camel is especially useful when you need to:
 
@@ -44,7 +35,7 @@ Camel is especially useful when you need to:
 
 * transform data
 
-* call REST services
+* call [REST](./Atoms/Apache_Camel_REST_API.md) services
 
 * consume or produce messages
 
@@ -57,10 +48,11 @@ Camel is especially useful when you need to:
 This should fit nicely with your Spring Boot and JMS experience.
 
 ***
+![Beginn der Route 66 in Chicago](./Images/Beginn-der-Route-66-in-Chicago.png)
 
-# 2. The Central Idea: Routes
+# 2. The Central Idea: Routes 🔀
 
-The most important concept in Camel is a **route**.
+The most important concept in Camel is a **route**.🔀
 
 A route describes:
 
@@ -68,11 +60,9 @@ A route describes:
 
 For example:
 
-```text
-File → Camel → Console
-```
+![Directory File Spring Boot Apache Console](./Images/Directory_File_Spring_Boot_Apache_Console.png "Directory File Spring Boot Apache Console")
 
-In Camel Java DSL:
+In Camel 🐪 we use the Java ☕ DSL:
 
 ```java
 from("file:input")
@@ -101,23 +91,7 @@ means:
 
 So conceptually:
 
-```text
-┌──────────┐
-│  input   │
-│ directory│
-└────┬─────┘
-     │
-     ▼
-┌──────────┐
-│  Camel   │
-│  Route   │
-└────┬─────┘
-     │
-     ▼
-┌──────────┐
-│   Log    │
-└──────────┘
-```
+![Input Directory Camel Route Log](./Images/Input_Directory_Camel_Route_Log.png)
 
 ***
 
@@ -130,24 +104,29 @@ Before writing code, let's understand a few terms.
 An **endpoint** is a place where Camel communicates with something.
 
 Examples:
-
 ```text
 file:input
 ```
-
 A file endpoint.
+
+> [NOTE!]
+>  Follow the white rabbit 🐇 for an example: [File-Endpoint Example](./Examples/Spring_Boot_Apache_Camel_File_Component_Example.md)
 
 ```text
 jms:queue:orders
 ```
-
 A JMS queue endpoint.
+
+> [NOTE!]
+>  Follow the white rabbit 🐇 for an example: [JMS Example](./Examples/Spring_Boot_Apache_Camel_JMS_Example.md)
 
 ```text
 http://example.com/api
 ```
-
 An HTTP endpoint.
+
+> [NOTE!]
+>  Follow the white rabbit 🐇 for an example: [HTTP Example](./Examples/Spring_Boot_Apache_Camel_HTTP_Example.md)
 
 You can think of an endpoint as:
 
@@ -158,6 +137,9 @@ You can think of an endpoint as:
 ## Component
 
 A **component** provides the ability to communicate with a specific technology.
+
+> [NOTE!]
+> Follow the white rabit 🐇: [link](./Atoms/Apache_Camel_component.md)
 
 Examples include:
 
