@@ -158,13 +158,206 @@ Examples include:
 
 * Kafka component: [Apache Camel and Kafka](./Examples/Apache_Camel_Kafka_Example.md)
 
-For example:
+For example as a **Camel endpoint URI**:
+
+![File component with input directory](./Images/File_component_with_input_directory.png)
+
+Think of it like this
+
+![Apache Camel input Directory](./Images/Apache-Camel-input-Directory.png)
+
+So the Camel endpoint URI:
+
+```text
+file:input
+```
+
+means:
+
+> **Use the `file` component and point it at the `input` directory.**
+
+***
+
+### 1. What is `file`?
+
+In:
+
+```java
+from("file:input")
+```
+
+the part «file» is the **component name**.
+
+Apache Camel has many components:
 
 ```text
 file:input
 ^^^^
-component
+
+http://...
+^^^^
+
+jms:queue:orders
+^^^
+
+direct:start
+^^^^^^
+
+timer:hello
+^^^^^
 ```
+
+The component tells Camel **what kind of external system or mechanism it is dealing with**.
+
+For example:
+
+| URI                | Component | What it deals with     |
+| ------------------ | --------- | ---------------------- |
+| `file:input`       | `file`    | Files/directories      |
+| `http://...`       | `http`    | HTTP                   |
+| `jms:queue:orders` | `jms`     | JMS                    |
+| `direct:start`     | `direct`  | Camel-internal routing |
+| `timer:hello`      | `timer`   | Timers                 |
+
+***
+
+### 2. What is `input`?
+
+The next part:
+
+```text
+file:input
+     ^^^^^
+```
+
+is the **component-specific configuration**.
+
+For the File component, it represents the directory:
+
+```text
+input/
+```
+
+So when you write:
+
+```java
+from("file:input")
+```
+
+Camel essentially says:
+
+```text
+             from(...)
+                │
+                ▼
+          ┌───────────┐
+          │   file    │
+          │ component │
+          └─────┬─────┘
+                │
+                │ watches
+                ▼
+             input/
+                │
+       ┌────────┼────────┐
+       ▼        ▼        ▼
+   hello.txt  a.csv   order.xml
+```
+
+When a file appears in `input/`, Camel can create an **Exchange** and send it into your route.
+
+***
+
+### 3. Connecting this to your previous example
+
+You had something like:
+
+```java
+@Component
+public class FileRoute extends RouteBuilder {
+
+    @Override
+    public void configure() {
+
+        from("file:input?charset=UTF-8")
+            .routeId("my-file-route")
+            .log(">>> FILE DETECTED <<<")
+            .log("File name: ${header.CamelFileName}")
+            .log("File content: ${body}");
+    }
+}
+```
+
+You can visualize the beginning of this route as:
+
+```text
+                  Camel Route
+                      │
+                      │
+                      ▼
+        from("file:input?charset=UTF-8")
+                      │
+                      ▼
+              ┌─────────────┐
+              │    file     │
+              │  component  │
+              └──────┬──────┘
+                     │
+                     │ watches
+                     ▼
+                  input/
+                     │
+              ┌──────┴──────┐
+              │             │
+              ▼             ▼
+          hello.txt      order.xml
+              │             │
+              └──────┬──────┘
+                     │
+                     ▼
+                  Exchange
+                     │
+                     ▼
+              ┌─────────────┐
+              │    log()    │
+              └─────────────┘
+```
+
+The important idea is:
+
+> **A Camel endpoint URI has a `component` on the left and component-specific details on the right.**
+
+```text
+file : input
+^^^^    ^^^^^
+ │        │
+ │        └── component-specific part
+ │
+ └─────────── component
+```
+
+And the `?charset=UTF-8` part is an **option**:
+
+```text
+file : input ? charset=UTF-8
+^^^^   ^^^^^   ^^^^^^^^^^^^^
+ │       │           │
+ │       │           └── option
+ │       │
+ │       └────────────── component configuration
+ │
+ └────────────────────── component
+```
+
+This same mental model becomes very useful when we move from `file:` to **JMS**, because you will see things such as:
+
+```text
+jms:queue:orders
+^^^
+```
+
+where `jms` is again the **Camel component**.
+
 
 and:
 
