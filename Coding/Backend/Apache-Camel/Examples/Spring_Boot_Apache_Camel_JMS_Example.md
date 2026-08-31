@@ -3,7 +3,10 @@ id: 20260829200203
 title: Spring Boot and Apache Camel JMS Integration Guide
 author: Karl Schmitt
 date: 2026-08-29
+keywords: [Spring Boot, Apache Camel, JMS]
 ---
+
+![Integrations-Framework Nachrichten Workflow](../Images/Integrations-Framework_Nachrichten-Workflow.png)
 
 > [NOTE!]
 > Dieser Text bietet eine praktische Einführung in die Integration von **Spring Boot, Apache Camel und JMS** mithilfe von ActiveMQ Artemis. Der Autor erläutert den Aufbau einer funktionalen Pipeline, die **HTTP-Anfragen** empfängt und diese über **Camel-Routen** an eine JMS-Queue weiterleitet. Ein zentraler Aspekt ist die Unterscheidung zwischen **Produzenten und Konsumenten**, wobei Camel als Vermittler zwischen verschiedenen Protokollen agiert. Zudem wird das Konzept des **JMS-Bridges** thematisiert, das den Datenaustausch zwischen verschiedenen Messaging-Systemen ermöglicht. Abschließend verdeutlicht der Text die wichtige technische Differenzierung zwischen einem **Camel-Exchange** und der tatsächlichen **JMS-Nachricht**.

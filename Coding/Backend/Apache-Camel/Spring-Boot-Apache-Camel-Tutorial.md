@@ -28,22 +28,25 @@ For example:
 
 ![Apache Camel Integration](./Images/Apache-Camel-Integration.png)
 
+***
 
-Camel is especially useful when you need to:
+![Apache-Camel-Icon](./Images/Apache-Camel-Icon.png)
 
-* move data from one system to another
+Camel 🐪 is especially useful when you need to:
 
-* transform data
+* move data from one system to another 🚚
 
-* call [REST](./Atoms/Apache_Camel_REST_API.md) services
+* transform data ⚙️
 
-* consume or produce messages
+* call [REST](./Atoms/Apache_Camel_REST_API.md) services 🔧
 
-* read and write files
+* consume or produce messages 📥📤
 
-* integrate JMS brokers
+* read and write files 📝
 
-* implement routing logic
+* integrate JMS brokers 📬
+
+* implement routing logic 🔀
 
 This should fit nicely with your Spring Boot and JMS experience.
 
@@ -54,7 +57,7 @@ This should fit nicely with your Spring Boot and JMS experience.
 
 The most important concept in Camel is a **route**.🔀
 
-A route describes:
+A [route](./Atoms/Camel_Route.md) describes:
 
 > **Where does a message come from, what should happen to it, and where should it go?**
 
@@ -95,19 +98,21 @@ So conceptually:
 
 ***
 
-# 3. Important Camel Terminology
+# 3. Important Apache Camel Terminology
 
 Before writing code, let's understand a few terms.
 
-## Endpoint
+![Apache Camel Endpoints](./Images/Apache_Camel_Endpoints.png)
 
-An **endpoint** is a place where Camel communicates with something.
+## Endpoints
+
+An **endpoint** is a place where Camel 🐪 communicates with something.
 
 Examples:
 ```text
 file:input
 ```
-A file endpoint.
+⬆️ A file 📁📝 endpoint.
 
 > [NOTE!]
 >  Follow the white rabbit 🐇 for an example: [File-Endpoint Example](./Examples/Spring_Boot_Apache_Camel_File_Component_Example.md)
@@ -115,7 +120,7 @@ A file endpoint.
 ```text
 jms:queue:orders
 ```
-A JMS queue endpoint.
+⬆️ A JMS queue 📥📤 endpoint.
 
 > [NOTE!]
 >  Follow the white rabbit 🐇 for an example: [JMS Example](./Examples/Spring_Boot_Apache_Camel_JMS_Example.md)
@@ -123,7 +128,7 @@ A JMS queue endpoint.
 ```text
 http://example.com/api
 ```
-An HTTP endpoint.
+⬆️ An HTTP 🖧 endpoint.
 
 > [NOTE!]
 >  Follow the white rabbit 🐇 for an example: [HTTP Example](./Examples/Spring_Boot_Apache_Camel_HTTP_Example.md)
@@ -134,22 +139,24 @@ You can think of an endpoint as:
 
 ***
 
-## Component
+## Components
 
 A **component** provides the ability to communicate with a specific technology.
+
+![Apache Camel Components](./Images/Apache_Camel_Components.png)
 
 > [NOTE!]
 > Follow the white rabit 🐇: [link](./Atoms/Apache_Camel_component.md)
 
 Examples include:
 
-* File component
+* File component: [Apache Camel and Files](./Examples/Spring_Boot_Apache_Camel_File_Component_Example.md)
 
-* HTTP component
+* HTTP component: [Apache Camel and HTTP](./Examples/Spring_Boot_Apache_Camel_HTTP_Example.md)
 
-* JMS component
+* JMS component: [Apache Camel and JMS](./Examples/Spring_Boot_Apache_Camel_JMS_Example.md)
 
-* Kafka component
+* Kafka component: [Apache Camel and Kafka](./Examples/Apache_Camel_Kafka_Example.md)
 
 For example:
 
@@ -169,7 +176,7 @@ component
 
 ***
 
-## Message
+## Messages
 
 Camel moves **messages** through routes.
 

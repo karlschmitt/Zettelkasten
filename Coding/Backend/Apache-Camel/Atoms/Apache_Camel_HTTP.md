@@ -1,6 +1,6 @@
 ---
 id: 20260829182429
-title: Bridging Systems with Apache Camel and Spring Boot HTTP
+title: Bridging Systems with HTTP
 author: Karl Schmitt
 date: 2026-08-29
 ---

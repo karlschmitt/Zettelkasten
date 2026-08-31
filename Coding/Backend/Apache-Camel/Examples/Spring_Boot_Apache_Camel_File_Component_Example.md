@@ -3,9 +3,15 @@ id: 20260829201827
 title: Spring Boot Apache Camel File-Endpoint Example
 author: Karl Schmitt
 date: 2026-08-29
+keywords: [Spring Boot, Apache Camel, File]
 ---
 
-# Spring Boot Apache Camel File-Endpoint Example
+![Ablauf der automatisierten Dateiverarbeitung](../Images/Ablauf_der_automatisierten_Dateiverarbeitung.png)
+
+> [NOTE!]
+> Dieser Text erläutert die Integration der **Apache Camel File-Komponente** innerhalb einer **Spring Boot-Umgebung**. Die Komponente fungiert als vielseitiges Werkzeug zum **Lesen und Schreiben von Dateien**, wobei spezifische Routen den Datentransfer zwischen Verzeichnissen steuern. Nutzer können über verschiedene **URI-Optionen** präzise festlegen, ob Quelldateien nach der Verarbeitung gelöscht, verschoben oder durch reguläre Ausdrücke gefiltert werden sollen. Ein zentraler Aspekt ist das **Exchange-Objekt**, welches neben dem Dateiinhalt auch wichtige Metadaten in den Headern speichert. Zudem verhindert ein integrierter **Idempotenz-Mechanismus**, dass identische Dateien mehrfach eingelesen werden. Diese Technologie eignet sich besonders für die **Stapelverarbeitung** oder die Anbindung von Altsystemen, die auf dateibasiertem Datenaustausch basieren.
+
+# Spring Boot and Apache Camel File-Endpoint Example
 
 The **Apache Camel File component** is one of the most frequently used components. It allows you to read files from a directory (Consumer) or write files to a directory (Producer).
 
