@@ -104,7 +104,7 @@ Before writing code, let's understand a few terms.
 
 ![Apache Camel Endpoints](./Images/Apache_Camel_Endpoints.png)
 
-## Endpoints
+## Apache Camel Endpoints
 
 An **endpoint** is a place where Camel 🐪 communicates with something.
 
@@ -139,7 +139,7 @@ You can think of an endpoint as:
 
 ***
 
-## Components
+## Apache Camel Components
 
 A **component** provides the ability to communicate with a specific technology.
 
@@ -178,7 +178,7 @@ means:
 
 ***
 
-### 1. What is `file`?
+### 1. What is the meaning of `file` in an endpoint URI?
 
 In:
 
@@ -190,22 +190,7 @@ the part «file» is the **component name**.
 
 Apache Camel has many components:
 
-```text
-file:input
-^^^^
-
-http://...
-^^^^
-
-jms:queue:orders
-^^^
-
-direct:start
-^^^^^^
-
-timer:hello
-^^^^^
-```
+![Apache Camel Component Exampes](./Images/Apache_Camel_Component_Exampes.png)
 
 The component tells Camel **what kind of external system or mechanism it is dealing with**.
 
@@ -221,14 +206,11 @@ For example:
 
 ***
 
-### 2. What is `input`?
+### 2. What is the meaning of `input` in an endpoint URI?
 
 The next part:
 
-```text
-file:input
-     ^^^^^
-```
+![File input endpoint URI](./Images/File_input_endpoint_URI.png)
 
 is the **component-specific configuration**.
 
@@ -246,32 +228,16 @@ from("file:input")
 
 Camel essentially says:
 
-```text
-             from(...)
-                │
-                ▼
-          ┌───────────┐
-          │   file    │
-          │ component │
-          └─────┬─────┘
-                │
-                │ watches
-                ▼
-             input/
-                │
-       ┌────────┼────────┐
-       ▼        ▼        ▼
-   hello.txt  a.csv   order.xml
-```
+![The file component watches the input directory](./images/The_file_component_watches_the_input_directory.png)
 
-When a file appears in `input/`, Camel can create an **Exchange** and send it into your route.
+When a file appears in the `input/` directory, 
+Camel can create an **Exchange** and send it into your route.
 
 ***
 
-### 3. Connecting this to your previous example
+### 3. Connecting this to your upcoming example
 
-You had something like:
-
+You will see something like this:
 ```java
 @Component
 public class FileRoute extends RouteBuilder {
@@ -290,90 +256,33 @@ public class FileRoute extends RouteBuilder {
 
 You can visualize the beginning of this route as:
 
-```text
-                  Camel Route
-                      │
-                      │
-                      ▼
-        from("file:input?charset=UTF-8")
-                      │
-                      ▼
-              ┌─────────────┐
-              │    file     │
-              │  component  │
-              └──────┬──────┘
-                     │
-                     │ watches
-                     ▼
-                  input/
-                     │
-              ┌──────┴──────┐
-              │             │
-              ▼             ▼
-          hello.txt      order.xml
-              │             │
-              └──────┬──────┘
-                     │
-                     ▼
-                  Exchange
-                     │
-                     ▼
-              ┌─────────────┐
-              │    log()    │
-              └─────────────┘
-```
+![Beginning of the file component route](./Images/Beginning_of_the_file_component_route.png)
+
 
 The important idea is:
 
 > **A Camel endpoint URI has a `component` on the left and component-specific details on the right.**
 
-```text
-file : input
-^^^^    ^^^^^
- │        │
- │        └── component-specific part
- │
- └─────────── component
-```
+![Camel File Endpoint URI](./Images/Camel_File_Endpoint_URI.png)
 
 And the `?charset=UTF-8` part is an **option**:
 
-```text
-file : input ? charset=UTF-8
-^^^^   ^^^^^   ^^^^^^^^^^^^^
- │       │           │
- │       │           └── option
- │       │
- │       └────────────── component configuration
- │
- └────────────────────── component
-```
+![file input charset](./Images/file_input_charset.png)
+
 
 This same mental model becomes very useful when we move from `file:` to **JMS**, because you will see things such as:
 
-```text
-jms:queue:orders
-^^^
-```
+![JMS queue order](./Images/jms_queue_orders.png)
 
 where `jms` is again the **Camel component**.
 
-
-and:
-
-```text
-jms:queue:orders
-^^^
-component
-```
-
 ***
 
-## Messages
+## Apache Camel Messages 📨
 
-Camel moves **messages** through routes.
+Camel 🐪 moves **messages** through [routes](./Atoms/Camel_Route.md).
 
-A message usually contains:
+A [message](./Atoms/Apache_Camel_Messages.md) 📩 usually contains:
 
 ```text
 Message
@@ -383,29 +292,28 @@ Message
 
 Example:
 
-```text
-Body:
-------
-Hello World
-```
+![Body Hello World](./Images/Body_Hello_World.png)
 
 Headers might contain metadata:
 
-```text
-Content-Type = application/json
-FileName     = example.txt
-```
+![Header_Metadata](./Images/Header_Metadata.png)
+
+> [NOTE!]
+> Feel free to follow the white rabbit 🐇:
+
+1. [Apache Camel Route](./Atoms/Camel_Route.md)
+2. [Apache Camel Exchange](./Atoms/Apache_Camel_Exchange.md)
+3. [Apache Camel Message](./Atoms/Apache_Camel_Messages.md)
 
 ***
 
-# 4. Create a Spring Boot Project
+# 4. Create a Spring Boot Project applying Maven
 
 Create a Spring Boot project using:
 
 [Spring Initializr](https://start.spring.io/?utm_source=chatgpt.com)
 
 Choose:
-
 ```text
 Project: Maven
 Language: Java
