@@ -303,27 +303,32 @@ Headers might contain metadata:
 
 ***
 
-# 4. Create a Spring Boot Project 
+# 4. Create a Spring Boot Project 🚀
 
-Create a Spring Boot project using the following web tool:
+![Spring Boot Icon](./Images/Spring-Boot-Icon.png)
+
+Create a Spring Boot project using the following spring boot web tool:
 
 [Spring Initializr](https://start.spring.io/?utm_source=chatgpt.com)
 
 Choose the following spring boot project parameters:
 ```text
-Project: Maven
-Language: Java
+Project: Maven 👩‍🏭
+Language: Java ☕
 Spring Boot: current stable version
 ```
 Add the dependencies:
 ```text
-Spring Web
-Apache Camel
+Spring Web 🌐
+Apache Camel 🐪
 ```
+
+![Apache Camel Icon](./Images/Apache-Camel-Icon.png)
+
 ![Spring-initializr](./Images/Screenshots/Spring-initializr.png)
 
 
-For a Maven project, a typical Camel dependency looks like this:
+For a Maven 👷‍♀️ project, a typical Camel 🐪 dependency looks like this:
 
 ```xml
 <dependency>
@@ -332,7 +337,7 @@ For a Maven project, a typical Camel dependency looks like this:
 </dependency>
 ```
 
-For a file-based example, add the file component as well:
+For a file-based example 📁, add the file 📝 component as well:
 
 ```xml
 <dependency>
@@ -347,24 +352,30 @@ Camel version compatibility depends on the Spring Boot version, so it is best to
 
 ***
 
-# 5. Your First Camel Route
+# 5. Your First Camel Route 🛣️
 
-You can start Visual Studio Code from the project root folder:
+![Visual Studio Code Icon](./Images/visual_studio_code_icon.png)
+
+You can start Visual Studio Code from the project root folder 🗂️:
 
 ![Start-Visual-Studio-Code-from-project-root](./Images/Screenshots/Start-Visual-Studio-Code-from-project-root.png)
-Feel free to install the extension pack for Java:
+Feel free to install the extension pack for Java☕:
 
 ![Extension-Pack-for-Java](./Images/Screenshots/Extension-Pack-for-Java.png)
 
-Create a package using the extension:
+Create a Java ☕package using the extension:
 ```text
 alice.alice.camel.routes
 ```
 ![Create-Java-Package](./Images/Screenshots/Create-Java-Package.png)
 
+On disk, Java ☕ packages are folders 🗂️ and the folders for «alice.alice> are created during project creation.
+
 ![Package-Camel-Routes](./Images/Screenshots/Package-Camel-Routes.png)
 
-Then create the Java class file:
+Feel free to verify the directory structure 🗂️ usig the **PowerShell** _tree_ command.
+
+Next create the Java ☕ class file in the Java ☕ package «_alice.alice.camel.routes_» :
 ```text
 FileRoute.java
 ```
@@ -373,6 +384,7 @@ FileRoute.java
 With the name **FileRoute**:
 
 ![Java-Class-FileRoute](./Images/Screenshots/Java-Class-FileRoute.png)
+
 ```java
 package com.example.camel.routes;
 

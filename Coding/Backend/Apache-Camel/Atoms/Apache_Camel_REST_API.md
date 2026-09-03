@@ -4,6 +4,11 @@ title: Apache Camel REST API
 author: Karl Schmitt
 date: 2026-08-28
 ---
+![Vergleich von REST-API Entwicklungs-Frameworks](../Images/Vergleich_von_REST-API_Entwicklungs-Frameworks.png)
+
+> [NOTE!]
+> Dieser Text erläutert die Implementierung von **REST-APIs** innerhalb der Frameworks **Spring Boot** und **Apache Camel**. Während Spring Boot primär für die Erstellung eigenständiger **Microservices** mittels Annotationen genutzt wird, dient Apache Camel als mächtiges Werkzeug für die **Systemintegration** und komplexe Datenroutings. Die Quelle beschreibt grundlegende **REST-Prinzipien** wie Statuslosigkeit und die Verwendung von **HTTP-Methoden** sowie den Datenaustausch im **JSON-Format**. Ein direkter Vergleich verdeutlicht, dass Spring Boot ideal für standardisierte **CRUD-Operationen** ist, während Camel seine Stärken bei der Verknüpfung zahlreicher externer Schnittstellen ausspielt. In der Praxis werden beide Technologien oft kombiniert, um sowohl eine stabile **Anwendungsstruktur** als auch eine flexible Logik für den **Datentransfer** zu gewährleisten. Die bereitgestellten Code-Beispiele veranschaulichen die unterschiedlichen Programmieransätze der beiden Java-basierten Frameworks.
+
 
 # Apache Camel REST API 🐪
 
