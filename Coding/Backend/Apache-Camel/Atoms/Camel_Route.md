@@ -5,6 +5,12 @@ author: Karl Schmitt
 date: 2926-08-24
 ---
 
+![Anatomie einer Datenintegrations-Route](../Images/Anatomie_einer_Datenintegrations-Route.png)
+
+>[NOTE!]
+>Diese Quelle erläutert das Konzept der **Apache Camel Route**, die als zentrales Element für den Datentransport zwischen verschiedenen Systemen dient. Man kann sich diese Route wie eine **Pipeline** vorstellen, die Informationen von einem **Ausgangspunkt** empfängt, sie bei Bedarf **verarbeitet oder umwandelt** und schließlich an ein **Ziel** weiterleitet. Der Prozess nutzt dabei sogenannte **Endpunkte** zur Kommunikation und verpackt Daten in ein **Exchange-Objekt**, welches auch Metadaten enthält. Ein wesentlicher Vorteil dieses Modells ist die **Entkopplung** von Systemen, da die Route die gesamte Logik der Zustellung und **Fehlerbehandlung** übernimmt. Durch den Einsatz von **Enterprise Integration Patterns** lassen sich zudem komplexe Aufgaben wie das Filtern oder Aufteilen von Nachrichten einfach umsetzen. Letztlich fungiert die Route als **bindendes Glied**, das unterschiedliche Softwareanwendungen durch eine lesbare, flussdiagrammähnliche Struktur effizient miteinander verbindet.
+
+
 # Apache Camel Route
 
 In Apache Camel, a **Route** is the most fundamental building block. 

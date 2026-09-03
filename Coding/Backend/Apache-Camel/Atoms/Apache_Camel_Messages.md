@@ -5,7 +5,7 @@ author: Karl Schmitt
 date: 2026-09-01
 ---
 
-![]()
+![Anatomie von Integrationsnachrichten](../Images/Anatomie_von_Integrationsnachrichten.png)
 
 > [NOTE!]
 > In Apache Camel fungiert eine **Message** als die fundamentale Dateneinheit, die innerhalb einer Route verarbeitet wird. Diese besteht im Wesentlichen aus dem eigentlichen **Inhalt (Body)**, ergänzenden **Metadaten (Headers)** und optionalen Anhängen für binäre Daten. Jede Nachricht wird innerhalb eines sogenannten **Exchange-Containers** transportiert, der den gesamten Lebenszyklus des Datenaustauschs zwischen Sendern und Empfängern steuert. Dank eines flexiblen **Type-Converter-Systems** kann Camel die Datenformate während des Transports automatisch anpassen. Innerhalb einer **Spring-Boot-Umgebung** ermöglicht dieses Modell eine nahtlose Integration und Transformation von Java-Objekten entlang definierter Routen. Zusammenfassend bilden Message und Exchange das **technische Grundgerüst** für den kontrollierten Informationsfluss in Camel-basierten Anwendungen.

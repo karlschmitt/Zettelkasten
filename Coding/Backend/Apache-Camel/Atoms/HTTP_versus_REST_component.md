@@ -5,6 +5,10 @@ author: Karl Schmitt
 date: 2026-09-01
 ---
 
+> [NOTE!]
+> Dieser Text erläutert die wesentlichen Unterschiede zwischen der **HTTP-Komponente** und der **REST-Komponente** innerhalb des Apache Camel Frameworks für Spring Boot. Während die **HTTP-Komponente** primär als **Client** für ausgehende Anrufe an externe Webseiten fungiert, dient die **REST-Komponente** als vielseitige **Fassade** für die Definition eigener APIs. Ein entscheidender Punkt ist, dass die REST-Komponente für den Betrieb eine zugrunde liegende **Transport-Engine** benötigt, da sie Netzwerkverbindungen nicht eigenständig verwaltet. Entwickler nutzen die **Rest DSL**, um Pfadparameter und Datenbindungen elegant zu organisieren, während für einfache externe Aufrufe die direkte HTTP-Integration bevorzugt wird. Zusammenfassend lässt sich sagen, dass beide Werkzeuge spezialisierte Rollen in der **Systemintegration** einnehmen und nahtlos zusammenarbeiten können.
+
+
 # HTTP versus REST Component
 
 _Yes, Apache Camel contains both an HTTP Component and a REST Component_. 
@@ -47,7 +51,7 @@ When configuring a REST API consumer in Spring Boot, you choose a transport comp
 | `camel-http` | Making outbound HTTP/REST calls.                 | N/A (Client-only).                                                                               |
 | `camel-rest` | Defining inbound and outbound REST architecture. | `camel-platform-http` (reuses Spring Boot's internal Tomcat/Undertow server) or `camel-servlet`. |
 
-If you plan to build a REST API, use the REST Component combined with `platform-http`. If you want to call someone else's website, use the HTTP Component. \[1, 2, 4, 8]
+If you plan to build a REST API, use the REST Component combined with `platform-http`. If you want to call someone else's website, use the HTTP Component.
 
 ***
 
@@ -56,17 +60,3 @@ Would you like a code example showing how to expose a REST API or how to consume
 
 
 \[1] [https://camel.apache.org](https://camel.apache.org/components/4.18.x/rest-component.html)
-
-\[2] [https://tomd.xyz](https://tomd.xyz/camel-call-rest-http/)
-
-\[3] [https://camel.apache.org](https://camel.apache.org/components/4.22.x/rest-openapi-component.html)
-
-\[4] [https://camel.apache.org](https://camel.apache.org/manual/rest-dsl-openapi.html)
-
-\[5] [https://dzone.com](https://dzone.com/articles/expose-rest-endpoints-with-apache-camel)
-
-\[6] [https://camel.apache.org](https://camel.apache.org/camel-spring-boot/next/starters/rest.html)
-
-\[7] [https://camel.apache.org](https://camel.apache.org/components/4.22.x/rest-api-component.html)
-
-\[8] [https://camel.apache.org](https://camel.apache.org/manual/rest-dsl.html)

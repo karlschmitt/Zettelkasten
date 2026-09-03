@@ -5,7 +5,7 @@ author: Karl Schmitt
 date: 2026-09-01
 ---
 
-![]()
+![Aufbau eines digitalen Nachrichten-Containers](../Images/Aufbau_eines_digitalen_Nachrichten-Containers.png)
 
 > [NOTE!]
 > In der Welt von **Apache Camel** fungiert das sogenannte **Exchange-Objekt** als zentraler Informationsträger, der eine Nachricht sicher durch einen Datenfluss transportiert. Man kann sich dieses Objekt wie einen **Versandkarton** 📦 vorstellen, der neben dem eigentlichen Inhalt auch wichtige Metadaten in Form von **Headern** und **Exchange-Properties** enthält. Während Header oft an externe Systeme weitergegeben werden, dienen Properties der internen Datenverwaltung innerhalb der Route. Zusätzlich speichert das Exchange-Modell eine **eindeutige Identifikationsnummer** sowie Informationen über eventuell auftretende **Fehler**, um die Stabilität des Prozesses zu gewährleisten. Das System unterscheidet dabei zwischen verschiedenen **Kommunikationsmustern**, wie dem reinen Ereignisversand oder dem klassischen Anfrage-Antwort-Modell. Für Entwickler in **Spring Boot** bildet dieses Konstrukt das fundamentale Werkzeug, um komplexe Schnittstellen und Datenverarbeitungen effizient zu steuern.

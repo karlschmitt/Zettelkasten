@@ -284,11 +284,7 @@ Camel 🐪 moves **messages** through [routes](./Atoms/Camel_Route.md).
 
 A [message](./Atoms/Apache_Camel_Messages.md) 📩 usually contains:
 
-```text
-Message
-├── Body
-└── Headers
-```
+![Message Header Body](./Images/Message_Header_Body.png)
 
 Example:
 
@@ -307,21 +303,19 @@ Headers might contain metadata:
 
 ***
 
-# 4. Create a Spring Boot Project applying Maven
+# 4. Create a Spring Boot Project 
 
-Create a Spring Boot project using:
+Create a Spring Boot project using the following web tool:
 
 [Spring Initializr](https://start.spring.io/?utm_source=chatgpt.com)
 
-Choose:
+Choose the following spring boot project parameters:
 ```text
 Project: Maven
 Language: Java
 Spring Boot: current stable version
 ```
-
-Add:
-
+Add the dependencies:
 ```text
 Spring Web
 Apache Camel
