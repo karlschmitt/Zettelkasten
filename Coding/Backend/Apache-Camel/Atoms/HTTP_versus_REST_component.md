@@ -4,7 +4,7 @@ title: HTTP versus REST Component
 author: Karl Schmitt
 date: 2026-09-01
 ---
-
+![HTTP versus REST Komponenten-Vergleich](../Images/HTTP_versus_REST_Komponenten-Vergleich.png)
 > [NOTE!]
 > Dieser Text erläutert die wesentlichen Unterschiede zwischen der **HTTP-Komponente** und der **REST-Komponente** innerhalb des Apache Camel Frameworks für Spring Boot. Während die **HTTP-Komponente** primär als **Client** für ausgehende Anrufe an externe Webseiten fungiert, dient die **REST-Komponente** als vielseitige **Fassade** für die Definition eigener APIs. Ein entscheidender Punkt ist, dass die REST-Komponente für den Betrieb eine zugrunde liegende **Transport-Engine** benötigt, da sie Netzwerkverbindungen nicht eigenständig verwaltet. Entwickler nutzen die **Rest DSL**, um Pfadparameter und Datenbindungen elegant zu organisieren, während für einfache externe Aufrufe die direkte HTTP-Integration bevorzugt wird. Zusammenfassend lässt sich sagen, dass beide Werkzeuge spezialisierte Rollen in der **Systemintegration** einnehmen und nahtlos zusammenarbeiten können.
 

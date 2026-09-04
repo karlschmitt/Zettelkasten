@@ -458,7 +458,7 @@ mvn spring-boot:run
 
 Now create a file:
 ```powershell
-ni nput/hello.txt
+ni input/hello.txt
 ```
 With this content:
 ```text
@@ -471,47 +471,26 @@ For a quick test you can also use the PowerShell:
 ```PowerShell
 "Hello Apache Camel!" | Out-File -Encoding utf8 .\input\hello.txt
 ```
+So your Maven project structure should be:
 
-So your structure should be:
+![Input folder in the Mavon file structure](./Images/Input_folder_in_the_Mavon_file_structure.png)
 
-project-root/
-│
-├── pom.xml
-├── input/              ← HERE
-│   └── hello.txt
-│
-├── src/
-│   └── main/
-│       ├── java/
-│       └── resources/
-│
-└── target/
+> [NOTE!]
+> You can use the PowerShell **tree** command to list the directory structure
 
-Camel should detect the file and process it.
+![PowerShell tree command Maven directory structure](./Images/PowerShell_tree_command_Maven_directory_structure.png)
 
-The route is:
+Camel 🐪 should **detect** the file and process it.
 
-```text
-hello.txt
-    │
-    ▼
-file:input
-    │
-    ▼
-Camel
-    │
-    ▼
-.log("${body}")
-    │
-    ▼
-Console
-```
+The Camel 🐪 route is:
+
+![First Camel Route](./Images/First_Camel_Route.png)
 
 ***
 
 # 7. Understanding `from()` and `to()`
 
-A typical Camel route looks like this:
+A typical Camel 🐪 route looks like this:
 
 ```java
 from("SOURCE")
@@ -529,29 +508,23 @@ This means:
 
 > Read files from `input` and move or copy them to `output`.
 
-The flow is:
+The Camel 🐪 flow is:
 
-```text
-input
-  │
-  ▼
-┌─────────┐
-│  Camel  │
-└────┬────┘
-     │
-     ▼
-output
-```
+![The simplest possible integration route](./Images/The_simplest_possible_integration_route.png)
 
 This is one of the simplest possible integration routes.
 
 ***
+![Steam-Punk-Steam-Machine](./Images/Steam-Punk-Steam-Machine.png)
 
-# 8. Add Processing
+# 8. Add Processing 👩‍🔧
 
-Usually, you don't just move messages. You want to process them.
+Usually, you don't just move messages. You want to process 🔄 them.
 
-For this, we can use a **Processor**.
+For this, we can use a **Processor** 🔧.
+
+> [NOTE!]
+> Feel free to follow the white rabbit: [Apache Camel Processor](./Atoms/Apache_Camel_Processor.md) 
 
 ```java
 from("file:input")
@@ -582,25 +555,9 @@ After processing:
 HELLO CAMEL
 ```
 
-The complete flow is:
+The complete Camel flow is:
 
-```text
-┌──────────┐
-│  input   │
-└────┬─────┘
-     │
-     ▼
-┌──────────┐
-│ Processor│
-│          │
-│ toUpper()│
-└────┬─────┘
-     │
-     ▼
-┌──────────┐
-│  output  │
-└──────────┘
-```
+![Camel Processor](./Images/Camel_Processor_toUpper.png)
 
 ***
 

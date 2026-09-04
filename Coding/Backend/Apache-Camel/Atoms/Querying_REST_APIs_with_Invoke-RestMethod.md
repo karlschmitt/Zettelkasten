@@ -3,9 +3,16 @@ id: 20260903100006
 title: Querying REST APIs with Invoke-RestMethod
 author: Karl Schmitt
 date: 2026-09-03
+keywords: [ PowerShell, REST, API ]
 ---
+![REST-API Abfragen mittels Skriptbefehlen](../Images/REST-API_Abfragen_mittels_Skriptbefehlen.png)
 
-# Querying REST APIs with Invoke-RestMethod
+> [NOTE!]
+> Dieser Text erläutert, wie man mit **PowerShell** effizient Abfragen an **REST-APIs** stellt, wobei der Fokus auf dem Befehl **Invoke-RestMethod** liegt. Da dieses Werkzeug **JSON-Daten** automatisch in **PowerShell-Objekte** umwandelt, vereinfacht es die Verarbeitung von Informationen erheblich. Der Autor demonstriert verschiedene Anwendungsszenarien, wie das Abrufen einzelner Datensätze, die Nutzung von **Schleifen** für mehrere Anfragen und das Senden von **Sicherheits-Headern**. Ergänzend wird **Invoke-WebRequest** als Alternative vorgestellt, falls detaillierte Metadaten wie **HTTP-Statuscodes** benötigt werden. Insgesamt dient der Leitfaden als praktische Anleitung, um Schnittstellen mit minimalem manuellem Aufwand anzusprechen und die Ergebnisse direkt im Terminal zu formatieren.
+
+# PowerShell Guide to Mastering REST API Queries
+
+## Querying REST APIs with Invoke-RestMethod
 
 To query a REST API using PowerShell, the most common and powerful command is **`Invoke-RestMethod`**. It is specifically designed for REST APIs because it automatically converts JSON responses into easy-to-use PowerShell objects.
 
