@@ -5,7 +5,13 @@ author: Karl Schmitt
 date: 2026-09-04
 ---
 
-# Apache Camel Process Example
+![Automatisierter Datei-Workflow für Integrationslösungen](../Images/Automatisierter_Datei-Workflow_für_Integrationslösungen.png)
+
+> [NOTE!]
+> Dieser Text bietet eine praktische Anleitung zur Implementierung von **Apache Camel** innerhalb eines **Spring Boot-Projekts**. Er beschreibt detailliert, wie eine **automatisierte Datenroute** erstellt wird, die Textdateien aus einem Quellverzeichnis liest und diese verarbeitet. Mithilfe einer speziellen **Processor-Klasse** wird der Text in Großbuchstaben umgewandelt und mit einem aktuellen **Zeitstempel** sowie einem neuen Dateinamen versehen. Das Beispiel erläutert zudem die notwendigen **Abhängigkeiten in der pom.xml** und die Definition der Pipeline mittels der **Camel Domain Specific Language**. Abschließend zeigt der Leitfaden auf, wie die **Entkoppelung von Logik und Datenfluss** die Effizienz der Softwareentwicklung steigert. Dieser strukturierte Ansatz verdeutlicht die einfache Handhabung von **Dateitransfer-Prozessen** in modernen Java-Anwendungen.
+
+# Building a Spring Boot File Processor with Apache Camel
+
 
 This is a complete, runnable **Spring Boot** project example. 
 

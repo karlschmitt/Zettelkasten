@@ -4,7 +4,7 @@ title: Apache Camel Processor
 author: Karl Schmitt
 date: 2026-09-04
 ---
-![]()
+![Individuelle Logik im Datenfluss](../Images/Individuelle_Logik_im_Datenfluss.png)
 
 > [NOTE!]
 > Der Text erläutert die Funktionsweise des **Apache Camel Processors**, der als flexibles Werkzeug zur Implementierung **individueller Geschäftslogik** innerhalb eines Nachrichtenflusses dient. Über ein einfaches Java-Interface ermöglicht dieser **direkten Zugriff auf das Exchange-Objekt**, wodurch Entwickler Inhalte, Kopfzeilen und Metadaten einer Nachricht manuell transformieren oder validieren können. Während Camel viele Standardkomponenten bietet, fungiert der Processor als **Schnittstelle für komplexere Aufgaben**, die über einfache Datenformate hinausgehen. Die Integration erfolgt dabei nahtlos über die **DSL-Methode .process()**, die den Processor fest in die Route einbindet. Zudem wird der Processor von **Beans abgegrenzt**, wobei ersterer durch seine enge Kopplung an die Camel-API besonders für **systemnahe Manipulationen** geeignet ist. Zusammenfassend wird der Processor als zentrale Instanz beschrieben, um Nachrichten flexibel zu bearbeiten, bevor sie ihren Weg im System fortsetzen.

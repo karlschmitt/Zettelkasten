@@ -565,22 +565,17 @@ The complete Camel flow is:
 
 This is one of the most important Camel concepts.
 
-Camel uses an object called an **Exchange** to carry information through a route.
+Camel uses a Java  object called an **Exchange** to carry information through a route.
 
 Conceptually:
 
-```text
-Exchange
-│
-├── Message
-│   ├── Body
-│   └── Headers
-│
-└── Additional Camel information
-```
+![Apache Camel Exchange Message](./Images/Apache_Camel_Exchange_Message.png)
+
+
+> [NOTE!]
+> Feel free to follow the white rabbit: [Apache Camel Exchange](./Atoms/Apache_Camel_Exchange.md) 
 
 Inside a processor:
-
 ```java
 .process(exchange -> {
 
@@ -591,7 +586,7 @@ Inside a processor:
 })
 ```
 
-You are saying:
+In the code above, you are saying:
 
 > Give me the message body as a `String`.
 
@@ -685,9 +680,9 @@ This is closer to normal Spring Boot architecture.
 
 ***
 
-# 11. Filtering Messages
+# 11. Filtering 🔍 Messages 📩
 
-Camel can decide whether a message should continue.
+Camel 🐪 can decide whether a message 📨 should continue.
 
 Example:
 
@@ -719,6 +714,12 @@ Conceptually:
 ```
 
 This pattern is based on the **Content-Based Router** enterprise integration pattern.
+
+> [NOTE!]
+> Feel free to follow the white rabbit: [Apache Camel Content-Based Route](./Atoms/Apache_Camel_Content-Based_Route.md)
+
+> [NOTE!]
+>  You might like to see a complete example:  [Camel File Sorter](./Examples/Camel_File_Sorter.md)
 
 ***
 
@@ -1055,61 +1056,63 @@ I recommend learning Camel in this order:
 
 1. What is Apache Camel?
 
-2. Components and endpoints
+2. Components
 
-3. Messages
+3. Endpoints
 
-4. Exchanges
+4. Messages
 
-5. Routes
+5. Exchanges
 
-6. `from()` and `to()`
+6. Routes
+
+7. `from()` and `to()`
 
 ### Part 2 — Processing
 
-7. Processors
+8. Processors
 
-8. Message body
+9. Message body
 
-9. Headers
+10. Headers
 
-10. Beans and Spring services
+11. Beans and Spring services
 
-11. Type conversion
+12. Type conversion
 
 ### Part 3 — Routing
 
-12. `choice()`
+13. `choice()`
 
-13. `filter()`
+14. `filter()`
 
-14. `multicast()`
+15. `multicast()`
 
-15. `split()`
+16. `split()`
 
-16. `direct:` endpoints
+17. `direct:` endpoints
 
 ### Part 4 — Error Handling
 
-17. `onException()`
+18. `onException()`
 
-18. Redelivery
+19. Redelivery
 
-19. Dead letter channels
+20. Dead letter channels
 
-20. Retry strategies
+21. Retry strategies
 
 ### Part 5 — Spring Boot Integration
 
-21. Camel + REST
+22. Camel + REST
 
-22. Camel + JMS
+23. Camel + JMS
 
-23. Camel + ActiveMQ
+24. Camel + ActiveMQ
 
-24. Configuration with `application.yml`
+25. Configuration with `application.yml`
 
-25. Testing Camel routes
+26. Testing Camel routes
 
 ### Part 6 — Real-World Project
 
