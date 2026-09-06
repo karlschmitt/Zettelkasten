@@ -5,7 +5,7 @@ author: Karl Schmitt
 date: 2026-09-04
 keywords: [Java, PostgreSQL, Spring Boot, Apache Camel]
 ---
-![]()
+![Galaktische Datenbrücken Integrations-Workshop](../Images/Galaktische_Datenbruecken_Integrations-Workshop.png)
 
 > [NOTE!]
 > Dieser Text beschreibt eine technische Übung für ein **Coding Dojo**, die zeigt, wie man mit **Apache Camel** und **Spring Boot** Daten zwischen verschiedenen Systemen austauscht. Der Prozess umfasst die Erstellung einer **REST-Schnittstelle**, die Informationen über Charaktere von einer externen **Star Wars API** abruft. Ein spezieller **Java-Processor** transformiert die empfangenen JSON-Daten anschließend in ein Format, das für eine **PostgreSQL-Datenbank** lesbar ist. Die Anleitung führt Schritt für Schritt durch die notwendigen **Abhängigkeiten**, die Konfiguration der Verbindungsparameter sowie die Definition der **Routing-Logik**. Ziel des Beispiels ist es, Entwicklern die Handhabung von **Header-Management**, dynamischen Endpunkten und der Datenintegration in der Praxis zu vermitteln. Diese praxisnahe Übung dient somit als strukturierte Vorlage für die moderne **Backend-Programmierung** und Systemintegration.

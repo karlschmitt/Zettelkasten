@@ -1,9 +1,15 @@
 ---
 id: 20260903152511
-title: How to connect a PostgreSQL with Apache Camel?
+title: Integrating PostgreSQL with Apache Camel and Spring Boot
 author: Karl Schmitt
 date: 2026-09-03
+keywords: [ Spring Boot, Apache Camel, PostgreSQL, SQL, REST, Docker]
 ---
+![Nahtlose Datenbank-Integration mit Frameworks](../Images/Nahtlose_Datenbank-Integration_mit_Frameworks.png)
+
+> [NOTE!]
+> Dieser Text bietet eine praktische Anleitung zur Integration von **PostgreSQL-Datenbanken** in **Apache Camel** innerhalb einer **Spring Boot-Umgebung**. Der Autor erläutert, dass Camel über die **SQL-Komponente** direkt auf die von Spring Boot verwaltete **DataSource** zugreifen kann, was manuellen JDBC-Code überflüssig macht. Anhand konkreter Beispiele wird gezeigt, wie man **Abfragen ausführt**, Daten mittels der **Split-Funktion** verarbeitet und Parameter über **Message-Header** dynamisch einbindet. Die Anleitung umfasst zudem die Konfiguration der **Abhängigkeiten**, die Einrichtung der Datenbank via **Docker** sowie die Erstellung von **REST-Schnittstellen** zur Datenmanipulation. Abschließend wird betont, dass die Stärke dieser Architektur in der **Abstraktion komplexer Integrationsprozesse** liegt, wodurch sich Entwickler auf den logischen Datenfluss konzentrieren können.
+
 
 # How to connect a PostgreSQL with Apache Camel?
 

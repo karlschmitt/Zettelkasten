@@ -5,6 +5,11 @@ author: Karl Schmitt
 date: 2026-09-04
 keywords: [Spring Boot, Apache Camel, CBR]
 ---
+![Inhaltsbasierter Datei-Router Ueberblick](../Images/Inhaltsbasierter_Datei-Router_Ueberblick.png)
+
+> [NOTE!]
+> Dieser Text beschreibt die Implementierung eines **inhaltsbasierten Dateirouters** mithilfe von **Spring Boot** und **Apache Camel**. Der Autor erläutert den Prozess der automatischen Dateiversortung, bei dem Dokumente aus einem Eingangsordner basierend auf spezifischen **Schlüsselwörtern** in unterschiedliche Zielverzeichnisse verschoben werden. Zur technischen Umsetzung werden notwendige **Abhängigkeiten** für die Konfigurationsdatei sowie der Java-Code für die **Routing-Logik** detailliert dargestellt. Ein praktischer Leitfaden erklärt zudem, wie das System durch das Erstellen von Testdateien und die Beobachtung der **Konsolenausgaben** überprüft werden kann. Zentrale Begriffe der **Camel Simple Language**, wie die Handhabung des Nachrichtenkörpers und spezielle Konfigurationsparameter, werden dabei für das bessere Verständnis hervorgehoben. Insgesamt dient das Dokument als präzise **Schritt-für-Schritt-Anleitung** für Entwickler, um eine automatisierte Datenverarbeitung zu realisieren.
+
 
 # Content-Based File Router
 

@@ -4,6 +4,9 @@ title: The Jedi Archives
 author: Karl Schmitt
 date: 2026-09-04
 ---
+![Datenbank-Einrichtung mit Container-Software](../Images/Datenbank-Einrichtung_mit_Container-Software.png)
+> [NOTE!]
+> Dieser Text dient als technische Anleitung zur **standardisierten Datenbankeinrichtung** für einen Programmier-Workshop mithilfe von **Docker Compose**. Der Autor beschreibt, wie Teilnehmer eine konsistente **PostgreSQL-Umgebung** schaffen können, indem sie Konfigurationsdateien und ein automatisches **Initialisierungsskript** nutzen. Durch diesen Prozess wird eine Tabelle für **Star-Wars-Charaktere** erstellt, die nahtlos in ein **Spring Boot-Projekt** integriert werden kann. Der Fokus liegt dabei auf der **Automatisierung und Reproduzierbarkeit**, um technische Fehler während der Übung zu minimieren. Falls Probleme auftreten, ermöglicht die Methode ein schnelles **Zurücksetzen des Systems** auf den Ursprungszustand. Insgesamt bietet die Quelle eine effiziente Lösung für die **kooperative Softwareentwicklung** in einer kontrollierten Testumgebung.
 
 # The Jedi Archives
 

@@ -3,7 +3,11 @@ id: 20260903093742
 title: Exposing and Consuming REST APIs with Spring Boot and Apache Camel
 author: Karl Schmitt
 date: 2026-09-03
+keywords: [ Spring Boot, Apache Camel, Maven, HTTP, REST, API, DSL]
 ---
+![API-Proxy-Erstellung mit Integrations-Frameworks](../Images/API-Proxy-Erstellung_mit_Integrations-Frameworks.png)
+> [NOTE!]
+> Dieser Text erläutert die Integration von **Apache Camel** in eine **Spring Boot-Anwendung**, um effizient **REST-Schnittstellen** zu erstellen und externe Dienste abzurufen. Der Autor beschreibt die notwendigen **Maven-Abhängigkeiten** sowie die Konfiguration des **Camel-Servlets**, welches als zentraler Einstiegspunkt fungiert. Ein praktisches Programmierbeispiel zeigt, wie die **Rest DSL** genutzt wird, um lokale Endpunkte bereitzustellen, während die **HTTP-Komponente** Daten dynamisch von einer externen API bezieht. Durch den Einsatz der **To-Dynamic-Funktion** können Variablen wie Identifikationsnummern flexibel in externe Anfragen integriert werden. Abschließend werden die Vorteile dieses Ansatzes hervorgehoben, insbesondere die einfache **Datenumwandlung**, die Protokollunabhängigkeit und die robuste **Fehlerbehandlung**. Diese Anleitung dient somit als technischer Leitfaden für die Erstellung leistungsfähiger **API-Gateways**.
 
 # Exposing and Consuming REST APIs with Spring Boot and Apache Camel
 
