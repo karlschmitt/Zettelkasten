@@ -676,7 +676,10 @@ public class FileRoute extends RouteBuilder {
 }
 ```
 
-This is closer to normal Spring Boot architecture.
+This is a _closer to normal_ Spring Boot architecture.
+
+> [NOTE!]
+> Feel free to visit a complete process example: [Apache Camel Process Example](./Examples/Apache_Camel_Process_Example.md)
 
 ***
 
@@ -697,21 +700,7 @@ from("file:input")
 
 Conceptually:
 
-```text
-                 ┌──────────────┐
-                 │ File arrives │
-                 └──────┬───────┘
-                        │
-                        ▼
-                 ┌──────────────┐
-                 │ Is important?│
-                 └──────┬───────┘
-                   │         │
-                 YES         NO
-                   │         │
-                   ▼         ▼
-             important     normal
-```
+![Is important switch](./Images/Is_important_switch.png)
 
 This pattern is based on the **Content-Based Router** enterprise integration pattern.
 
