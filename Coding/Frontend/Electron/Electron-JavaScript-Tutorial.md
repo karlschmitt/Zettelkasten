@@ -5,6 +5,14 @@ author: Karl Schmitt
 date: 2026-09-09
 ---
 
+![]()
+
+> [NOTE!]
+> Dieser Quelltext bietet eine **strukturierte Anleitung** zur Entwicklung von Desktop-Anwendungen mit dem Framework **Electron.js**. Der Text erklärt, wie Entwickler mithilfe von **Webtechnologien** wie JavaScript, HTML und CSS plattformübergreifende Software erstellen können. Der Prozess umfasst essenzielle Schritte von der **Installation von Node.js** bis hin zur Konfiguration des **Hauptprozesses** und der Benutzeroberfläche. Zudem werden fortgeschrittene Themen wie die **automatische Aktualisierung** während der Entwicklung und die finale **Paketierung** der App thematisiert. Das Ziel des Leitfadens ist es, Einsteigern den Weg von einem leeren Verzeichnis zu einem **funktionsfähigen Installationsprogramm** zu ebnen. Durch die Kombination von **Node.js und Chromium** wird aufgezeigt, wie moderne Web-Tools für die Desktop-Umgebung nutzbar gemacht werden.
+
+
+![Electron.js Logo](./images/electronjs_logo.png)
+
 # Hello Desktop: My First Electron App
 
 Here’s a **clear, structured, step‑by‑step Electron.js tutorial** that walks you from zero to a working desktop app. Since Electron development is a technical, multi-step process, I’ll present it as a procedural guide you can follow directly.

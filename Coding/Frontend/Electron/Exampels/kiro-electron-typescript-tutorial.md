@@ -6,6 +6,8 @@ date: 2026-09-10
 keywords: [ Elektron.js, TypeScript]
 ---
 
+![Electron.js Logo](../images/electronjs_logo.png)
+
 # Building a Desktop App with Electron.js and TypeScript
 
 A hands-on tutorial for creating a cross-platform desktop application using [Electron](https://www.electronjs.org/) with TypeScript, on Windows with PowerShell. You'll build a small but complete "Notes" app that demonstrates Electron's core architecture: the main process, renderer process, secure preload bridge, and inter-process communication (IPC).

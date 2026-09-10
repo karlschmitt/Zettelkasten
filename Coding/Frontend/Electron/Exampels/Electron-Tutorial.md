@@ -1,10 +1,14 @@
 ---
 id: 20260909223419
-title: 
+title: Electron.js Tutorial
 author: Karl Schmitt
 date: 2926-09-09
 keywords: [ Electron.js]
 ---
+
+![Electron.js Logo](../images/electronjs_logo.png)
+
+# Electron.js Tutorial
 
 This tutorial will guide you through building a minimal, type-safe desktop application using Electron.js and TypeScript.
 

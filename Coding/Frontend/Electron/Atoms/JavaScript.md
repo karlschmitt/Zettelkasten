@@ -1,6 +1,15 @@
 ---
 id: 20260909222144
+title: Learn JavaScript
+author: Karl Schmitt
+date: 2026-09-09
+keywords: [ JavaScript]
 ---
+
+![JavaScript Logo](../Images/JavaScript-logo.png)
+
+
+# Learn JavaScript
 
 To learn JavaScript, you need to understand it is a programming language used to make websites interactive. It is the language that powers dynamic content like dropdown menus, animated graphics, and interactive maps.
 

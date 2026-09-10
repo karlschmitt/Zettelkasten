@@ -6,6 +6,8 @@ date: 2026-09-10
 keywords: [ PowerShell, TypeScript, Deno ]
 ---
 
+![TypeScript Logo](../Images/Typescript_logo_2020.png)
+
 # TypeScript with Deno on PowerShell — A Practical Tutorial
 
 A hands-on guide to writing and running TypeScript using [Deno](https://deno.com) on Windows with PowerShell 7+. Deno runs TypeScript natively — no `tsc`, no `node_modules`, no build config required.

@@ -3,10 +3,18 @@ id: 20260909183303
 title: Build an Electron App with TypeScript
 autor: Karl Schmitt
 date: 2026-09-09
-keywords: [ Electron, TypeScript ]
+keywords: [ Electron.js, TypeScript ]
 ---
 
+![Electron.js Logo](./images/electronjs_logo.png)
+
 # Build an Electron App with TypeScript
+
+> [NOTE!]
+>  What is Electron.js: [Electron](./Atoms/Electron.md)
+
+> [NOTE!]
+>  Feel free to follow the white rabbit: [Electron.js for absolut beginners](./Atoms/Electron_js_for_absolut_beginners.md)
 
 To build an Electron.js application using TypeScript, the fastest and most reliable approach is to _use [Electron Forge](https://www.electronforge.io/) with its official Webpack + TypeScript template_. This handles all the complex bundling and compilation configurations automatically. 
 

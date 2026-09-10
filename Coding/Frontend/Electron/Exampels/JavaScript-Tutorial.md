@@ -6,6 +6,8 @@ date: 2026-09-09
 keywords: [ JavaScript ]
 ---
 
+![JavaScript Logo](../Images/JavaScript-logo.png)
+
 ## 🚀 Quickstart JavaScript Tutorial
 
 This tutorial covers the absolute essentials of JavaScript. You can run all of this code directly inside your web browser.

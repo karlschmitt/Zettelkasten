@@ -6,6 +6,8 @@ date: 2026-09-10
 keywords: [ PowerShell, TypeScript, Electron.js]  
 ---
 
+![Electron.js Logo](../images/electronjs_logo.png)
+
 # Learning Electron.js with TypeScript and PowerShell
 
 Electron lets you build cross-platform desktop applications with web technologies and Node.js. This tutorial creates a small TypeScript desktop app using Electron Forge.

@@ -6,9 +6,17 @@ date: 2026-09-09
 keywords: [ TypeScript ]
 ---
 
+![TypeScript Logo](../Images/Typescript_logo_2020.png)
+
 # Learning TypeScript
 
 Here is a hands-on, beginner-friendly TypeScript tutorial. It covers the absolute essentials you need to start writing typed code immediately.
+
+> [NOTE!]
+>  Feel free to follow the white rabut 🐇: [Learn TypeScript](../Atoms/TypeScript.md)
+
+> [NOTE!]
+>  Feel free to follow the dinosaur 🦖: [Learning TypeScript with Deno](../Atoms/Learning_TypeScript_with_Deno.md)
 
 ***
 

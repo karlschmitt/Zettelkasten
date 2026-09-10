@@ -6,6 +6,8 @@ date: 2026-09-10
 keywords: [ PowerShell, TypeScript, Deno ]
 ---
 
+![TypeScript Logo](../Images/Typescript_logo_2020.png)
+
 # Learning TypeScript with Deno and PowerShell
 
 Deno runs TypeScript directly and includes a formatter, linter, test runner, and secure permissions by default.

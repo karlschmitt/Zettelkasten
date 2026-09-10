@@ -3,7 +3,10 @@ id: 20260909205823
 title: Electron and TypeScript Startpage
 author: Karl Schmitt
 date: 2026-09-09
+keywords: [ Electron.js ]
 ---
+
+![Electron.js Logo](./images/electronjs_logo.png)
 
 # Electron and TypeScript Startpage
 

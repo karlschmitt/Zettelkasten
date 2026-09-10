@@ -6,9 +6,13 @@ date: 2026-09-09
 keywords: [ Electron, TypeScript, C++]
 ---
 
+![Architektur von Electron.js](./Images/Architektur_einer_Desktop-Anwendung.png)
+
 > [NOTE!]
 > Diese Quellen bieten eine fundierte Einführung in die Entwicklung von Desktop-Anwendungen mit **Electron.js** unter besonderer Berücksichtigung von **TypeScript** und **C++-Backends**. Im Mittelpunkt steht das **Prozessmodell**, das strikt zwischen dem **Main-Prozess** für Systemaufgaben und dem **Renderer-Prozess** für die Benutzeroberfläche trennt. Ein sicherer Datenaustausch wird dabei durch **Preload-Skripte** und die sogenannte **Inter-Prozess-Kommunikation (IPC)** gewährleistet. Der Text erläutert zudem verschiedene Strategien, wie eine grafische Oberfläche effektiv mit performanten **C++-Diensten** verknüpft werden kann. Ein strukturierter **Lernplan** unterstützt Entwickler dabei, diese komplexen Technologien schrittweise zu meistern und professionelle Software-Architekturen aufzubauen. Damit dient das Material als praxisnaher Leitfaden für den Übergang von der Web- zur modernen Desktop-Entwicklung.
 
+
+![Electron.js Logo](./images/electronjs_logo.png)
 
 # Electron.js — Building Desktop Applications with Web Technologies
 
