@@ -9,4 +9,6 @@ date: 2026-06-30
 
 # Frontend Landing Page
 
+1. [Electron.js](./Electron/Electron_and_TypeScript_Startpage.md)
+
 

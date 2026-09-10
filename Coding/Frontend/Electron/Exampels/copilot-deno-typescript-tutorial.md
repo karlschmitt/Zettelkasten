@@ -3,7 +3,7 @@ id: 20260910145720
 title: Learning TypeScript with Deno and PowerShell
 author: Karl Schmitt
 date: 2026-09-10
-keywords: [ PowerShell, TypeScript, Deno]
+keywords: [ PowerShell, TypeScript, Deno ]
 ---
 
 # Learning TypeScript with Deno and PowerShell
