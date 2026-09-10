@@ -1,0 +1,143 @@
+---
+id: 20260910090716
+title: Backend JavaScript Tutorial
+author: Karl Schmitt
+date: 2026-09-10
+keywords: [ JavaScript, Deno, PowerShell, Backend]
+---
+
+# 🦕 Deno + 💻 PowerShell: Backend JavaScript Tutorial
+
+Deno is a modern, secure runtime for JavaScript and TypeScript. Unlike running JavaScript inside a web browser, Deno allows you to write JavaScript code that runs directly on your computer to manage files, build web servers, and create automation scripts. \[1, 2]
+
+Using Windows PowerShell, you can install Deno, manage files, and execute your scripts. \[3, 4]
+
+***
+
+## Step 1: Install Deno via PowerShell
+
+1. Open PowerShell (Click Start, type `PowerShell`, and hit Enter).
+2. Copy and paste the official installation command from [Deno Docs](https://docs.deno.com/runtime/) and press Enter:
+   ```powershell
+   irm https://deno.land | iex
+   ```
+3. Restart your PowerShell window so it recognizes the newly added path.
+4. Verify the installation by checking the version:
+   ```powershell
+   deno --version
+   ```
+   \[5, 6, 7]
+
+***
+
+## Step 2: Create Your First Project Folder
+
+Use PowerShell commands to create a workspace and navigate into it: \[8]
+
+```powershell
+mkdir deno_tutorial
+cd deno_tutorial
+```
+
+***
+
+## Step 3: Write and Run a "Hello World" Script
+
+Create a simple JavaScript file directly from PowerShell. \[9]
+
+1. Run this command to create a file named `app.js` containing a log statement:
+   ```powershell
+   "console.log('Hello from Deno and PowerShell!');" | Out-File -Encoding utf8 app.js
+   ```
+2. Execute the script using the [Deno CLI](https://docs.deno.com/examples/):
+   ```powershell
+   deno run app.js
+   ```
+   _Output:_ `Hello from Deno and PowerShell!` \[10, 11]
+
+***
+
+## Step 4: Understanding Deno's Sandbox Security
+
+Deno is secure by default. It will not allow a script to read files, write files, or access the network unless you explicitly grant permission. \[1, 7, 12]
+
+Let's write a script that fetches data from the web using the standard browser `fetch` API. \[1, 13]
+
+1. Create a script called `fetch_data.js` to download some placeholder data:
+   ```powershell
+   @'
+   const response = await fetch("https://typicode.com");
+   const data = await response.json();
+   console.log("Fetched Data:", data);
+   '@ | Out-File -Encoding utf8 fetch_data.js
+   ```
+2. Try running it without permissions:
+   ```powershell
+   deno run fetch_data.js
+   ```
+   _Deno will stop execution and prompt you to grant network privileges._
+3. Run it correctly by adding the explicit network flag (`--allow-net`):
+   ```powershell
+   deno run --allow-net fetch_data.js
+   ```
+   \[12, 14]
+
+***
+
+## Step 5: Read and Write System Files
+
+Let's leverage JavaScript to write a message to a text file locally, and then read it back.
+
+1. Create `file_system.js` using PowerShell:
+   ```powershell
+   @'
+   const text = "Deno allows me to write backend JavaScript!";
+
+   // Write a text file
+   await Deno.writeTextFile("output.txt", text);
+   console.log("File written successfully!");
+
+   // Read the text file back
+   const data = await Deno.readTextFile("output.txt");
+   console.log("File Content:", data);
+   '@ | Out-File -Encoding utf8 file_system.js
+   ```
+2. Because this script touches your local hardware, you must grant read and write permissions (`--allow-read` and `--allow-write`):
+   ```powershell
+   deno run --allow-read --allow-write file_system.js
+   ```
+   \[1]
+
+***
+
+Would you like to build a local web server next using Deno, or would you like to see how to pass command-line arguments from PowerShell directly into your JavaScript code? \[10]
+
+
+
+\[1] [https://www.youtube.com](https://www.youtube.com/watch?v=GtpyEGDtMOc\&t=479)
+
+\[2] [https://medium.com](https://medium.com/workingdevshero/tips-tricks-deno-scripting-33639ee50d2c)
+
+\[3] [https://www.youtube.com](https://www.youtube.com/watch?v=2iLeRzHvc10\&t=343)
+
+\[4] [https://pendyprogramming.medium.com](https://pendyprogramming.medium.com/exploring-deno-a-secure-runtime-for-javascript-and-typescript-5e88405588f4)
+
+\[5] [https://docs.deno.com](https://docs.deno.com/runtime/getting_started/installation/)
+
+\[6] [https://blog.logrocket.com](https://blog.logrocket.com/deno-adoption-guide/)
+
+\[7] [https://docs.deno.com](https://docs.deno.com/runtime/)
+
+\[8] [https://www.loginradius.com](https://www.loginradius.com/blog/engineering/hello-world-deno)
+
+\[9] [https://www.youtube.com](https://www.youtube.com/watch?v=3Vt_cjgojDI)
+
+\[10] [https://docs.deno.com](https://docs.deno.com/examples/)
+
+\[11] [https://daily.dev](https://daily.dev/blog/deno-basics-for-beginners/)
+
+\[12] [https://dev.to](https://dev.to/mr_ali3n/getting-started-with-denojs-2hp0)
+
+\[13] [https://deno.com](https://deno.com/)
+
+\[14] [https://deno.com](https://deno.com/learn/scripts-clis)
