@@ -5,7 +5,7 @@ author: Karl Schmitt
 date: 2026-09-09
 ---
 
-![]()
+![Desktop-Apps in sechs Schritten](./Images/Desktop-Apps_in_sechs_Schritten.png)
 
 > [NOTE!]
 > Dieser Quelltext bietet eine **strukturierte Anleitung** zur Entwicklung von Desktop-Anwendungen mit dem Framework **Electron.js**. Der Text erklärt, wie Entwickler mithilfe von **Webtechnologien** wie JavaScript, HTML und CSS plattformübergreifende Software erstellen können. Der Prozess umfasst essenzielle Schritte von der **Installation von Node.js** bis hin zur Konfiguration des **Hauptprozesses** und der Benutzeroberfläche. Zudem werden fortgeschrittene Themen wie die **automatische Aktualisierung** während der Entwicklung und die finale **Paketierung** der App thematisiert. Das Ziel des Leitfadens ist es, Einsteigern den Weg von einem leeren Verzeichnis zu einem **funktionsfähigen Installationsprogramm** zu ebnen. Durch die Kombination von **Node.js und Chromium** wird aufgezeigt, wie moderne Web-Tools für die Desktop-Umgebung nutzbar gemacht werden.

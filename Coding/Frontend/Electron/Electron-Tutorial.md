@@ -16,8 +16,9 @@ keywords: [ Electron, TypeScript, C++]
 
 # Electron.js — Building Desktop Applications with Web Technologies
 
+![](./Images/Architektur_fuer_Desktop-Anwendungen.png)
 
-Absolutely — and **yes, Electron works very well with TypeScript**. In fact, for a professional application with a C++ backend, I would strongly recommend **Electron + TypeScript** rather than plain JavaScript.
+Electron works very well with TypeScript**. In fact, for a professional application with a C++ backend, I would strongly recommend **Electron + TypeScript** rather than plain JavaScript.
 
 And your new project is actually a very interesting architecture:
 
@@ -87,6 +88,8 @@ The most important new concept is going to be **Electron's process model**.
 ***
 
 # 1. What exactly is Electron?
+
+![Architektur fuer professionelle Desktop-Apps](./Images/Architektur_fuer_professionelle_Desktop-Apps.png)
 
 Electron lets you build a desktop application using web technologies:
 

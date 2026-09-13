@@ -6,22 +6,43 @@ date: 2026-04-19
 keywords: [ Node.js, node, npm, JavaScript]
 ---
 
+![Leitfaden zur Server-Einrichtung](./Images/Leitfaden_zur_Server-Einrichtung.png)
+
+> [NOTE!]
+>  Dieser Text bietet eine strukturierte **Einführung in Node.js**, die Anfängern den Übergang zur serverseitigen Programmierung mit JavaScript erleichtert. Zunächst werden die notwendigen **Voraussetzungen** sowie der **Installationsprozess** der stabilen Systemversion erläutert. Der Leitfaden führt den Leser durch die Erstellung eines ersten Projekts und erklärt die Nutzung des **Paketmanagers NPM** zur Verwaltung externer Bibliotheken. Ein zentraler Bestandteil ist der Aufbau eines einfachen **Webservers** unter Verwendung des populären Frameworks Express.js. Abschließend gibt der Autor wertvolle Empfehlungen zu **fortgeschrittenen Konzepten** wie asynchroner Programmierung und dem Einsatz von Datenbanken. Dieser Ratgeber dient somit als umfassender **Startpunkt für die Entwicklung** moderner Backend-Anwendungen.
+
+
 # How to start with Node.js?
 
 Starting with Node.js is an exciting step because it allows you to use JavaScript—the language of the web—to build backend applications, APIs, and tooling.
 
 Here is a step-by-step guide to get you from zero to your first running server.
 
+![Node.js Logo](./Images/Nodejs_logo.png "Node.js Logo")
+
 ---
 
 ### 1. Prerequisites
+
+![JavaScript Logo](./Images/JavaScript_Logo.png)
+
 Before diving into Node.js, you should have a basic understanding of:
 *   **JavaScript:** (Variables, functions, objects, and especially **ES6+** features like Arrow Functions and Promises).
+    *   [JavaScript for absolute beginners](./Atoms/JavaScript_for_absolute_beginners.md)
+    *   [JavaScript Functions](./Atoms/JavaScript_functions.md)
+    *   [How to explore JavaScript using Node.js](./How_to_explore_JavaScript_using_Node.Js.md)
+    *   [JavaScript OOP](./Atoms/JavaScript_OOP.md)
+    *   [JavaScript Arrow Functions](./Atoms/JavaScript_Arrow_Functions.md)
+    *   [JavaScript Promises](./Atoms/JavaScript_Promises.md)
 *   **The Command Line:** (Navigating folders using `cd`, `ls` or `dir`).
+    *   [Windows ShortCuts](./Atoms/Windows_ShortCuts.md)
+    *   [Power Shell Shortcut](./Atoms/PowerShellShortCut.md)
+    *   [PowerShell for absolute beginners](./Atoms/PowerShell_For_Absolute_Beginners.md)
 
 ---
 
 ### 2. Install Node.js
+
 1.  Go to the official [Node.js website](https://nodejs.org/).
 2.  Download the **LTS (Long Term Support)** version. It is the most stable and recommended for beginners.
 3.  Follow the installer prompts.
@@ -31,14 +52,17 @@ Before diving into Node.js, you should have a basic understanding of:
     npm -v
     ```
     If you see version numbers (e.g., `v20.x.x`), you are ready to go!
+    
+![Pobe node and npm](./Images/Pobe_node_and_npm.png)
 
 ---
 
 ### 3. Your First "Hello World"
-You don't need a browser to run Node.js code.
-1.  Create a folder for your project.
-2.  Inside that folder, create a file named `app.js`.
-3.  Open it in a code editor (like VS Code) and type:
+
+You don't need a web browser to run Node.js code.
+1.  Create a folder for your project: `mkdir FirstNodeJs`
+2.  Inside that folder, create a file named `ni app.js`.
+3.  Open it in a code editor (like VS Code or Vim) and type:
     ```javascript
     console.log("Hello, Node.js!");
     ```
