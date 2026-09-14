@@ -32,12 +32,13 @@ By the end of this tutorial, you'll be able to:
 
 ***
 
-## Lesson 1: Your First JavaScript Program
+## Lesson 1: Your First JavaScript Program 🌍
 
 Create a folder anywhere you like.
 
-Open PowerShell:
+![PowerShell Logo](../Images/PowerShell_Logo.png)
 
+Open PowerShell:
 ```powershell
 mkdir JS-Learning
 
@@ -45,14 +46,16 @@ cd JS-Learning
 
 code .
 ```
-    
-Create a HTML file named:
+
+![HTML5 Logo](../Images/HTML5_Logo.png)
+
+Create a [HTML](https://en.wikipedia.org/wiki/HTML) file named:
 
 ```powershell
 ni index.html 
 ```
 
-Paste the following HTML code into ```index.html```:
+Paste the following [HTML](https://en.wikipedia.org/wiki/HTML) code into ```index.html```:
 
 ```html
 <!DOCTYPE html>
@@ -83,11 +86,11 @@ start index.html
 
 ***
 
-## Lesson 2: The Console
+## Lesson 2: The Browser Console
 
-The console is your best friend.
+The browser console is your best friend.
 
-Open your HTML page in Edge.
+Open your [HTML](https://en.wikipedia.org/wiki/HTML) page in Edge.
 
 1. Press: **F12**
 2. Click: **Console**
@@ -99,7 +102,7 @@ Open your HTML page in Edge.
 
 ***
 
-## Lesson 3: Variables
+## Lesson 3: Variables 🪶
 
 > [NOTE!]
 > Variables store data in memory not on disk.
@@ -108,13 +111,13 @@ A variable in JavaScript is a labeled container used to store data values in mem
 use, and update them later. 
 You can read more about them on the MDN Web Docs on JavaScript Variables.
 
-### The Storage Box Analogy
+### The Storage Box Analogy 📦
 
 * The Label (Name): The unique name you give the variable so you can find it later (like writing "score" on a cardboard box).
 * The Value (Data): The actual item you put inside the box (like the number 10 or the text "Hello").
 * The Equal Sign (=): The assignment operator used to put a value into that container.
 
-### The Three Keywords
+### The Three Keywords 🔑
 
 JavaScript uses **three** keywords to create variables, though you will mostly use the first two today:
 
@@ -143,7 +146,7 @@ Open an editor:
 ```powershell
 nvim variables.html
 ```
-And add the following HTML code to ```variables.html```
+And add the following [HTML](https://en.wikipedia.org/wiki/HTML) code to ```variables.html```
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -166,11 +169,10 @@ And add the following HTML code to ```variables.html```
 Save the file.
 
 Open it in Edge using the ```start``` command and you'll see a popup.
-
-^```powershell
+```powershell
 start variables.html
 ```
-Press F12 and navigate to the Console output.
+Press **F12** and navigate to the **Console** output.
 You shouls see^: ```Hellow Daisy!```
 
 Another example:
@@ -197,15 +199,15 @@ Another example:
 
 ## Types of Data
 
-### Text
+#### Text
 
 let city = "Berlin";
 
-### Numbers
+#### Numbers
 
 let temperature = 22;
 
-### True/False
+#### True/False
 
 let isSunny = true;
 
@@ -247,7 +249,7 @@ console.log(firstName);
 console.log(age);
 
 ```
-Place into an HTML file named **emily.html** and open it in Edge using the ```start``` command:
+Place into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **emily.html** and open it in Edge using the ```start``` command:
 
 ```html
 <!DOCTYPE html>
@@ -314,7 +316,7 @@ These symbols combine multiple true/false checks:
 * NOT (!): Flips a true/false value. Example: !true is false.
 
 
-Please place the following code into an HTML file named **math.html** and open it in Edge using the ```start``` command:
+Please place the following code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **math.html** and open it in Edge using the ```start``` command:
 
 ```html
 <!DOCTYPE html>
@@ -341,12 +343,11 @@ Please place the following code into an HTML file named **math.html** and open i
 </body>
 </html>
 ```
-
 ***
-
 
 Operator precedence in JavaScript is the set of rules that decides which operation happens first when an expression contains multiple operators, much like the traditional math rule PEMDAS. You can review the full priority table on the [MDN Operator Precedence Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence).
 JavaScript does not always read a line of code strictly from left to right. Instead, it looks at the operators and gives priority to certain symbols over others.
+
 ## The Golden Rule: Parentheses First (())
 
 * Overrides everything: Parentheses have the highest priority of all.
@@ -354,6 +355,7 @@ JavaScript does not always read a line of code strictly from left to right. Inst
 * Example: (2 + 3) * 4 results in 20 because the addition inside the parentheses happens before the multiplication. Without parentheses, 2 + 3 * 4 results in 14.
 
 ## Common Order of Priority (High to Low)
+
 When you mix different types of operators, JavaScript evaluates them in this general order:
 
 * Grouping (()): Evaluated first.
@@ -365,6 +367,7 @@ When you mix different types of operators, JavaScript evaluates them in this gen
 * Assignment (=): Evaluated last, after the right side of the equals sign is fully calculated.
 
 ## A Clear Code Example
+
 Consider this simple math expression in JavaScript:
 
 let result = 10 + 5 * 2;
@@ -374,6 +377,7 @@ let result = 10 + 5 * 2;
 * Why: JavaScript spots the multiplication operator (*) and knows it has higher precedence than addition (+). It calculates 5 * 2 first to get 10, and then adds the initial 10 to get 20.
 
 ## Associativity (Tie-Breakers)
+
 When two operators have the same priority level, JavaScript uses associativity to decide the direction:
 
 * Left-to-Right: Most operators like +, -, *, and / evaluate from left to right.
@@ -475,6 +479,7 @@ if (age >= 18) {
 }
 ```
 
+Place this code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **eighteen.html** and open it in Edge using the ```start``` command:
 ```html
 <!DOCTYPE html>
 <html lang="de">
@@ -498,8 +503,9 @@ if (age >= 18) {
 
 ***
 
-With an alternative:
+#### The «if» statement with an alternative path:
 
+Place this code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **choice.html** and open it in Edge using the ```start``` command.
 ```html
 <!DOCTYPE html>
 <html lang="de">
@@ -528,6 +534,8 @@ With an alternative:
 
 ## Exercise
 
+Place this code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **eighteen.html** and open it in Edge using the ```start``` 
+command.
 ```html
 <!DOCTYPE html>
 <html lang="de">
@@ -600,6 +608,8 @@ or see a practical example of looping through an array!
 
 Loops repeat work.
 
+Place this code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **loop.html** and open it in Edge using the ```start``` 
+command.
 ```html
 <!DOCTYPE html>
 <html lang="de">
@@ -623,13 +633,9 @@ Loops repeat work.
 Output:
 ```text
 1
-
 2
-
 3
-
 4
-
 5
 ```
 
@@ -644,7 +650,8 @@ for (let i = 1; i <= 10; i++) {
 
 }
 ```
-
+Place this code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **loop.html** and open it in Edge using the ```start``` 
+command.
 ```html
 <!DOCTYPE html>
 <html lang="de">
@@ -725,7 +732,7 @@ Here is a simple example of a function that adds two numbers together:
     }
     greet();
 ```
-
+Place this code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **function.html** and open it in Edge using the ```start``` command. 
 ```html
 <!DOCTYPE html>
 <html lang="de">
@@ -813,7 +820,7 @@ const greet = (name) => {
 }
 greet("Fiona");
 ```
-
+Place this code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **parameters.html** and open it in Edge using the ```start``` command.
 ```html
 <!DOCTYPE html>
 <html lang="de">
@@ -837,8 +844,7 @@ greet("Fiona");
 </html>
 ```
 
-Output:
-
+Console Output:
 ```text
     Hello Fiona 
 ```
@@ -905,12 +911,10 @@ JavaScript provides built-in tools to manipulate arrays easily:
 Get the first item:
 
 ```javascript
-
     let fruits = ["Apple", "Banana", "Orange"];
-
     console.log(fruits[0]);
 ```
-
+Place this code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **array.html** and open it in Edge using the ```start```  command.
 ```html
 <!DOCTYPE html>
 <html lang="de">
@@ -934,15 +938,12 @@ Get the first item:
 ```
 
 The result visible on the console **F12**:
-
 ``` text
 Apple
 ```
-
 ***
 
 Loop through all fruits items:
-
 ```javascript
 let fruits = ["Apple", "Banana", "Orange"];
 
@@ -952,8 +953,9 @@ for (let fruit of fruits) {
 
 }
 ```
+Place this code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **array_and_loop.html** and open it in Edge using the ```start```  command.
 
-```html
+````html`
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -1050,28 +1052,20 @@ even though the class syntax makes it look like traditional languages like Java 
 > Objects store related information.
 
 ```javascript
-
 let person = {
-
     name: "Sarah",
-
     age: 25
-
 };
-
 ```
 
 Access values:
 
 ```javascript
-
 console.log(person.name);
 
 console.log(person.age);
-
 ```
-
-
+Place this code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **object.html** and open it in Edge using the ```start```  command.
 ```html
 <!DOCTYPE html>
 <html lang="de">
@@ -1097,7 +1091,6 @@ console.log(person.age);
 </body>
 </html>
 ```
-
 ***
 
 ## Lesson 10: Real Web Page Interaction
@@ -1106,8 +1099,10 @@ Here is a simple example of a JavaScript alert message triggered by a single but
 You can implement this in two common ways: using an event listener (recommended for clean code) or using the inline onclick attribute. [1] 
 
 ### Method 1: Using an Event Listener (Recommended)
+
 This approach keeps your HTML structure and JavaScript logic completely separate, which is best practice. 
 
+Place this code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **button.html** and open it in Edge using the ```start```  command.
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -1137,8 +1132,9 @@ This approach keeps your HTML structure and JavaScript logic completely separate
 
 ### Method 2: Using the Inline onclick Attribute
 
-This is the quickest approach where the JavaScript function is called directly from the HTML tag. [1, 3] 
+This is the quickest approach where the JavaScript function is called directly from the HTML tag.
 
+Place this code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **onclick.html** and open it in Edge using the ```start``` command. 
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -1213,14 +1209,18 @@ JavaScript can also build brand new HTML elements from scratch or delete existin
 * appendChild(): Inserts the new element inside a parent container on the page.
 * remove(): Deletes an element from the DOM entirely.
 
+```javascript
 // 1. Create a new paragraph elementconst newPara = document.createElement("p");
 // 2. Add text to it
 newPara.textContent = "This paragraph was created with JavaScript.";
-// 3. Find a parent container and add the new paragraph to itconst container = document.getElementById("content-box");
+// 3. Find a parent container and add the new paragraph to it
+const container = document.getElementById("content-box");
 container.appendChild(newPara);
+```
 
 ### Example:
 
+Place this code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **title.html** and open it in Edge using the ```start``` command. 
 ```html
 <!DOCTYPE html>
 <html lang="de">
@@ -1256,6 +1256,7 @@ When clicked, the heading changes.
 Here is a complete, single-page HTML and JavaScript click counter example.
 It uses a button to increment the counter and updates the text displayed on the screen instantly.
 
+Place this code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **counter.html** and open it in Edge using the ```start`` command.` 
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -1401,10 +1402,17 @@ Every day:
 
 1. Create one small HTML file.
 2. Put JavaScript inside `<script>` tags.
-3. Open it in Edge.
-4. Press **F12**.
+3. Open it in **Edge** using the ```start``` command in PowerShell.
+4. Press **F12** to enter the browser console.
 5. Use `console.log()` everywhere.
 
 That's exactly how many professional frontend developers experiment and debug browser code.
 
 With your restrictions, you can still learn roughly **80-90% of beginner and intermediate JavaScript** without Node.js, Deno, or any additional software.
+
+Follow the Deno 🦖:
+
+1. [JavaScript Bootcamp Week 1](../JavaScript/7-day_JavaScript_Bootcamp_with_Deno.md)
+2. [JavaScript Bootcamp Week 2](../JavaScript/JavaScript_Bootcamp_Week2.md)
+3. [JavaScript Bootcamp Week 3](../JavaScript/JavaSript_Bootcamp_week3.md) 
+

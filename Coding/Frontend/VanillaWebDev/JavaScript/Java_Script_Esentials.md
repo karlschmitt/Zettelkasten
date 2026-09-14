@@ -36,7 +36,7 @@ author: Karl Schmitt
 20. [Analyzing JavaScript Data Types](./Analyzing_JavaScript_Data_Types.md)
 21. [Modifying JavaScript Data Types](./Modifing_JavaScript_Data_Types.md)
 22. Operators
-23. [A 7-day JavaScript bootcam with Deno](./7-day_JavaScript_Bootcamp_with_Deno.md)
+23. [A 7-day JavaScript bootcamp with Deno](./7-day_JavaScript_Bootcamp_with_Deno.md)
 24. [JavaScript Bootcamp Week 2](./JavaScript_Bootcamp_Week2.md)
 25. [JavaScript Bootcamp Week 3](./JavaSript_Bootcamp_week3.md)
     

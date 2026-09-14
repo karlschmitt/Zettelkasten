@@ -2,7 +2,7 @@
 id: 20260413230534 
 title: A 7-day JavaScript Bootcamp using Deno
 date: 2026-04-16
-keywords [ JavaScript, Bootcamp, Deno ]
+keywords: [ JavaScript, Bootcamp, Deno ]
 ---
 
 # A 7-day JavaScript Bootcamp using Deno
