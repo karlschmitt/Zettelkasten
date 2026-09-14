@@ -928,7 +928,7 @@ Place this code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **
 
         console.log("Get the first item:")
 
-        console.log(fruits\[0]);
+        console.log(fruits[0]);
     </script>
 </body>
 </html>
