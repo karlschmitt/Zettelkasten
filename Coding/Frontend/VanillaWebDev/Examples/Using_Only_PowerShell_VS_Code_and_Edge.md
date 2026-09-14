@@ -768,17 +768,17 @@ Arrow functions were introduced in modern JavaScript to make code shorter and ea
 
 Here is how a simple greeting function looks in both styles:
 Traditional Function:
-
+```javascript
 function sayHello(name) {
     return "Hello, " + name;
 }
-
+```
 Arrow Function:
-
+```javascript
 const sayHello = (name) => {
     return "Hello, " + name;
 };
-
+```
 
 * No function keyword: You skip writing the word function.
 * Arrow =>: Placed between the parameters () and the code block {}.
@@ -789,18 +789,16 @@ const sayHello = (name) => {
 ### The Short-Cut: Implicit Return
 
 If your arrow function only does one single task and returns a value, you can remove the curly braces {} and the return keyword completely. JavaScript will return the result automatically.
-
+```javascript
 // Super short arrow function
-
 const add = (a, b) => a + b;
 console.log(add(5, 3)); // Outputs: 8
-
+```
 
 * One parameter shortcut: If your function takes only one parameter, you can even skip the parentheses () around the input.
-
+```javascript
 const double = n => n * 2;
-
-
+```
 ------------------------------
 
 ### A Major Difference: The this Keyword
@@ -811,7 +809,6 @@ Beyond just being shorter, arrow functions handle the special word this differen
 
 
 ### Arrow Function Example:
-
 ```javascript
 const greet = (name) => {
 
@@ -955,7 +952,7 @@ for (let fruit of fruits) {
 ```
 Place this code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **array_and_loop.html** and open it in Edge using the ```start```  command.
 
-````html`
+```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
