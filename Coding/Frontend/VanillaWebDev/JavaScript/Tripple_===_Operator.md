@@ -1,4 +1,11 @@
-# 20260407100045 JavaScript the tripple === operator
+---
+id: 20260407100045
+title: JavaScript the tripple === operator
+author: Karl Schmitt
+date: 2026-04-07
+---
+
+#  JavaScript the tripple === operator
 
 --------------------------------
 

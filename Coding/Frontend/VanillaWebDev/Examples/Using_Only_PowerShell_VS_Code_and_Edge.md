@@ -4,7 +4,7 @@ title: JavaScript for Absolute Beginners
 author: Karl Schmitt
 date: 2026-09-12
 ---
-
+[]()
 ![Skriptsprachen-Lernpfad für den Browser](../Images/Skriptsprachen-Lernpfad_fuer_den_Browser.png)
 
 > [NOTE!]
@@ -255,8 +255,7 @@ console.log(firstName);
 console.log(age);
 
 ```
-Place the collowing code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **emily.html** and open it in Edge using the ```start``` command:
-
+Place the following code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **emily.html** and open it in Edge using the ```start``` command:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -278,8 +277,8 @@ Place the collowing code into an [HTML](https://en.wikipedia.org/wiki/HTML) file
 </html>
 ```
 ***
-
-## Lesson 4: Math
+![Three IC circuit chips](../Images/Three_IC_circuit_chips.png)
+## Lesson 4: Math π
 
 > [NOTE!]
 > JavaScript can calculate using operators.
@@ -288,7 +287,7 @@ Operators in JavaScript are special symbols or keywords used to perform operatio
 such as math calculations, comparing items, or checking true/false logic. 
 You can learn more details from the [MDN Expressions and Operators Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators).
 
-## Arithmetic Operators (Math)
+## Arithmetic Operators (Math) ➕➖✖️➗
 
 These symbols do basic math on numbers:
 
@@ -297,14 +296,14 @@ These symbols do basic math on numbers:
 * Multiplication (*): Multiplies numbers. Example: 4 * 2 results in 8.
 * Division (/): Divides numbers. Example: 20 / 5 results in 4.
 
-### Assignment Operators (Storing Values)
+### Assignment Operators (Storing Values) 🟰
 
 These symbols assign values to variables:
 
 * Assignment (=): Puts a value into a variable. Example: let x = 10;.
 * Add and Assign (+=): Adds a number to the current variable value and saves it. Example: x += 5; is the same as x = x + 5;.
 
-### Comparison Operators (Comparing Values)
+### Comparison Operators (Comparing Values) 🟰🟰🟰
 
 These symbols compare two things and give a true or false answer:
 
@@ -313,7 +312,9 @@ These symbols compare two things and give a true or false answer:
 * Greater than (>): Checks if the left side is larger. Example: 10 > 5 is true.
 * Less than (<): Checks if the left side is smaller. Example: 3 < 5 is true.
 
-### Logical Operators (Combining Rules)
+### Logical Operators (Combining Rules) ∧
+
+![Gate-Symbols](../Images/Gate-Symbols.png)
 
 These symbols combine multiple true/false checks:
 
@@ -323,7 +324,11 @@ These symbols combine multiple true/false checks:
 
 
 Please place the following code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **math.html** and open it in Edge using the ```start``` command:
-
+```powershel
+ni math.html
+nvim math.html
+start math.html
+```
 ```html
 <!DOCTYPE html>
 <html lang="en">
