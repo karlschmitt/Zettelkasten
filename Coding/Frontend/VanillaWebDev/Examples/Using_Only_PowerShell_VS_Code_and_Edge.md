@@ -85,8 +85,9 @@ start index.html
 ✅ Congratulations! You've run your first JavaScript program.
 
 ***
+![Microsoft Edge Logo](../Images/Microsoft_Edge_Logo.png)
 
-## Lesson 2: The Browser Console
+## Lesson 2: The Browser Console 🌐
 
 The browser console is your best friend.
 
@@ -125,25 +126,24 @@ JavaScript uses **three** keywords to create variables, though you will mostly u
 * const: Creates a constant variable whose value cannot be changed once it is set. Use this for fixed values that should remain the same (like a website URL or a maximum limit).
 * var: The older way to declare variables. It works similarly to let, but has confusing rules about scope (where the variable is accessible), so modern JavaScript code avoids using it.
 
-### How to Use Variables
+### How to Use Variables 🛠️
 
    1. Declare and Assign:
-   
-   let score = 10; // Creates 'score' and puts 10 inside
-   
-   2. Read the Value:
-   
-   console.log(score); // Outputs 10 to the console
-   
+        ```javascript
+        let score = 10; // Creates 'score' and puts 10 inside
+        ```
+   2. Read and output the Value:
+       ```javascript
+       console.log(score); // Outputs 10 to the console
+       ```
    3. Update the Value (for let):
-   
-   score = 15; // Changes the value inside 'score' to 15
-   
-   
-If you'd like, let me know if you want to explore variable naming rules or learn about different data types like strings and numbers.
+       ```javascript
+       score = 15; // Changes the value inside 'score' to 15
+       ```
 
-Open an editor:
+Create a new item an open it in your favorite editor 📝:
 ```powershell
+ni variables.html
 nvim variables.html
 ```
 And add the following [HTML](https://en.wikipedia.org/wiki/HTML) code to ```variables.html```
@@ -166,16 +166,21 @@ And add the following [HTML](https://en.wikipedia.org/wiki/HTML) code to ```vari
 </html>
 ```
 
-Save the file.
+Save the file 💾.
 
-Open it in Edge using the ```start``` command and you'll see a popup.
+
+![Microsoft Edge Logo](../Images/Microsoft_Edge_Logo.png)
+
+Open it in Edge using the ```start``` command and you'll see a popup window.
 ```powershell
 start variables.html
 ```
 Press **F12** and navigate to the **Console** output.
-You shouls see^: ```Hellow Daisy!```
+You shouls see: ```Hellow Daisy!```
 
-Another example:
+#### Another example using a number
+
+Place the following code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **age.html** and open it in Edge using the ```start``` command:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -200,27 +205,31 @@ Another example:
 ## Types of Data
 
 #### Text
-
+```javascript
 let city = "Berlin";
-
+```
 #### Numbers
-
+```javascript
 let temperature = 22;
-
+```
 #### True/False
-
+```javascript
 let isSunny = true;
-
+```
+Place the collowing code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **weather.html** and open it in Edge using the ```start``` command:
+```powershell
+start weather.html
+```
 ```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>JavaScript Alert Demo</title>
+    <title>JavaScript Weather Info</title>
 </head>
 
 <body>
-    <h1>JavaScript Alert Demo</h1>
+    <h1>JavaScript Weather Info</h1>
     <script>
         let city = "Berlin";
         let temperature = 22;
@@ -232,11 +241,8 @@ let isSunny = true;
 </body>
 </html>
 ```
-
-
 ***
-
-## Exercise
+## Exercise 🏋️‍♀️
 
 Study the following JavaScript code:
 ```javascript
@@ -249,7 +255,7 @@ console.log(firstName);
 console.log(age);
 
 ```
-Place into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **emily.html** and open it in Edge using the ```start``` command:
+Place the collowing code into an [HTML](https://en.wikipedia.org/wiki/HTML) file named **emily.html** and open it in Edge using the ```start``` command:
 
 ```html
 <!DOCTYPE html>

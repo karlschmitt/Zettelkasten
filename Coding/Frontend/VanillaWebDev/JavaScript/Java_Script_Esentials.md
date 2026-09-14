@@ -19,7 +19,7 @@ author: Karl Schmitt
 3. [How to learn JavaScript using Deno?](./How_to_learn_JavaScript_using_Deno.md)
 4. [Deno](./What_is_deno.md)
 5. [Exploring JavaScript variables using Deno](./Explorin_JavaScript_Variables.md)
-6. [JavaScript Variales](./Java_Script_Variables.md)
+6. [JavaScript Variables](./Java_Script_Variables.md)
 7. [JavaScript the tripple === operator](./Tripple_===_Operator.md)
 8. [JavaScript Arrays](./JavaScript_Arrays.md)
 9. [Short introduction into JavaScript arrays](./JavaScript_short_array_intoduction.md)
