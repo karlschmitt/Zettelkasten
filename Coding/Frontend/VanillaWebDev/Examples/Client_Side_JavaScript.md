@@ -1,5 +1,8 @@
 ---
 id: 20260912191642
+title: Client Side JavaScript
+author: Karl Schmitt
+date: 2026-09-12
 ---
 
 That actually changes the strategy, but it does **not** prevent you from learning JavaScript.
@@ -12,20 +15,23 @@ Press **F12** in Edge and open the **Console** tab.
 
 You can type JavaScript directly:
 
-let name = "Chris";
+```JavaScript
+let name = "Jennifer Aniston";
 
 console.log(name);
-
+```
 Try:
-
+```JavaScript
 for (let i = 1; i <= 5; i++) {
 
 console.log(i);
 
 }
+```
 
 Or:
 
+```javascript
 const person = {
 
 name: "Chris",
@@ -34,9 +40,8 @@ age: 30
 
 };
 
-
-
 console.log(person.name);
+```
 
 The browser runs this immediately.
 
