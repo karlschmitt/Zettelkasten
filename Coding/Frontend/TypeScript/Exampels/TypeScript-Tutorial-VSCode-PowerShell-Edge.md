@@ -5,7 +5,7 @@ author: Karl Schmitt
 date: 2026-09-17
 keywords: [TypeScript, VS Code, PowerShell, Edge]
 ---
-
+![Web-Entwicklungs-Workflow ohne lokale Laufzeitumgebung](../Images/Web-Entwicklungs-Workflow_ohne_lokale_Laufzeitumgebung.png)
 > [NOTE!]
 > Dieses Tutorial beschreibt eine Methode, um **TypeScript** ausschließlich mit **Visual Studio Code**, **PowerShell** und **Microsoft Edge** zu nutzen, ohne dabei Node.js oder Deno installieren zu müssen. Der Prozess nutzt einen **browserbasierten Compiler**, der TypeScript-Dateien zur Laufzeit direkt in ausführbares JavaScript umwandelt. Während **VS Code** die statische Typprüfung und Autovervollständigung übernimmt, dient die **PowerShell** zur effizienten Projektverwaltung und Dateierstellung. Der Leitfaden vermittelt **Kernkonzepte der Sprache**, wie Schnittstellen, Klassen und Generics, anhand praktischer Beispiele wie einer To-Do-Liste. Abschließend wird erläutert, wie Entwickler ihren Code direkt innerhalb der **Edge DevTools** untersuchen und Fehler beheben können.
 

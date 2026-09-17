@@ -5,7 +5,7 @@ author: Karl Schmitt
 date: 2026-09-17
 keywords: JavaScript, VS Code, PowerShell, Edge
 ---
-
+![Schlanker Workflow für den Einstieg](../Images/Schlanker_Workflow_für_den_Einstieg.png)
 > [NOTE!]
 > Dieses Tutorial bietet einen **anfängerfreundlichen Einstieg** in die JavaScript-Programmierung unter ausschließlicher Verwendung von **Visual Studio Code, PowerShell und Microsoft Edge**. Im Gegensatz zu vielen modernen Kursen verzichtet diese Anleitung komplett auf externe Laufzeitumgebungen wie **Node.js oder Deno**, da der Code direkt im Browser ausgeführt wird. Die Quelle erläutert praxisnah die **Einrichtung des Arbeitsbereichs**, grundlegende Sprachkonzepte sowie die **Manipulation des DOM**, um Webseiten interaktiv zu gestalten. Zudem lernen Anwender, wie sie die integrierten **DevTools zur Fehlersuche** nutzen und kleine Projekte wie einen Klick-Zähler umsetzen. Durch die Kombination von **PowerShell-Befehlen** und Browser-Technologien wird ein schlanker, effizienter Workflow für die Webentwicklung vermittelt. Abschließend gibt der Text Ausblicke auf fortgeschrittene Themen wie **APIs und lokale Speicherung**, um das Gelernte zu vertiefen.
 
