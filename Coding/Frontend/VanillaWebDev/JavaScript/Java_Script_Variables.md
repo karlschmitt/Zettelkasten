@@ -1,15 +1,34 @@
-# 20260412220229 JavaScript Variales
+---
+id: 20260412220229
+title: JavaScript Variales
+author: Karl Schmitt
+date: 2026-04-12
+keywords: [ JavaScript, variables, REPL ]
+---
 
+![Variablen in Laufzeitumgebungen effektiv untersuchen.](../Images/Variablen_in_Laufzeitumgebungen_effektiv_untersuchen.png)
 
+> [NOTE!]
+> Dieser Text erläutert verschiedene Strategien zur **Untersuchung von JavaScript-Variablen** innerhalb der **Deno-Laufzeitumgebung**. Entwickler können die **interaktive REPL** für schnelle Tests nutzen oder **fortgeschrittene Konsolenbefehle** wie `console.table` verwenden, um Datenstrukturen übersichtlich darzustellen. Für komplexere Aufgaben bietet das System spezialisierte Werkzeuge wie die Funktion **Deno.inspect** oder den Zugriff auf das **globale Scope-Objekt**. Professionelle Fehleranalysen werden durch die Integration von **Chrome DevTools** oder den **Debugger in Visual Studio Code** ermöglicht. Insgesamt dient der Leitfaden dazu, die **Sichtbarkeit von Daten** während der Programmierung und Fehlerbehebung zu optimieren. Je nach Umfang des Projekts hilft die Auswahl der passenden Methode dabei, den **Zustand des Codes** effizient zu überwachen.
 
-Exploring variables in Deno can be done in several ways, ranging from quick interactive checks to professional debugging.
+![JavaScript Logo](../Images/JavaScript_Logo.png)
+
+#  JavaScript Variales
+
+![Deno Logo](../Images/Deno_Logo.jpg)
+
+Exploring variables in [Deno](https://deno.com/) can be done in several ways, ranging from quick interactive checks to professional debugging.
+
+> [NOTE!]
+> Follow the dinosaur 🦖 to find out more about [Deno](https://deno.com/): [Deno Runtime](./What_is_deno.md)
 
 Here are the best methods to explore JavaScript variables in Deno.
 
 ---
 
 ### 1. The Interactive REPL (Best for quick experiments)
-Deno comes with a built-in **REPL** (Read-Eval-Print Loop). This is the fastest way to test code and see what’s inside a variable.
+
+[Deno](https://deno.com/) comes with a built-in **REPL** (Read-Eval-Print Loop). This is the fastest way to test code and see what’s inside a variable.
 
 1.  Open your terminal and type `deno`.
 2.  Create a variable and simply type its name to see its value.
@@ -25,6 +44,7 @@ Deno comes with a built-in **REPL** (Read-Eval-Print Loop). This is the fastest 
 ---
 
 ### 2. Advanced Console Methods
+
 Deno’s `console` object is highly optimized for readability.
 
 *   **`console.log()`**: Standard output. In Deno, this automatically color-codes types (strings are green, numbers are yellow, etc.).
@@ -41,6 +61,7 @@ Deno’s `console` object is highly optimized for readability.
 ---
 
 ### 3. Using `Deno.inspect()`
+
 If you want to convert a variable into a readable string (including its colors) without printing it immediately, use `Deno.inspect`. This is what `console.log` uses under the hood.
 
 ```typescript
@@ -52,6 +73,7 @@ console.log("The object looks like this: " + output);
 ---
 
 ### 4. Exploring the "Global" Scope
+
 If you want to see what variables and functions are built into the Deno environment, explore the global objects:
 
 *   **`globalThis`**: The top-level object containing everything available globally.
@@ -62,6 +84,7 @@ In the REPL, just type `Deno` and hit Enter to see the massive list of system to
 ---
 
 ### 5. Debugging with Chrome DevTools (The "Pro" Way)
+
 If you have a complex script and want to "pause time" to look at variables, you can use the Chrome debugger.
 
 1.  Run your script with the inspect flag:
@@ -75,6 +98,7 @@ If you have a complex script and want to "pause time" to look at variables, you 
 ---
 
 ### 6. Using VS Code "Variables" View
+
 If you use Visual Studio Code with the **Deno extension**:
 
 1.  Open a `.ts` file.
@@ -85,6 +109,7 @@ If you use Visual Studio Code with the **Deno extension**:
 ---
 
 ### Summary: Which one to use?
+
 *   **REPL (`deno`):** Use when you are learning syntax or testing a single function.
 *   **`console.table`:** Use when you have a list of data.
 *   **`--inspect-brk`:** Use when you have a bug in a large script and need to see how variables change over time.

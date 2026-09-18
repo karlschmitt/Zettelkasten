@@ -3,7 +3,7 @@ id: 20260912145504
 title: Browser JavaScript using Edge
 author: Karl Schmitt
 date: 2026-09-12
-keywords: [  Browserm, JavaScript, Edge]
+keywords: [  Browser, JavaScript, Edge, PowerShell]
 ---
 
 # Browser JavaScript using Edge

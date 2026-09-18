@@ -1,20 +1,31 @@
-# 20260412214812 What is deno?
+---
+id: 20260412214812 
+title: Deno Runtime
+author: Karl Schmitt
+date: 2026-04-12
+keywords: [ JavaScript, Deno]
+---
+
+# What is deno?
 
 As of 2025, **Deno** has evolved from a "Node.js alternative" into a powerful, production-ready runtime that simplifies JavaScript and TypeScript development.
 
-Here is a breakdown of what Deno is and a roadmap for how to learn it.
+![Deno Land](../Images/Deno_Land.png)
+
+Here is a breakdown of what [Deno](https://deno.com/) is and a roadmap for how to learn it.
 
 ---
 
 ### Part 1: What is Deno?
 
-Deno (an anagram of "Node") is a secure runtime for **JavaScript, TypeScript, and WebAssembly**. It was created by **Ryan Dahl**, the same person who created Node.js, to address the architectural "regrets" he had with Node.
+[Deno](https://deno.com/) (an anagram of "Node") is a secure runtime for **JavaScript, TypeScript, and WebAssembly**. It was created by **Ryan Dahl**, the same person who created Node.js, to address the architectural "regrets" he had with Node.
 
-#### Key Features:
-1.  **Native TypeScript Support:** Unlike Node, Deno runs TypeScript out of the box. You don't need `tsc`, `ts-node`, or complex Webpack/Babel configs.
-2.  **Secure by Default:** Deno is "sandboxed." It cannot access the disk, network, or environment variables unless you explicitly grant permission (e.g., `--allow-net`).
-3.  **No `node_modules` (usually):** Deno uses URL-based imports (standard ES Modules). However, with **Deno 2.0**, it now has excellent backward compatibility with `npm` packages and `package.json`.
-4.  **All-in-One Toolchain:** Deno includes a built-in linter (`deno lint`), formatter (`deno fmt`), test runner (`deno test`), and bundler.
+#### Key 🔑 Features:
+
+1.  **Native TypeScript Support:** Unlike Node, [Deno](https://deno.com/) runs TypeScript out of the box. You don't need `tsc`, `ts-node`, or complex Webpack/Babel configs.
+2.  **Secure by Default:** [Deno](https://deno.com/) is "sandboxed." It cannot access the disk, network, or environment variables unless you explicitly grant permission (e.g., `--allow-net`).
+3.  **No `node_modules` (usually):** [Deno](https://deno.com/) uses URL-based imports (standard ES Modules). However, with **Deno 2.0**, it now has excellent backward compatibility with `npm` packages and `package.json`.
+4.  **All-in-One Toolchain:** [Deno](https://deno.com/) includes a built-in linter (`deno lint`), formatter (`deno fmt`), test runner (`deno test`), and bundler.
 5.  **Standard Library:** It provides a high-quality "standard library" (maintained by the Deno team) for common tasks like file handling, HTTP, and logging.
 
 ---

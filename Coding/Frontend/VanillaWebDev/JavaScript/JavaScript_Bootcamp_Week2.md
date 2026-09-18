@@ -1,6 +1,7 @@
 ---
 id: 20260413231257 
 title: JavaScript Bootcamp Week 2
+author: Karl Schmitt
 date: 2026-04-16
 keywords [ JavaScript, Bootcamp ]
 ---

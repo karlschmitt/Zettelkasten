@@ -1,6 +1,7 @@
 ---
 id: 20260413231824
 title: JavaScript Bootcamp Week 3
+author: Karl Schmitt
 date: 2026-04-16
 keywords: [ JavaScript, Bootcamp, Deno ]
 ---

@@ -1,9 +1,16 @@
 ---
 id: 20260413230534 
 title: A 7-day JavaScript Bootcamp using Deno
+author: Karl Schmitt
 date: 2026-04-16
 keywords: [ JavaScript, Bootcamp, Deno ]
 ---
+
+![7-Tage JavaScript Bootcamp mit Deno](../Images/7-Tage_JavaScript_Bootcamp_mit_Deno.png)
+
+> [NOTE!]
+> Der bereitgestellte Text beschreibt einen **siebentägigen JavaScript-Intensivkurs**, der speziell für die Nutzung mit der Laufzeitumgebung **Deno** konzipiert wurde. Die Struktur sieht tägliche Einheiten von etwa **30 bis 45 Minuten** vor, in denen Lernende Konzepte erst testen und anschließend in einer **Zettelkasten-Notiz** festhalten. In der ersten Woche liegt der Fokus auf **grundlegenden Datentypen**, Variablenzuweisungen, logischen Abfragen und der Erstellung einfacher **Funktionen**. Ein tägliches **Mini-Projekt** sorgt für die praktische Anwendung des Gelernten, wie etwa die Analyse von Datentypen oder der Vergleich von Werten. Ziel dieses Programms ist es, Anfängern ein **solides Fundament** in der Programmierung zu vermitteln, bevor sie zu komplexeren Themen wie Arrays oder asynchronen Prozessen übergehen. Dieser methodische Ansatz kombiniert **praktisches Codieren** mit einer systematischen Wissensdokumentation für einen nachhaltigen Lernerfolg.
+
 
 # A 7-day JavaScript Bootcamp using Deno
 

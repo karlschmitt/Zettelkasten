@@ -5,7 +5,7 @@ author: Karl Schmitt
 date: 2026-09-12
 ---
 
-![]()
+![Skriptsprachen-Lernpfad fuer den Browser](../Images/Skriptsprachen-Lernpfad_fuer_den_Browser.png)
 
 > [NOTE!]
 > Dieser Text widerlegt die Annahme, dass man für das Erlernen von **JavaScript** zwingend moderne Werkzeuge wie Node.js oder Frameworks benötigt. Stattdessen wird der **Browser** als ideale, bereits vorhandene Laufzeitumgebung präsentiert, um die Grundlagen der Programmierung direkt zu meistern. Der Leitfaden führt Anfänger durch den Aufbau einer **Projektstruktur** mit HTML, CSS und JavaScript und erklärt essenzielle Konzepte wie das **DOM**, Event-Handling und die Fetch-API. Durch einen strukturierten **30-Tage-Lernplan** und praxisnahe Beispiele wird gezeigt, wie man interaktive Anwendungen ohne komplexe Zusatzsoftware erstellt. Abschließend wird betont, dass ein tiefes Verständnis der **Web-APIs** und der Kernsprache eine unverzichtbare Basis für die spätere Arbeit mit professionellen Frameworks bildet. Damit fungiert die Quelle als motivierendes Handbuch für einen **puristischen Lernansatz** in der Webentwicklung.

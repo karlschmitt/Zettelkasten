@@ -9,6 +9,7 @@ keywords: JavaScript, VS Code, PowerShell, Edge
 > [NOTE!]
 > Dieses Tutorial bietet einen **anfängerfreundlichen Einstieg** in die JavaScript-Programmierung unter ausschließlicher Verwendung von **Visual Studio Code, PowerShell und Microsoft Edge**. Im Gegensatz zu vielen modernen Kursen verzichtet diese Anleitung komplett auf externe Laufzeitumgebungen wie **Node.js oder Deno**, da der Code direkt im Browser ausgeführt wird. Die Quelle erläutert praxisnah die **Einrichtung des Arbeitsbereichs**, grundlegende Sprachkonzepte sowie die **Manipulation des DOM**, um Webseiten interaktiv zu gestalten. Zudem lernen Anwender, wie sie die integrierten **DevTools zur Fehlersuche** nutzen und kleine Projekte wie einen Klick-Zähler umsetzen. Durch die Kombination von **PowerShell-Befehlen** und Browser-Technologien wird ein schlanker, effizienter Workflow für die Webentwicklung vermittelt. Abschließend gibt der Text Ausblicke auf fortgeschrittene Themen wie **APIs und lokale Speicherung**, um das Gelernte zu vertiefen.
 
+![JavaScript Logo](../Images/JavaScript_Logo.png)
 
 # JavaScript Tutorial — Using Only VS Code, PowerShell, and Edge
 
@@ -178,7 +179,7 @@ Open `app.js` and add:
 console.log("app.js is running in Edge!");
 ```
 
-Save both files (`Ctrl+S`). Then open the page in Edge from PowerShell:
+Save both files (`Ctrl+S`) 💾. Then open the page in Edge from PowerShell:
 
 ```powershell
 Start-Process msedge "D:\CodingDojo\JsPractice\index.html"
@@ -204,6 +205,12 @@ var old = "avoid var"; // legacy; prefer let/const
 score = 20;            // OK
 // name = "Bob";       // Error: assignment to constant
 ```
+> [NOTE!]
+>  Feel free to follow the dinosaur 🦖 to learn more about JavaScript variales: [JavaScript Variables](../JavaScript/Java_Script_Variables.md)
+
+> [NOTE!]
+> In case you want to go even deeper into variables follow the dinosaur 🦖 again: [Exploring JavaScript Variables](../JavaScript/Exploring_JavaScript_Variables.md)
+
 
 ### Data Types
 
@@ -495,6 +502,14 @@ Click the buttons and watch the number change. Open DevTools (`F12`) and type `c
 ## 12. Next Steps
 
 You now have a complete browser-only JavaScript workflow: **write in VS Code, orchestrate with PowerShell, run and debug in Edge.**
+
+![Tent](../Images/Google_Tent.png)
+
+>[NOTE!]
+> Feel free to continue with the bootcamp ⛺:
+* [7-day JavaScript Bootcamp with Deno](../JavaScript/7-day_JavaScript_Bootcamp_with_Deno.md)
+* [JavaScript Bootcamp Week2](../JavaScript/JavaScript_Bootcamp_Week2.md)
+* [JavaSript Bootcamp week3](../JavaScript/JavaSript_Bootcamp_week3.md)
 
 Ideas to keep learning:
 

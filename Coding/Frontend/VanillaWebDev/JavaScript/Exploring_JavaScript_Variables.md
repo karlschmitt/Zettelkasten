@@ -1,4 +1,18 @@
-# 20260412221214 Exploring JavaScript Variables
+---
+id: 20260412221214 
+title: Exploring JavaScript Variables
+author: Karl Schmitt
+date: 2026-04-12
+keywords: [ JavaScript, Deno ]
+---
+
+![Variablen im Labor erklärt.](../Images/Variablen_im_Labor_erklärt.png)
+
+> [NOTE!]
+> Dieser Leitfaden von Karl Schmitt bietet eine praxisorientierte Einführung in den Umgang mit **JavaScript-Variablen** unter Verwendung der **Deno-Laufzeitumgebung**. Der Autor erläutert die wesentlichen Unterschiede zwischen den Schlüsselwörtern **const**, **let** und dem veralteten **var**, um sichere Programmiergewohnheiten zu fördern. Durch gezielte Experimente im **Deno-REPL** oder in Testdateien werden Konzepte wie **dynamische Typisierung**, **Gültigkeitsbereiche** und verschiedene **Datentypen** anschaulich vermittelt. Die Quelle betont eine **wissenschaftliche Lernmethode**, bei der Programmierer Ergebnisse vorhersagen und durch bewusstes Testen von Fehlern ein tieferes Verständnis entwickeln sollen. Praktische **Mini-Herausforderungen** ergänzen die Theorie und unterstützen den Wissenstransfer in die Anwendung. Insgesamt dient der Text als strukturierte Anleitung, um die Grundlagen der Datenverwaltung in JavaScript effizient und **hands-on** zu meistern.
+
+
+# Exploring JavaScript Variables
 
 Learning **JavaScript variables with Deno** is one of the best starting points—you can experiment instantly without setup friction.
 
@@ -6,17 +20,17 @@ Let’s make this **hands-on and exploratory**, not just theory 👇
 
 ***
 
-# 🚀 1. Start a “Playground” File
+## 🚀 1. Start a “Playground” File
 
 Create a file:
 
-```bash
-touch variables.js
+```powershell
+ni variables.js
 ```
 
 Run it anytime with:
 
-```bash
+```powershell
 deno run variables.js
 ```
 
@@ -24,7 +38,7 @@ deno run variables.js
 
 ***
 
-# 🧠 2. The 3 Types of Variables
+## 🧠 2. The 3 Types of Variables
 
 ### ✅ `let` (changeable)
 
@@ -58,7 +72,7 @@ var city = "Berlin";
 
 ***
 
-# 🔍 3. Explore by Changing Values
+## 🔍 3. Explore by Changing Values
 
 Try this:
 
@@ -75,7 +89,7 @@ console.log("x now =", x);
 
 ***
 
-# 📦 4. Learn Types Through Variables
+## 📦 4. Learn Types Through Variables
 
 Experiment like this:
 
@@ -117,7 +131,7 @@ console.log(value);
 
 ***
 
-# 🔁 6. Play With Scope (Very Important Concept)
+## 🔁 6. Play With Scope (Very Important Concept)
 
 ```js
 let globalVar = "I am global";
@@ -140,7 +154,7 @@ test();
 
 ***
 
-# ⚡ 7. Block Scope Experiment
+## ⚡ 7. Block Scope Experiment
 
 ```js
 if (true) {
@@ -158,7 +172,7 @@ console.log(c); // works 😬
 
 ***
 
-# 🧩 8. Real Mini-Challenges (Best Learning Method)
+## 🧩 8. Real Mini-Challenges (Best Learning Method)
 
 Try these in Deno:
 
@@ -207,7 +221,7 @@ console.log(y); // ?
 
 ***
 
-# 🛠️ 9. Use Deno REPL (Super Powerful)
+## 🛠️ 9. Use Deno REPL (Super Powerful)
 
 Instead of files, use interactive mode:
 
@@ -226,7 +240,7 @@ x + 5
 
 ***
 
-# 🔥 10. Best Learning Strategy (This Matters Most)
+## 🔥 10. Best Learning Strategy (This Matters Most)
 
 Don’t just read—**experiment like a scientist**:
 
@@ -242,7 +256,7 @@ Don’t just read—**experiment like a scientist**:
 
 ***
 
-# 💡 Pro Tip
+## 💡 Pro Tip
 
 Think of variables as:
 
@@ -256,7 +270,7 @@ Think of variables as:
 
 ***
 
-# 🚀 If You Want Next Steps
+## 🚀 If You Want Next Steps
 
 I can help you:
 
