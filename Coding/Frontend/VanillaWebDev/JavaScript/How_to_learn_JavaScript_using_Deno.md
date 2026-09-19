@@ -1,4 +1,11 @@
-# 20260412213238 Using Deno to learn JavaScript
+---
+id: 20260412213238 
+title: Using Deno to learn JavaScript
+author: Karl Schmitt
+date: 2026-04-12
+---
+
+# Using Deno to learn JavaScript
 
 Link to the [Deno](https://deno.com/) Website.
 

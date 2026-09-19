@@ -153,10 +153,11 @@ The Console is your instant playground. Use it throughout this tutorial to test 
 
 ---
 
-## 5. Running JavaScript from an HTML File
+## 5. 🏃 Running JavaScript from an HTML File
 
-Now let's run JS from a file. In VS Code, open `index.html` and paste:
+Now let's run JS from a HTML file. In VS Code, open `index.html` and paste:
 
+![HTML5Logo](../Images/HTML5_Logo.png)
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -197,6 +198,7 @@ Put these examples in `app.js` and reload Edge (or paste them into the Console).
 
 ### Variables
 
+In JavaScript, _**variables are named containers used to store and reference data values that can change or remain constant throughout a program.**_
 ```javascript
 let score = 10;        // can be reassigned
 const name = "Ada";    // cannot be reassigned
@@ -214,6 +216,26 @@ score = 20;            // OK
 
 ### Data Types
 
+In JavaScript, _data types are the specific classifications or categories of values—such as numbers, strings, and objects—that tell the engine how to store, interpret, and manipulate that data in memory._
+
+#### Categories of Data Types
+
+JavaScript data types are split into two main groups:
+
+* Primitive Data Types: Basic, single-value types that are immutable.
+
+  * String: Text data enclosed in quotes.
+  * Number: Numeric values for integers and decimals.
+  * BigInt: Extremely large integers.
+  * Boolean: Logical values of `true` or `false`.
+  * Undefined: A variable that has been declared but not assigned a value yet.
+  * Null: An intentional absence of any object value.
+  * Symbol: Unique and immutable identifiers.
+
+* Non-Primitive (Reference) Data Types: Complex data structures that can hold collections of values or more complex entities.
+
+  * Object: Key-value collections, arrays, and functions.
+
 ```javascript
 const text = "a string";
 const number = 42;
@@ -224,8 +246,35 @@ let notSet;                // undefined
 
 console.log(typeof text, typeof number, typeof isReady);
 ```
+> [NOTE!]
+>  In case you feel playful use this link: [Playing with prrimitive data types](./JavaScript/playing_with_prrimitive_data_types.md)
+
+> [NOTE!]
+>  Feel free to analize JavaScript data types even deeper: [Analyzing JavaScript Data Types](../JavaScript/Analyzing_JavaScript_Data_Types.md)
+
+> [NOTE!]
+> Feel free to explore JavaScript data types in detail: [Primitive_Data_Types](./JavaSript//primitive_data_types.md)
+
+> [NOTE!]
+>  Yes in deed, you can modify the type of JavaScript variabels: [Modifing JavaScript Data Types](./JavaScript/Modifing_JavaScript_Data_Types.md)
 
 ### Strings and Template Literals
+
+In JavaScript, _a string is a primitive data type used to represent a sequence of characters for storing and working with text_.
+
+#### How to Create Strings
+
+You can define strings using three different types of delimiters:
+
+* Single quotes (`'`)
+* Double quotes (`"`)
+* Backticks (`` ` ``) for template literals, which allow multiline text and variable embedding
+
+#### Key Characteristics of Strings
+
+* Immutable: Once a string is created, its individual characters cannot be changed in place.
+* Indexed: Each character occupies a specific position starting from index `0`.
+* Length property: You can check the number of characters using the `.length` property.
 
 ```javascript
 const first = "Grace";
@@ -237,6 +286,14 @@ console.log(full);                 // Grace Hopper
 console.log(full.toUpperCase());   // GRACE HOPPER
 console.log(full.length);          // 12
 ```
+> [NOTE!]
+>  Feel free to discover more about strings in this tutorial: [JavaScript String Tutorial](JavaScript_Strings.md)
+
+In JavaScript, _template literals are string literals enclosed by backticks (` `) that allow for multi-line text and easy variable embedding using interpolation._
+
+> [NOTE!]
+> Feel free to dicover more about template literals in this tutorial: [JavaScript Template Literals](JavaScript_Template_Literals.md)
+
 
 ### Conditionals
 

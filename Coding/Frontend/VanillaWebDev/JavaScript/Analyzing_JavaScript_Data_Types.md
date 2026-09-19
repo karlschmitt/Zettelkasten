@@ -1,6 +1,7 @@
 ---
 id: 20260415194808
 title: Analyzing JavaScript Data Types
+author: Karl Schmitt
 date: 2026-04-15
 ---
 

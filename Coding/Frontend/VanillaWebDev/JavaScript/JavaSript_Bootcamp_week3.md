@@ -6,6 +6,12 @@ date: 2026-04-16
 keywords: [ JavaScript, Bootcamp, Deno ]
 ---
 
+![Programmier-Bootcamp Woche 3](../Images/Programmier-Bootcamp_Woche_3.png)
+
+> [NOTE!]
+> Diese Quelle beschreibt die **dritte Woche eines JavaScript-Bootcamps**, das sich auf die Vermittlung von **asynchroner Programmierung** konzentriert. Die Lernenden werden schrittweise durch Konzepte wie **Promises, async/await** und den Umgang mit **Schnittstellen (APIs)** geführt, um Echtzeitdaten abzurufen. Als technische Plattform dient die **Laufzeitumgebung Deno**, mit der die Teilnehmer lernen, **nicht-blockierenden Code** zu schreiben und Fehlermeldungen sicher zu verarbeiten. Der Lehrplan kombiniert theoretisches Wissen mit praktischen Übungen, die von einfachen Konsolenbefehlen bis hin zur Entwicklung eigener **Kommandozeilen-Werkzeuge (CLI)** reichen. Am Ende der Woche beherrschen die Studenten die Verarbeitung von **JSON-Daten** und den Aufbau funktionaler Anwendungen. Damit markiert dieser Abschnitt den Übergang von grundlegenden Skripten hin zur **professionellen Softwareentwicklung**.
+
+
 #  JavaScript Bootcamp Week 3
 
 Nice—Week 3 is where things start to feel _real_. You’ll fetch live data, handle async code, and build a small CLI tool using Deno.

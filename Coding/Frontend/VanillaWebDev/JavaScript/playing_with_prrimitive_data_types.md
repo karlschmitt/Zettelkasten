@@ -1,5 +1,11 @@
-# 20260413225109 Playing around with JavaScript primitive data types
+---
+id: 20260413225109
+title: Playing around with JavaScript primitive data types
+author: Karl Schmitt
+date: 2026-04-13
+---
 
+# Playing around with JavaScript primitive data types
 
 Exploring **primitive data types in JavaScript** is a great way to build a solid foundation. Let’s make this practical and hands-on so you can _learn by doing_.
 

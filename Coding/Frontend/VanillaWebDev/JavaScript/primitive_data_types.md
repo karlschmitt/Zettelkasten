@@ -1,4 +1,11 @@
-# 20260413224520 Exploring primitive JavaScript data types using Deno
+---
+id: 20260413224520 
+title: Exploring primitive JavaScript data types using Deno
+author: Katl Schmitt
+date: 2026-04-13
+---
+
+# Exploring primitive JavaScript data types using Deno
 
 Deno is an excellent environment for exploring JavaScript because it supports the latest ECMAScript standards out of the box with zero configuration.
 

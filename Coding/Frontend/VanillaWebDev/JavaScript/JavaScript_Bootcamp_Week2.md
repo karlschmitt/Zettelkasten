@@ -3,8 +3,14 @@ id: 20260413231257
 title: JavaScript Bootcamp Week 2
 author: Karl Schmitt
 date: 2026-04-16
-keywords [ JavaScript, Bootcamp ]
+keywords: [ JavaScript, Bootcamp ]
 ---
+
+![JavaScript Bootcamp Daten beherrschen](../Images/JavaScript_Bootcamp_Daten_beherrschen.png)
+
+> [NOTE!]
+> Dieser Kursplan für die **zweite Woche eines JavaScript-Bootcamps** konzentriert sich auf den professionellen Umgang mit **komplexen Datenstrukturen**. Die Lernenden vertiefen ihr Wissen über **Arrays und Objekte**, um Informationen effizient zu organisieren und abzurufen. Ein wesentlicher Bestandteil ist die Anwendung von **leistungsstarken Array-Methoden** wie Map und Filter, die eine gezielte Transformation von Daten ermöglichen. Durch den Einsatz der **Deno-Laufzeitumgebung** werden theoretische Konzepte in praktischen Mini-Projekten und **verschiedenen Loop-Techniken** direkt angewendet. Das Ziel dieser Woche besteht darin, durch die **Kombination aller gelernten Techniken** echte Programmierlogik zu entwickeln. Abschließend bereitet das Material auf fortgeschrittene Themen wie die **Integration von APIs** und asynchrone Programmierung vor.
+
 
 # JavaScript Bootcamp Week 2
 
