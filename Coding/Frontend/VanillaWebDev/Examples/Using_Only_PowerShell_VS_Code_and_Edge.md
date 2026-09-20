@@ -1418,9 +1418,11 @@ That's exactly how many professional frontend developers experiment and debug br
 
 With your restrictions, you can still learn roughly **80-90% of beginner and intermediate JavaScript** without Node.js, Deno, or any additional software.
 
+![Tent](../Images/Google_Tent.png)
+
 Follow the Deno 🦖:
 
-1. [JavaScript Bootcamp Week 1](../JavaScript/7-day_JavaScript_Bootcamp_with_Deno.md)
-2. [JavaScript Bootcamp Week 2](../JavaScript/JavaScript_Bootcamp_Week2.md)
-3. [JavaScript Bootcamp Week 3](../JavaScript/JavaSript_Bootcamp_week3.md) 
+1. [🏊 JavaScript Bootcamp Week 1](../JavaScript/7-day_JavaScript_Bootcamp_with_Deno.md)
+2. [🚴 JavaScript Bootcamp Week 2](../JavaScript/JavaScript_Bootcamp_Week2.md)
+3. [🏃 JavaScript Bootcamp Week 3](../JavaScript/JavaSript_Bootcamp_week3.md) 
 

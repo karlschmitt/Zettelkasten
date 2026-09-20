@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive TypeScript Bootcamp</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        tsblue: '#3178c6',
+                        tsdark: '#1e1e1e',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- TypeScript Standalone Compiler (unpkg) -->
+    <script src="https://unpkg.com/typescript@5.3.3/lib/typescript.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .code-font { font-family: 'Fira Code', monospace; }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #1e1e1e; }
+        ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 h-full flex flex-col overflow-hidden">
+
+    <!-- Header -->
+    <header class="bg-slate-800 border-b border-slate-700 px-6 py-3 flex items-center justify-between shrink-0 z-20">
+        <div class="flex items-center space-x-3">
+            <div class="bg-tsblue text-white p-2 rounded-xl shadow-lg flex items-center justify-center w-10 h-10 font-bold text-xl">
+                TS
+            </div>
+            <div>
+                <h1 class="font-bold text-lg text-white leading-tight">TypeScript Bootcamp</h1>
+                <p class="text-xs text-slate-400">Master TypeScript from Basics to Advanced Generics</p>
+            </div>
+        </div>
+
+        <!-- Mode Switches -->
+        <div class="flex items-center space-x-2 bg-slate-900/80 p-1.5 rounded-xl border border-slate-700">
+            <button id="nav-lessons" onclick="switchMode('lessons')" class="px-4 py-1.5 rounded-lg text-sm font-medium transition-all bg-tsblue text-white shadow">
+                <i class="fa-solid fa-graduation-cap mr-1.5"></i> Lessons & Quizzes
+            </button>
+            <button id="nav-sandbox" onclick="switchMode('sandbox')" class="px-4 py-1.5 rounded-lg text-sm font-medium transition-all text-slate-400 hover:text-white">
+                <i class="fa-solid fa-code mr-1.5"></i> Free Sandbox
+            </button>
+        </div>
+
+        <div class="flex items-center space-x-4">
+            <div class="hidden md:flex items-center space-x-2 text-xs bg-slate-700/50 px-3 py-1.5 rounded-full border border-slate-600">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-slate-300">TS v5.3.3 Compiler Online</span>
+            </div>
+            <button onclick="resetProgressModal()" class="text-slate-400 hover:text-red-400 text-xs px-3 py-1.5 rounded-lg border border-slate-700 hover:border-red-500/50 transition-all" title="Reset Bootcamp Progress">
+                <i class="fa-solid fa-rotate-right mr-1"></i> Reset Progress
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="flex-1 flex overflow-hidden relative">
+
+        <!-- Lessons Sidebar -->
+        <aside id="sidebar-lessons" class="w-80 bg-slate-800/90 border-r border-slate-700 flex flex-col shrink-0 transition-all duration-300 z-10">
+            <div class="p-4 border-b border-slate-700 flex items-center justify-between">
+                <h2 class="font-semibold text-sm text-slate-200 uppercase tracking-wider">Curriculum</h2>
+                <span id="progress-counter" class="text-xs bg-tsblue/20 text-tsblue font-medium px-2 py-0.5 rounded-full border border-tsblue/30">0/10 Completed</span>
+            </div>
+            <div id="lessons-list" class="flex-1 overflow-y-auto p-3 space-y-2">
+                <!-- Injected via JavaScript -->
+            </div>
+        </aside>
+
+        <!-- Sandbox / Lesson Content Area + Compiler Split -->
+        <div class="flex-1 flex flex-col lg:flex-row overflow-hidden bg-slate-900">
+
+            <!-- Left Panel: Lesson instructions or Sandbox info -->
+            <div id="content-panel" class="w-full lg:w-5/12 bg-slate-800/60 border-r border-slate-700 flex flex-col overflow-y-auto p-6 space-y-6">
+                <!-- Dynamic Content injected via JS -->
+            </div>
+
+            <!-- Right Panel: Code Editor & Console Output -->
+            <div class="flex-1 flex flex-col h-full overflow-hidden bg-slate-900">
+                
+                <!-- Editor Toolbar -->
+                <div class="bg-slate-800 border-b border-slate-700 px-4 py-2 flex items-center justify-between shrink-0">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider px-2 py-1 bg-slate-700/60 rounded code-font">playground.ts</span>
+                        <span id="compile-status" class="text-xs text-emerald-400 flex items-center"><i class="fa-solid fa-circle-check mr-1 text-[10px]"></i> Ready</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <button onclick="resetCode()" class="px-3 py-1.5 bg-slate-700 hover:bg-slate-600 text-slate-200 text-xs font-medium rounded-lg transition-all flex items-center space-x-1.5 border border-slate-600">
+                            <i class="fa-solid fa-arrow-rotate-left"></i>
+                            <span>Reset Code</span>
+                        </button>
+                        <button onclick="runTypeScript()" class="px-4 py-1.5 bg-gradient-to-r from-tsblue to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white text-xs font-semibold rounded-lg shadow-lg transition-all flex items-center space-x-2 transform active:scale-95">
+                            <i class="fa-solid fa-play"></i>
+                            <span>Run Code</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Code Editor Area -->
+                <div class="flex-1 relative flex flex-col min-h-[45%]">
+                    <textarea id="code-editor" class="w-full h-full bg-[#1e1e1e] text-slate-200 code-font p-4 text-sm resize-none focus:outline-none leading-relaxed spellcheck='false'" placeholder="// Write your TypeScript code here..."></textarea>
+                </div>
+
+                <!-- Resizer Bar / Console Header -->
+                <div class="bg-slate-800 border-t border-b border-slate-700 px-4 py-2 flex items-center justify-between shrink-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-terminal text-slate-400 text-xs"></i>
+                        <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Console Output & Diagnostics</span>
+                    </div>
+                    <button onclick="clearConsole()" class="text-slate-400 hover:text-slate-200 text-xs px-2 py-1 rounded hover:bg-slate-700 transition-all">Clear</button>
+                </div>
+
+                <!-- Console Output Window -->
+                <div id="console-output" class="h-44 bg-slate-950 p-4 code-font text-xs overflow-y-auto space-y-1.5 text-slate-300 border-t border-slate-800">
+                    <div class="text-slate-500">// Console output will appear here when you run code...</div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Quiz Modal / Notification Overlay -->
+    <div id="modal-container" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div id="modal-content" class="bg-slate-800 border border-slate-700 rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-4">
+            <!-- Dynamic Modal Content -->
+        </div>
+    </div>
+
+    <script>
+        // Bootcamp curriculum data with lessons, theory, initial code, solution validator, and quizzes
+        const lessons = [
+            {
+                id: 1,
+                title: "1. Basic Types & Annotations",
+                category: "Basics",
+                description: "Learn how to annotate basic types like string, number, boolean, and arrays in TypeScript.",
+                theory: `
+                    <h3 class="text-lg font-bold text-white mb-2">Basic Types in TypeScript</h3>
+                    <p class="text-slate-300 text-sm mb-3">TypeScript extends JavaScript by adding static type definitions. Type annotations ensure variables retain their intended data types throughout execution.</p>
+                    <ul class="list-disc list-inside text-sm text-slate-300 space-y-1.5 mb-4">
+                        <li><code class="text-tsblue bg-slate-900 px-1.5 py-0.5 rounded code-font">let name: string = "Alice";</code></li>
+                        <li><code class="text-tsblue bg-slate-900 px-1.5 py-0.5 rounded code-font">let age: number = 30;</code></li>
+                        <li><code class="text-tsblue bg-slate-900 px-1.5 py-0.5 rounded code-font">let isActive: boolean = true;</code></li>
+                        <li><code class="text-tsblue bg-slate-900 px-1.5 py-0.5 rounded code-font">let scores: number[] = [90, 85, 92];</code></li>
+                    </ul>
+                    <div class="bg-blue-950/40 border border-blue-800/50 p-3 rounded-xl text-xs text-blue-200">
+                        <i class="fa-solid fa-lightbulb text-amber-400 mr-1.5"></i> <strong>Task:</strong> Declare a variable <code class="code-font font-bold">username</code> of type string, <code class="code-font font-bold">score</code> of type number, and print a greeting message to the console using <code class="code-font font-bold">console.log</code>.
+                    </div>
+                `,
+                initialCode: `// Declare your variables with types below
+let username: string = "TypeScript Learner";
+let score: number = 95;
+
+console.log("Hello, " + username + "! Your score is " + score + ".");
+`,
+                validator: (output, code) => {
+                    return output.some(line => line.includes("Hello")) && code.includes("string") && code.includes("number");
+                },
+                quiz: {
+                    question: "What is the correct syntax for declaring an array of strings in TypeScript?",
+                    options: [
+                        "string[] arr = [];",
+                        "let arr: string[] = [];",
+                        "let arr: array<string> = [];",
+                        "const arr = string[];"
+                    ],
+                    correct: 1
+                }
+            },
+            {
+                id: 2,
+                title: "2. Functions & Return Types",
+                category: "Basics",
+                description: "Type function parameters and explicit return types to catch bugs early.",
+                theory: `
+                    <h3 class="text-lg font-bold text-white mb-2">Typed Functions</h3>
+                    <p class="text-slate-300 text-sm mb-3">Functions in TypeScript can specify types for both input parameters and the returned value.</p>
+                    <pre class="bg-slate-900 p-3 rounded-xl text-xs text-slate-300 code-font mb-4 overflow-x-auto">function add(a: number, b: number): number {
+    return a + b;
+}</pre>
+                    <div class="bg-blue-950/40 border border-blue-800/50 p-3 rounded-xl text-xs text-blue-200">
+                        <i class="fa-solid fa-lightbulb text-amber-400 mr-1.5"></i> <strong>Task:</strong> Create a function named <code class="code-font font-bold">calculateArea</code> that takes width and height as numbers and returns their product as a number. Call it and log the result.
+                    </div>
+                `,
+                initialCode: `// Write your calculateArea function here
+function calculateArea(width: number, height: number): number {
+    return width * height;
+}
+
+const area = calculateArea(10, 5);
+console.log("Area is: " + area);
+`,
+                validator: (output, code) => {
+                    return output.some(line => line.includes("Area is: 50")) && code.includes("number");
+                },
+                quiz: {
+                    question: "What does the void return type signify in a TypeScript function?",
+                    options: [
+                        "The function returns undefined or null.",
+                        "The function returns nothing.",
+                        "The function throws an error.",
+                        "The function returns any type."
+                    ],
+                    correct: 1
+                }
+            },
+            {
+                id: 3,
+                title: "3. Interfaces & Objects",
+                category: "Interfaces",
+                description: "Define object shapes and contracts using TypeScript interfaces.",
+                theory: `
+                    <h3 class="text-lg font-bold text-white mb-2">Interfaces</h3>
+                    <p class="text-slate-300 text-sm mb-3">Interfaces are a powerful way to define contracts within your code and shapes for objects.</p>
+                    <pre class="bg-slate-900 p-3 rounded-xl text-xs text-slate-300 code-font mb-4 overflow-x-auto">interface User {
+    id: number;
+    name: string;
+    isAdmin?: boolean; // Optional property
+}</pre>
+                    <div class="bg-blue-950/40 border border-blue-800/50 p-3 rounded-xl text-xs text-blue-200">
+                        <i class="fa-solid fa-lightbulb text-amber-400 mr-1.5"></i> <strong>Task:</strong> Define an interface <code class="code-font font-bold">Product</code> with <code class="code-font font-bold">id</code> (number), <code class="code-font font-bold">title</code> (string), and <code class="code-font font-bold">price</code> (number). Create an object matching this interface and print its details.
+                    </div>
+                `,
+                initialCode: `interface Product {
+    id: number;
+    title: string;
+    price: number;
+}
+
+const item: Product = {
+    id: 101,
+    title: "Mechanical Keyboard",
+    price: 129.99
+};
+
+console.log("Product: " + item.title + " costs $" + item.price);
+`,
+                validator: (output, code) => {
+                    return output.some(line => line.includes("Mechanical Keyboard")) && code.includes("interface");
+                },
+                quiz: {
+                    question: "How do you mark a property as optional in an interface?",
+                    options: [
+                        "property?: type",
+                        "optional property: type",
+                        "property: type | null",
+                        "property!: type"
+                    ],
+                    correct: 0
+                }
+            },
+            {
+                id: 4,
+                title: "4. Type Aliases & Union Types",
+                category: "Types",
+                description: "Combine multiple types using unions (|) and define custom type aliases.",
+                theory: `
+                    <h3 class="text-lg font-bold text-white mb-2">Union Types & Aliases</h3>
+                    <p class="text-slate-300 text-sm mb-3">Union types allow a value to be one of several types, while type aliases give a custom name to any type.</p>
+                    <pre class="bg-slate-900 p-3 rounded-xl text-xs text-slate-300 code-font mb-4 overflow-x-auto">type Status = "success" | "error" | "loading";
+let currentStatus: Status = "success";</pre>
+                    <div class="bg-blue-950/40 border border-blue-800/50 p-3 rounded-xl text-xs text-blue-200">
+                        <i class="fa-solid fa-lightbulb text-amber-400 mr-1.5"></i> <strong>Task:</strong> Create a type alias <code class="code-font font-bold">ID</code> that can be either a <code class="code-font font-bold">string</code> or a <code class="code-font font-bold">number</code>. Create a variable of type ID and log it.
+                    </div>
+                `,
+                initialCode: `type ID = string | number;
+
+let userId: ID = "usr_99812";
+console.log("User ID is: " + userId);
+
+userId = 42;
+console.log("New User ID is: " + userId);
+`,
+                validator: (output, code) => {
+                    return output.length >= 2 && code.includes("type ID");
+                },
+                quiz: {
+                    question: "Which operator is used to specify a union type in TypeScript?",
+                    options: [
+                        "&",
+                        "|",
+                        "or",
+                        "+"
+                    ],
+                    correct: 1
+                }
+            },
+            {
+                id: 5,
+                title: "5. Enums",
+                category: "Advanced Types",
+                description: "Use enums to define a set of named numeric or string constants.",
+                theory: `
+                    <h3 class="text-lg font-bold text-white mb-2">Enums (Enumerations)</h3>
+                    <p class="text-slate-300 text-sm mb-3">Enums allow developers to define a set of named constants, making intent clearer or creating distinct sets of cases.</p>
+                    <pre class="bg-slate-900 p-3 rounded-xl text-xs text-slate-300 code-font mb-4 overflow-x-auto">enum Direction {
+    Up = "UP",
+    Down = "DOWN",
+    Left = "LEFT",
+    Right = "RIGHT"
+}</pre>
+                    <div class="bg-blue-950/40 border border-blue-800/50 p-3 rounded-xl text-xs text-blue-200">
+                        <i class="fa-solid fa-lightbulb text-amber-400 mr-1.5"></i> <strong>Task:</strong> Define an enum <code class="code-font font-bold">LogLevel</code> with values <code class="code-font font-bold">Info</code>, <code class="code-font font-bold">Warning</code>, and <code class="code-font font-bold">Error</code>. Assign one to a variable and print it.
+                    </div>
+                `,
+                initialCode: `enum LogLevel {
+    Info = "INFO",
+    Warning = "WARNING",
+    Error = "ERROR"
+}
+
+let currentLevel: LogLevel = LogLevel.Warning;
+console.log("Current log level: " + currentLevel);
+`,
+                validator: (output, code) => {
+                    return output.some(line => line.includes("WARNING")) && code.includes("enum");
+                },
+                quiz: {
+                    question: "By default, what type of values are assigned to enum members if uninitialized?",
+                    options: [
+                        "Strings",
+                        "Booleans",
+                        "Numbers starting from 0",
+                        "Objects"
+                    ],
+                    correct: 2
+                }
+            },
+            {
+                id: 6,
+                title: "6. Classes & Access Modifiers",
+                category: "OOP",
+                description: "Build robust object-oriented classes with public, private, and readonly modifiers.",
+                theory: `
+                    <h3 class="text-lg font-bold text-white mb-2">TypeScript Classes</h3>
+                    <p class="text-slate-300 text-sm mb-3">TypeScript adds visibility modifiers (<code class="code-font">public</code>, <code class="code-font">private</code>, <code class="code-font">protected</code>) and <code class="code-font">readonly</code> to standard ES6 classes.</p>
+                    <pre class="bg-slate-900 p-3 rounded-xl text-xs text-slate-300 code-font mb-4 overflow-x-auto">class Animal {
+    constructor(public name: string) {}
+    speak() { console.log(this.name + " makes a noise."); }
+}</pre>
+                    <div class="bg-blue-950/40 border border-blue-800/50 p-3 rounded-xl text-xs text-blue-200">
+                        <i class="fa-solid fa-lightbulb text-amber-400 mr-1.5"></i> <strong>Task:</strong> Create a <code class="code-font font-bold">Car</code> class with a readonly <code class="code-font font-bold">brand</code> property and a method <code class="code-font font-bold">start()</code> that prints a message. Instantiate and call <code class="code-font font-bold">start()</code>.
+                    </div>
+                `,
+                initialCode: `class Car {
+    constructor(readonly brand: string) {}
+
+    start(): void {
+        console.log(this.brand + " engine started smoothly.");
+    }
+}
+
+const myCar = new Car("Tesla");
+myCar.start();
+`,
+                validator: (output, code) => {
+                    return output.some(line => line.includes("Tesla engine started")) && code.includes("readonly");
+                },
+                quiz: {
+                    question: "What does the 'readonly' modifier do in a TypeScript class?",
+                    options: [
+                        "Prevents the property from being read outside the class.",
+                        "Prevents the property from being modified after initialization.",
+                        "Makes the property static across all instances.",
+                        "Automatically makes the property optional."
+                    ],
+                    correct: 1
+                }
+            },
+            {
+                id: 7,
+                title: "7. Generics (Functions & Interfaces)",
+                category: "Generics",
+                description: "Write reusable and type-safe algorithms using generic type parameters <T>.",
+                theory: `
+                    <h3 class="text-lg font-bold text-white mb-2">Introduction to Generics</h3>
+                    <p class="text-slate-300 text-sm mb-3">Generics enable you to create components that work with any data type while maintaining full type safety.</p>
+                    <pre class="bg-slate-900 p-3 rounded-xl text-xs text-slate-300 code-font mb-4 overflow-x-auto">function identity<T>(arg: T): T {
+    return arg;
+}</pre>
+                    <div class="bg-blue-950/40 border border-blue-800/50 p-3 rounded-xl text-xs text-blue-200">
+                        <i class="fa-solid fa-lightbulb text-amber-400 mr-1.5"></i> <strong>Task:</strong> Create a generic function <code class="code-font font-bold">wrapInArray<T>(item: T): T[]</code> that wraps any input item inside an array and returns it. Test it with both a string and a number.
+                    </div>
+                `,
+                initialCode: `function wrapInArray<T>(item: T): T[] {
+    return [item];
+}
+
+const stringArray = wrapInArray("TypeScript");
+const numberArray = wrapInArray(42);
+
+console.log(stringArray);
+console.log(numberArray);
+`,
+                validator: (output, code) => {
+                    return output.some(line => line.includes("TypeScript")) && code.includes("<T>");
+                },
+                quiz: {
+                    question: "Why are generics preferred over 'any' type in functions?",
+                    options: [
+                        "Generics preserve the exact type information passed into and returned from the function.",
+                        "Generics execute much faster at runtime.",
+                        "Generics are required for all async functions.",
+                        "Using 'any' causes syntax errors in TypeScript."
+                    ],
+                    correct: 0
+                }
+            },
+            {
+                id: 8,
+                title: "8. Advanced Generics & Constraints",
+                category: "Generics",
+                description: "Restrict generic types using the 'extends' keyword to ensure properties exist.",
+                theory: `
+                    <h3 class="text-lg font-bold text-white mb-2">Generic Constraints</h3>
+                    <p class="text-slate-300 text-sm mb-3">You can constrain a generic type to ensure it possesses specific properties or matches a shape using <code class="code-font">extends</code>.</p>
+                    <pre class="bg-slate-900 p-3 rounded-xl text-xs text-slate-300 code-font mb-4 overflow-x-auto">function getLength<T extends { length: number }>(item: T): number {
+    return item.length;
+}</pre>
+                    <div class="bg-blue-950/40 border border-blue-800/50 p-3 rounded-xl text-xs text-blue-200">
+                        <i class="fa-solid fa-lightbulb text-amber-400 mr-1.5"></i> <strong>Task:</strong> Write a generic function <code class="code-font font-bold">printLength<T extends { length: number }>(obj: T)</code> that logs the length of strings or arrays passed to it. Call it with an array of items.
+                    </div>
+                `,
+                initialCode: `function printLength<T extends { length: number }>(obj: T): void {
+    console.log("Length is: " + obj.length);
+}
+
+printLength(["apple", "banana", "cherry"]);
+printLength("Hello TypeScript!");
+`,
+                validator: (output, code) => {
+                    return output.some(line => line.includes("Length is: 3")) && code.includes("extends");
+                },
+                quiz: {
+                    question: "What does <T extends { id: number }> mean in a generic definition?",
+                    options: [
+                        "T must inherit from a class named id.",
+                        "T can be any type as long as it has an 'id' property of type number.",
+                        "T must be an array of numbers.",
+                        "T is optional and defaults to number."
+                    ],
+                    correct: 1
+                }
+            },
+            {
+                id: 9,
+                title: "9. Utility Types (Partial, Pick, Omit)",
+                category: "Advanced Types",
+                description: "Transform existing types effortlessly with TypeScript's built-in utility types.",
+                theory: `
+                    <h3 class="text-lg font-bold text-white mb-2">Utility Types</h3>
+                    <p class="text-slate-300 text-sm mb-3">TypeScript provides utility types to facilitate common type transformations:</p>
+                    <ul class="list-disc list-inside text-sm text-slate-300 space-y-1.5 mb-4">
+                        <li><code class="text-tsblue bg-slate-900 px-1.5 py-0.5 rounded code-font">Partial&lt;T&gt;</code> - Makes all properties optional.</li>
+                        <li><code class="text-tsblue bg-slate-900 px-1.5 py-0.5 rounded code-font">Pick&lt;T, K&gt;</code> - Selects a subset of properties.</li>
+                        <li><code class="text-tsblue bg-slate-900 px-1.5 py-0.5 rounded code-font">Omit&lt;T, K&gt;</code> - Removes properties from a type.</li>
+                    </ul>
+                    <div class="bg-blue-950/40 border border-blue-800/50 p-3 rounded-xl text-xs text-blue-200">
+                        <i class="fa-solid fa-lightbulb text-amber-400 mr-1.5"></i> <strong>Task:</strong> Define an interface <code class="code-font font-bold">Todo</code> with <code class="code-font font-bold">title</code> and <code class="code-font font-bold">completed</code>. Use <code class="code-font font-bold">Partial&lt;Todo&gt;</code> to create an update function that accepts partial updates.
+                    </div>
+                `,
+                initialCode: `interface Todo {
+    title: string;
+    completed: boolean;
+    description: string;
+}
+
+function updateTodo(todo: Todo, fieldsToUpdate: Partial<Todo>): Todo {
+    return { ...todo, ...fieldsToUpdate };
+}
+
+const myTodo: Todo = { title: "Learn TS", completed: false, description: "Master generics and utilities" };
+const updated = updateTodo(myTodo, { completed: true });
+
+console.log("Todo completed status: " + updated.completed);
+`,
+                validator: (output, code) => {
+                    return output.some(line => line.includes("Todo completed status: true")) && code.includes("Partial");
+                },
+                quiz: {
+                    question: "What does Partial<T> do to all properties of type T?",
+                    options: [
+                        "Makes them readonly",
+                        "Makes them optional (? )",
+                        "Deletes them",
+                        "Makes them required"
+                    ],
+                    correct: 1
+                }
+            },
+            {
+                id: 10,
+                title: "10. Mapped & Conditional Types",
+                category: "Expert",
+                description: "Master meta-programming in TypeScript with Mapped and Conditional types.",
+                theory: `
+                    <h3 class="text-lg font-bold text-white mb-2">Mapped & Conditional Types</h3>
+                    <p class="text-slate-300 text-sm mb-3">Conditional types act like if statements in the type system (<code class="code-font">T extends U ? X : Y</code>), while mapped types iterate over keys.</p>
+                    <pre class="bg-slate-900 p-3 rounded-xl text-xs text-slate-300 code-font mb-4 overflow-x-auto">type IsString<T> = T extends string ? true : false;</pre>
+                    <div class="bg-blue-950/40 border border-blue-800/50 p-3 rounded-xl text-xs text-blue-200">
+                        <i class="fa-solid fa-lightbulb text-amber-400 mr-1.5"></i> <strong>Task:</strong> Create a conditional type <code class="code-font font-bold">TypeName&lt;T&gt;</code> that returns <code class="code-font font-bold">"string"</code> if T is a string, or <code class="code-font font-bold">"other"</code> otherwise. Write code demonstrating its usage.
+                    </div>
+                `,
+                initialCode: `type TypeName<T> = T extends string ? "string" : "other";
+
+function checkType<T>(val: T): TypeName<T> {
+    if (typeof val === "string") {
+        return "string" as TypeName<T>;
+    }
+    return "other" as TypeName<T>;
+}
+
+console.log(checkType("Hello"));
+console.log(checkType(123));
+`,
+                validator: (output, code) => {
+                    return output.some(line => line.includes("string")) && output.some(line => line.includes("other")) && code.includes("extends");
+                },
+                quiz: {
+                    question: "What is the syntax for a conditional type in TypeScript?",
+                    options: [
+                        "T ? X : Y",
+                        "T extends U ? X : Y",
+                        "if T then X else Y",
+                        "T == U => X : Y"
+                    ],
+                    correct: 1
+                }
+            }
+        ];
+
+        // State variables
+        let currentMode = 'lessons'; // 'lessons' or 'sandbox'
+        let currentLessonIndex = 0;
+        let completedLessons = JSON.parse(localStorage.getItem('ts_bootcamp_completed') || '{}');
+        let userSandboxCode = localStorage.getItem('ts_bootcamp_sandbox') || `// Welcome to the TypeScript Sandbox!
+// Experiment freely with types, interfaces, classes, and generics.
+
+interface Person {
+    name: string;
+    age: number;
+}
+
+function greet(person: Person): string {
+    return "Hello, " + person.name + "! You are " + person.age + " years old.";
+}
+
+const user: Person = { name: "Developer", age: 28 };
+console.log(greet(user));
+`;
+
+        // Initialize application on load
+        window.onload = function() {
+            renderLessonsList();
+            loadLesson(0);
+            updateProgressCounter();
+        };
+
+        // Switch between Lessons mode and Sandbox mode
+        function switchMode(mode) {
+            currentMode = mode;
+            const lessonsBtn = document.getElementById('nav-lessons');
+            const sandboxBtn = document.getElementById('nav-sandbox');
+            const sidebar = document.getElementById('sidebar-lessons');
+            const contentPanel = document.getElementById('content-panel');
+            const editor = document.getElementById('code-editor');
+
+            if (mode === 'lessons') {
+                lessonsBtn.className = "px-4 py-1.5 rounded-lg text-sm font-medium transition-all bg-tsblue text-white shadow";
+                sandboxBtn.className = "px-4 py-1.5 rounded-lg text-sm font-medium transition-all text-slate-400 hover:text-white";
+                sidebar.classList.remove('hidden');
+                loadLesson(currentLessonIndex);
+            } else {
+                sandboxBtn.className = "px-4 py-1.5 rounded-lg text-sm font-medium transition-all bg-tsblue text-white shadow";
+                lessonsBtn.className = "px-4 py-1.5 rounded-lg text-sm font-medium transition-all text-slate-400 hover:text-white";
+                sidebar.classList.add('hidden');
+                
+                // Load sandbox view
+                contentPanel.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-2 text-tsblue">
+                            <i class="fa-solid fa-code text-xl"></i>
+                            <h2 class="text-xl font-bold text-white">TypeScript Sandbox</h2>
+                        </div>
+                        <p class="text-slate-300 text-sm">Use this free playground to experiment with advanced TypeScript features, type assertions, utility types, and custom generics without constraints.</p>
+                        <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/60 space-y-2">
+                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Quick Tips</h4>
+                            <ul class="list-disc list-inside text-xs text-slate-300 space-y-1">
+                                <code class="text-slate-400">console.log()</code> prints output to the bottom console.
+                                <li>Type checking errors will appear in the diagnostics console.</li>
+                                <li>Click <span class="text-tsblue font-semibold">Run Code</span> to compile and execute.</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+                editor.value = userSandboxCode;
+                clearConsole();
+                appendConsole("System initialized. Ready for TypeScript compilation.", "text-emerald-400");
+            }
+        }
+
+        // Render sidebar lessons list
+        function renderLessonsList() {
+            const listEl = document.getElementById('lessons-list');
+            listEl.innerHTML = "";
+
+            lessons.forEach((lesson, index) => {
+                const isCompleted = completedLessons[lesson.id];
+                const isActive = (currentMode === 'lessons' && currentLessonIndex === index);
+
+                let btn = document.createElement('button');
+                btn.onclick = () => {
+                    if (currentMode !== 'lessons') switchMode('lessons');
+                    loadLesson(index);
+                };
+                btn.className = `w-full text-left p-3 rounded-xl transition-all flex items-center justify-between border ${
+                    isActive 
+                        ? 'bg-tsblue/20 border-tsblue text-white shadow-md' 
+                        : 'bg-slate-900/40 border-slate-700/60 text-slate-300 hover:bg-slate-700/40'
+                }`;
+
+                btn.innerHTML = `
+                    <div class="flex items-center space-x-3 overflow-hidden">
+                        <div class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
+                            isCompleted ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' : 'bg-slate-800 text-slate-400 border border-slate-700'
+                        }">
+                            ${isCompleted ? '<i class="fa-solid fa-check text-[10px]"></i>' : (index + 1)}
+                        </div>
+                        <div class="truncate">
+                            <p class="text-xs font-semibold truncate">${lesson.title}</p>
+                            <span class="text-[10px] text-slate-400">${lesson.category}</span>
+                        </div>
+                    </div>
+                `;
+                listEl.appendChild(btn);
+            });
+        }
+
+        // Load specific lesson into view & editor
+        function loadLesson(index) {
+            currentLessonIndex = index;
+            const lesson = lessons[index];
+            renderLessonsList();
+
+            const contentPanel = document.getElementById('content-panel');
+            contentPanel.innerHTML = `
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs uppercase tracking-wider font-semibold text-tsblue bg-tsblue/10 px-2.5 py-1 rounded-lg border border-tsblue/20">${lesson.category}</span>
+                        <span class="text-xs text-slate-400">Lesson ${index + 1} of ${lessons.length}</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-white">${lesson.title}</h2>
+                    <p class="text-slate-300 text-sm">${lesson.description}</p>
+                    <div class="border-t border-slate-700/60 pt-4">
+                        ${lesson.theory}
+                    </div>
+                </div>
+                <div class="mt-auto pt-4 flex items-center justify-between border-t border-slate-700/60">
+                    <button onclick="prevLesson()" ${index === 0 ? 'disabled' : ''} class="px-3 py-1.5 bg-slate-700 hover:bg-slate-600 disabled:opacity-40 disabled:cursor-not-allowed text-xs font-medium rounded-lg text-slate-200 transition-all">
+                        <i class="fa-solid fa-arrow-left mr-1"></i> Previous
+                    </button>
+                    <button onclick="openQuizModal(${index})" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-xs font-semibold rounded-lg text-white shadow transition-all flex items-center space-x-1.5">
+                        <i class="fa-solid fa-question-circle"></i>
+                        <span>Take Quiz</span>
+                    </button>
+                    <button onclick="nextLesson()" ${index === lessons.length - 1 ? 'disabled' : ''} class="px-3 py-1.5 bg-tsblue hover:bg-blue-600 disabled:opacity-40 disabled:cursor-not-allowed text-xs font-medium rounded-lg text-white transition-all">
+                        Next <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            `;
+
+            const editor = document.getElementById('code-editor');
+            editor.value = lesson.initialCode;
+            clearConsole();
+            appendConsole(`Loaded: ${lesson.title}. Click 'Run Code' to test your solution.`, "text-slate-400");
+        }
+
+        function prevLesson() {
+            if (currentLessonIndex > 0) loadLesson(currentLessonIndex - 1);
+        }
+
+        function nextLesson() {
+            if (currentLessonIndex < lessons.length - 1) loadLesson(currentLessonIndex + 1);
+        }
+
+        // Reset code for current lesson or sandbox
+        function resetCode() {
+            if (currentMode === 'lessons') {
+                const lesson = lessons[currentLessonIndex];
+                document.getElementById('code-editor').value = lesson.initialCode;
+                clearConsole();
+                appendConsole("Code reset to initial lesson template.", "text-amber-400");
+            } else {
+                document.getElementById('code-editor').value = `// TypeScript Sandbox\nconsole.log("Sandbox reset!");`;
+                clearConsole();
+            }
+        }
+
+        // Compile and run TypeScript code using TS standalone compiler
+        function runTypeScript() {
+            const editor = document.getElementById('code-editor');
+            const code = editor.value;
+
+            if (currentMode === 'sandbox') {
+                userSandboxCode = code;
+                localStorage.setItem('ts_bootcamp_sandbox', code);
+            }
+
+            clearConsole();
+            appendConsole("Compiling TypeScript code...", "text-slate-400");
+
+            try {
+                // Compile TypeScript using ts.transpileModule
+                const result = ts.transpileModule(code, {
+                    compilerOptions: {
+                        module: ts.ModuleKind.CommonJS,
+                        target: ts.ScriptTarget.ES2015,
+                        strict: true
+                    }
+                });
+
+                if (result.diagnostics && result.diagnostics.length > 0) {
+                    appendConsole("⚠️ TypeScript Type Diagnostics / Errors:", "text-amber-400");
+                    result.diagnostics.forEach(diag => {
+                        const message = ts.flattenDiagnosticMessageText(diag.messageText, '\n');
+                        const line = diag.file ? diag.file.getLineAndCharacterOfPosition(diag.start).line + 1 : 0;
+                        appendConsole(`  [Line ${line}] ${message}`, "text-red-400");
+                    });
+                }
+
+                appendConsole("Transpilation successful. Executing JavaScript...", "text-emerald-400");
+                
+                // Capture console.log outputs
+                const capturedOutput = [];
+                const customConsole = {
+                    log: (...args) => {
+                        const formatted = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)).join(' ');
+                        capturedOutput.push(formatted);
+                        appendConsole(formatted, "text-slate-200");
+                    },
+                    error: (...args) => {
+                        const formatted = args.join(' ');
+                        capturedOutput.push("Error: " + formatted);
+                        appendConsole("Error: " + formatted, "text-red-400");
+                    },
+                    warn: (...args) => {
+                        const formatted = args.join(' ');
+                        capturedOutput.push("Warning: " + formatted);
+                        appendConsole("Warning: " + formatted, "text-amber-400");
+                    }
+                };
+
+                // Execute in safe sandbox function
+                const executeFn = new Function('console', result.outputText);
+                executeFn(customConsole);
+
+                // If in lesson mode, validate solution
+                if (currentMode === 'lessons') {
+                    const currentLesson = lessons[currentLessonIndex];
+                    if (currentLesson.validator(capturedOutput, code)) {
+                        if (!completedLessons[currentLesson.id]) {
+                            completedLessons[currentLesson.id] = true;
+                            localStorage.setItem('ts_bootcamp_completed', JSON.stringify(completedLessons));
+                            updateProgressCounter();
+                            renderLessonsList();
+                            showSuccessNotification("🎉 Great job! Lesson completed successfully.");
+                        }
+                    }
+                }
+
+            } catch (err) {
+                appendConsole(`❌ Runtime Execution Error: ${err.message}`, "text-red-400");
+            }
+        }
+
+        // Console logger helper
+        function appendConsole(text, colorClass = "text-slate-300") {
+            const consoleEl = document.getElementById('console-output');
+            const div = document.createElement('div');
+            div.className = `${colorClass} leading-relaxed`;
+            div.textContent = text;
+            consoleEl.appendChild(div);
+            consoleEl.scrollTop = consoleEl.scrollHeight;
+        }
+
+        function clearConsole() {
+            document.getElementById('console-output').innerHTML = "";
+        }
+
+        function updateProgressCounter() {
+            const completedCount = Object.keys(completedLessons).length;
+            document.getElementById('progress-counter').innerText = `${completedCount}/${lessons.length} Completed`;
+        }
+
+        // Quiz Modal Logic
+        function openQuizModal(lessonIndex) {
+            const lesson = lessons[lessonIndex];
+            const quiz = lesson.quiz;
+            const modalContainer = document.getElementById('modal-container');
+            const modalContent = document.getElementById('modal-content');
+
+            modalContent.innerHTML = `
+                <div class="flex items-center justify-between border-b border-slate-700 pb-3">
+                    <h3 class="font-bold text-white text-base flex items-center space-x-2">
+                        <i class="fa-solid fa-question-circle text-tsblue"></i>
+                        <span>Knowledge Check: ${lesson.title}</span>
+                    </h3>
+                    <button onclick="closeModal()" class="text-slate-400 hover:text-white text-sm"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <p class="text-sm text-slate-200 font-medium mt-2">${quiz.question}</p>
+                <div class="space-y-2.5 my-3" id="quiz-options">
+                    ${quiz.options.map((opt, i) => `
+                        <label class="flex items-center space-x-3 p-3 rounded-xl bg-slate-900/60 border border-slate-700 hover:border-tsblue cursor-pointer transition-all">
+                            <input type="radio" name="quiz-option" value="${i}" class="text-tsblue focus:ring-tsblue">
+                            <span class="text-sm text-slate-300">${opt}</span>
+                        </label>
+                    `).join('')}
+                </div>
+                <div class="flex justify-end space-x-3 pt-3 border-t border-slate-700">
+                    <button onclick="closeModal()" class="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-xs font-semibold rounded-lg text-slate-200 transition-all">Cancel</button>
+                    <button onclick="submitQuiz(${lessonIndex})" class="px-4 py-2 bg-tsblue hover:bg-blue-600 text-xs font-semibold rounded-lg text-white transition-all shadow">Submit Answer</button>
+                </div>
+            `;
+            modalContainer.classList.remove('hidden');
+        }
+
+        function submitQuiz(lessonIndex) {
+            const radios = document.querySelectorAll('input[name="quiz-option"]');
+            let selected = -1;
+            radios.forEach((r, idx) => { if (r.checked) selected = idx; });
+
+            if (selected === -1) {
+                alertBox("Please select an answer option.");
+                return;
+            }
+
+            const correctIndex = lessons[lessonIndex].quiz.correct;
+            const modalContent = document.getElementById('modal-content');
+
+            if (selected === correctIndex) {
+                completedLessons[lessons[lessonIndex].id] = true;
+                localStorage.setItem('ts_bootcamp_completed', JSON.stringify(completedLessons));
+                updateProgressCounter();
+                renderLessonsList();
+
+                modalContent.innerHTML = `
+                    <div class="text-center py-6 space-y-3">
+                        <div class="w-16 h-16 bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 rounded-full flex items-center justify-center mx-auto text-2xl">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Correct Answer!</h3>
+                        <p class="text-sm text-slate-300">You have successfully mastered this concept.</p>
+                        <button onclick="closeModal()" class="px-6 py-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold rounded-lg shadow transition-all mt-3">Continue Learning</button>
+                    </div>
+                `;
+            } else {
+                modalContent.innerHTML = `
+                    <div class="text-center py-6 space-y-3">
+                        <div class="w-16 h-16 bg-red-500/20 border border-red-500/40 text-red-400 rounded-full flex items-center justify-center mx-auto text-2xl">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Incorrect Answer</h3>
+                        <p class="text-sm text-slate-300">Review the lesson theory and try again!</p>
+                        <button onclick="openQuizModal(${lessonIndex})" class="px-6 py-2 bg-slate-700 hover:bg-slate-600 text-white text-xs font-semibold rounded-lg shadow transition-all mt-3">Try Again</button>
+                    </div>
+                `;
+            }
+        }
+
+        function showSuccessNotification(message) {
+            const modalContainer = document.getElementById('modal-container');
+            const modalContent = document.getElementById('modal-content');
+            modalContent.innerHTML = `
+                <div class="text-center py-6 space-y-3">
+                    <div class="w-16 h-16 bg-blue-500/20 border border-blue-500/40 text-tsblue rounded-full flex items-center justify-center mx-auto text-2xl">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Milestone Reached!</h3>
+                    <p class="text-sm text-slate-300">${message}</p>
+                    <button onclick="closeModal()" class="px-6 py-2 bg-tsblue hover:bg-blue-600 text-white text-xs font-semibold rounded-lg shadow transition-all mt-3">Awesome</button>
+                </div>
+            `;
+            modalContainer.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal-container').classList.add('hidden');
+        }
+
+        function alertBox(msg) {
+            const modalContainer = document.getElementById('modal-container');
+            const modalContent = document.getElementById('modal-content');
+            modalContent.innerHTML = `
+                <div class="p-4 space-y-3 text-center">
+                    <i class="fa-solid fa-triangle-exclamation text-amber-400 text-3xl"></i>
+                    <p class="text-sm text-slate-200">${msg}</p>
+                    <button onclick="closeModal()" class="px-4 py-2 bg-tsblue text-white text-xs font-semibold rounded-lg">OK</button>
+                </div>
+            `;
+            modalContainer.classList.remove('hidden');
+        }
+
+        function resetProgressModal() {
+            const modalContainer = document.getElementById('modal-container');
+            const modalContent = document.getElementById('modal-content');
+            modalContent.innerHTML = `
+                <div class="p-6 space-y-4 text-center">
+                    <div class="w-14 h-14 bg-red-500/20 border border-red-500/40 text-red-400 rounded-full flex items-center justify-center mx-auto text-xl">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Reset All Progress?</h3>
+                    <p class="text-sm text-slate-300">This will clear your completed lessons and reset your bootcamp progress.</p>
+                    <div class="flex justify-center space-x-3 pt-2">
+                        <button onclick="closeModal()" class="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-xs font-semibold rounded-lg text-slate-200">Cancel</button>
+                        <button onclick="confirmResetProgress()" class="px-4 py-2 bg-red-600 hover:bg-red-500 text-xs font-semibold rounded-lg text-white shadow">Reset Progress</button>
+                    </div>
+                </div>
+            `;
+            modalContainer.classList.remove('hidden');
+        }
+
+        function confirmResetProgress() {
+            localStorage.removeItem('ts_bootcamp_completed');
+            completedLessons = {};
+            updateProgressCounter();
+            renderLessonsList();
+            closeModal();
+            appendConsole("Bootcamp progress has been reset.", "text-amber-400");
+        }
+    </script>
+</body>
+</html>

@@ -1,16 +1,27 @@
 ---
 id: 20260912190916
+author: Karl Schmitt
+date: 2026-09-12
+keywords: [ PoerShell, VSCode, Edge, Node.js]
 ---
+
+![PowerShell Logo](../Images/PowerShell_Logo.png)
 
 Absolutely. In fact, **PowerShell + VS Code + Edge** is a surprisingly good JavaScript learning setup. You already have everything you need.
 
 ## What each tool does
 
+![Visual Studio Code Logo](../Images/Visual_Studio_Code_Logo.png)
+
 * **Visual Studio Code**: Write and edit JavaScript.
 * **PowerShell**: Run JavaScript programs using Node.js.
 * **Microsoft Edge**: Test JavaScript in the browser and use Developer Tools.
 
+![Microsoft Edge Logo](../Images/Microsoft_Edge_Logo.png)
+
 The only extra thing you'll eventually need is **Node.js** (free), which lets PowerShell execute JavaScript files.
+
+![NodeJSlogo](../Images/NodeJS_logo.png)
 
 ***
 
