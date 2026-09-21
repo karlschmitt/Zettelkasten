@@ -15,7 +15,8 @@ date: 2026-06-30
 4. [👩‍🏭 Mastering Browser JavaScript](./VanillaWebDev/Minimal_WebDev_with_HTML_CSS_JavaScript/Browser_JavaScript.md)
 5. [☢️ Pure TypeScript](./TypeScript/Exampels/TypeScript-Tutorial-VSCode-PowerShell-Edge.md)
 6.  [🔬 Minimalist TypeScript Development](./TypeScript/Exampels/TypeScript_Using_Only_PowerShell_and_Edge.md)
-7. ⚛️[Electron.js](./Electron/Electron_and_TypeScript_Startpage.md)
+7.  [🧰 TypeScript-Tutorial with an inline compiler](./TypeScript/Exampels/TypeScript-Tutorial-Inline-Compiler.md)
+8. ⚛️[Electron.js](./Electron/Electron_and_TypeScript_Startpage.md)
 
 >[NOTE!]
 > Feel free to continue with the bootcamps ⛺:
