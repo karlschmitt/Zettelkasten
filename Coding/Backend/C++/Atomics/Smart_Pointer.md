@@ -2,7 +2,7 @@
 id: 
 title: Secure Pointer Tutorial
 author: Karl Schmitt
-date: 202609-22
+date: 2026-09-22
 keywords: [ C++, g++, cmake ]
 ---
 
