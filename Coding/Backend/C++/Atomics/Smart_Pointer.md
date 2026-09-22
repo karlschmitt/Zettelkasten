@@ -1,5 +1,5 @@
 ---
-id: 
+id: 20260922152103
 title: Secure Pointer Tutorial
 author: Karl Schmitt
 date: 2026-09-22

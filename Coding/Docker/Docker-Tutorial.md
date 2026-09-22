@@ -40,15 +40,12 @@ Imagine you write a Java application.
 
 On your computer you have:
 
-```text
-Windows 11
-Java 21
-Maven
-Spring Boot
-PostgreSQL
-Redis
-...
-```
+* Windows 11
+* Java 25
+* Maven 3.9.12
+* Spring Boot 4.1
+* PostgreSQL 17.11
+* ActiveMQ 6.3.2
 
 Your application works perfectly.
 
@@ -56,11 +53,8 @@ Then you give it to another developer.
 
 They install:
 
-```text
-Java 17
-PostgreSQL 16
-...
-```
+* Java 17
+* PostgreSQL 16
 
 Suddenly:
 
@@ -76,19 +70,7 @@ you can package software together with the environment it needs.
 
 Conceptually:
 
-```text
-┌──────────────────────────────┐
-│          Docker              │
-│                              │
-│  ┌────────────────────────┐  │
-│  │ Your application       │  │
-│  │ Java                   │  │
-│  │ Libraries              │  │
-│  │ Configuration          │  │
-│  └────────────────────────┘  │
-│                              │
-└──────────────────────────────┘
-```
+![Docker Your application Java Libraries Configuration](./Images/Docker_Your_application_Java_Libraries_Configuration.png)
 
 That package can then run consistently on another machine.
 
@@ -100,15 +82,13 @@ Docker is a platform for **building, distributing, and running containers**.
 
 The most important words are:
 
-```text
-Image
-Container
-Dockerfile
-Registry
-Volume
-Network
-```
-
+* Image
+* Container
+* Dockerfile
+* Registry
+* Volume
+* Network
+  
 Don't worry about all of them yet.
 
 We'll learn them one by one.
@@ -148,21 +128,13 @@ A **container** is a running instance of that image.
 A useful analogy is:
 
 ```text
-Class       → Object
-Image       → Container
+Class       ➡️ Object
+Image       ➡️ Container
 ```
 
 For example:
 
-```text
-nginx image
-     │
-     ├── container 1
-     │
-     ├── container 2
-     │
-     └── container 3
-```
+![nginx_image_container_1_container_2_container_3.png](./Images/nginx_image_container_1_container_2_container_3.png)
 
 One image can create many containers.
 
