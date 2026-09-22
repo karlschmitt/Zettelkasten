@@ -6,6 +6,8 @@ date: 2026-09-09
 keaywors: [ C++, g++, cmake, ctest]
 ---
 
+![Grundlagen moderner Build-Generatoren](../Images/Grundlagen_moderner_Build-Generatoren.png)
+
 > [NOTE!]
 > Dieser Text bietet eine fundierte Einführung in **CMake**, ein System zur **Generierung von Build-Dateien** für Programmiersprachen wie C++. Er richtet sich primär an Java-Entwickler, indem er **Vergleiche zu Maven** zieht und grundlegende Konzepte wie die Datei **CMakeLists.txt** sowie den **Target-basierten Ansatz** erläutert. Der Prozess wird in die Phasen der **Konfiguration** und des eigentlichen **Build-Vorgangs** unterteilt, wobei die Trennung von Quellcode und Build-Verzeichnis betont wird. Zudem werden fortgeschrittene Themen wie die **Verwaltung von Abhängigkeiten**, die Nutzung verschiedener **Generatoren** wie Ninja sowie automatisierte **Tests mit CTest** behandelt. Abschließend liefert die Quelle einen strukturierten **Lernpfad**, um den Übergang von einfachen ausführbaren Dateien zu komplexen professionellen Projekten zu erleichtern.
 

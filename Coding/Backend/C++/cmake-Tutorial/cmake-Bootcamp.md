@@ -6,6 +6,8 @@ date: 2026-09-09
 keywords: [ Powershell, C++, g++, cmake, ctest]
 ---
 
+![C++-Build-System Grundlagen und Praxis](../Images/C++-Build-System_Grundlagen_und_Praxis.png)
+
 > [NOTE!]
 > Dieser Text bietet einen **praxisorientierten Leitfaden** für den Einstieg in **CMake** unter Windows 11 mit PowerShell und dem g++ Compiler. Der Autor erläutert den Übergang von manuellen Kompilierbefehlen hin zu einem **zielorientierten Build-System**, das komplexe Projekte effizient verwaltet. Wichtige Konzepte wie die Erstellung von **Executables und Bibliotheken**, das Linken von Abhängigkeiten sowie die Nutzung von **Voreinstellungen** werden Schritt für Schritt erklärt. Zudem wird die Integration von automatisierten Tests mittels **CTest** und eine saubere Projektstrukturierung thematisiert. Das Ziel ist es, Entwicklern ein fundiertes **mentales Modell** für moderne C++-Entwicklungsprozesse zu vermitteln. Ein strukturierter Lernplan rundet die Einführung ab, um den Weg vom Anfänger zum Fortgeschrittenen zu ebnen.
 
