@@ -25,19 +25,3 @@ It acts as a high-performance C# wrapper that translates standard managed drawin
 | Desktop              | Windows (WPF, WinForms, WinUI 3), macOS, Linux                            |
 | Mobile               | Android, iOS, tvOS, Mac Catalyst, Tizen                                   |
 | Web & Cross-Platform | WebAssembly (WASM), .NET MAUI, Uno Platform \[.NET 6+, .NET Standard 2.0] |
-
-Useful Links:
-
-\[1] [https://skiasharp.com](https://skiasharp.com/)
-
-\[2] [https://skiasharp.com](https://skiasharp.com/2026/05/07/what-are-the-main-features-of-skiasharp/)
-
-\[3] [https://daily.dev](https://daily.dev/posts/using-the-skiasharp-graphics-library-in-net-lefrtoofl)
-
-\[4] [https://mono.github.io](https://mono.github.io/SkiaSharp/)
-
-\[5] [https://learn.microsoft.com](https://learn.microsoft.com/en-us/dotnet/maui/migration/skiasharp?view=net-maui-10.0)
-
-\[6] [https://github.com](https://github.com/mono/skiasharp)
-
-\[7] [https://platform.uno](https://platform.uno/blog/skiasharp-for-dotnet/)

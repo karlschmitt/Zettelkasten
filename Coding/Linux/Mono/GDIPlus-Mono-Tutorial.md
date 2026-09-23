@@ -1,4 +1,14 @@
-# GDI+ Graphics Programming with Mono — A Practical Tutorial
+---
+id: 20260923181701
+title: Graphics Programming with Mono
+author: Karl Schmitt
+date: 2026-09-23
+keywords: [ Mono, GDI+ ]
+---
+
+# Graphics Programming with Mono
+
+## GDI+ Graphics Programming with Mono — A Practical Tutorial
 
 This tutorial walks you through drawing 2D graphics using **GDI+** (the `System.Drawing` namespace) on the **Mono** runtime. GDI+ is a mature 2D graphics API that lets you draw lines, shapes, text, and images onto surfaces such as bitmaps, windows, or off-screen buffers.
 
