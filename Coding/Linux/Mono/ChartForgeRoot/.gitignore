@@ -1,0 +1,14 @@
+# Build output
+bin/
+obj/
+
+# Generated charts
+*.png
+
+# IDE
+.vs/
+.idea/
+*.user
+
+# Keep the sample data
+!data.csv
