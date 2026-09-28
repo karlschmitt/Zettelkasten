@@ -76,13 +76,11 @@ void main() {
 ```
 
 > **Note on Compilation:** In a full production engine, you compile these `.vert` and `.frag` files into binary format (`.spv` files) using Vulkan's `glslc` compiler tool before running your C++ program.
->
->
+
 
 ## Step 2: What the C++ Code Has to Do
 
 To actually execute those shaders and put pixels on the screen, your C++ `main.cpp` needs to perform these core steps in order:
-
 
 
 1. **Initialize GLFW & Window:** Open a window and tell GLFW _not_ to create an OpenGL context (since we are using Vulkan).

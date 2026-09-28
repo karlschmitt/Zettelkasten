@@ -45,7 +45,7 @@ If Vulkan is installed correctly, you will see:
 
 If it fails, you’ll get an error indicating missing loader or drivers.
 
-## ✅ **2. Run a demo application (e.g.,&#x20;**`vkcube`**)**
+## ✅ **2. Run a demo application (e.g.**`vkcube`**)**
 
 The Vulkan SDK includes demo programs such as `vkcube.exe`. Running them verifies that:
 

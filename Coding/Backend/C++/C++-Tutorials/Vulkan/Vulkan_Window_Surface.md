@@ -17,8 +17,30 @@ Instead of writing tedious, OS-specific platform code manually, GLFW provides a 
 
 We are going to merge your working `VkInstance` code from earlier with your GLFW window code. Once the instance is created, we will pass it to GLFW to generate our rendering surface handler.
 
-Replace your `main.cpp` with this comprehensive lifecycle setup:
+Here the cmake «build» file to build the following C++ Vukan code:
+```cmake
+cmake_minimum_required(VERSION 3.10)
+project(VulkanSurfaceWindow)
 
+set(CMAKE_CXX_STANDARD 17)
+
+# 1. Find Vulkan SDK (works because your VULKAN_SDK env variable is set)
+find_package(Vulkan REQUIRED)
+
+# 2. Include GLFW headers (your manually built MinGW version)
+include_directories("C:/CodingDojo/glfw-dist/include")
+
+# 3. Create the executable
+add_executable(vulkan_surface main.cpp)
+
+# 4. Link Vulkan + GLFW (static library built with MinGW)
+target_link_libraries(vulkan_surface PRIVATE
+    Vulkan::Vulkan
+    "C:/CodingDojo/glfw-dist/lib/libglfw3.a"
+)
+```
+
+Replace your `main.cpp` with this comprehensive lifecycle setup:
 ```cpp
 #include <iostream>
 #include <vector>

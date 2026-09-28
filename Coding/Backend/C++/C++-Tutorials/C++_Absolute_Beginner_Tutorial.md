@@ -5,6 +5,11 @@ author: Karl Schmitt
 date: 2026-09-21
 ---
 
+![C++ und CMake Workflow Guide](../Images/C++_und_CMake_Workflow_Guide.png)
+
+> [NOTE!]
+> Dieser Leitfaden bietet eine **praxisorientierte Einführung** in die Grundlagen der Programmierung mit **C++** und dem Build-System **CMake**. Der Text erläutert den gesamten Entwicklungsprozess, angefangen beim Schreiben von **Quellcode** über die manuelle Kompilierung mit **g++** bis hin zur automatisierten Projektverwaltung. Wichtige Konzepte wie **Variablen, Funktionen und Kontrollstrukturen** werden ebenso behandelt wie die Strukturierung von Projekten durch **Header-Dateien** und getrennte Build-Verzeichnisse. Ein zentraler Fokus liegt auf der Rolle von **CMake** als Werkzeug zur Konfigurationserzeugung für komplexe Anwendungen. Abschließend bietet das Dokument einen strukturierten **Lernpfad**, der Einsteiger von den ersten Codezeilen bis hin zur Entwicklung professioneller Software-Architekturen begleitet.
+
 # C++ Absolute Beginner Tutorial
 
 Absolutely. Since you're working on Windows 11 with **g++ + PowerShell + Visual Studio Code**, I'll make this a completely hands-on **C++ + CMake Absolute Beginner Tutorial**.
@@ -17,33 +22,11 @@ The important idea is that we will learn **C++ and CMake together**, but we won'
 
 By the end, you will understand this complete chain:
 
-```text
-C++ source code
-      │
-      ▼
-   g++ compiler
-      │
-      ▼
- executable program
-```
+![C source code g compiler executable program](../Images/C_source_code_g_compiler_executable_program.png)
 
 and then:
 
-```text
-C++ source code
-      │
-      ▼
-    CMake
-      │
-      ▼
- build system
-      │
-      ▼
-   g++ compiler
-      │
-      ▼
- executable program
-```
+![C source code CMake build system g compiler executable progr](../Images/C_source_code_CMake_build_system_g_compiler_executable_progr.png)
 
 We'll start with tiny programs and gradually build a small C++ application.
 

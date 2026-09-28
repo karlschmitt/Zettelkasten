@@ -21,42 +21,44 @@ Vulkan is a cross-platform graphics API, meaning it doesn't know anything about 
 
 Since the LunarG Vulkan SDK installer handles common dependencies automatically, GLFW can often be linked straight from your machine or fetched easily via CMake. Let's configure your project to pull down and build GLFW directly so everything stays self-contained.
 
-## Step 1: Update `CMakeLists.txt` to Download GLFW
+## Step 1: Update `CMakeLists.txt` to use GLFW
 
-We will use CMake's built-in `FetchContent` module. This tells CMake to automatically download GLFW from GitHub during configuration and compile it perfectly alongside your application using your `g++` compiler.
+Hints for building:
+```powershell
+# 1. Delete the bad build folder completely
+Remove-Item -Recurse -Force build
+
+# 2. Re-run configuration with the corrected file
+cmake -B build
+
+cmake --build build
+
+.\build\vulkan_window.exe
+```
+```
 
 Replace the contents of your `CMakeLists.txt` file with this:
 
 ```cmake
-cmake_minimum_required(VERSION 3.14) # FetchContent works best with 3.14+
-
-project(VulkanPractice CXX)
+cmake_minimum_required(VERSION 3.10)
+project(VulkanGLFWWindow)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# 1. Look for your installed Vulkan SDK
+# 1. Find Vulkan (SDK must be installed)
 find_package(Vulkan REQUIRED)
 
-# 2. Automatically download and prepare GLFW from GitHub
-include(FetchContent)
-FetchContent_Declare(
-    glfw
-    GIT_REPOSITORY https://github.com
-    GIT_TAG        3.4 # Use stable version 3.4
+# 2. Include GLFW headers
+include_directories("C:/CodingDojo/glfw-dist/include")
+
+# 3. Create executable
+add_executable(vulkan_window main.cpp)
+
+# 4. Link Vulkan + manually-built GLFW
+target_link_libraries(vulkan_window PRIVATE
+    Vulkan::Vulkan
+    "C:/CodingDojo/glfw-dist/lib/libglfw3.a"
 )
-# We only want the core library, we don't need GLFW's own internal tests/docs
-set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
-set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
-set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(glfw)
-
-# 3. Define our practice executable
-add_executable(VulkanPractice main.cpp)
-
-# 4. Link everything together
-target_include_directories(VulkanPractice PRIVATE ${Vulkan_INCLUDE_DIRS})
-target_link_libraries(VulkanPractice PRIVATE Vulkan::Vulkan glfw)
 ```
 
 ***
