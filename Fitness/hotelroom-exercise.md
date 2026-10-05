@@ -19,16 +19,17 @@ date: 2026-09-26
 7. Standing Hip Circles
 8. Cat Cow
 9. Bird Dog
-10. Fire Hydrant 
-11. Supine Twist
-12. Double leg lift
-13. Criss cross
-14. The 100
-15. Oil Rigger [Video](https://youtu.be/xuN5smwD1vU) Bild
-16. Planks with leg lifts
-17. Reverse Crunches [Bild](./Images/Bare_foot_fitness_girl_in_leotard_stands_hip_width_apart.png)
-18. Glute Bridge
-19. Side-lying clam
+10. Fire Hydrant
+11. Clamshell [Video](https://youtu.be/2d-QyEv4EnA) 
+12. Supine Twist
+13. Double leg lift
+14. Criss cross
+15. The 100
+16. Oil Rigger [Video](https://youtu.be/xuN5smwD1vU) Bild
+17. Planks with leg lifts
+18. Reverse Crunches [Bild](./Images/Bare_foot_fitness_girl_in_leotard_stands_hip_width_apart.png)
+19. Glute Bridge
+20. Side-lying clam
 
 
 ## Useful Links
