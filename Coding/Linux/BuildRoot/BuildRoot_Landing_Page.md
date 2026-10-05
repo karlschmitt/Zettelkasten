@@ -67,33 +67,8 @@ Retrieve finalized compilation assets from the target directory:
 
 ## **2. Buildroot Output → Docker Pipeline**
 
-Code
+![Buildroot Output Docker Pipeline](../Images/Buildroot_Output_Docker_Pipeline.png)
 
-```
-+---------------------------+
-|        Buildroot          |
-|  - systemd                |
-|  - Weston                 |
-|  - Mesa                   |
-|  - Electron               |
-|  - Custom packages        |
-+-------------+-------------+
-              |
-              | rootfs.tar
-              v
-+-------------+-------------+
-|        Docker Image       |
-|  buildroot-image          |
-+-------------+-------------+
-              |
-              | docker run
-              v
-+-------------+-------------+
-|     Running Container     |
-|  /sbin/init (systemd)     |
-|  Weston (RDP)             |
-+---------------------------+
-```
 
 ## **3. Weston Headless + RDP Architecture**
 
@@ -103,7 +78,7 @@ Code
 +-------------------------------------------+
 |               Weston (Headless)           |
 |-------------------------------------------|
-|  Headless Backend → Virtual Framebuffer   |
+|  Headless Backend → "Virtual Framebuffer" |
 |  RDP Output → TCP/3389                    |
 |  Wayland Socket → /run/wayland-0          |
 +----------------------+--------------------+
@@ -112,8 +87,8 @@ Code
                        v
 +----------------------+--------------------+
 |          Wayland Clients                  |
-|  - Electron                                |
-|  - Custom apps                             |
+|  - Electron                               |
+|  - Custom apps                            |
 +-------------------------------------------+
 ```
 
