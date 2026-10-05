@@ -36,27 +36,8 @@ The system is designed for:
 
 ## **2.1 High‑Level Architecture**
 
-Code
+![System Architecture Overview](../Images/System_Architecture_Overview.png)
 
-```
-+-----------------------------------------------------------+
-|                       Windows 11                          |
-|  - WSL2 subsystem                                         |
-|  - Docker Engine                                          |
-|  - RDP Client (mstsc.exe)                                 |
-+-------------------------------+---------------------------+
-                                |
-                                | RDP (TCP/3389)
-                                |
-+-------------------------------v---------------------------+
-|                     Docker Container                      |
-|  Buildroot Linux System                                   |
-|  - systemd                                                 |
-|  - Weston (headless backend + RDP server)                 |
-|  - Mesa (software rendering)                              |
-|  - Electron application                                   |
-+-----------------------------------------------------------+
-```
 
 ### **Key Characteristics**
 
@@ -337,15 +318,3 @@ This system demonstrates a modern, efficient approach to embedded GUI developmen
 * **Electron** provides a flexible application platform
 
 The result is a **lightweight, deterministic, GUI‑capable Linux environment** that runs seamlessly on Windows machines and integrates cleanly into modern development workflows.
-
-If you want, I can also prepare:
-
-* a **diagram‑only architecture note**
-
-* a **Zettelkasten atomic note set (20+ cards)**
-
-* a **slide‑deck version**
-
-* a **developer onboarding guide**
-
-Just tell me which format you want next.
