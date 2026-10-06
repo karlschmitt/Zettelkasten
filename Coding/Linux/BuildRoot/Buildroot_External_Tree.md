@@ -1,6 +1,6 @@
 ---
 id: 20261004222429
-title: Step‑by‑Step TutorialStep‑by‑Step Tutorial
+title: Step‑by‑Step Tutorial
 author: Karl Schmitt
 date: 2026-10-04
 keywords: [ Buildroot, WSL2, Docker, Wayland, Weston, RDP]

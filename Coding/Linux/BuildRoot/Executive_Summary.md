@@ -1,9 +1,9 @@
 ---
 id: 20261005001409
-title: Executive Summary for Buildroot
+title: Executive Summary
 author: Karl Schmitt
 date: 2026-10-05
-keaywords: [ Buildroot, electron.js, GUI, Docker, WSL2]
+keaywords: [ Linux, Buildroot, node.js, electron.js, GUI, Docker, WSL2]
 ---
 
 ![Effiziente Embedded-Entwicklung mit Containern](../Images/Effiziente_Embedded-Entwicklung_mit_Containern.png)

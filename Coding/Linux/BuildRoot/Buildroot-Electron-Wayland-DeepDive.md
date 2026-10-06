@@ -1,4 +1,12 @@
-# Deep Dive: Building a Buildroot Image with Wayland/Sway + Node.js + Electron for WSL2 and Docker
+---
+id: 20261005172636
+title: Deep Dive
+author: Karl Schmitt
+date: 2026-10-05
+keywords: [ Linux, Buildroot, Wayland. Sway, Node.js, Electron, WSL2, Docker]
+---
+
+# Building a Buildroot Image with Wayland, Sway, Node.js, Electron for WSL2 and Docker
 
 **Date:** 2026-10-05
 **Goal:** Produce a single Buildroot-generated root filesystem containing a Wayland + Sway
