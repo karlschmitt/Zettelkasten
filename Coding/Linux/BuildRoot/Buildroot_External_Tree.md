@@ -178,6 +178,138 @@ git checkout 2026.02
 
 ![Blueprint](../Images/Blueprint.png)
 
+***
+
+## Building a Reproducible Wayland/Weston Graphic Client System in Buildroot
+
+### Context
+
+* Host System: Windows 11 running WSL2 (Debian Trixie distribution).
+* Goal: Create a lightweight, embedded Linux client system via Buildroot capable of running a Wayland / Weston display compositor to host Electron.js GUIs.
+* Remote Access: Stream the display rendering server outputs back to the Windows host seamlessly via `wayvnc` or a VNC loopback overlay.
+* Core Constraint: The environment must be 100% reproducible and automated using a dedicated Buildroot `defconfig` blueprint.
+
+***
+
+## Architectural Evolutions and Fixes
+
+### 1. The Per-Package Isolation and Systemd Traps (Legacy Phase)
+
+* Problem: In modern Buildroot trees, using `systemd` alongside Per-Package Directories (`BR2_PER_PACKAGE_DIRECTORIES=y`) isolates package staging folders. During compilation, the `systemd` build space failed to pull development files (`mount.pc`/`libmount.so`) from the `util-linux` sandbox, causing permanent compilation failure loops inside Meson.
+* Resolution: Abandoned `systemd` in favor of an elegant, lightweight embedded architecture to enforce reproducibility.
+
+### 2. The Stable Embedded Design Selection
+
+To bypass tracking bottlenecks and circular dependencies completely, we swapped out heavy desktop daemons for robust embedded design frameworks:
+
+* Init System: `SysVinit` (`BR2_INIT_SYSV=y`) -> Fast, predictable script-based execution flow.
+* Hardware Manager: `Eudev` (`BR2_ROOTFS_DEVICE_CREATION_DYNAMIC_EUDEV=y`) -> Handles hardware hotplugging natively without requiring systemd hooks.
+
+***
+
+## The Master Blueprint Defconfig Configuration
+
+We froze all parameters inside a minimal configuration profile (`configs/wayland_client_x86_64_defconfig`). This eliminates manual `make menuconfig` guessing and lets any user recompile an identical root filesystem from scratch using one instruction.
+
+## Core Blueprint Settings
+
+```makefile
+# Target Architecture Profile
+BR2_x86_64=y
+BR2_x86_x86_64=y
+
+# Toolchain (Standard GLIBC with C++ capability required by Chromium/Electron)
+BR2_TOOLCHAIN_BUILDROOT_GLIBC=y
+BR2_INSTALL_LIBSTDCPP=y
+BR2_TOOLCHAIN_BUILDROOT_CXX=y
+
+# Core Init System Options
+BR2_INIT_SYSV=y
+BR2_ROOTFS_DEVICE_CREATION_DYNAMIC_EUDEV=y
+
+# Linux Kernel Configuration
+BR2_LINUX_KERNEL=y
+BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
+BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="board/qemu/x86_64/linux.config"
+
+# Graphics Framework Stack (Mesa3D serving Accelerated OpenGL ES & EGL)
+BR2_PACKAGE_MESA3D=y
+BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_VIRGL=y
+BR2_PACKAGE_MESA3D_OPENGL_EGL=y
+BR2_PACKAGE_MESA3D_OPENGL_ES=y
+
+# Wayland & Headless Weston Ecosystem Applications
+BR2_PACKAGE_WAYLAND=y
+BR2_PACKAGE_WESTON=y
+BR2_PACKAGE_WESTON_DEFAULT_COMPOSITOR_DRM=y
+BR2_PACKAGE_WESTON_SIMPLE_CLIENTS=y
+BR2_PACKAGE_WESTON_DEMO_CLIENTS=y
+
+# Core Utilities Framework
+BR2_PACKAGE_UTIL_LINUX=y
+BR2_PACKAGE_UTIL_LINUX_BINARIES=y
+
+# Filesystem Packaging Limits
+BR2_TARGET_ROOTFS_EXT2=y
+BR2_TARGET_ROOTFS_EXT2_4=y
+BR2_TARGET_ROOTFS_EXT2_SIZE="1G"
+```
+
+***
+
+## Deployment & Hardware Graphics Passthrough
+
+## 1. Host Optimization (Debian WSL2 Environment)
+
+To allow the virtual hardware monitor layers to interact directly with the physical Windows graphics adapter via WSLg, we mapped the host-side packages explicitly:
+
+```bash
+apt-get update && apt-get install -y \
+    qemu-system-x86 qemu-utils libgl1-mesa-dri \
+    libvirglrenderer1 virgl-server libegl1 \
+    libgbm1 libgl1 libgles2 libglx-mesa0 libelf-dev
+```
+
+## 2. High-Performance QEMU Launch Wrapper Script
+
+We built a tailored execution script at `output/images/start-qemu.sh` to initialize the layout with dual consoles (`tty1` screen visualization + `ttyS0` serial mirror), virtualization options, and direct 3D graphics bridging:
+
+```bash
+#!/bin/sh
+IMAGE_DIR="$(dirname "$0")"
+
+exec qemu-system-x86_64 \
+    -M q35 \
+    -m 2G \
+    -smp 2 \
+    -kernel "${IMAGE_DIR}/bzImage" \
+    -drive file="${IMAGE_DIR}/rootfs.ext4",if=virtio,format=raw \
+    -append "root=/dev/vda ro console=tty1 console=ttyS0 quiet" \
+    -net nic,model=virtio -net user \
+    -device virtio-vga-gl \
+    -display gtk,gl=on \
+    -serial stdio
+```
+
+## 3. Active Status Verified
+
+The base graphics driver and compositor environment were successfully verified using the virtual machine console logs:
+
+* Graphics device linked perfectly to `/dev/dri/card0` and `/dev/dri/renderD128`.
+* Acceleration pipeline registered `GL renderer: virgl (LLVMPIPE...)` via OpenGL ES 3.2 Mesa 26.1.8.
+
+***
+
+## Active State and Next Action Item
+
+We are currently updating the blueprint to integrate the Node.js environment layer (`BR2_PACKAGE_NODEJS=y`) to execute Electron frameworks natively. We are also deploying an init boot service (`S90weston`) inside our Rootfs Overlay folder to transition Weston into a persistent headless VNC network stream daemon (`wayvnc`) on port `5900`.
+
+***
+
+Now that your Zettelkasten is updated, let me know if your current `make` run with Node.js has finished successfully, or if you need to troubleshoot any package step during this compilation phase!
+
+
+## Let's begin
 
 This blueprint only contains Buildroot plus Wayland to test your build environmet on Debian WSL:
 ```bash
@@ -252,10 +384,17 @@ EOF
 # Make the script executable
 chmod +x output/images/start-qemu.sh
 ```
-You should see:
+🚀 Boot up! 
+
+```bash
+./output/images/start-qemu.sh
+```
+
+🖥️ You should see now:
+
 ![First Blueprint QEMU](../Images/First_Blueprint_QEMU_001.png)
 
-We need to tell the kernel to send output to _both_ the serial port and the virtual screen:
+📨 We need to tell the kernel to send output to _both_ the serial port and the virtual screen:
 ```bash
 cat << 'EOF' > output/images/start-qemu.sh
 #!/bin/sh
@@ -276,11 +415,78 @@ EOF
 
 chmod +x output/images/start-qemu.sh
 ```
+🛠️ Create the Weston Configuration File
+
+```bash
+cat << 'EOF' > board/custom_client/rootfs-overlay/etc/xdg/weston/weston.ini
+[core]
+backend=drm-backend.so
+renderer=gl
+xwayland=true
+
+[shell]
+locking=false
+panel-position=top
+
+[launcher]
+icon=/usr/share/weston/icon_terminal.png
+path=/usr/bin/weston-terminal
+EOF
+```
+Re-Package Your Image File
+```
+make
+```
 
 
+🚀 Generate the startup script:
+```bash
+# 1. Create the boot script directory layout
+mkdir -p board/custom_client/rootfs-overlay/etc/init.d/
 
+# 2. Write the automated Weston startup service script
+cat << 'EOF' > board/custom_client/rootfs-overlay/etc/init.d/S90weston
+#!/bin/sh
+case "$1" in
+  start)
+    echo "Starting Weston Display Server..."
+    export XDG_RUNTIME_DIR=/tmp/runtime-root
+    mkdir -p $XDG_RUNTIME_DIR
+    chmod 700 $XDG_RUNTIME_DIR
+    
+    # Run Weston dynamically on the active virtual console
+    weston --tty=1 --backend=drm-backend.so &
+    ;;
+  stop)
+    echo "Stopping Weston..."
+    killall weston
+    ;;
+  *)
+    echo "Usage: $0 {start|stop}"
+    exit 1
+esac
+exit 0
+EOF
 
+# 3. Make the startup script executable
+chmod +x board/custom_client/rootfs-overlay/etc/init.d/S90weston
+```
+📦Re-Package the Image:
+```bash
+# Force the overlay variable into the defconfig if it isn't there already
+if ! grep -q "BR2_ROOTFS_OVERLAY" configs/wayland_client_x86_64_defconfig; then
+    echo 'BR2_ROOTFS_OVERLAY="board/custom_client/rootfs-overlay"' >> configs/wayland_client_x86_64_defconfig
+fi
 
+# Reload the configuration file blueprint and re-run make to merge the overlay
+make wayland_client_x86_64_defconfig
+make
+```
+
+🚀 Boot Up Agan
+```bash
+./output/images/start-qemu.sh
+```
 
 #### 🟦 Second Configuration Blueprint 🏗️
 
