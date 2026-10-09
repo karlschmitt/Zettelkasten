@@ -3,11 +3,16 @@ id: 20261009114209
 title: First Configuration Blueprint
 author: Karl Schmitt
 date: 2026-10-04
-keywords: [ Buildroot ]
+keywords: [ WSL, Debian, Buildroot, Wayland, Weston, QEMU ]
 ---
 
-# 🟦 First Configuratin Blueprint 🏗️
+![Buildroot und Wayland QEMU-Anleitung](../../Images/Buildroot_und_Wayland_QEMU-Anleitung.png)
 
+> [NOTE!]
+> Diese Anleitung beschreibt die Einrichtung und Erstellung einer **Buildroot-Umgebung** für x86\_64-Architekturen innerhalb einer **WSL-Debian-Instanz**. Zunächst werden alle erforderlichen **Systemabhängigkeiten und Entwicklungswerkzeuge** installiert, bevor das offizielle Buildroot-Repository heruntergeladen wird. Anschließend erfolgt die Erstellung einer maßgeschneiderten **Konfigurationsdatei**, welche die Integration des Linux-Kernels, der GLIBC-Toolchain sowie der grafischen **Wayland- und Weston-Komponenten** steuert. Nach dem erfolgreichen Kompilieren lässt sich das virtuelle Betriebssystem mithilfe eines generierten **QEMU-Startskripts** unkompliziert ausführen. Abschließend wird ein **Dateisystem-Overlay** eingerichtet, um den Weston-Display-Server direkt beim Systemstart automatisch zu laden.
+
+
+# 🟦 First Configuration Blueprint 🏗️
 
 ## Install Buildroot prerequisites
 
@@ -36,35 +41,28 @@ sudo apt install -y \
     libelf-dev \
     qemu-system-x86 \
     qemu-utils \
-    libgl1-mesa-dri \ 
-    libvirglrenderer1 \ 
+    libgl1-mesa-dri \
+    libvirglrenderer1 \
     virgl-server \
-    libegl1 \ 
-    libgbm1 \ 
-    libgl1 \ 
-    libgles2 \ 
-    libglx-mesa0 \ 
-    libgl1-mesa-dri
-
+    libegl1 \
+    libgbm1 \
+    libgl1 \
+    libgles2 \
+    libglx-mesa0
 ```
+
 ## Let's begin
 
-Let“s do it in small steps. Create a new directory and clone the Buildroot repository:
+Let's do it in small steps. Create a new directory and clone the Buildroot repository:
 
 ```bash
-mkdir -p ~/Second_Chance/First_Blueprin
-```
-```bash
+mkdir -p ~/Second_Chance/First_Blueprint
 cd ~/Second_Chance/First_Blueprint
-```
-```bash
 git clone https://github.com/buildroot/buildroot.git
-```
-```bash
 cd buildroot
 ```
 
-This blueprint project contains only Buildroot plus Wayland to test your build environmet on Debian WSL:
+This blueprint project contains only Buildroot plus Wayland to test your build environment on Debian WSL:
 ```bash
 # 1. Create your stable, reproducible defconfig blueprint file
 cat << 'EOF' > configs/wayland_client_x86_64_defconfig
@@ -115,39 +113,8 @@ make wayland_client_x86_64_defconfig
 # 3. Launch your clean compilation sequence
 make
 ```
-Create the start script ```./output/images/start-qemu.sh```:
-```bash
-cat << 'EOF' > output/images/start-qemu.sh
-#!/bin/sh
-IMAGE_DIR="$(dirname "$0")"
 
-exec qemu-system-x86_64 \
-    -M q35 \
-    -m 2G \
-    -smp 2 \
-    -kernel "${IMAGE_DIR}/bzImage" \
-    -drive file="${IMAGE_DIR}/rootfs.ext4",if=virtio,format=raw \
-    -append "root=/dev/vda ro console=ttyS0 quiet" \
-    -net nic,model=virtio -net user \
-    -device virtio-vga-gl \
-    -display gtk,gl=on \
-    -serial stdio
-EOF
-
-# Make the script executable
-chmod +x output/images/start-qemu.sh
-```
-🚀 Boot up! 
-
-```bash
-./output/images/start-qemu.sh
-```
-
-🖥️ You should see now:
-
-![First Blueprint QEMU](../../Images/First_Blueprint_QEMU_001.png)
-
-📨 We need to tell the kernel to send output to _both_ the serial port and the virtual screen:
+Create the start script `./output/images/start-qemu.sh`:
 ```bash
 cat << 'EOF' > output/images/start-qemu.sh
 #!/bin/sh
@@ -168,12 +135,26 @@ EOF
 
 chmod +x output/images/start-qemu.sh
 ```
+
+🚀 Boot up! 
+
+```bash
+./output/images/start-qemu.sh
+```
+
+🖥️ You should see now:
+
+![First Blueprint QEMU](../../Images/First_Blueprint_QEMU_001.png)
+
 🛠️ Create the Weston Configuration File
 
 ```bash
+# Create the full layout folder sequence before targeting the .ini configuration file
+mkdir -p board/custom_client/rootfs-overlay/etc/xdg/weston/
+
 cat << 'EOF' > board/custom_client/rootfs-overlay/etc/xdg/weston/weston.ini
 [core]
-backend=drm-backend.so
+backend=drm
 renderer=gl
 xwayland=true
 
@@ -186,11 +167,11 @@ icon=/usr/share/weston/icon_terminal.png
 path=/usr/bin/weston-terminal
 EOF
 ```
+
 Re-Package Your Image File
-```
+```bash
 make
 ```
-
 
 🚀 Generate the startup script:
 ```bash
@@ -207,8 +188,8 @@ case "$1" in
     mkdir -p $XDG_RUNTIME_DIR
     chmod 700 $XDG_RUNTIME_DIR
     
-    # Run Weston dynamically on the active virtual console
-    weston --tty=1 --backend=drm-backend.so &
+    # Run Weston dynamically using the clean modern DRM backend string mapping
+    weston --tty=1 --backend=drm &
     ;;
   stop)
     echo "Stopping Weston..."
@@ -224,7 +205,8 @@ EOF
 # 3. Make the startup script executable
 chmod +x board/custom_client/rootfs-overlay/etc/init.d/S90weston
 ```
-📦Re-Package the Image:
+
+📦 Re-Package the Image:
 ```bash
 # Force the overlay variable into the defconfig if it isn't there already
 if ! grep -q "BR2_ROOTFS_OVERLAY" configs/wayland_client_x86_64_defconfig; then
@@ -236,9 +218,14 @@ make wayland_client_x86_64_defconfig
 make
 ```
 
-🚀 Boot Up Agan
+🚀 Boot Up Again
 ```bash
 ./output/images/start-qemu.sh
 ```
 
+**Connect from Windows:** Windows Remote Desktop Connection.
+
+Open **Remote Desktop Connection (`mstsc`)** on Windows and connect to:
+
+`localhost:53389`
 
