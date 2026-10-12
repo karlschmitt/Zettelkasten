@@ -57,8 +57,14 @@ Let's do it in small steps. Create a new directory and clone the Buildroot repos
 
 ```bash
 mkdir -p ~/Second_Chance/First_Blueprint
+```
+```bash
 cd ~/Second_Chance/First_Blueprint
+```
+```bash
 git clone https://github.com/buildroot/buildroot.git
+```
+```bash
 cd buildroot
 ```
 
@@ -101,18 +107,33 @@ BR2_PACKAGE_WESTON_DEMO_CLIENTS=y
 BR2_PACKAGE_UTIL_LINUX=y
 BR2_PACKAGE_UTIL_LINUX_BINARIES=y
 
+# Additional Packages: Text Editors and Multiplexers
+BR2_PACKAGE_VIM=y
+BR2_PACKAGE_TMUX=y
+
 # Filesystem Packaging Target Limits (Expanded to 1GB to support assets)
 BR2_TARGET_ROOTFS_EXT2=y
 BR2_TARGET_ROOTFS_EXT2_4=y
 BR2_TARGET_ROOTFS_EXT2_SIZE="1G"
 EOF
-
+````
+```bash
 # 2. Apply your configuration blueprint to generate the master .config
 make wayland_client_x86_64_defconfig
+```
+```bash
 
 # 3. Launch your clean compilation sequence
 make
 ```
+
+Use the following ccommand to verify that the filesystem and the tar ball is created:
+```bash
+ls -lh /root/Second_Chance/First_Blueprint/buildroot/output/images/
+```
+
+> [NOTE!]
+>  Make sure you run the **make** command above because it will create the ```./output/images``` foler which we need next. 
 
 Create the start script `./output/images/start-qemu.sh`:
 ```bash
@@ -132,8 +153,14 @@ exec qemu-system-x86_64 \
     -display gtk,gl=on \
     -serial stdio
 EOF
-
+```
+```bash
 chmod +x output/images/start-qemu.sh
+```
+
+Use the following ccommand again to verify that the **start script** is created:
+```bash
+ls -lh /root/Second_Chance/First_Blueprint/buildroot/output/images/
 ```
 
 🚀 Boot up! 
@@ -151,7 +178,8 @@ chmod +x output/images/start-qemu.sh
 ```bash
 # Create the full layout folder sequence before targeting the .ini configuration file
 mkdir -p board/custom_client/rootfs-overlay/etc/xdg/weston/
-
+````
+```bash
 cat << 'EOF' > board/custom_client/rootfs-overlay/etc/xdg/weston/weston.ini
 [core]
 backend=drm
@@ -177,7 +205,8 @@ make
 ```bash
 # 1. Create the boot script directory layout
 mkdir -p board/custom_client/rootfs-overlay/etc/init.d/
-
+```
+```bash
 # 2. Write the automated Weston startup service script
 cat << 'EOF' > board/custom_client/rootfs-overlay/etc/init.d/S90weston
 #!/bin/sh
@@ -201,7 +230,8 @@ case "$1" in
 esac
 exit 0
 EOF
-
+```
+```bash
 # 3. Make the startup script executable
 chmod +x board/custom_client/rootfs-overlay/etc/init.d/S90weston
 ```
@@ -212,9 +242,12 @@ chmod +x board/custom_client/rootfs-overlay/etc/init.d/S90weston
 if ! grep -q "BR2_ROOTFS_OVERLAY" configs/wayland_client_x86_64_defconfig; then
     echo 'BR2_ROOTFS_OVERLAY="board/custom_client/rootfs-overlay"' >> configs/wayland_client_x86_64_defconfig
 fi
-
+```
+```bash
 # Reload the configuration file blueprint and re-run make to merge the overlay
 make wayland_client_x86_64_defconfig
+```
+```bash
 make
 ```
 
@@ -225,7 +258,48 @@ make
 
 **Connect from Windows:** Windows Remote Desktop Connection.
 
-Open **Remote Desktop Connection (`mstsc`)** on Windows and connect to:
+Open **Remote Desktop Connection (`mstsc`)** on Windows and connect to your BuildRoot Linux:
 
-`localhost:53389`
+```powershell
+mstsc.exe /v:localhost:3389
+```
+
+# 🟦 **Next Step: Import into Docker**
+
+From inside WSL:
+
+Code
+
+```
+docker import output/images/rootfs.tar second_chance_image
+```
+
+Run the container:
+
+Code
+
+```
+docker run -it --privileged -p 3389:3389 second_chance_image /sbin/init
+```
+
+# 🟦 **Eventually Start Weston (Headless + RDP)**
+
+This step is only nesseary if Weston is not configured as service an therefoe doen“t start automaticly.
+Inside the container:
+
+Code
+
+```
+weston --backend=headless-backend.so --rdp --socket=wayland-0
+```
+
+# 🟦 **Again Connect from Windows**
+
+On Windows:
+
+Code
+
+```
+mstsc.exe /v:localhost:3389
+```
 

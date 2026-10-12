@@ -57,8 +57,14 @@ Let's do it in small steps. Create a new directory and clone the Buildroot repos
 
 ```bash
 mkdir -p ~/Second_Chance/Second_Blueprint
+```
+```bash
 cd ~/Second_Chance/Second_Blueprint
+```
+```bash
 git clone https://github.com/buildroot/buildroot.git
+```
+```bash
 cd buildroot
 ```
 
@@ -111,6 +117,10 @@ BR2_PACKAGE_WAYVNC=y
 BR2_PACKAGE_UTIL_LINUX=y
 BR2_PACKAGE_UTIL_LINUX_BINARIES=y
 
+# Additional Packages: Text Editors and Multiplexers
+BR2_PACKAGE_VIM=y
+BR2_PACKAGE_TMUX=y
+
 # =====================================================================
 # The Advanced App Runtime Environment Layer
 # =====================================================================
@@ -140,6 +150,16 @@ make advanced_client_x86_64_defconfig
 ```bash
 # 3. Launch the final compilation sequence
 make
+```
+Use the following ccommand to verify that the filesystem and the tar ball is created:
+```bash
+ls -lh /root/Second_Chance/First_Blueprint/buildroot/output/images/
+```
+
+> [NOTE!]
+>  Make sure you run the **make** command above because it will create the ```./output/images``` foler which we need later. 
+
+
 ```
 
 ## Step 2: Add `btop` and the Native Wayland Terminal
@@ -220,7 +240,13 @@ EOF
 chmod +x output/images/start-qemu.sh
 ```
 
-_(Note: We added `-net user,hostfwd=tcp::5900-:5900`. This maps the internal container network port directly onto your local Windows machine so your VNC client can connect)._
+Use the following ccommand again to verify that the **start script** is created:
+```bash
+ls -lh /root/Second_Chance/First_Blueprint/buildroot/output/images/
+```
+
+> [NOTE]
+>  We added `-net user,hostfwd=tcp::5900-:5900`. This maps the internal container network port directly onto your local Windows machine so your VNC client can connect).
 
 ***
 
@@ -307,5 +333,48 @@ Once the virtual target finishes its initialization sequences inside the QEMU wi
 **Connect from Windows:** Windows Remote Desktop Connection.
 
 Open **Remote Desktop Connection (`mstsc`)** on Windows and connect to:
+```powershell
+mstsc.exe /v:localhost:3389
+```
 
-`localhost:53389`
+# 🟦 **Next Step: Import into Docker**
+
+From inside WSL:
+
+Code
+
+```
+docker import output/images/rootfs.tar second_chance_image
+```
+
+Run the container:
+
+Code
+
+```
+docker run -it --privileged -p 3389:3389 second_chance_image /sbin/init
+```
+
+# 🟦 **Eventually Start Weston (Headless + RDP)**
+
+This step is only nesseary if Weston is not configured as service an therefoe doen“t start automaticly.
+Inside the container:
+
+Code
+
+```
+weston --backend=headless-backend.so --rdp --socket=wayland-0
+```
+
+# 🟦 **Again Connect from Windows**
+
+On Windows:
+
+Code
+
+```
+mstsc.exe /v:localhost:3389
+```
+
+
+

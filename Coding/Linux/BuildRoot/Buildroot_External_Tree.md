@@ -1,6 +1,6 @@
 ---
 id: 20261004222429
-title: Step‑by‑Step Tutorial
+title: Step‑by‑Step Tutorial old
 author: Karl Schmitt
 date: 2026-10-04
 keywords: [ Buildroot, WSL2, Docker, Wayland, Weston, RDP]
@@ -12,8 +12,6 @@ keywords: [ Buildroot, WSL2, Docker, Wayland, Weston, RDP]
 
 
 # Buildroot Step‑by‑Step Tutorial 👟
-
-
 
 
 ### Full Stack Overview
@@ -149,11 +147,18 @@ Inside your WSL Debian instance and Bash terminal:
 
 ![Git-Logo](../Images/Git-Logo.png)
 ```bash
-mkdir -p ~/Second_Chance/buildroot-work
-cd ~/Second_Chance/buildroot-work
+mkdir -p ~/Second_Chance/External_Blueprint
+```
+```bash
+cd ~/Second_Chance/External_Blueprint
+```
+```bash
 git clone https://github.com/buildroot/buildroot.git
+```
+```bash
 cd buildroot
 ```
+
 A small script, in case you have to clone it again:
 ```bash
 # 1. Clean out any previous broken artifact folders
@@ -213,7 +218,9 @@ We froze all parameters inside a minimal configuration profile (`configs/wayland
 
 ## Core Blueprint Settings
 
-```makefile
+```bash
+# 1. Create your stable, reproducible defconfig blueprint file
+cat << 'EOF' > configs/wayland_client_x86_64_defconfig
 # Target Architecture Profile
 BR2_x86_64=y
 BR2_x86_x86_64=y
@@ -249,12 +256,33 @@ BR2_PACKAGE_WESTON_DEMO_CLIENTS=y
 BR2_PACKAGE_UTIL_LINUX=y
 BR2_PACKAGE_UTIL_LINUX_BINARIES=y
 
+# Additional Packages: Text Editors and Multiplexers
+BR2_PACKAGE_VIM=y
+BR2_PACKAGE_TMUX=y
+
+# Node.js + NPM (Required to execute and build Electron packages)
+BR2_PACKAGE_NODEJS=y
+BR2_PACKAGE_NODEJS_NPM=y
+
+# C# Mono Open Source .NET Runtime Environment
+BR2_PACKAGE_MONO=y
+
 # Filesystem Packaging Limits
 BR2_TARGET_ROOTFS_EXT2=y
 BR2_TARGET_ROOTFS_EXT2_4=y
 BR2_TARGET_ROOTFS_EXT2_SIZE="1G"
-```
 
+EOF
+```
+```bash
+# 2. Apply your configuration blueprint to generate the master .config
+make wayland_client_x86_64_defconfig
+```
+```bash
+
+# 3. Launch your clean compilation sequence
+make
+```
 ***
 
 ## Deployment & Hardware Graphics Passthrough
@@ -407,17 +435,311 @@ make
 
 
 
-### 3 Create the Buildroot external tree 🌳
+
+## Complete Step-by-Step Tutorial: Creating and Integrating a Buildroot External Tree (`BR2_EXTERNAL`)
+
+An **External Tree (`BR2_EXTERNAL`)** allows you to cleanly add custom packages, configuration options, and board support files outside of the main Buildroot source repository. This keeps your modifications modular, version-control friendly, and fully reproducible.
+
+### Create the Buildroot external tree 🌳
 
 Set up an external tree to hold custom packages and configuration.
 
-In WSL Debian Bash terminal:
+In a WSL Debian Bash terminal:
 
-* Go to home: `cd ~/Second_Chance`
+* In the Windows PowerShell run: `wsl -d Second_Chance`
 
-* Create external tree: `mkdir -p ~/Second_Chance/buildroot-external/package/electron` and `mkdir -p ~/Second_Chance/buildroot-external/package/hello-electron`
+* Go to git project home directory: `cd ~/Second_Chance/`
 
-* Ensure structure: `ls ~/Second_Chance/buildroot-external` should show `Config.in`, `external.mk`, `package/` after next steps
+* In the git project home directory you should see a **.bit** folder:`ls -a`
+
+* Go to the external blueprint directory: `cd ~/Second_Chance/External_Blueprint/`
+
+* In the external blueprint directory you should see a **buildroot** folder: `ls -a`
+
+* Create the external tree directory: `mkdir -p ~/Second_Chance/External_Blueprint/buildroot-external`
+
+
+This tutorial guides you through setting up an external tree containing a custom application (`hello-electron`) and integrating it into your Buildroot build pipeline.
+
+
+
+## Step 1: Create the External Tree Directory Structure
+
+Let's create your workspace folder and set up the layout for your external tree and custom packages.
+
+![Builtroot External Tree](../Images/Screenshots/Builtroot-External-Tree.png)
+
+Open your bash erminal and run:
+```bash
+# Create the root external tree directory and package folders
+mkdir -p ~/Second_Chance/External_Blueprint/buildroot-external/package/electron
+mkdir -p ~/Second_Chance/External_Blueprint/buildroot-external/package/hello-electron/src
+```
+
+Once we are done, your directory structure should look like this:
+
+```
+buildroot-external/
+├── Config.in
+├── external.desc
+├── external.mk
+└── package
+    ├── electron
+    │   ├── Config.in
+    │   └── electron.mk
+    └── hello-electron
+        ├── Config.in
+        ├── hello-electron.mk
+        └── src
+            ├── main.js
+            └── package.json
+---
+```
+
+## Step 2: Create the Core External Tree Metadata Files
+
+Every external tree requires three core configuration files at its root.
+
+![Builtroot External Tree](../Images/Screenshots/Builtroot-External-Tree.png)
+
+### 1. `external.desc`
+
+This file defines the unique identifier for your external tree. Buildroot uses this name to generate internal variables (like `$BR2_EXTERNAL_MY_TREE_PATH`).
+
+
+
+Plaintext
+
+```
+name: MY_TREE
+desc: "Custom external package tree for Electron and utilities"
+```
+
+### 2. `Config.in`
+
+This file creates a custom menu in `menuconfig` and sources the configuration files of your individual packages.
+
+
+
+Code snippet
+
+```
+menu "Custom External Packages"
+
+source "$BR2_EXTERNAL_MY_TREE_PATH/package/electron/Config.in"
+source "$BR2_EXTERNAL_MY_TREE_PATH/package/hello-electron/Config.in"
+
+endmenu
+```
+
+### 3. `external.mk`
+
+This Makefile fragment automatically discovers and includes the `.mk` build files for all packages located inside your external tree.
+
+
+
+Makefile
+
+```
+include $(sort $(wildcard $(BR2_EXTERNAL_MY_TREE_PATH)/package/*/*.mk))
+```
+
+## Step 3: Define Your Custom Packages
+
+### Defining the Electron Package
+
+Create the configuration and build rules for the Electron runtime wrapper.
+
+
+
+1. **`buildroot-external/package/electron/Config.in`**
+
+
+
+Code snippet
+
+```
+config BR2_PACKAGE_ELECTRON
+	bool "electron"
+	depends on BR2_PACKAGE_HOST_NODEJS_ARCH_SUPPORTS
+	select BR2_PACKAGE_HOST_NODEJS
+	help
+	  Electron framework for building desktop applications with web technologies.
+```
+
+2. **`buildroot-external/package/electron/electron.mk`**
+
+
+
+Makefile
+
+```
+################################################################################
+#
+# electron
+#
+################################################################################
+
+ELECTRON_VERSION = 28.2.0
+ELECTRON_SITE = https://github.com/electron/electron/releases/download/v$(ELECTRON_VERSION)
+ELECTRON_SOURCE = electron-v$(ELECTRON_VERSION)-linux-x64.zip
+
+define ELECTRON_EXTRACT_CMDS
+	unzip -q $(ELECTRON_DL_DIR)/$(ELECTRON_SOURCE) -d $(@D)
+endef
+
+define ELECTRON_INSTALL_TARGET_CMDS
+	mkdir -p $(TARGET_DIR)/usr/lib/electron
+	cp -r $(@D)/* $(TARGET_DIR)/usr/lib/electron/
+	ln -sf /usr/lib/electron/electron $(TARGET_DIR)/usr/bin/electron
+endef
+
+$(eval $(generic-package))
+```
+
+### Defining the "Hello Electron" Application Package
+
+Create the package that bundles your custom application source files into the target image.
+
+
+
+1. **`buildroot-external/package/hello-electron/Config.in`**
+
+
+
+Code snippet
+
+```
+config BR2_PACKAGE_HELLO_ELECTRON
+	bool "hello-electron"
+	select BR2_PACKAGE_ELECTRON
+	help
+	  A simple Hello Electron application.
+```
+
+2. **`buildroot-external/package/hello-electron/hello-electron.mk`**
+
+
+
+Makefile
+
+```
+################################################################################
+#
+# hello-electron
+#
+################################################################################
+
+HELLO_ELECTRON_VERSION = 1.0
+HELLO_ELECTRON_SITE = $(BR2_EXTERNAL_MY_TREE_PATH)/package/hello-electron/src
+HELLO_ELECTRON_SITE_METHOD = local
+
+define HELLO_ELECTRON_INSTALL_TARGET_CMDS
+	mkdir -p $(TARGET_DIR)/opt/hello-electron
+	cp -r $(@D)/* $(TARGET_DIR)/opt/hello-electron/
+endef
+
+$(eval $(generic-package))
+```
+
+## Step 4: Add Application Source Code
+
+Create a basic Electron application payload inside the source directory.
+
+
+
+1. **`buildroot-external/package/hello-electron/src/package.json`**
+
+
+
+JSON
+
+```
+{
+  "name": "hello-electron",
+  "version": "1.0.0",
+  "main": "main.js"
+}
+```
+
+2. **`buildroot-external/package/hello-electron/src/main.js`**
+
+
+
+JavaScript
+
+```
+const { app, BrowserWindow } = require('electron');
+
+function createWindow() {
+  const win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false
+    }
+  });
+
+  win.loadURL('data:text/html;charset=utf-8,<html><body style="background:#222;color:#fff;display:flex;justify-content:center;align-items:center;height:100vh;font-family:sans-serif;"><h1>Hello Electron.js</h1></body></html>');
+}
+
+app.whenReady().then(createWindow);
+```
+
+## Step 5: Build and Test with Buildroot
+
+To compile your system with the external tree attached, point Buildroot to your external directory via the `BR2_EXTERNAL` environment variable.
+
+
+
+1. Navigate to your Buildroot source directory:
+
+
+
+   Bash
+
+   ```
+   cd ~/Second_Chance/External_Blueprint/buildroot
+   ```
+
+2. Configure Buildroot while passing your external tree path:
+
+
+
+   Bash
+
+   ```
+   make BR2_EXTERNAL=/root/Second_Chance/External_Blueprint/buildroot-external wayland_client_x86_64_defconfig
+   ```
+
+3. (Optional) Open `menuconfig` to verify your packages appear under the **Custom External Packages** menu:
+
+
+
+   Bash
+
+   ```
+   make BR2_EXTERNAL=/root/Second_Chance/External_Blueprint/buildroot-external menuconfig
+   ```
+
+   _(Navigate to **Custom External Packages** and ensure `electron` and `hello-electron` are enabled with `[*]`)._
+
+
+
+4. Run the build sequence:
+
+
+
+   Bash
+
+   ```
+   make BR2_EXTERNAL=/root/Second_Chance/External_Blueprint/buildroot-external
+   ```
+
+Once the build completes successfully, your custom packages will be compiled and embedded into your root filesystem image (`output/images/rootfs.ext4`), ready to launch in QEMU or deploy to your target environment!
+
+
 
 #### **External Package Architecture for Buildroot**
 ```
