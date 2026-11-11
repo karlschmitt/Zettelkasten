@@ -16,7 +16,8 @@ date: 2026-06-30
 5. [☢️ Pure TypeScript](./TypeScript/Exampels/TypeScript-Tutorial-VSCode-PowerShell-Edge.md)
 6.  [🔬 Minimalist TypeScript Development](./TypeScript/Exampels/TypeScript_Using_Only_PowerShell_and_Edge.md)
 7.  [🧰 TypeScript-Tutorial with an inline compiler](./TypeScript/Exampels/TypeScript-Tutorial-Inline-Compiler.md)
-8. ⚛️[Electron.js](./Electron/Electron_and_TypeScript_Startpage.md)
+8.  [React Landing Page](./React/React-Landing-Page.md)
+9. ⚛️[Electron.js](./Electron/Electron_and_TypeScript_Startpage.md)
 
 >[NOTE!]
 > Feel free to continue with the bootcamps ⛺:
