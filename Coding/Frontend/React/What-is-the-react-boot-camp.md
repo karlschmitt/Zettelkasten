@@ -17,10 +17,7 @@ keywords: [ React, Vite ]
 5. ⚠️ [How does React handle side effects?](./Atoms/React_handling_side_effects.md)
 6. 📰 [Multi Page Applications](./Atoms/React_Router_multi_page_applications.md)
 7. 🔄[Dynamic Route Parameters](./Atoms/React_Router_Dynamic_Route_Parameters.md)
-8. 
-
-Here is a comprehensive, self-contained **React Bootcamp** formatted in clean Markdown, specifically structured for a **Zettelkasten** workflow (complete with YAML frontmatter, atomic `[[wikilinks]]`, tags, and conceptual breakdowns so you can easily split each module into permanent notes).
-
+   
 
 > **Core Mental Model:** React is a declarative JavaScript library for building user interfaces where the UI is a pure function of state: $UI = f(state)$.
 
@@ -28,7 +25,7 @@ Here is a comprehensive, self-contained **React Bootcamp** formatted in clean Ma
 
 ## 🗺️ Curriculum Overview (Atomic Note Links)
 
-* [[01-react-architecture-and-virtual-dom]]
+* [01-react-architecture-and-virtual-dom](./Atoms/React_Core_Architectural_Concepts_Zettelkasten.md)
 * [[02-jsx-and-component-composition]]
 * [[03-props-and-unidirectional-data-flow]]
 * [[04-state-management-with-usestate]]
