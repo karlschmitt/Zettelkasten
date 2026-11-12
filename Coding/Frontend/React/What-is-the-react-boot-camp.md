@@ -27,7 +27,7 @@ keywords: [ React, Vite ]
 ## 🗺️ Curriculum Overview (Atomic Note Links)
 
 * [01-react-architecture-and-virtual-dom](./Atoms/React_Core_Architectural_Concepts_Zettelkasten.md)
-* [[02-jsx-and-component-composition]]
+* [02-jsx-and-component-composition](./Atoms/JSX-and-Component-Composition.md)
 * [[03-props-and-unidirectional-data-flow]]
 * [[04-state-management-with-usestate]]
 * [[05-side-effects-and-useeffect]]
@@ -48,6 +48,10 @@ Modern React apps are bootstrapped using **Vite** rather than legacy tools like 
 
 
 ### 2. Core Architectural Concepts
+
+
+![JSX and Component Composition Nbr2](./Images/JSX_and_Component_Composition_Nbr2.png)
+
 * **Component-Based Architecture:** Break UIs into isolated, reusable building blocks (e.g., `<Navbar />`, `<Card />`, `<Button />`).
 * **The Virtual DOM:** An in-memory lightweight copy of the real browser DOM. When state changes, React runs a *diffing algorithm* (Reconciliation) to calculate the minimal set of changes required and updates only those specific nodes in the real DOM.
 * **JSX (JavaScript XML):** Syntax sugar allowing HTML-like structure inside JavaScript. Under the hood, compilers (like Babel or SWC) transpile JSX into `React.createElement()` calls.
