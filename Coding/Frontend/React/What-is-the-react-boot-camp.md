@@ -19,6 +19,7 @@ keywords: [ React, Vite ]
 7. 🔄[Dynamic Route Parameters](./Atoms/React_Router_Dynamic_Route_Parameters.md)
    
 
+
 > **Core Mental Model:** React is a declarative JavaScript library for building user interfaces where the UI is a pure function of state: $UI = f(state)$.
 
 ---

@@ -8,7 +8,7 @@ keywords: [ React, UI, DOM ]
 
 ![Kernkonzepte der UI-Komponenten-Architektur](../Images/Kernkonzepte_der_UI-Komponenten-Architektur.png)
 
-> [NOTE!]
+> [!NOTE]
 > Der Text beschreibt die grundlegenden **architektonischen Konzepte** von React als JavaScript-Bibliothek zur Erstellung von Benutzeroberflächen. Im Mittelpunkt stehen **wiederverwendbare Komponenten**, die über einen **deklarativen Ansatz** und **einfache Datenflüsse** von Eltern- zu Kindelementen aufgebaut sind. Durch den Einsatz eines **virtuellen DOMs** und den **Abgleichungsprozess** werden Änderungen effizient im Browser dargestellt. Zudem steuern **Zustände** und **Hooks** die dynamischen Abläufe, während die **Context-API** den applikationsweiten Datenaustausch ohne unnötige Weitergabe erleichtert.
 
 
