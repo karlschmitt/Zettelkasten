@@ -191,17 +191,6 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 4. [TypeScipt with Deno](./TypeScript/How_learn_type_script_using_deno.md) 🦕
 
 
-### React
-
-1. [React Home](https://react.dev/)
-2. [How to create a React project?](./React/How_to_create_a_react_project.md)
-3. [A beginner's guide](https://www.freecodecamp.org/news/get-started-with-react-for-beginners/)
-4. [Learn React](./React/React.md)
-
-### React Hooks
-
-### React Router
-
 ### Material-UI 
 
 1. The community [material.co](https://materialui.co)
@@ -222,8 +211,6 @@ Why not watching a [YouTube](https://www.youtube.com/) video from Nana, she perf
 
 1. [Angular Bootcamp](./Angular/Learning_Angular_Hub.md)
 2. [Angular Home](https://angular.dev/)
-
-## Teilproject Spring Boot Bootcamp!
 
 ## Teilproject Persistency Bootcamp
 

@@ -10,17 +10,30 @@ keywords: [ React, JavaScript ]
 
 # React Landing Page ✈️
 
-1. ⛵ [What-is-the-react-bootcamp?](./What-is-the-react-boot-camp.md)
-2. 📚 [How_to_learn_React?](./How_to_learn_React_JS.md)
-3. ✨[JavaScript](./JavaScript.md)
-4. 📖 [React](./React.md)
-5. 👩‍🏭 [How to create a react project?](./How_to_create_a_react_project.md)
-6. 🤿 [React-Deep-Dive](./react-deep-dive.md)
-7. 🪝[React-Hooks-Deep-Dive](./react-hooks-deep-dive.md)
-8. 🛒 [React-Redux-Deep-Dive](./react-redux-deep-dive.md)
-9. 🧑‍🎓 [React Framework](./React_Framework.md)
-10. ⛺[30 Day Absolute Beginner React Bootcamp](./react-30-day-absolute-beginner-bootcamp.md)
-11. 📅[Two Day Absolute Beginnr React Coding Dojo](./Two_Day_Absolute_Beginner_React_Coding_Dojo.md)
+1. 🌐[React Home on the Web](https://react.dev/)
+2. 🪏[How to create a React project?](./React/How_to_create_a_react_project.md)
+3. 🪁[A beginner's guide](https://www.freecodecamp.org/news/get-started-with-react-for-beginners/)
+4. 📺 [Learn React on YouTube](https://youtu.be/-g0l__V5Mck)
+5. ⛵ [What-is-the-react-bootcamp?](./What-is-the-react-boot-camp.md)
+6. 📚 [How_to_learn_React?](./How_to_learn_React_JS.md)
+7. ✨[JavaScript](./JavaScript.md)
+8. 📖 [React](./React.md)
+9. 👩‍🏭 [How to create a react project?](./How_to_create_a_react_project.md)
+10. 🤿 [React-Deep-Dive](./react-deep-dive.md)
+11. 🪝[React-Hooks-Deep-Dive](./react-hooks-deep-dive.md)
+12. 🛒 [React-Redux-Deep-Dive](./react-redux-deep-dive.md)
+13. 🧑‍🎓 [React Framework](./React_Framework.md)
+14. ⛺[30 Day Absolute Beginner React Bootcamp](./react-30-day-absolute-beginner-bootcamp.md)
+15. 📅[Two Day Absolute Beginnr React Coding Dojo](./Two_Day_Absolute_Beginner_React_Coding_Dojo.md)
 
+
+## Short Tutorials
+
+1. 🧱 [React Components and howto use them](./Tutorials/React_Components_and_howto_use_them.md)
+2. 🧩 [React Component tutorial](./Images/React_Component_tutorial.md)
+3. 🍭 [Props and how to use them](./Tutorials/Props_and_how_to_use_them.md)
+4. 🍫 [Props Tutorial](./Tutorials/Props_Tutorial.md)
+5. 🚩 [React State Tutorial](./Tutorials/React_State_Tutorial.md)
+6. ⚖️ [React Props versus State](./Tutorials/React_Props_versus_State.md)
 
 ## Happy coding! 😊
