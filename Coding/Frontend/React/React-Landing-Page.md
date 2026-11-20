@@ -1,9 +1,9 @@
 ---
-id: 2026111115093420261111150934
+id: 20261111150934
 title: React Landing Page
 author: Karl Schmitt
 date: 2026-11-11
-keywords: [ React, JavaScript ]
+keywords: [ React, Hooks, JavaScript ]
 ---
 
 ![React Logo](./Images/react-logo-dark.png)
@@ -35,5 +35,9 @@ keywords: [ React, JavaScript ]
 4. 🍫 [Props Tutorial](./Tutorials/Props_Tutorial.md)
 5. 🚩 [React State Tutorial](./Tutorials/React_State_Tutorial.md)
 6. ⚖️ [React Props versus State](./Tutorials/React_Props_versus_State.md)
+7. ☔ [State under the Hood](./Tutorials/React_and_State.md)
+8. 🎈 [Lifting State Up](./Tutorials/Lifting-State-Up.md)
+9. .🪐˖ [StarWars API](./Tutorials/React_useEffect_swapi_Tutorial.md)
+10. ⛅ [Weather App](./Tutorials/React_useEffect_weather_app_tutorial.md)
 
 ## Happy coding! 😊
