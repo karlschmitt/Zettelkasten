@@ -1,6 +1,8 @@
 ---
 id: 20261118153935
 title: React Components
+author: Karl Schmitt
+date: 2026-11-18
 ---
 
 
