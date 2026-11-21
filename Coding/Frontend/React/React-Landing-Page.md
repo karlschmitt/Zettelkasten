@@ -38,11 +38,12 @@ keywords: [ React, Hooks, JavaScript ]
 7. 🚩 [React State Tutorial](./Tutorials/React_State_Tutorial.md)
 8. ⚖️ [React Props versus State](./Tutorials/React_Props_versus_State.md)
 9. ☔ [State under the Hood](./Tutorials/React_and_State.md)
-10. 🎈 [Lifting State Up](./Tutorials/Lifting-State-Up.md)
-11. .🪐 [StarWars API](./Tutorials/React_useEffect_swapi_Tutorial.md)
-12. ⛅ [Weather App](./Tutorials/React_useEffect_weather_app_tutorial.md)
-13. 🌡️ [React useContext Weather App](./Tutorials/React_useContext_weather_app_tutorial.md)
-14. 🏦 [React useReducer Beginner Tutorial](./Tutorials/React_useReducer_Tutorial.md)
+10. 🧮 [React Web Calculator](./Tutorials/React_Web_Calculator.md)
+11. 🎈 [Lifting State Up](./Tutorials/Lifting-State-Up.md)
+12. .🪐 [StarWars API](./Tutorials/React_useEffect_swapi_Tutorial.md)
+13. ⛅ [Weather App](./Tutorials/React_useEffect_weather_app_tutorial.md)
+14. 🌡️ [React useContext Weather App](./Tutorials/React_useContext_weather_app_tutorial.md)
+15. 🏦 [React useReducer Beginner Tutorial](./Tutorials/React_useReducer_Tutorial.md)
 
 
 ## Happy coding! 😊
