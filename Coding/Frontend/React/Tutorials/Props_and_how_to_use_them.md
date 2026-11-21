@@ -6,7 +6,7 @@ date: 2026-11-18
 keywords: [ React, Props ]
 ---
 
-![](../Images/Props_Funktionsweise_Nutzung.png)
+![Props Funktionsweise Nutzung](../Images/Props_Funktionsweise_Nutzung.png)
 
 > [!NOTE]
 > In React-Anwendungen dienen **Props** als grundlegendes Werkzeug, um Informationen von einer übergeordneten Komponente an eine untergeordnete weiterzuleiten. Sie ähneln funktionalen Argumenten oder HTML-Attributen, wodurch Entwickler flexible und wiederverwendbare UI-Elemente erstellen können. Ein zentrales Merkmal dieser Datenübertragung ist der **unidirektionale Datenfluss**, der sicherstellt, dass Informationen ausschließlich von oben nach unten wandern und für das empfangende Element unveränderlich bleiben. Durch diese **konstante Datenstruktur** lässt sich die Benutzeroberfläche dynamisch anpassen, ohne Werte fest im Code verankern zu müssen. Darüber hinaus beschränken sich diese Eigenschaften nicht nur auf einfache Textzeichenfolgen, sondern unterstützen diverse Formate wie Zahlen, Arrays oder Funktionen. Schließlich ermöglichen sie eine **saubere Code-Organisation**, indem Entwickler benötigte Werte direkt in den Funktionsparametern der jeweiligen Komponenten extrahieren können.

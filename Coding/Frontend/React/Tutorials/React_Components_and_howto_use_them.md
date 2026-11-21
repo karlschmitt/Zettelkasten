@@ -3,8 +3,13 @@ id: 20261118153935
 title: React Components
 author: Karl Schmitt
 date: 2026-11-18
+keywords: [ React, JSX, JavaScript, XML, HTML]
 ---
 
+![React-Komponenten und GUI-Architektur](../Images/React-Komponenten_und_GUI-Architektur.png)
+
+> [!NOTE]
+> React-Anwendungen werden aus **unabhängigen Bausteinen** aufgebaut, die als **Komponenten** bezeichnet werden und die Benutzeroberfläche in übersവരുടെ, wiederverwendbare Teile unterteilen. Diese Komponenten sind im Wesentlichen **JavaScript-Funktionen**, die mit einem **Großbuchstaben** beginnen und **JSX** zurückgeben, um festzulegen, wie der Inhalt auf dem Bildschirm dargestellt wird. Bei der Entwicklung einer grafischen Oberfläche wird die Ansicht zunächst in einen **Komponentenbaum** zerlegt, bevor die kleinsten Elemente erstellt und in übergeordnete Strukturen integriert werden. Schließlich wird die **Hauptkomponente** in das HTML-Dokument eingefügt, wodurch React die vollständige Verwaltung der Browser-Anzeige übernimmt. Dieser modulare Ansatz bietet erhebliche Vorteile, da er die **Wiederverwendbarkeit** von Code erhöht, die **Isolierung** von Fehlern erleichtert und die langfristige **Wartbarkeit** von Webanwendungen deutlich verbessert.
 
 # React Components
 
@@ -31,6 +36,8 @@ function ActionButton() {
 ### How to Build a Web GUI Using Components
 
 Building a graphical user interface in React follows a predictable, four-step architectural workflow:
+
+![How to Build a Web GUI Using Components](../Images/How_to_Build_a_Web_GUI_Using_Components.png)
 
 #### 1. Decompose the UI into a Component Tree
 

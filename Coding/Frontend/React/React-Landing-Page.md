@@ -29,16 +29,20 @@ keywords: [ React, Hooks, JavaScript ]
 
 ## Short Tutorials
 
-1. 🧱 [React Components and howto use them](./Tutorials/React_Components_and_howto_use_them.md)
-2. 🧩 [React Component tutorial](./Images/React_Component_tutorial.md)
-3. 🍭 [Props and how to use them](./Tutorials/Props_and_how_to_use_them.md)
-4. 🍫 [Props Tutorial](./Tutorials/Props_Tutorial.md)
-5. 🚩 [React State Tutorial](./Tutorials/React_State_Tutorial.md)
-6. ⚖️ [React Props versus State](./Tutorials/React_Props_versus_State.md)
-7. ☔ [State under the Hood](./Tutorials/React_and_State.md)
-8. 🎈 [Lifting State Up](./Tutorials/Lifting-State-Up.md)
-9. .🪐˖ [StarWars API](./Tutorials/React_useEffect_swapi_Tutorial.md)
-10. ⛅ [Weather App](./Tutorials/React_useEffect_weather_app_tutorial.md)
-11. 🌡️ [React useContext Weather App](../Tutorials/React_useContext_weather_app_tutorial.md)
+1. 🚀 [Let“s start](./tutorials/React_Absolute_Beginner_Step-by-Step_Tutorial.md)
+2. 🧱 [React Components and howto use them](./Tutorials/React_Components_and_howto_use_them.md)
+3. 🧩 [React Component tutorial](./Tutorials/React_Component_tutorial.md)
+4.  🛝 [JSX Playground](./Tutorials/JSX-Playground.md)
+5. 🍭 [Props and how to use them](./Tutorials/Props_and_how_to_use_them.md)
+6. 🍫 [Props Tutorial](./Tutorials/Props_Tutorial.md)
+7. 🚩 [React State Tutorial](./Tutorials/React_State_Tutorial.md)
+8. ⚖️ [React Props versus State](./Tutorials/React_Props_versus_State.md)
+9. ☔ [State under the Hood](./Tutorials/React_and_State.md)
+10. 🎈 [Lifting State Up](./Tutorials/Lifting-State-Up.md)
+11. .🪐 [StarWars API](./Tutorials/React_useEffect_swapi_Tutorial.md)
+12. ⛅ [Weather App](./Tutorials/React_useEffect_weather_app_tutorial.md)
+13. 🌡️ [React useContext Weather App](./Tutorials/React_useContext_weather_app_tutorial.md)
+14. 🏦 [React useReducer Beginner Tutorial](./Tutorials/React_useReducer_Tutorial.md)
+
 
 ## Happy coding! 😊
