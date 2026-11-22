@@ -241,6 +241,8 @@ The result is a blue heading with a font size of 40 pixels.
 
 ### **5.1 CSS syntax**
 
+![React What is a CSS Rule Nbr 1](../Images/React_What_is_a_CSS_Rule_Nbr_2.png)
+
 A CSS rule consists of:
 
 ```

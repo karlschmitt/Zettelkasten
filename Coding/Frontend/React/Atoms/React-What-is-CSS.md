@@ -6,7 +6,7 @@ date: 2026-11-22
 keywords: [ React, CSS ]
 ---
 
-![CSS-Styling-Methoden in Web-Frameworks](../Images/CSS-Styling-Methoden_in_Web-Frameworks.png)
+![CSS-Styling-Methoden in Web-Frameworks](../Images/Visuelles_Styling_im_Web-Framework.png)
 
 > [!NOTE]
 > Diese Notizen erklären, wie **Cascading Style Sheets** das Aussehen und Design von **React-Anwendungen** steuern, während React selbst für die Struktur und das Verhalten zuständig ist. Es werden verschiedene Methoden zur Gestaltung vorgestellt, darunter **externe CSS-Dateien**, **Inline-Styles** mit camelCase-Schreibweise und **CSS-Modules** zur Vermeidung von Namenskonflikten. Zudem wird erläutert, warum React den Begriff **className** anstelle des üblichen HTML-Attributs verwendet, da es sich hierbei um ein reserviertes JavaScript-Wort handelt. Schließlich verdeutlicht das Prinzip des **Cascadings**, wie CSS bei konkurrierenden Regeln anhand von Spezifität und Reihenfolge entscheidet, welche Stilvorgabe letztendlich angewendet wird.
