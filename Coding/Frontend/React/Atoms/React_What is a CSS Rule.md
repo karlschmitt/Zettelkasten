@@ -22,56 +22,49 @@ A CSS rule is a statement that tells the browser how specific HTML elements shou
 
 A CSS rule consists of:
 
-1\. A selector
+1\. 🕵️‍♀️ A selector
 
-2\. One or more declarations
+2\. 📜 One or more declarations
 
 Basic structure:
-
-\`\`\`css
-
+```css
 selector {
 
   property: value;
 
 }
-
-\`\`\`
-
-\---
+```
+---
 
 ## Example
 
-\`\`\`css
-
+```css
 h1 {
 
   color: blue;
 
 }
-
-\`\`\`
+```
 
 In this rule:
 
-\- \`h1\` is the selector
+-  `h1` is the selector 🕵️‍♀️
 
-\- \`color\` is the property
+-  `color` is the property
 
-\- \`blue\` is the value
+-  `blue` is the value
 
 Meaning:
 
-All \`\<h1>\` elements should be displayed in blue.
+All  `<h1>` elements should be displayed in blue.🟦
 
-\---
+---
 
 ## Anatomy of a CSS Rule
 
 Example:
 
-\`\`\`css
-
+```css
 p {
 
   color: red;
@@ -80,12 +73,11 @@ p {
 
 }
 
-\`\`\`
+```
 
 Breakdown:
 
-\`\`\`text
-
+```text
 Selector:
 
 p
@@ -95,13 +87,10 @@ Declarations:
 color: red;
 
 font-size: 18px;
-
-\`\`\`
+```
 
 Visualization:
-
-\`\`\`text
-
+```text
 p {
 
   color: red;
@@ -112,7 +101,7 @@ p {
 
 ↑
 
-Selector
+p or paragraph is the Selector
 
 color: red;
 
@@ -120,61 +109,81 @@ font-size: 18px;
 
 ↑
 
-Declarations
+are the Declarations
 
-\`\`\`
+```
+---
 
-\---
-
-## The Selector
+## The Selector 🕵️‍♀️
 
 The selector determines which HTML elements receive the styles.
 
-### Element Selector
+### Element Selector 🕵️‍♀️
 
-\`\`\`css
-
+```css
 h1 {
 
   color: blue;
 
 }
+```
 
-\`\`\`
+Targets all `<h1>` elements.
 
-Targets all \`\<h1>\` elements.
+---
 
-\---
+### Class Selector 🕵️‍♀️
 
-### Class Selector
+A **CSS class selector** targets and styles HTML elements that have a specific `class` attribute. You write it in your stylesheet using a **period (`.`)** followed immediately by the class name.
 
-\`\`\`css
+How It Works
 
+1. **In HTML.** Add the `class` attribute to one or more elements.
+
+```html
+<p class="highlight">This paragraph will be styled.</p>
+<div class="highlight">This div will share the exact same style.</div>
+```
+
+Use code with caution.
+
+2. **In CSS.** Reference that class name with a leading __dot__.
+```css
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+```
+Key Features:
+
+* **Reusable across elements.** Unlike an ID selector (`#`), which is meant for a single unique element, the same class can be applied to as many HTML elements on a page as you want.
+* **Combinable.** A single HTML element can hold multiple classes separated by spaces (e.g., `<button class="btn primary">`), allowing you to layer and mix different styles.
+* **Targetable by tag.** You can restrict a class to a specific HTML tag by placing the tag name before the period—for example, `p.highlight` will only style `<p>` tags with that class, ignoring `<div>` tags.
+
+```css
 .title {
 
   color: green;
 
 }
+```
 
-\`\`\`
+The above css code code statment targets all elements with:
 
-Targets all elements with:
-
-\`\`\`html
+```html
 
 class="title"
 
-\`\`\`
+```
 
 Example:
 
-\`\`\`html
+```html
 
-\<h1 class="title">Hello\</h1>
+<h1 class="title">Hello</h1>
 
-\`\`\`
-
-\---
+```
+---
 
 ### ID Selector
 
