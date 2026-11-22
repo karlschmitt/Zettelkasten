@@ -143,7 +143,10 @@ Navigate into the React project folder with a different PowerShell session::
 cd D:\CodingDojo\ReactDojo\react-css-playground
 ```
 
+![PowerShell open React project folder](../Images/Screenshots/PowerShell_open_React_project_folder.png)
+
 ⚠️ Install dependencies only if needed, in my case this was done with the npm invocation above!:
+🍀 If the development server is already running this step can be omitted. 
 
 ```
 npm install
@@ -151,13 +154,18 @@ npm install
 
 ### **Step 2: Open Visual Studio Code**
 
+![Visual Studio Code Logo](../Images/Visual_Studio_Code_Logo.png)
+
 Open Visual Studio Code in a different PowerShell session:
 ```
 cd D:\CodingDojo\ReactDojo\react-css-playground
 code .
 ```
+On the left side you see the file stucture and ```App.jsx``` is selected and on the right side you see the file content:
 
-### **Step 3: Start the development server**
+![Visual Studio Code first opening Nbr 001](../Images/Screenshots/Visual_Studio_Code_first_opening_Nbr_001.png)
+
+### **Step 3: ⭐ Start the development server**
 
 ⚠️Be careful, you only need to start the development server if it is not already running!
 ```
@@ -165,13 +173,13 @@ cd D:\CodingDojo\ReactDojo\react-css-playground
 npm run dev
 ```
 
-Open the URL displayed in PowerShell, normally:
+🌐 Open the following URL in a Web browser, the URI is displayed in the PowerShell, normally:
 
 ```
 http://localhost:5173
 ```
 
-Exercise 1 completed
+🏋️ Exercise one completed ✅
 
 You have created your first React application using Vite!
 
@@ -192,6 +200,14 @@ Important files:
 | `src/index.css`  | Global CSS                    |
 | `package.json`   | Dependencies and scripts      |
 | `vite.config.js` | Vite configuration            |
+
+The initial top level structure of you React project might looks like this:
+
+![PowerShell open React project folder](../Images/Screenshots/PowerShell_open_React_project_folder.png)
+
+The source folder of your React project migt look like this:
+
+![PowerShell open React source folder](../Images/Screenshots/PowerShell_open_React_source_folder.png)
 
 ## **5. What is CSS?**
 
@@ -215,6 +231,13 @@ h1 {
 ```
 
 The result is a blue heading with a font size of 40 pixels.
+
+![React What is CSS Overview Nbr 1](../Images/React_What_is_CSS_Overview_Nbr_2.png)
+
+> [!NOTE]
+> If you want to find out more about CSS feel free to follow the white rabbit 🐇:
+
+[What-is-CSS?](../Atoms/React-What-is-CSS.md)
 
 ### **5.1 CSS syntax**
 
