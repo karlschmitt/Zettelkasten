@@ -18,6 +18,8 @@ keywords: [ React, CSS]
 
 ## Overview
 
+![CSS3 Logo](../Images/CSS3_Logo.png)
+
 A CSS rule is a statement that tells the browser how specific HTML elements should be displayed.
 
 A CSS rule consists of:
@@ -34,6 +36,34 @@ selector {
 
 }
 ```
+A **CSS rule** (also called a ruleset) is _the fundamental building block of CSS that tells a browser which HTML elements to style and how to display them_.
+
+Every CSS rule is made up of two main parts: a **selector** and a **declaration block**.
+
+```css
+/* Selector */
+p {
+  /* Declaration Block */
+  color: darkslategray;   /* Declaration 1 */
+  line-height: 1.6;       /* Declaration 2 */
+}
+```
+
+Use code with caution ⚠️.
+
+💪 Anatomy of a CSS Rule
+
+* **Selector (`p`):** Points to the specific HTML element(s) you want to style (in this case, all `<p>` paragraph tags). You can also target elements by class (`.button`), ID (`#header`), or state (`a:hover`).
+
+* **Declaration Block (`{ ... }`):** Contains one or more styling instructions wrapped in curly braces.
+
+* **Declaration (`color: darkslategray;`):** A single styling rule ending with a semicolon. Each declaration consists of:
+
+  * **Property (`color`):** The visual feature you want to change (like text color, font size, or margin).
+  * **Value (`darkslategray`):** The exact setting you want to give that property.
+
+When a 🌐 web browser loads a webpage, it scans the stylesheet 🌈 from top to bottom, reads each CSS rule, and applies the declarations to every HTML element that matches the selector.
+
 ---
 
 ## Example

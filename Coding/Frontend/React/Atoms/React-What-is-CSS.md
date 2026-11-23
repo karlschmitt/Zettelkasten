@@ -18,6 +18,8 @@ keywords: [ React, CSS ]
 
 ## Overview
 
+![CSS3 Logo](../Images/CSS3_Logo.png)
+
 CSS stands for **Cascading Style Sheets**.
 
 CSS is the language used to control the visual appearance of a website or web application. While React defines the structure and behavior of the user interface, CSS defines how it looks.
@@ -30,6 +32,43 @@ Typical styling tasks include:
 - Layouts
 - Animations
 - Responsive design
+
+**CSS (Cascading Style Sheets)** is _a stylesheet language used to control the visual presentation, layout, and design of web pages_.
+
+Alongside HTML and JavaScript, it is one of the core technologies of the World Wide Web:
+
+* **HTML** acts as the skeleton, defining the structure and raw content (like headings, paragraphs, and images).
+* **CSS** acts as the skin and clothing, dictating colors, fonts, spacing, animations, and responsive layouts across different screen sizes.
+* **JavaScript** adds interactivity and dynamic behavior.
+
+How It Works
+
+CSS operates using rules that target specific HTML elements and apply styling instructions to them.
+```css
+/* Example CSS Rule */
+h1 {
+  color: navy;
+  font-size: 32px;
+}
+```
+
+Use code with caution ⚠️.
+
+* **Selector (`h1`).** Identifies which HTML elements on the page will be styled.
+* **Property (`color`, `font-size`).** The specific visual characteristic you want to change.
+* **Value (`navy`, `32px`).** The setting assigned to that property.
+
+The term **"Cascading"** refers to the priority system browsers use when multiple rules target the same element. Rules are read from top to bottom, and more specific selectors override general ones, allowing developers to set broad default styles and easily customize individual parts.
+
+Ways to Apply CSS 🎂
+
+There are three main methods for adding styles to a webpage, as detailed in this [W3Schools CSS Introduction](https://www.w3schools.com/css/css_intro.asp).
+
+* **External Stylesheets.** Writing CSS in a separate `.css` file and linking it to your HTML. This is the standard approach because updating one file instantly updates the look of an entire website.
+* **Internal (Embedded) CSS.** Placing styles inside a `<style>` tag within the `<head>` section of a single HTML document to give that specific page a unique design.
+* **Inline CSS.** Adding a `style` attribute directly to an individual HTML tag for quick, one-off adjustments. \[[1](https://www.coursera.org/articles/css)]
+
+For a beginner-friendly walkthrough on building your first styled page, check out this [Medium guide on CSS basics](https://medium.com/technology-hits/what-is-css-18a12aefb172) or browse the [MDN Web Docs CSS reference](https://developer.mozilla.org/en-US/docs/Web/CSS) for detailed documentation.
 
 ---
 

@@ -27,7 +27,7 @@ keywords: [ React, Hooks, JavaScript ]
 15. 📅[Two Day Absolute Beginnr React Coding Dojo](./Two_Day_Absolute_Beginner_React_Coding_Dojo.md)
 
 
-## Short Tutorials
+## Short Tutorials👩‍🎓
 
 1. 🚀 [Let“s start](./tutorials/React_Absolute_Beginner_Step-by-Step_Tutorial.md)
 2. 🧱 [React Components and howto use them](./Tutorials/React_Components_and_howto_use_them.md)
@@ -40,15 +40,15 @@ keywords: [ React, Hooks, JavaScript ]
 9. ☔ [State under the Hood](./Tutorials/React_and_State.md)
 10. 🧮 [React Web Calculator](./Tutorials/React_Web_Calculator.md)
 11. 🎈 [Lifting State Up](./Tutorials/Lifting-State-Up.md)
-12. .🪐 [StarWars API](./Tutorials/React_useEffect_swapi_Tutorial.md)
+12. 🪐 [StarWars API](./Tutorials/React_useEffect_swapi_Tutorial.md)
 13. ⛅ [Weather App](./Tutorials/React_useEffect_weather_app_tutorial.md)
 14. 🌡️ [React useContext Weather App](./Tutorials/React_useContext_weather_app_tutorial.md)
 15. 🏦 [React useReducer Beginner Tutorial](./Tutorials/React_useReducer_Tutorial.md)
 
-## React and CSS
+## React and CSS 🌈
 
-1. [CSS in React](./React_and_CSS/React_CSS_Vite_Zettelkasten_Tutorial.md)
-2. [React and CSS](./React_and_CSS/React_and_CSS3_an_Absolute_Beginner_Tutorial.md)
-3. [Styling React with CSS](./React_and_CSS/Styling_React_with_CSS_modules_using_Dynamic_Styles.md)
+1. 🎨 [CSS in React](./React_and_CSS/React_CSS_Vite_Zettelkasten_Tutorial.md)
+2. 🖌️ [React and CSS](./React_and_CSS/React_and_CSS3_an_Absolute_Beginner_Tutorial.md)
+3. 🪶 [Styling React with CSS](./React_and_CSS/Styling_React_with_CSS_modules_using_Dynamic_Styles.md)
 
 ## Happy coding! 😊
