@@ -6,6 +6,8 @@ date: 2026-11-24
 keywords: [ Windows, WSL, Docker, Linux, Ubuntu ]
 ---
 
+![Container-in-Container Architektur](./Images/Container-in-Container_Architektur_Infografik.png)
+
 > [!NOTE]
 > Diese **Dokumentation** beschreibt ein praktisches **Bootcamp** zum Erstellen einer **Docker-in-Docker-Umgebung** unter **Windows 11** mit **WSL 2** und **Docker Desktop**. Die Anleitung führt durch zehn praktische Lektionen, um einen eigenen **Ubuntu-basierten Außencontainer** mit einer funktionsfähigen **Docker-Engine** zu errichten. Mithilfe von **Docker Compose** und **Shell-Skripten** lernen Anwender, mehrere unabhängige **Innencontainer** zu starten, Netzwerke für die **Container-Kommunikation** einzurichten und **Daten** dauerhaft über Volumes zu speichern. Schließlich vermittelt das Projekt wertvolle Einblicke in **verschachtelte Image-Builds**, **Fehlerbehebung** und bewährte **Sicherheitsaspekte** für isolierte Testlabore.
 
