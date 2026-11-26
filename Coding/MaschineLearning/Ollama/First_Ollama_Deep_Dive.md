@@ -12,21 +12,21 @@ keywords: [ Windows, PowerShell, Docker, Python, OpenCode ]
 > Der **Ollama Deep Dive für absolute Anfänger** bietet eine umfassende Einführung in die Ausführung von **Large Language Models** direkt auf dem eigenen Computer, wodurch Datenschutz und Unabhängigkeit von der Cloud gewährleistet werden. Das Tutorial erklärt Schritt für Schritt die grundlegende **Architektur**, die Installation verschiedener **Modelle** sowie die Verwaltung über die Befehlszeile. Darüber hinaus wird gezeigt, wie sich der lokale **API-Server** mithilfe von Python ansprechen lässt, um eigene Anwendungen, Chatbots oder Streaming-Antworten zu realisieren. Ein weiterer Schwerpunkt liegt auf fortgeschrittenen Themen wie **Docker**, **RAG-Systemen** und der Erstellung maßgeschneiderter **Modelfiles**. Letztlich dient der Leitfaden als strukturierter Lernpfad, um eine vollständige und datenschutzfreundliche **KI-Entwicklungsumgebung** aufzubauen.
 
 
-# Ollama Deep Dive für absolute Anfänger 👩‍🎓 
+# Ollama 🦙 Deep Dive für absolute Anfänger 👩‍🎓 
 
 > **Zettelkasten Tutorial**
 >
-> Ziel: Nach diesem Tutorial verstehst du nicht nur, wie man Ollama verwendet, sondern auch **was lokal laufende LLMs sind**, wie Ollama intern funktioniert, wie man Modelle verwaltet, APIs nutzt, Python integriert, Docker einsetzt und eine lokale KI-Entwicklungsumgebung aufbaut.
+> Ziel: Nach diesem Tutorial verstehst du nicht nur, wie man Ollama 🦙 verwendet, sondern auch **was lokal laufende LLMs sind**, wie Ollama 🦙 intern funktioniert, wie man Modelle verwaltet, APIs nutzt, Python integriert, Docker einsetzt und eine lokale KI-Entwicklungsumgebung aufbaut.
 
 ***
 
-## 1. Was ist Ollama?
+## 1. Was ist Ollama 🦙?
 
 ![Ollama Logo](../Images/Ollama-logo.png)
 
 ### Kurzdefinition
 
-**Ollama** ist eine Plattform, mit der man Large Language Models (LLMs) lokal auf dem eigenen Computer ausführen kann.
+**Ollama** 🦙 ist eine Plattform, mit der man Large Language Models (LLMs) lokal auf dem eigenen Computer ausführen kann.
 
 Anstatt ChatGPT über das Internet zu verwenden, läuft das Modell direkt auf deinem Rechner.
 
@@ -65,7 +65,7 @@ Vorteile:
 
 ![OpenCode Ollama API localhost11434_LLM Llama Qwen](../Images/OpenCode_Ollama_API_localhost11434_LLM_Llama_Qwen.png)
 
-Ollama ist also:
+Ollama 🦙 ist also:
 
 > Ein lokaler Modellserver plus eine API.
 
@@ -155,19 +155,20 @@ Beliebte Modelle:
 
 ***
 
-## Modell installieren
+## Modell installieren bzw. herrunterladen
 
-Beispiel:
+🗔 Beispiel 🧲:
 
+```powershell
 ollama pull llama3
-
+```
 ***
 
-Download überprüfen:
-
+💾 Download überprüfen:
+```powershell
 ollama list
-
-Ausgabe:
+```
+🗔 Ausgabe:
 
 NAME       SIZE
 
@@ -175,15 +176,15 @@ llama3     4.7 GB
 
 ***
 
-# 5. Erstes Gespräch
-
+# 5. Erstes Gespräch 💬 und starte das Model 🎪
+```powershell
 ollama run llama3
-
+```
 Dann:
-
+ 
 \>>> Explain React Hooks
 
-Antwort erscheint direkt im Terminal.
+Antwort erscheint direkt im Terminal 🗔.
 
 ***
 
@@ -193,49 +194,50 @@ Verlassen:
 
 ***
 
-# 6. Modelle verwalten
+# 6. Modelle verwalten🗄️
 
-## Installierte Modelle
-
+## 💻Installierte Modelle
+```powershell
 ollama list
-
+```
 ***
 
-## Modell löschen
-
+## Modell löschen 🧽
+```powershell
 ollama rm llama3
-
+```
 ***
 
-## Modellinformationen
-
+## Modellinformationen abrufen 🗂️
+```powershell
 ollama show llama3
-
+```
 ***
 
-# 7. Mehrere Modelle
+# 7. Mehrere Modelle 🤹
 
-Du kannst mehrere Modelle gleichzeitig installiert haben.
-
+🗔 Du kannst mehrere Modelle gleichzeitig installiert haben.
+```powershell
 ollama pull qwen3
 
 ollama pull phi4
 
 ollama pull mistral
+```
 
-Verwendung:
-
+🗔 Verwendung:
+```powershell
 ollama run qwen3
-
+```
 oder
-
+```powershell
 ollama run phi4
-
+```
 ***
 
 # 8. Wie viel RAM brauche ich?
 
-Faustregel:
+✊ Faustregel:👉
 
 | Modellgröße | RAM    |
 | ----------- | ------ |
@@ -258,11 +260,11 @@ Ollama erkennt die Hardware automatisch.
 
 ***
 
-# 9. Ollama REST API
+# 9. Ollama 🦙 REST API
 
 Der wichtigste Schritt.
 
-Ollama ist ein lokaler API-Server.
+Ollama 🦙 ist ein lokaler API-Server.
 
 ***
 
@@ -272,30 +274,45 @@ Ollama ist ein lokaler API-Server.
 
 Antwort:
 
-Ollama is running
+Ollama 🦙 is running
 
 ***
 
 ## API Request
 
-PowerShell:
+This confirms 🦙 Ollama is actively responding to API requests:
+```powershell
+Invoke-RestMethod http://localhost:11434
+```
+* **If running:** It returns `Ollama is running`.
+* **If not running:** It throws a `Unable to connect to the remote server` error.
 
-curl <http://localhost:11434/api/generate> \`
-```yson
+Invoke 🦙 Ollama on Powershell:
+```powershell
+$json = @'
 {
-
-"model":"llama3",
-
-"prompt":"What is React?"
-
+  "model": "llama3",
+  "prompt": "What is React?",
+  "stream": false
 }
+'@
+
+(Invoke-RestMethod -Uri "http://localhost:11434/api/generate" -Method Post -Body $json -ContentType "application/json").response
+```
+Invoke 🦙 Ollama on Bash:
+```bash
+curl http://localhost:11434/api/generate -d '{
+  "model": "llama3",
+  "prompt": "What is React?",
+  "stream": false
+}'
 ```
 
 ***
 
 # 10. JSON verstehen
 
-Request:
+Json Request:
 ```yson
 {
 
@@ -305,7 +322,7 @@ Request:
 
 }
 ```
-Antwort:
+Json Antwort:
 ```yson
 {
 
@@ -326,19 +343,30 @@ Jetzt wird es spannend.
 ## Python installieren
 
 Prüfen:
-
+```powershell
 python --version
+```
 
+![Python Version](../Images/Screenshots/Python_Version.png)
 ***
 
 ## Requests Library
 
+```powershell
 pip install requests
-
+```
+```powershell
+python -m pip install requests
+```
 ***
 
 ## Erstes Python Script
 
+Feel free to use Neovim or Vim:
+```pawershell
+nvim chat.py
+```
+```python
 import requests
 
 response = requests.post(
@@ -346,24 +374,19 @@ response = requests.post(
     "<http://localhost:11434/api/generate>",
 
     json={
-
         "model": "llama3",
-
         "prompt": "Explain React"
-
     }
-
 )
-
 print(response.json())
-
+```
 ***
 
-Speichern:
+Speichern on Neovim and Vim, pres Esc and ``:x``  :
 
-chat.py
+chat.py shold be on the disk:
 
-Starten:
+Starten mit Python:
 
 python chat.py
 
