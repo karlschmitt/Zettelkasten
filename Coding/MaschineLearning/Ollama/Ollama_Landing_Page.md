@@ -6,7 +6,7 @@ date: 2026-11-27
 ---
 # Ollama Landing Page 🛩️
 
-![Ollama Logo](../Images/Ollama-logo.png)
+![Ollama Logo](../Images/Ollama_Local_AI.png)    
 
 ## Ollama on Windows 🪟
 
