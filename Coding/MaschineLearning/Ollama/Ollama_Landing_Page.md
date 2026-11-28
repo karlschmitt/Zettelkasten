@@ -15,7 +15,8 @@ date: 2026-11-27
 3. 🤿 [Ollama an  Absolute Beginner Deep Dive on Windows](./Ollama_on_Windows_Absolute_Beginner_Deep_Dive.md)
 4. 🐚 [Ollama Beginner Deep Dive using Windows and PowerShell](./Beginning_Ollama.md)
 5. ⛺ [Ollama a 30-Day Absolute Beginner Bootcamp](./Ollama_30-Day_Absolute_Beginner_Bootcamp.md)
-   
+
+![Docker Logo](../Images/Docker_Logo.png)
 
 ## Ollama on Docker 🐳
 
