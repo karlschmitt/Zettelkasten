@@ -8,6 +8,11 @@ type: tutorial
 status: evergreen
 ---
 
+![Lokale KI-Integration und Systemanforderungen](../Images/Lokale_KI-Integration_und_Systemanforderungen.png)
+
+> [!NOTE]
+> Diese Anleitung beschreibt umfassend die Nutzung von **Ollama** unter **Windows 11** mithilfe der **PowerShell**, um lokale Sprachmodelle auf consumer-freundlicher Hardware auszuführen. Die Architektur unterteilt sich in die **Ollama Engine** als Hintergrundserver, die heruntergeladenen **Model Weights** sowie individuelle **Modelfiles** zur Konfiguration von Parametern und Systemanweisungen. Nutzer erfahren Schritt für Schritt, wie die Installation gelingt, welche **Hardware-Voraussetzungen** bezüglich des Arbeitsspeichers oder VRAMs nötig sind und wie die Steuerung über grundlegende **CLI-Befehle** erfolgt. Darüber hinaus zeigt das Tutorial fortgeschrittene Automatisierungen wie das **Piping** von Textdateien direkt in Modelle sowie die Anpassung von **Speicherpfaden** und Umgebungsvariablen. Mit diesen Werkzeugen können Anwender künstliche Intelligenz komplett offline betreiben, lokale Markdown-Dateien verarbeiten und maßgeschneiderte Wissensassistenten erstellen.
+
 # Ollama Beginner Deep Dive using Windows and PowerShell
 
 ## 1. Core Concepts (Mental Model)
@@ -113,28 +118,24 @@ Because Ollama accepts standard input (`stdin`) in PowerShell, you can pipe loca
 ```PowerShell
 Get-Content ".\raw-notes.md" | ollama run gemma3:4b "Extract 5 atomic Zettelkasten concepts from this text in Markdown bullet points:"
 ```
-
 ### Save Output Directly to a New Markdown Note
-
-PowerShell
-
-```
-\$Prompt = "Create a concise literature note with YAML frontmatter for the following text:`n" + (Get-Content ".\article.txt" -Raw)
-\$Prompt | ollama run llama3.2 | Out-File -FilePath ".\literature-note.md" -Encoding utf8
+```PowerShell
+$Prompt = "Create a concise literature note with YAML frontmatter for the following text:`n" + (Get-Content ".\article.txt" -Raw)
+$Prompt | ollama run llama3.2 | Out-File -FilePath ".\literature-note.md" -Encoding utf8
 ```
 
 ### Query the Local REST API via PowerShell
 
 When integrating Ollama with tools like Obsidian (e.g., Smart Connections, Copilot, or Text Generator plugins), apps communicate with `http://localhost:11434`. You can test the API directly in PowerShell:
 ```PowerShell
-\$Body = @{
+$Body = @{
     model  = "gemma3:4b"
     prompt = "Define evergreen notes in two sentences."
-    stream = \$false
+    stream = $false
 } | ConvertTo-Json
 
-\$Response = Invoke-RestMethod -Method Post -Uri "http://localhost:11434/api/generate" -Body \$Body -ContentType "application/json"
-\$Response.response
+$Response = Invoke-RestMethod -Method Post -Uri "http://localhost:11434/api/generate" -Body \$Body -ContentType "application/json"
+$Response.response
 ```
 
 ## 6. Customizing Models with a `Modelfile`

@@ -1,6 +1,6 @@
 ---
 id: 20261125170656
-title: "Ollama Beginner Deep Dive with Python and Docker"
+title: Ollama Beginner Deep Dive with Python and Docker
 author: Karl Schmitt
 keywords: [ai, local-llm, ollama, python, docker, windows-11, zettelkasten, tutorial]
 date: 2026-11-25

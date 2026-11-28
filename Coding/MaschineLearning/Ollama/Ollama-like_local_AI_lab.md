@@ -5,6 +5,7 @@ author: Karl Schmitt
 date: 2026-11-25
 keywords: [ ai, LLM, Ollama, Docker, Python, Windows, Zettelkasten ]
 ---
+
 ![Lokale KI Architektur und Alternativen](../Images/Lokale_KI_Architektur_und_Alternativen.png)
 
 > [!NOTE]

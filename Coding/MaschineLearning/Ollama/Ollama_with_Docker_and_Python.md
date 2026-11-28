@@ -3,27 +3,34 @@ id: 20261126165118
 title: Ollama with Docker and Python 
 author: Karl Schmitt
 date: 2026-11-26
+keywords: [ Ollama, LLM, Windows, PowerShell, Docker, Python, REST, API ]
 ---
+![Lokale KI-Infrastruktur und API-Integration](../Images/Lokale_KI-Infrastruktur_und_API-Integration.png)
 
-We can build a complete Ollama learning environment without installing Ollama directly on your Windows 11 machine.
+> [!NOTE]
+> Diese Anleitung beschreibt, wie man eine **lokale Entwicklungsumgebung für Künstliche Intelligenz** auf einem **Windows-11-Computer** einrichtet, ohne die Ollama-Anwendung direkt zu installieren. Stattdessen wird der offizielle **Ollama-Server** in einem **Docker-Container** ausgeführt, wobei persistente Volumes verwendet werden, um heruntergeladene **AI-Modelle** dauerhaft zu speichern. Über **PowerShell-Befehle** und eine **REST-API** können Entwickler direkt mit dem Server kommunizieren. Anschließend zeigt das Tutorial, wie man mit **Python** und der **Requests-Bibliothek** eigene Skripte, interaktive **Chatbots** mit **System-Prompts**, **Streaming-Antworten** sowie grundlegende **RAG-Anwendungen** (Retrieval-Augmented Generation) baut. Abschließend werden Themen wie **Docker Compose**, **GPU-Beschleunigung** über NVIDIA, **Sicherheitsaspekte** in Unternehmen und **Fehlerbehebung** behandelt, um eine vollständig containerisierte Lernumgebung zu schaffen.
 
-In fact, **Docker + Python + PowerShell is an excellent combination for learning Ollama.**
+![Ollama Logo](../Images/Ollama-logo.png)
+
+We can build a complete Ollama 🦙 learning environment without installing Ollama 🦙 directly on your Windows 11 machine.
+
+In fact, **Docker, Python and PowerShell is an excellent combination for learning Ollama 🦙.**
 
 There is one important distinction:
 
-* We will NOT install the Ollama Windows application.
+* We will NOT install the Ollama 🦙 Windows application.
 
-* We will run the official Ollama server inside a Docker container.
+* We will run the official Ollama 🦙 server inside a Docker container.
 
 * We will download and manage AI models through that container.
 
-* We will communicate with Ollama using Python.
+* We will communicate with Ollama 🦙 using Python.
 
 * We will use PowerShell for all commands and Visual Studio Code for development.
 
 This gives us a practical introduction to local Large Language Models (LLMs), REST APIs, Python integration, Docker volumes, and eventually Retrieval-Augmented Generation (RAG).
 
-# **Ollama with Docker and Python**
+# **Ollama 🦙 with Docker 🐳 and Python 🐍.**
 
 ## **Absolute Beginner – Step-by-Step Deep Dive Tutorial**
 

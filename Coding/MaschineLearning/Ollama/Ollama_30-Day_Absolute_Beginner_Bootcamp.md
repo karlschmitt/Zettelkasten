@@ -6,12 +6,17 @@ date: 2026-11-25
 keywords: [ Ollama, Bootcamp, Windows, PowerShell, VSCode, Java, Spring Boot]
 ---
 
+![Bootcamp für lokale KI-Anwendungen](../Images/Bootcamp_fuer_lokale_KI-Anwendungen.png)
+
+> [!NOTE]
+> Der Text beschreibt ein **30-tägiges Lernprogramm** für Einsteiger, um die Ausführung lokaler Künstlicher Intelligenz mit **Ollama** unter Windows und PowerShell zu meistern. Die Teilnehmenden erlernen im ersten Teil die grundlegende Handhabung von **lokalen Sprachmodellen** und erkunden im Anschluss die Kommunikation über **REST-APIs** sowie die Anpassung durch individuelle Modelfiles. In der finalen Phase wird das erworbenen Wissen praktisch angewendet, indem eine lokale KI-Schnittstelle in eine **Java- und Spring-Boot-Anwendung** integriert wird.
+
 
 Let's make this a practical coding dojo for your Windows and PowerShell environment, with one lesson, one exercise, and a tangible result every day.
 
 We'll progress from installing Ollama to building a local AI assistant and eventually integrating it with Java and Spring Boot.
 
-# **Ollama – 30-Day Absolute Beginner Bootcamp**
+# **Ollama 🦙 a 30-Day Absolute Beginner Bootcamp**🏕️
 
 [Ollama AI Integration in Unreal Engine - Local Chat Tutorial | Community tutorial](https://images.openai.com/static-rsc-4/8qPFd12ip3agsA9qy3mUalT4c9YwH8vAbENt59NQ6lNR0xbegiZ6AyUFe6ylpSQ0QlXd18p4MKo-Mt7_bqtr9Zu7kDxm74ffdIWrX3IloNwWvUJkQc6nXV8rKLBkzyh-kMNnHh1IAqgOKiR27c5_UZ1RDj2ZVjUnO18TeLt8PDM?purpose=inline)
 
@@ -20,53 +25,75 @@ We'll progress from installing Ollama to building a local AI assistant and event
 [Must Know Ollama Commands for Managing LLMs locally](https://images.openai.com/static-rsc-4/z82bvyYyZTpUCyM8RLWdpra-B_Z_Yp6QvKW176yVWI_NuyH-9K4bU5bk8AN1z6ijh61ubZQEcluQUrZNvXidCmstFy_ysjL4R0Nov5o7DmjJMSG-9NWs1o_w-bBOu_Asw6q0z52NAWZeGrHbsXZGg6rcgI2jaMPmrH9lBDodvdA?purpose=inline)
 
 
-## **Bootcamp roadmap**
+## **⛺Bootcamp roadmap**
 
-**Your learning journey**
+**Your learning journey** 🚂
 
-30 days
+30 days 🗓️
 
-**Week 1**__:&#x20;__**Ollama fundamentals**
+**Week 1 **🎯**Ollama fundamentals**
 
 01–07
 
 Installation, models, commands and local AI
 
-**Week 2**__:&#x20;__**PowerShell and REST API**
+**Week 2** 🎯**PowerShell and REST API**
 
 08–14
 
 HTTP, JSON, prompts and chat applications
 
-**Week 3**__:&#x20;__**Advanced Ollama**
+**Week 3**__🎯__**Advanced Ollama**
 
 15–21
 
 Modelfiles, parameters, streaming and tool calling
 
-**Week 4**__:&#x20;__**Java and AI applications**
+**Week 4**__🎯__**Java and AI applications**
 
 22–30
 
 Java clients, Spring Boot and final project
 
-## **Week 1 – Ollama fundamentals**
+## **Week 1 – Ollama 🦙 fundamentals**
 
-Days 1–7 · Beginner
+Days 1–7 · Beginner 👩‍🎓
 
-Goal: Install Ollama, understand local LLMs and become comfortable with the command line.
+Goal: Install Ollama, understand local LLMs and become comfortable with the command line 💻.
 
-[library](https://images.openai.com/static-rsc-4/iC1pWAxAtGlF4Ppu29pYJyVUYAbL82h0-gEOW2HQi0zMl9OmzSvHrPi1eTJDH-AVbmsne3GGNBazLlCcbxkWQRLQOFsa4cFgyFS1jyYu5fe69eCBdVZE0k1UFHCLXSwVpZTS1U9emNxTbqerTeI9EEnS2WHR7fvgsEfo6fwCP3o?purpose=inline)
+### Local LLM 🎪
+
+_**Local LLMs (Large Language Models) are AI models that run directly on your own computer’s hardware—using your CPU, GPU, and RAM—rather than on remote cloud servers**_. **Ollama** is an open-source tool that acts like a package manager for these models, making it easy to download, manage, and run them with simple terminal commands or a desktop interface. \[[1](https://www.youtube.com/watch?v=5RIOQuHOihY), [2](https://www.promptquorum.com/local-llms/what-are-local-llms), [3](https://www.freecodecamp.org/news/run-and-customize-llms-locally-with-ollama/)]
+
+Why Run LLMs Locally?
+
+* **Complete privacy.** Your prompts, documents, and data never leave your device, making local models ideal for confidential or sensitive work.
+* 💰**Zero API costs.** Once you download a model, you can generate unlimited text without paying subscription fees or per-token cloud charges.
+* **Offline access.** Local models work without an internet connection, which is useful when traveling or working in restricted environments. 
+* **Full customization.** Tools like Ollama let you tweak system prompts, adjust parameters via a `Modelfile`, or connect models to local apps via a built-in REST API (`localhost:11434`).
+
+How Local LLMs Compare to Cloud AI ☁️
+
+| Feature           | Local LLMs (via Ollama)                                                      | Cloud AI (e.g., ChatGPT, Claude)                     |
+| ----------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------- |
+| **Where it runs** | Your local CPU, GPU, or Apple Silicon                                        | Remote data centers                                  |
+| **Data privacy**  | High; data stays on your machine                                             | Prompts are sent to external servers                 |
+| **Cost**          | Free after initial download                                                  | Subscription or pay-per-token fees                   |
+| **Capability**    | Strong for summarizing, writing, and coding, though limited by your hardware | Frontier-level reasoning and massive context windows |
+
+Normally, running an open-weight model (like Llama, Gemma, Qwen, or Mistral) requires configuring runtimes and managing compressed model files (such as GGUF formats). [Ollama](https://ollama.com/) bundles the inference engine and model library together. After installing it, typing a single command like `ollama run llama3` downloads the optimized model and starts a local chat session. 
 
 **Day 1 – What is Ollama?**
 
-* Understand LLMs and local AI.
+* Understand [LLMs](../Atomics/Large_language_models.md) and local AI.
 
 * Understand Ollama versus an AI model.
 
 * Explore the Ollama architecture.
 
 _Exercise:_ Draw the architecture from PowerShell to Ollama to the model.
+
+![](../Images/Ollama_Architecture_Nbr_3.png)
 
 **Deliverable:** `01-What-is-Ollama.md`
 

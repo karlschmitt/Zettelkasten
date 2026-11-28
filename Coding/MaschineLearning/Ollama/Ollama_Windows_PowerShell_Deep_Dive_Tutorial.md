@@ -6,6 +6,11 @@ date: 2026-11-25
 keywords: [ Ollama ]
 ---
 
+![Lokale Sprachmodelle ausführen und integrieren](../Images/Lokale_Sprachmodelle_ausfuehren_und_integrieren.png)
+
+> [!NOTE]
+> Diese Anleitung beschreibt ausführlich, wie **Ollama** auf einem Windows 11-System eingerichtet und zur Ausführung lokaler **großer Sprachmodelle** genutzt wird. Nutzer lernen grundlegende **Befehlszeilenwerkzeuge** kennen, um KI-Modelle herunterzuladen, zu verwalten und interaktiv zu bedienen. Darüber hinaus wird gezeigt, wie sich die lokale **REST-API** über Skripte in **PowerShell** sowie in Programmiersprachen wie **Java** und **Spring Boot** anbinden lässt. Abschließend behandelt das Tutorial die Erstellung **angepasster Modelle** mithilfe von Konfigurationsdateien sowie die Entwicklung einfacher **KI-Agenten**.
+
 # Ollama – Absolute Beginner Deep Dive Tutorial
 
 **Platform:** Windows 11  

@@ -7,6 +7,11 @@ date: 2026-11-25
 type: tutorial
 status: evergreen
 ---
+![](../Images/Lokale_LLMs_in_Container-Umgebungen_Nbr_2.png)
+
+> [!NOTE]
+> Diese Anleitung erklärt Schritt für Schritt, wie man **Ollama** mithilfe von **Docker** auf einem **Windows 11**-System ausführt, ohne die Software direkt auf dem Betriebssystem installieren zu müssen. Durch die Nutzung eines **kontainerisierten Servers** bleiben der Host-Computer sauber und alle heruntergeladenen **KI-Modelle** dank permanenter **Datenvolumen** vor Verlust geschützt. Das Dokument zeigt zudem, wie man optional **NVIDIA-Grafikkarten** für die Hardwarebeschleunigung einbindet, Modelle über die Befehlszeile verwaltet und über **PowerShell-Skripte** oder REST-APIs auf den Dienst zugreift. Für eine vereinfachte Handhabung wird schließlich empfohlen, die Einrichtung über eine deklarative **Docker Compose**-Konfiguration zu automatisieren. Bei Bedarf lässt sich die gesamte Umgebung durch das Löschen der Container, Volumes und Images restlos und spurlos entfernen.
+
 
 # Ollama in Docker with Zero-Install Beginner Deep Dive
 

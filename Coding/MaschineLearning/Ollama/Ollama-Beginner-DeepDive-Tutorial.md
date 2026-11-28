@@ -1,6 +1,6 @@
 ---
 id: 202611251311
-title: Ollama - Absolute Beginner Deep Dive
+title: Ollama for Absolute Beginners with Deep Dive
 author: Karl Schmitt
 aliases: [Ollama Tutorial, Local LLM Tutorial]
 type: tutorial
@@ -8,8 +8,13 @@ date: 2026-11-25
 keywords: [ollama, llm, local-ai, python, powershell, windows, tutorial]
 environment: Windows 11, PowerShell 7, Python 3.13
 ---
+![Lokale Sprachmodelle Architektur und Workflows](../Images/Lokale_Sprachmodelle_Architektur_und_Workflows.png)
 
-# Ollama - Absolute Beginner Deep Dive
+> [!NOTE]
+> Diese **Schritt-für-Schritt-Anleitung** vermittelt Anfängern den praktischen Umgang mit **lokalen großen Sprachmodellen** unter **Windows** mithilfe der Software **Ollama**. Es wird detailliert erläutert, wie man die Anwendung installiert, über die Befehlszeile steuert und nahtlos in eigene **Python-Skripte** integriert. Darüber hinaus zeigt der Leitfaden fortgeschrittene Techniken wie die **Erstellung maßgeschneiderter Modelle**, die Generierung **strukturierter JSON-Ausgaben** sowie die Umsetzung einer **semantischen Suche** für persönliche Notizen. Durch die vollständige Ausführung auf dem eigenen Computer bleiben sämtliche **Daten privat**, während Leistung und Hardware-Ressourcen optimal genutzt werden können.
+
+
+# Ollama for Absolute Beginnerr Deep Dive
 
 A step-by-step, hands-on guide to running **large language models (LLMs) on your own Windows PC** with Ollama. You will install it, chat with a model, call it from PowerShell and Python, customize it, extract structured data, and build a small semantic search over your own notes.
 
